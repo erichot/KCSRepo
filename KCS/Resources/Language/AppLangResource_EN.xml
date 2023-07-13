@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resource>
+  <Item name="NaviItemSupervisorManage" text="Supervisor Management" />
+  <Item name="NaviItemDepartmentSet" text="Department Setting" />
+  <Item name="NaviItemDeviceSettingManage" text="Devices Management" />
+  <Item name="NaviItemEmployeesManage" text="Employees Management" />
+  <Item name="NaviItemEmployeeWeekly" text="Weekly Setting" />
+  <Item name="NaviItemEmployeeWorkCalendarMonthly" text="WorkCalendar Monthly Setting" />
+  <Item name="NaviItemEmployeeWorkCalendarMonthlyMultiUsers" text="WorkCalendar Monthly MultiUsers" />
+  <Item name="NaviItemEmployeeJobCode" text="Employee Job Code" />
+  <Item name="NaviItemAccessControlManage" text="AccessControl Management" />
+  <Item name="NaviItemTimeAttendanceManage" text="TimeAttendance Management" />
+  <Item name="NaviItemWorkShiftManagement" text="WorkShift Management" />
+  <Item name="NaviItemTransactionsReport" text="Transactions Report" />
+  <Item name="NaviItemTransactionAdd" text="Transaction Add" />
+  <Item name="NaviItemTransactionModify" text="Transaction Modify" />
+  <Item name="NaviItemLeaveType" text="Leave Type" />
+  <Item name="KCSTitle" text="KCS" />
+  <Item name="ProcessBarInit" text="Initializing..." />
+  <Item name="ProcessBarStart" text="Starting..." />
+  <Item name="ProcessBarFinish" text="Successfully loaded" />
+  <Item name="LoginFormTitle" text="Login Attendance Management" />
+  <Item name="LoginViewWelcome" text="Welcome" />
+  <Item name="LoginViewUserId" text="User ID" />
+  <Item name="LoginViewUserPin" text="Password" />
+  <Item name="LoginViewRemember" text="Remember me?" />
+  <Item name="LoginViewLogin" text="Log In" />
+  <Item name="LoginViewLoginFailed" text="Login failed" />
+  <Item name="NaviSupervisor" text="Supervisor" />
+  <Item name="NaviDeviceSetting" text="Devices" />
+  <Item name="NaviEmployees" text="Employees" />
+  <Item name="NaviAccessControl" text="Access Control" />
+  <Item name="NaviTimeAttendance" text="Time Attendance" />
+  <Item name="ToolBarGroupNew" text="New" />
+  <Item name="ToolBarNewEmployee" text="New Employee" />
+  <Item name="ToolBarNewDevice" text="New Device" />
+  <Item name="ToolNewDepartment" text="New Department" />
+  <Item name="ToolBarWorkShiftSetting" text="Work Shift Setting" />
+  <Item name="ToolBarNewSupervisor" text="New Supervisor" />
+  <Item name="ToolBarGroupSystem" text="System" />
+  <Item name="ToolBarSystemSetting" text="System Setting" />
+  <Item name="ToolBarSetAdminPin" text="Set Administrators PIN" />
+  <Item name="ToolBarGroupSave" text="Save" />
+  <Item name="ToolBarGroupEdit" text="Edit" />
+  <Item name="ToolBarGroupClose" text="Close" />
+  <Item name="ToolBarGroupAction" text="Actions" />
+  <Item name="ToolBarGroupFinger" text="Finger" />
+  <Item name="ToolBarJobCode" text="Job Code" />
+  <Item name="ToolBarForceDelete" text="Force delete" />
+  <Item name="ToolBarEmployeesType" text="Employee Type" />
+  <Item name="ToolBarDisableEmployee" text="Disable Employees" />
+  <Item name="ToolBarEnableEmployee" text="Enable  Employees" />
+  <Item name="ToolBarSetAcPara" text="Access Control Parameters" />
+  <Item name="ToolBarImportEmployee" text="Import Employees" />
+  <Item name="ToolBarExportEmployee" text="Export Employees" />
+  <Item name="ToolBarDeleteFinger1" text="Delete Finger1" />
+  <Item name="ToolBarDeleteFinger2" text="Delete Finger2" />
+  <Item name="ToolBarDeleteFinger12" text="Delete two fingers" />
+  <Item name="ToolBarReSyncAll" text="ReSync all" />
+  <Item name="ToolBarReSyncSelectd" text="ReSync select employee" />
+  <Item name="ToolBarSyncSetting" text="Sync Setting" />
+  <Item name="ToolBarSave" text="Save" />
+  <Item name="ToolBarSaveAndClose" text="SaveAndClose" />
+  <Item name="ToolBarSaveAndNew" text="SaveAndNew" />
+  <Item name="ToolBarReset" text="Reset" />
+  <Item name="ToolBarNew" text="New" />
+  <Item name="ToolBarClose" text="Close" />
+  <Item name="ToolBarEdit" text="Edit" />
+  <Item name="ToolBarDelete" text="Delete" />
+  <Item name="ToolBarSetPassword" text="Set Password" />
+  <Item name="IsDeleteItem" text="Do you want to delete this item?" />
+  <Item name="IsDeleteItems" text="Do you want to delete these items?" />
+  <Item name="IsDeleteFiner" text="Do you want to delete the finger" />
+  <Item name="IsForceDeleteItems" text="Do you want to force delete these items?" />
+  <Item name="IsDisableItems" text="Do you want to disable the select employees?" />
+  <Item name="IsEnableItems" text="Do you want to enable the select employees?" />
+  <Item name="IsApplySettingToSelectedItems" text="Do you want to apply settings to selected items?" />
+  <Item name="ReSyncAllEmployees" text="Do you want to ReSynchronization all employees to devices?" />
+  <Item name="ReSyncSelectedEmployee" text="Do you want to ReSynchronization selected employee to devices?" />
+  <Item name="DeleteEmployeeFailedTip" text="Cannot delete the user because the transaction record" />
+  <Item name="DeleteEmployeeFailed" text="Delete employee failed" />
+  <Item name="DeleteEmployeeOK" text="Delete employee succeeds" />
+  <Item name="DeleteEmployeeFingerOK" text="Delete employee finger succeeds" />
+  <Item name="DeleteEmployeeFingerFailed" text="Delete employee finger failed" />
+  <Item name="ReSyncAllEmployeeOK" text="Set ReSynchronization all employees to devices succeeds" />
+  <Item name="ReSyncAllEmployeeFailed" text="Set ReSynchronization all employees to devices failed" />
+  <Item name="ReSyncSelectedEmployeeOK" text="Set ReSynchronization selected employee to devices succeeds" />
+  <Item name="ReSyncSelectedEmployeeFailed" text="Set ReSynchronization selected employee to devices failed" />
+  <Item name="ForbidSyncSelectedEmployee" text="The selected employee is forbidden to sync to device " />
+  <Item name="SyncSettingForSelectedEmployee" text="Do you want to change the sync setting?" />
+  <Item name="SyncSettingForSelectedEmployeeFailed" text="Set Sync for selected employee failed" />
+  <Item name="DisableAllEmployeeOK" text="Disable selected employees succeeds" />
+  <Item name="DisableAllEmployeeFailed" text="Disable selected employees failed" />
+  <Item name="EnableAllEmployeeOK" text="Enable selected employees succeeds" />
+  <Item name="EnableAllEmployeeFailed" text="Enable selected employees failed" />
+  <Item name="FromXLSX" text="From XLSX" />
+  <Item name="FromXLS" text="From XLS" />
+  <Item name="FromTxtWithComSep" text="From TXT(CSV)" />
+  <Item name="FromTxtWithTabSep" text="From TXT(Tab separation)" />
+  <Item name="NoSelectedExcelFileHint" text="There aren't select the Excel file, can not be imported" />
+  <Item name="DeleteConfirm" text="Confirmation" />
+  <Item name="AuthorityReadOnly" text="Read only" />
+  <Item name="AuthorityAdmin" text="Read and Write" />
+  <Item name="UserPermissionTypeAdministrators" text="Administrators" />
+  <Item name="UserPermissionTypeSupervisorsAllDepartments" text="Supervisors Of all departments" />
+  <Item name="UserPermissionTypeSupervisorsDepartment" text="Supervisors Of one department" />
+  <Item name="UserPermissionTypeUsers" text="User" />
+  <Item name="UserPermissionTypeGuest" text="guest" />
+  <Item name="ContextMenuNew" text="New" />
+  <Item name="ContextMenuEdit" text="Edit" />
+  <Item name="ContextMenuDelete" text="Delete" />
+  <Item name="SupervisorViewId" text="Supervisor ID" />
+  <Item name="SupervisorViewName" text="Supervisor Name" />
+  <Item name="DepartmentID" text="Department ID" />
+  <Item name="Email" text="Email" />
+  <Item name="SupervisorViewPhone" text="Mobile phone" />
+  <Item name="SupervisorViewAdminType" text="Authority" />
+  <Item name="SupervisorViewAuth" text="Read only" />
+  <Item name="RemarkText" text="Description" />
+  <Item name="RecordsText" text="Records" />
+  <Item name="SetAdminPinCapiton" text="Set Administrators PIN" />
+  <Item name="GridContrlUpdateText" text="Update" />
+  <Item name="DialogCancelButtonText" text="Cancel" />
+  <Item name="DialogOkButtonText" text="Ok" />
+  <Item name="DialogYesButton" text="Yes" />
+  <Item name="DialogNoButtonText" text="No" />
+  <Item name="DialogIgnoreButtonText" text="Ignore" />
+  <Item name="DialogAbortButtonText" text="Abort" />
+  <Item name="DialogRetryButtonText" text="Retry" />
+  <Item name="DateEditTodayText" text="Today" />
+  <Item name="TwoInputNotConsistent" text="Two input passwords are not consistent" />
+  <Item name="PasswordValidateFailed" text="Password authentication failed" />
+  <Item name="ModifyPinFailed" text="Modify passwords failed" />
+  <Item name="EditSupervisor" text="Edit supervisor" />
+  <Item name="ResetSupervisorPin" text="Reset supervisor password" />
+  <Item name="AddItemFailed" text="New failed" />
+  <Item name="UpdateItemFailed" text="Update failed" />
+  <Item name="DeleteItemFailed" text="Delete failed" />
+  <Item name="NewSupervisorView" text="New a supervisor" />
+  <Item name="Department" text="Department" />
+  <Item name="DepartmentId" text="Department ID" />
+  <Item name="DepartmentName" text="Department Name" />
+  <Item name="SystemCode" text="Code" />
+  <Item name="EmployeeID" text="Employee ID" />
+  <Item name="EmployeeName" text="Employee Name" />
+  <Item name="ExportString" text="Export" />
+  <Item name="ToStrString" text="to" />
+  <Item name="OpenExportFile" text="Do you want to open this file?" />
+  <Item name="ExportToString" text="Export to..." />
+  <Item name="CannotOpenExportFile" text="Cannot find an application on your system suitable for openning the file with exported data." />
+  <Item name="CardID" text="Card ID" />
+  <Item name="TitleName" text="Title Name" />
+  <Item name="InActive" text="Inactive" />
+  <Item name="EmployeeTypeId" text="Employee Type ID" />
+  <Item name="EmployeeTypeName" text="Employee Type Name" />
+  <Item name="EmployeeType" text="Employee Type" />
+  <Item name="SyncOrNot" text="Disables Sync" />
+  <Item name="DontSyncToDevices" text="Do not sync to any devices" />
+  <Item name="SyncSetting" text="Sync setting" />
+  <Item name="SyncToAll" text="Sync to all devices" />
+  <Item name="SynToSelectedDevice" text="Sync to selected devices" />
+  <Item name="SelectDevices" text="Select devices" />
+  <Item name="Details" text="Details" />
+  <Item name="IsTaOrNot" text="Is TA or not" />
+  <Item name="ValideDate" text="Valid Date" />
+  <Item name="AllowTimeStartHour" text="Allow time start hour" />
+  <Item name="AllowTimeStartHMin" text="Allow time start Minute" />
+  <Item name="AllowTimeEndHour" text="Allow time end hour" />
+  <Item name="AllowTimeEndHMin" text="Allow time end Minute" />
+  <Item name="NotCheckAttendance" text="Do not Check work attendance" />
+  <Item name="NewEmployeeOk" text="New employee succeeds" />
+  <Item name="NewEmployeeFailed" text="New employee failed" />
+  <Item name="NewEmployeeFailedInput" text="Please check the input,The Items(*) are necessary" />
+  <Item name="ExisitedCardId" text="Duplicate Card ID" />
+  <Item name="ExisitedUserId" text="Duplicate user id" />
+  <Item name="DeviceID" text="Device ID" />
+  <Item name="DeviceIP" text="IP Address" />
+  <Item name="DeviceName" text="Device Name" />
+  <Item name="DeviceDescription" text="Description" />
+  <Item name="DeviceIsEnable" text="Is Enabled" />
+  <Item name="DeviceIsServerMode" text="Is Push Sync" />
+  <Item name="EditEmployeeOk" text="Modify employee succeeds" />
+  <Item name="EditEmployeeFailed" text="Modify employee failed" />
+  <Item name="SetToSync" text="Set to Sync" />
+  <Item name="EmployeeDataReplicated" text="Employee Replicated" />
+  <Item name="Finger1Replicated" text="Finger 1 Replicated" />
+  <Item name="Finger2Replicated" text="Finger 2 Replicated" />
+  <Item name="ErrorMsgUserIdLength" text="The column of UserID exceeds the maximun length of 16" />
+  <Item name="ErrorMsgDuplicatedUserId" text="Duplicate value in the column of UserID" />
+  <Item name="ErrorMsgCardIdLength" text="The column of CardID exceeds the maximun length of 10" />
+  <Item name="ErrorMsgDuplicatedCardId" text="Duplicate value in the column of CardID" />
+  <Item name="ImportComplete" text="Import operation complete" />
+  <Item name="ImportCompleteCounts" text="Insert Records" />
+  <Item name="SyncAfterImport" text="Sync to devices after import" />
+  <Item name="ImportOverwrite" text="Import &amp;&amp; Overwrite" />
+  <Item name="ToolBarGroupDevice" text="Device" />
+  <Item name="ToolBarGroupSync" text="Synchronization" />
+  <Item name="ToolBarDeleteDevice" text="Delete Device" />
+  <Item name="ToolBarEnableDevice" text="Enable Device" />
+  <Item name="ToolBarDisableDevice" text="Disable Device" />
+  <Item name="ToolBarResetDevice" text="Reset Device" />
+  <Item name="ToolBarDeviceSyncSetting" text="Device Sync Setting" />
+  <Item name="TransactionID" text="Transaction ID" />
+  <Item name="TransactionType" text="Transaction Type" />
+  <Item name="TransctionCardID" text="Card ID" />
+  <Item name="TransctionDateTime" text="Date Time" />
+  <Item name="DeviceCategoryName" text="Category Name" />
+  <Item name="DialogDeviceCategory" text="Device Category" />
+  <Item name="NotPropagateWithUsersByDefault" text="Do not propagate with all users by default" />
+  <Item name="ItemForIP" text="IP" />
+  <Item name="ItemForIP_Internal" text="IP (Internal)" />
+  <Item name="IPIsNecessary" text="IP Address is Necessary" />
+  <Item name="NewDeviceOk" text="New Device OK" />
+  <Item name="NewDeviceFailed" text="New Device Failed" />
+  <Item name="DeleteDeviceFailed" text="Delete Device Failed" />
+  <Item name="ExisitedSlaveId" text="ID Already exist!" />
+  <Item name="ExisitedSlaveIP" text="IP Address  Already exist!" />
+  <Item name="IsEnableDevice" text="Do you want to enable selected device" />
+  <Item name="EnableDeviceFailed" text="Enable Device Failed" />
+  <Item name="IsDisableDevice" text="Do you want to disable selected device" />
+  <Item name="DisableDeviceFailed" text="Disable Device Failed" />
+  <Item name="IsResetDevice" text="Do you want to reset selected device to default" />
+  <Item name="UpdateDeviceFailed" text="Update Device Failed" />
+  <Item name="IsReplicated" text="IsReplicated" />
+  <Item name="TimeReplicated" text="Replicated Time" />
+  <Item name="AllowSync" text="Allow Sync" />
+  <Item name="SyncSettingForSelectedDevice" text="Do you want to change the sync setting?" />
+  <Item name="SyncSettingForSelectedDeviceFailed" text="Set Sync for selected device failed" />
+  <Item name="AccessControlHoliType" text="Type " />
+  <Item name="AccessControlHoliTypeNULL" text="NULL" />
+  <Item name="SchedulerGotoDateText" text="Goto Date" />
+  <Item name="SchedulerGotoTodayText" text="Goto Today" />
+  <Item name="HolidaySetText" text="Holiday" />
+  <Item name="TimeSetSetText" text="Time Frame Setting" />
+  <Item name="TimeZoneSetText" text="Time Combination Setting" />
+  <Item name="DescriptionText" text="Description" />
+  <Item name="StartTime" text="Start Time" />
+  <Item name="EndTime" text="End Time" />
+  <Item name="TimeSetNoPassing" text="No Passing" />
+  <Item name="TimeSet24HoursPassing" text="24 Hours Passing" />
+  <Item name="FirstFrame" text="First Frame" />
+  <Item name="SecondFrame" text="Second Frame" />
+  <Item name="ThirdFrame" text="Third Frame" />
+  <Item name="FourthFrame" text="Fourth Frame" />
+  <Item name="UserGroupText" text="User Group" />
+  <Item name="NodeValueText" text="Value" />
+  <Item name="SundayText" text="Sunday" />
+  <Item name="MondayText" text="Monday" />
+  <Item name="TuesdayText" text="Tuesday" />
+  <Item name="WednesdayText" text="Wednesday" />
+  <Item name="ThursdayText" text="Thursday" />
+  <Item name="FridayText" text="Friday" />
+  <Item name="SaturdayText" text="Saturday" />
+  <Item name="TimeFrameText" text="Time Frame" />
+  <Item name="TimeZoneText" text="Time Zone" />
+  <Item name="WeekPlayText" text="Week Plan" />
+  <Item name="HolidayPlanText" text="Holiday Plan" />
+  <Item name="ToolBarSaveUserGroup" text="Save UserGroup Setting" />
+  <Item name="UseAdvancedAccessControlSetting" text="Use Advanced AccessControl Setting" />
+  <Item name="AccessGrantedTime" text="Access Granted Time" />
+  <Item name="AccessGrantedGroup" text="Access Granted Group" />
+  <Item name="BlackList" text="Blacklist" />
+  <Item name="SelectedDevicesFirst" text="Please select devices first" />
+  <Item name="SelectedEmployeesFirst" text="Please select employees first" />
+  <Item name="GroupIDText" text="Group ID" />
+  <Item name="NoSelectedDatas" text="No data is selected!" />
+  <Item name="NoExistingDatas" text="No existing data." />
+  <Item name="RefreshText" text="Refresh" />
+  <Item name="DeviceType" text="Device Type" />
+  <Item name="FirmwareVersion" text="Firmware Version" />
+  <Item name="WorkShiftCode" text="Shift Code" />
+  <Item name="WorkShiftName" text="Shift Name" />
+  <Item name="WorkShiftStartTime" text="Start Time" />
+  <Item name="WorkShiftEndTime" text="End Time" />
+  <Item name="WorkShiftBreakTime" text="Break Time" />
+  <Item name="WorkShiftIsDefault" text="Default" />
+  <Item name="WorkShiftTotalTime" text="Total Time" />
+  <Item name="BreakTimeByMinute" text="By minute" />
+  <Item name="WeekdayName" text="Weekday" />
+  <Item name="ShiftCode" text="Shift Code" />
+  <Item name="SaveSetting" text="Save all settings" />
+  <Item name="ApplyWeeklySettingsButton" text="Apply to selected employees" />
+  <Item name="CreateMothlyShift" text="Create employees MonthlyShift" />
+  <Item name="ApplyToAll" text="All Employees" />
+  <Item name="ApplyToSelectedUser" text="Selected Employees" />
+  <Item name="CreateMonthlyShift" text="Create MonthlyShift" />
+  <Item name="ProcessingText" text="Processing" />
+  <Item name="IsCreateMonthlyShift" text="Do you want to create monthlyshift for selected employees" />
+  <Item name="YearText" text="Year" />
+  <Item name="MonthText" text="Month" />
+  <Item name="DayText" text="Day" />
+  <Item name="LeaveCategoryText" text="Leave category" />
+  <Item name="VocationSettingText" text="Vacation setting" />
+  <Item name="ModifyTransText" text="Modify Transaction" />
+  <Item name="AddTransText" text="Add Transaction" />
+  <Item name="LeaveTypeIdText" text="Type ID" />
+  <Item name="LeaveTypeNameText" text="Type Name" />
+  <Item name="DisableText" text="Disable" />
+  <Item name="TimeSetErrorText" text="Error!Start Time has to be prior to End Time" />
+  <Item name="DateText" text="Date" />
+  <Item name="HourText" text="Hour" />
+  <Item name="ReasonText" text="Reason" />
+  <Item name="LeaveText" text="Leave" />
+  <Item name="hoursText" text="hours" />
+  <Item name="SaveSetttings" text="Save settings" />
+  <Item name="SelectEmployee" text="Selected employee" />
+  <Item name="Leave1ErrorMsg" text="Leave 1 setting is incorrect!" />
+  <Item name="Leave1HourErrorMsg" text="Leave 1 hours is incorrect!" />
+  <Item name="Leave2ErrorMsg" text="Leave 2 setting is incorrect!" />
+  <Item name="Leave2HourErrorMsg" text="Leave 2 hours is incorrect!" />
+  <Item name="Leave3ErrorMsg" text="Leave 3 setting is incorrect!" />
+  <Item name="Leave3HourErrorMsg" text="Leave 3 hours is incorrect!" />
+  <Item name="InsertErrorMsg" text="Insert failure!" />
+  <Item name="ErrorCodeText" text="Error Code" />
+  <Item name="OnlyActiveEmployee" text="Only active employees" />
+  <Item name="OnlyInactiveEmployee" text="Only inactive employees" />
+  <Item name="BothText" text="Both" />
+  <Item name="QueryText" text="Query" />
+  <Item name="FromText" text="From" />
+  <Item name="ToText" text="To" />
+  <Item name="JobNameText" text="Job Name" />
+  <Item name="ActiveInactiveText" text="Active/Inactive" />
+  <Item name="ReportsText" text="Reports" />
+  <Item name="ExportToTxtText" text="Export to CSV" />
+  <Item name="ExportXLSXText" text="Export to XLSX" />
+  <Item name="ExportToPDFText" text="Export to PDF" />
+  <Item name="LateTimeText" text="Late starts" />
+  <Item name="LateTimeNoteText" text="(Late starts from time)" />
+  <Item name="ResetTimeText" text="Break Time" />
+  <Item name="OverTimeText" text="Overtime starts" />
+  <Item name="OverTimeNoteText" text="Overtime starts from time" />
+  <Item name="OverTimeUnitText" text="Overtime unit" />
+  <Item name="AttendanceTimeText" text="Attendance time" />
+  <Item name="MaxAbsenceTimeText" text="Max. absence Hrs/Day" />
+  <Item name="MinuteText" text="Minute" />
+  <Item name="ShifCodeIsNecessary" text="Shift code is Necessary" />
+  <Item name="InputStartTimeText" text="Please input start time" />
+  <Item name="InputEndTimeText" text="Please input end time" />
+  <Item name="RestTimeError" text="must be between Start Time and End Time" />
+  <Item name="TaSettingText" text="Time Attendance settings" />
+  <Item name="BulidText" text="Build" />
+  <Item name="BulidTimeText" text="Build Time" />
+  <Item name="ModifyText" text="Modify" />
+  <Item name="ModifyTimeText" text="Modify Time" />
+  <Item name="HolidayNameText" text="Holiday Name" />
+  <Item name="TransactionText" text="Transaction" />
+  <Item name="AnnualCalendarText" text="Annual Calendar" />
+  <Item name="SettingsText" text="Settings" />
+  <Item name="CalendarSetText" text="Canlendar Settings" />
+  <Item name="RestlessYearText" text="Restless Year Round" />
+  <Item name="WeekendText" text="2days Weekend" />
+  <Item name="CalendarText" text="Calendar" />
+  <Item name="CreateAnnualCalendarText" text="Create Annual Canlendar" />
+  <Item name="CalendarIsExistedText" text="Calendar existed already. Do you want to overwrite it?" />
+  <Item name="CreateAnnualCalendarFailedText" text="Create Annual Canlendar Failed!" />
+  <Item name="CreateAnnualCalendarOKText" text="Create Annual Canlendar Succeeds!" />
+  <Item name="HolidayBreakText" text="Holiday/Break" />
+  <Item name="PrintText" text="Print" />
+  <Item name="CreateText" text="Create" />
+  <Item name="EditText" text="Edit" />
+  <Item name="ClockText" text="Clock" />
+  <Item name="RestDayText" text="Weekly Offs" />
+  <Item name="LegalHolidayText" text="Holidays" />
+  <Item name="EndText" text="End" />
+  <Item name="PageText" text="Page" />
+  <Item name="ShiftTabelCodeText" text="Shift Table" />
+  <Item name="ShiftTabelEditionText" text="Shift Table Edition" />
+  <Item name="ShiftTabelTypeText" text="Shift Table category" />
+  <Item name="CreatePersonalCalendarText" text="Create Personal Shift Table" />
+  <Item name="EditPersonalShiftTableText" text="Edit Personal Shift Table" />
+  <Item name="DefaultShiftText" text="Default Shift" />
+  <Item name="ShifTableCodeIsNecessary" text="Shift Table is Necessary" />
+  <Item name="CreateAnnualShiftTableText" text="Create Annual Shift Table" />
+  <Item name="CalendarNotExistedText" text="The annual calendar has not been generated! Continue or not?" />
+  <Item name="CreateAnnualShiftTabledFailedText" text="Create Annual Shift Table Failed!" />
+  <Item name="CreateAnnualShiftTabledOkText" text="Create Annual Shift Table Succeeds!" />
+  <Item name="CreatePersonalAnnualShiftTabledFailedText" text="Create Personal Annual Shift Table Failed!" />
+  <Item name="CreatePersonalAnnualShiftTabledOkText" text="Create Personal Annual Shift Table Succeeds!" />
+  <Item name="ResetTime1StartText" text="Break Time 1 Start" />
+  <Item name="ResetTime1EndText" text="Break Time 1 End" />
+  <Item name="ResetTime2StartText" text="Break Time 2 Start" />
+  <Item name="ResetTime2EndText" text="Break Time 2 End" />
+  <Item name="ToolBarExportSetting" text="Export Text Setting" />
+  <Item name="AboutText" text="About" />
+  <Item name="ToolBarSearchDevice" text="Search Devices" />
+  <Item name="ToolBarNetWorkTest" text="Network Test" />
+  <Item name="ToolBarRebootDevice" text="Reboot Device" />
+  <Item name="InputNewPassword" text="Input New Password" />
+  <Item name="NewPasswordAgain" text="New Password Again" />
+  <Item name="SystemSetting" text="System Setting" />
+  <Item name="LoginMode" text="Login mode" />
+  <Item name="WindowsAuthentication" text="Windows authentication" />
+  <Item name="SqlAuthentication" text="Sql authentication" />
+  <Item name="UserName" text="User Name" />
+  <Item name="Password" text="Password" />
+  <Item name="UsingExistingDatabase" text="Using existing database" />
+  <Item name="NewDatabase" text="New database" />
+  <Item name="RestoreDatabase" text="Restore database" />
+  <Item name="DataBase" text="DataBase" />
+  <Item name="DefaultLanguage" text="Default Language" />
+  <Item name="Test" text="Test" />
+  <Item name="ServerName" text="Server Name" />
+  <Item name="Restore" text="Restore" />
+  <Item name="ExportTextSet" text="Export to Text Setting" />
+  <Item name="AutoExportToTxt" text="Auto Export Transactions to TXT" />
+  <Item name="Createfilebymonth" text="Create file by month" />
+  <Item name="Separator" text="Separator" />
+  <Item name="DateSeparator" text="Date Separator" />
+  <Item name="SlaveIDlength" text="Slave ID length" />
+  <Item name="DateFormate" text="Date Formate" />
+  <Item name="TimeFormate" text="Time Formate" />
+  <Item name="FilePath" text="File Path" />
+  <Item name="LeaveManagementText" text="Leave management" />
+  <Item name="Finger1Status" text="Finger1 Status" />
+  <Item name="Finger2Status" text="Finger2 Status" />
+  <Item name="FingerEstablished" text="Already established" />
+  <Item name="FingerNotEstablished" text="Not established" />
+  <Item name="StatusText" text="Staus" />
+  <Item name="StatusEdit" text="Edit" />
+  <Item name="StatusApproval" text="Approval" />
+  <Item name="StatusCancel" text="Cancel" />
+  <Item name="Authorizer" text="Authorizer" />
+  <Item name="ApprovalTime" text="Approval time" />
+  <Item name="LeaveNUM" text="Leave NUM" />
+  <Item name="ApplyDate" text="Apply Date" />
+  <Item name="LeaveDateStart" text="Leave Date Start" />
+  <Item name="LeaveTimeStart" text="Leave Time Start" />
+  <Item name="LeaveDateEnd" text="Leave Date End" />
+  <Item name="LeaveTimeEnd" text="Leave Time End" />
+  <Item name="HourlyTotal" text="Hourly total" />
+  <Item name="HourlyTotalTips" text="(Minimum unit 0.5 hours)" />
+  <Item name="Agent" text="Agent" />
+  <Item name="Applicant" text="Applicant" />
+  <Item name="CreateLeaveDetails" text="Create Leave details" />
+  <Item name="IDText" text="ID" />
+  <Item name="LeaveDate" text="Leave Date" />
+  <Item name="AttendanceHours" text="Attendance hours" />
+  <Item name="LeaveHours" text="Leave hours" />
+  <Item name="NoPersonalAnnualShiftMsg" text="No shift table of the employee is found! Setup the employee's shift table first" />
+  <Item name="ResetLeaveDetailsHints" text="Do you want to reset your leave details" />
+  <Item name="ApproveOverDueHint" text="The holiday has been over 31 days,Can't be approved" />
+  <Item name="CancelOverDueHint" text="The holiday has been over 31 days,Can't be canceled" /> 
+  <Item name="AttendanceReport" text="Attendance Report" />
+  <Item name="ReportDetails" text="Attendance details" />
+  <Item name="ReportCount" text="Attendance statistics" />
+  <Item name="PleaseWait" text="Please Wait" />
+  <Item name="Loading" text="Loading" />
+  <Item name="CalculateAttendanceRecordsOnly" text="Calculate attendance record only" />
+  <Item name="CompanyBasicData" text="Company basic data" />
+  <Item name="CompanyName" text="Company Name" />
+  <Item name="OndutyTime" text="On Dutty" />
+  <Item name="OffdtuyTime" text="Off Dutty" />
+  <Item name="RestStartTime" text="Rest start" />
+  <Item name="RestEndTime" text="Rest end" />
+  <Item name="LateMinutes" text="Minutes late" />
+  <Item name="LeavEarlyMinutes" text="Leave early minutes" />
+  <Item name="Attendancehours" text="Attendance hours" />
+  <Item name="Absenthours" text="Absent hours" />
+  <Item name="OverTimehours" text="Overtime hours" />
+  <Item name="TotalText" text="Total" />
+  <Item name="ReReadTransactions" text="Re-Read Transactions" />
+  <Item name="SaveSucceeds" text="Save Succeeds" />
+  <Item name="ExportDataMannual" text="Export datas" />
+  <Item name="StartDate" text="Start date" />
+  <Item name="EndDate" text="End date" />
+  <Item name="EndDate" text="End date" />
+  <Item name="ExportSucceeds" text="Export Succeeds" />
+  <Item name="CalendarSetting2DaysWeekend" text="Two-day Weekend" />
+  <Item name="CalendarSettingNosWeekend" text="Restless Year Round" />
+  <Item name="ToolBarChangeCardId" text="Change Card ID" />
+  <Item name="NewCardIdText" text="New Card ID" />
+  <Item name="ChageCardIdOk" text="Change Card ID succeeds" />
+  <Item name="ChageCardIdFailed" text="Change Card ID failed" />
+  <Item name="DisableSync" text="Disable Synchronization" />
+  <Item name="SyncSettings" text="Synchronization Setup" />
+  <Item name="ChangeLanguage" text="Change Language" />
+  <Item name="PhotosText" text="Photo" />
+  <Item name="ToolBarDailyReport" text="Daily Report" />
+  <Item name="ToolBarMonthlyReport" text="Monthly Report" />
+  <Item name="YearLen" text="Length of year" />
+  <Item name="FixedText" text="Fixed Text" />
+  <Item name="DeviceMenuPwd" text="Menu Password" />
+  <Item name="DeviceWorkMode" text="Device Work Mode" />
+  <Item name="DeviceLanguage" text="Device Language" />
+  <Item name="LanguageCN" text="Simplified Chinese" />
+  <Item name="LanguageTW" text="Traditional Chinese" />
+  <Item name="LanguageEnglish" text="English" />
+  <Item name="LanguageItalian" text="Italian" />
+  <Item name="LanguageSpanish" text="Spanish" />
+  <Item name="LanguagePortuguese" text="Portuguese" />
+  <Item name="LanguageThai" text="Thai" />
+  <Item name="LanguageBrazilian" text="Brazilian" />
+  <Item name="LanguageCorean" text="Corean" />
+  <Item name="DeviceParaSetting" text="Device Parameters Setting" />
+  <Item name="SetDevicePara" text="Set" />
+  <Item name="SetDeviceAllPara" text="Set All" />
+  <Item name="ToolBarMonthlySimplifiedReport" text="Simplified Report"/>
+  <Item name="AdministratorsId" text="Administrators ID"/>
+  <Item name="AdministratorsName" text="Administrators Name"/>
+  <Item name="ToolBarDatabaseMaintenance" text="Database Maintenance"/>
+  <Item name="DatabaseBackup" text="Database backup"/>
+  <Item name="DatabaseRestore" text="Database restore"/>
+  <Item name="DatabaseDelRecords" text="Delete attendance records"/>
+  <Item name="DBMBackup" text="Backup"/>
+  <Item name="DBMRestore" text="Restore"/>
+  <Item name="DBMDelRecords" text="Delete records"/>
+  <Item name="DBMBackupSucceeds" text="Backup succeeds"/>
+  <Item name="DBMBackupFailed" text="Backup failed"/>
+  <Item name="DBMRestoreSucceeds" text="Restore succeeds"/>
+  <Item name="DBMRestoreFailed" text="Restore failed"/>
+  <Item name="DBMDleRecordsSucceeds" text="Delete records succeeds"/>
+  <Item name="DBMDleRecordsFailed"  text="Delete records failed"/>
+  <Item name="ToolBarSetDoorPin"  text="Open Password"/>
+  <Item name="ToolBarOpenDoor"  text= "Open Door"/>
+  <Item name="ToolBarSetDoorPin"  text="Open Door Password"/>
+  <Item name="PIN1GroupName"  text="PIN 1"/>
+  <Item name="PIN2GroupName"  text="PIN 2"/>
+  <Item name="PINName"  text="Name"/>
+  <Item name="PINStartHour"  text="Start Hour"/>
+  <Item name="PINStartMin"  text="Start Minute"/>
+  <Item name="PINEndHour"  text="End Hour"/>
+  <Item name="PINEndMin"  text="End Minute"/>
+  <Item name="PINValue"  text="Password"/>
+  <Item name="FileExtension"  text="File extension"/>
+  <Item name="CardIdLen"  text="Card ID length"/>
+  <Item name="TileText"  text="Title"/>
+  <Item name="FixedExportFileName"  text="Fixed export file name"/>
+  <Item name="LiftController"  text="Elevator Controller"/>
+  <Item name="EleavatorID"  text="Eleavator ID"/>
+  <Item name="EleavatorName"  text="Eleavator Name"/>
+  <Item name="EleavatorDes"  text="Description"/>
+  <Item name="NewElevator"  text="New Elevator"/>
+  <Item name="ElevatorAuthority"  text="Elevator Authority"/>
+  <Item name="NewElevatorOk"  text="New elevator succeeds"/>
+  <Item name="NewElevatorFailed"  text="New elevator failed"/>
+  <Item name="ModifyElevatorOk"  text="Modify elevator succeeds"/>
+  <Item name="ModifyElevatorFailed"  text="Modify elevator failed"/>
+  <Item name="DeleteElevatorOk"  text="Delete elevator succeeds"/>
+  <Item name="DeleteElevatorFailed"  text="Delete elevator failed"/>
+  <Item name="ExitedElevatorController"  text="The elevator controller already exists"/>
+  <Item name="ElevatorControlAuthority"  text="Lift control rights"/>
+  <Item name="ApplyText"  text="Apply"/>
+  <Item name="SetElevatorControlAuthorityFailed"  text="Setting elevator authority failed"/>
+  <Item name="SetElevatorControlAuthorityOk"  text="Setting elevator authority succeeds"/>
+  <Item name="ToolBarImportEmployeesPhotos"  text="Import Employees Photos"/>
+  <Item name="ImportEmployeesPhotosFailed"  text="Import employees photos failed"/>
+  <Item name="ImportEmployeesPhotosOk"  text="Import employees photos succeeds"/>
+  <Item name="ToolBarResyncAcParas"  text="Resync access control parameters"/>
+  <Item name="ResyncAcParasFailed"  text="Resync access control parameters failed"/>
+  <Item name="ResyncAcParasOk"  text="Resync access control parameters succeeds"/>
+
+  <Item name="ToolBarFlexShiftReport"  text="Flex Shift Report"/>
+  <Item name="WorkingHours"  text="WorkingHrs"/>
+</Resource>

@@ -1,0 +1,1463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{007737B8-D7F6-4BC1-9818-8AC25E7F685C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KCS</RootNamespace>
+    <AssemblyName>KACS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>G:\Deploy\KCS\IDCOM\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.1.5.4</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2C3FECFBD715742513ED5AF02B9C1D194FA049D4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>KCS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.6\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1.UI, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DevAV.v17.1.Data, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Drawing, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.SpellChecker.v17.1.Core, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Core.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Extensions, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Export, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Core, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Reporting.Extensions, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Extensions, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpellChecker.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.2.0.246, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.2.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LINQtoCSV">
+      <HintPath>.\LINQtoCSV.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="NPOI, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.1\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.1\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.1\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.1\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationClientsideProviders" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ComboxLang.cs" />
+    <Compile Include="Extensions\DataBasedExtension.cs" />
+    <Compile Include="Form\FormDatabaseMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormDatabaseMaintenance.Designer.cs">
+      <DependentUpon>FormDatabaseMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormLangSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormLangSelect.Designer.cs">
+      <DependentUpon>FormLangSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormSyncSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormSyncSet.Designer.cs">
+      <DependentUpon>FormSyncSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ApplicationLogEntity.cs" />
+    <Compile Include="Models\BusinessEntities\AnnulaCalendar.cs" />
+    <Compile Include="Models\BusinessEntities\AttendanceReportDetails.cs" />
+    <Compile Include="Models\BusinessEntities\AttendanceReportFlexShift.cs" />
+    <Compile Include="Models\BusinessEntities\AttendanceReportSimplified.cs" />
+    <Compile Include="Models\BusinessEntities\CalendarSettings.cs" />
+    <Compile Include="Models\BusinessEntities\DeviceBase.cs" />
+    <Compile Include="Models\BusinessEntities\DoorPIN.cs" />
+    <Compile Include="Models\BusinessEntities\Elevator.cs" />
+    <Compile Include="Models\BusinessEntities\ElevatorController.cs" />
+    <Compile Include="Models\BusinessEntities\ElevatorCtlAuthority.cs" />
+    <Compile Include="Models\BusinessEntities\EmployeeMsg.cs" />
+    <Compile Include="Models\BusinessEntities\EmployeeTA_Data.cs" />
+    <Compile Include="Models\BusinessEntities\PerLeaveItem.cs" />
+    <Compile Include="Models\BusinessEntities\PerLeaveItemDetail.cs" />
+    <Compile Include="Models\BusinessEntities\PerShiftTableBase.cs" />
+    <Compile Include="Models\BusinessEntities\ReReadTransPara.cs" />
+    <Compile Include="Models\BusinessEntities\TrunWork.cs" />
+    <Compile Include="Models\BusinessEntities\TrunWorkBase.cs" />
+    <Compile Include="Models\BusinessEntities\WorkList.cs" />
+    <Compile Include="Models\Constants\DeviceLanguage.cs" />
+    <Compile Include="Models\Constants\DeviceWorkMode.cs" />
+    <Compile Include="Models\CreateTaDataBase.cs" />
+    <Compile Include="Common\DAL\Constants\DbAccessErrorCode.cs" />
+    <Compile Include="Common\DAL\Constants\DbAuthMode.cs" />
+    <Compile Include="Common\DAL\DataBase.cs" />
+    <Compile Include="Common\DAL\ExportData.cs" />
+    <Compile Include="Common\DAL\SystemConfigure.cs" />
+    <Compile Include="Common\DAL\KCSDatabaseHelper.cs" />
+    <Compile Include="Common\DAL\SQLDataProvider.cs" />
+    <Compile Include="Common\DAL\XmlHelper.cs" />
+    <Compile Include="Common\Utils\FtpHelper.cs" />
+    <Compile Include="Common\ImportDepartmentUser.cs" />
+    <Compile Include="Common\DAL\SyncDatabaseHelper.cs" />
+    <Compile Include="Common\Utils\DataAnnotationHelper.cs" />
+    <Compile Include="Common\Utils\DevExpressLocalizerHelper.cs" />
+    <Compile Include="Common\Utils\GridViewExtension.cs" />
+    <Compile Include="Common\Utils\LanguageResource.cs" />
+    <Compile Include="Common\Utils\LoginPwdCryption.cs" />
+    <Compile Include="Common\Utils\ModelConvertHelper.cs" />
+    <Compile Include="Common\Utils\NaviItemAttribute.cs" />
+    <Compile Include="Common\Utils\PopHintDialog.cs" />
+    <Compile Include="Common\Utils\ProcessTracker.cs" />
+    <Compile Include="Common\Utils\StartUpProcess.cs" />
+    <Compile Include="Common\ValidationAttributes.cs" />
+    <Compile Include="Controls\ColumnViewHelper.cs" />
+    <Compile Include="Controls\ComboxData.cs" />
+    <Compile Include="Controls\Helpers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\OverviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OverviewControl.Designer.cs">
+      <DependentUpon>OverviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RibbonLogoHelper.cs" />
+    <Compile Include="Controls\RibbonLogoHelper.Designer.cs">
+      <DependentUpon>RibbonLogoHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ExportTextSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ExportTextSet.Designer.cs">
+      <DependentUpon>ExportTextSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormDbServerSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormDbServerSet.Designer.cs">
+      <DependentUpon>FormDbServerSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormComman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormComman.Designer.cs">
+      <DependentUpon>FormComman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccessControlDataSource.cs" />
+    <Compile Include="Models\BusinessEntities\DeviceBrief.cs" />
+    <Compile Include="Models\BusinessEntities\DeviceCategory.cs" />
+    <Compile Include="Models\BusinessEntities\EmployeeSync.cs" />
+    <Compile Include="Models\BusinessEntities\EmployeeAuthrity.cs" />
+    <Compile Include="Models\BusinessEntities\RegDevice.cs" />
+    <Compile Include="Models\BusinessEntities\ReportParaSet.cs" />
+    <Compile Include="Models\BusinessEntities\TaHolidays.cs" />
+    <Compile Include="Models\BusinessEntities\UserWorkShift.cs" />
+    <Compile Include="Models\BusinessEntities\WorkCalendar.cs" />
+    <Compile Include="Models\BusinessEntities\WorkShift.cs" />
+    <Compile Include="Models\BusinessEntities\WorkShiftItem.cs" />
+    <Compile Include="Models\BusinessEntities\WorkShiftSetting.cs" />
+    <Compile Include="Models\BusinessEntities\EmployeeBrief.cs" />
+    <Compile Include="Models\ElevatorControlDataSource.cs" />
+    <Compile Include="Models\Interface\IDeviceCategory.cs" />
+    <Compile Include="Models\Interface\ITransactions.cs" />
+    <Compile Include="Models\BusinessEntities\Transactions.cs" />
+    <Compile Include="Models\BusinessEntities\JobCode.cs" />
+    <Compile Include="Models\Interface\IUserWorkShift.cs" />
+    <Compile Include="Models\BusinessEntities\TaLeaveType.cs" />
+    <Compile Include="Models\BusinessEntities\PerShiftTable.cs" />
+    <Compile Include="Models\TaDataSource.cs" />
+    <Compile Include="Models\BusinessEntities\TaTransaction.cs" />
+    <Compile Include="Models\TransactionDataSource.cs" />
+    <Compile Include="Models\UserWorkShiftDataSource.cs" />
+    <Compile Include="Models\BusinessEntities\VocationSetting.cs" />
+    <Compile Include="Models\BusinessEntities\Vocation.cs" />
+    <Compile Include="Models\WorkShiftDataSource.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportAttendanceDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportAttendanceDetails.Designer.cs">
+      <DependentUpon>XtraReportAttendanceDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportDailyAttendance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportDailyAttendance.Designer.cs">
+      <DependentUpon>XtraReportDailyAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportFlexShift.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportFlexShift.Designer.cs">
+      <DependentUpon>XtraReportFlexShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportSimplified.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportSimplified.Designer.cs">
+      <DependentUpon>XtraReportSimplified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ApplicationLogService.cs" />
+    <Compile Include="Sync\BridgeUtility.cs" />
+    <Compile Include="Sync\ClientOfServer.cs" />
+    <Compile Include="Sync\ClientResultFactory.cs" />
+    <Compile Include="Sync\MessageFactory.cs" />
+    <Compile Include="Sync\SyncClient.cs" />
+    <Compile Include="Models\BusinessEntities\SyncEntitys.cs" />
+    <Compile Include="Models\Interface\SyncInterface.cs" />
+    <Compile Include="Sync\SyncLogger.cs" />
+    <Compile Include="Sync\SyncManage.cs" />
+    <Compile Include="Sync\SyncMessages.cs" />
+    <Compile Include="Sync\SyncServer.cs" />
+    <Compile Include="Sync\Terminal.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusinessEntities\Administrator.cs" />
+    <Compile Include="Models\BusinessEntities\Devices.cs" />
+    <Compile Include="Models\BusinessEntities\EmployeesType.cs" />
+    <Compile Include="Models\Constants\EmployeeAuthority.cs" />
+    <Compile Include="Models\Constants\EmployeeClassification.cs" />
+    <Compile Include="Models\Constants\EmployeeStatus.cs" />
+    <Compile Include="Models\Constants\UserPermissionType.cs" />
+    <Compile Include="Models\Constants\UserPermissionTypeValue.cs" />
+    <Compile Include="Models\CredentialsSource.cs" />
+    <Compile Include="Models\BusinessEntities\Department.cs" />
+    <Compile Include="Models\BusinessEntities\Employees.cs" />
+    <Compile Include="Models\BusinessEntities\EmployeeSupervisor.cs" />
+    <Compile Include="Models\DatabaseObject.cs" />
+    <Compile Include="Models\BusinessEntities\DepartmentList.cs" />
+    <Compile Include="Models\DepartmentListSource.cs" />
+    <Compile Include="Models\DepartmentSource.cs" />
+    <Compile Include="Models\BusinessEntities\DeviceInfo.cs" />
+    <Compile Include="Models\DevicesDataSource.cs" />
+    <Compile Include="Models\EmployeesDataSource.cs" />
+    <Compile Include="Models\EmployeesTypeDataSource.cs" />
+    <Compile Include="Models\BusinessEntities\EmployeesTypeFiled.cs" />
+    <Compile Include="Models\IDataErrorInfoHelper.cs" />
+    <Compile Include="Models\Interface\IEmployee.cs" />
+    <Compile Include="Models\Interface\IDepartment.cs" />
+    <Compile Include="Models\BusinessEntities\LoginAdmin.cs" />
+    <Compile Include="Models\SupervisorDataSource.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ModuleActivator.cs" />
+    <Compile Include="Services\ModuleLocator.cs" />
+    <Compile Include="Services\ModuleResourceProvider.cs" />
+    <Compile Include="Services\ModuleTypesResolver.cs" />
+    <Compile Include="Services\TransitionService.cs" />
+    <Compile Include="Services\WaitingService.cs" />
+    <Compile Include="Services\WorkspaceService.cs" />
+    <Compile Include="SocketLibrary\Base\NetBaseClient.cs" />
+    <Compile Include="SocketLibrary\Base\NetBasePayloadStream.cs" />
+    <Compile Include="SocketLibrary\Base\NetBaseServer.cs" />
+    <Compile Include="SocketLibrary\Base\NetBaseStream.cs" />
+    <Compile Include="SocketLibrary\Events\Client.cs" />
+    <Compile Include="SocketLibrary\Events\Enums.cs" />
+    <Compile Include="SocketLibrary\Events\Server.cs" />
+    <Compile Include="SocketLibrary\Events\Stream.cs" />
+    <Compile Include="SocketLibrary\NetApp\NetClient.cs" />
+    <Compile Include="SocketLibrary\NetApp\NetServer.cs" />
+    <Compile Include="SocketLibrary\NetApp\NetStream.cs" />
+    <Compile Include="SocketLibrary\NetUtility.cs" />
+    <Compile Include="SocketLibrary\Object\NetObject.cs" />
+    <Compile Include="SocketLibrary\Object\NetObjectClient.cs" />
+    <Compile Include="SocketLibrary\Object\NetObjectServer.cs" />
+    <Compile Include="SocketLibrary\Object\NetObjectStream.cs" />
+    <Compile Include="SplashScreenKCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreenKCS.Designer.cs">
+      <DependentUpon>SplashScreenKCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Access Control\AccessControlManageViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\AttendanceReportSetViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\AnnualCalendarPrintViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\AttendanceReportMultiWorkShiftViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\AttendanceReportWeeklyViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\AttendanceReportWorkCalendarViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\AttendanceStatusSettingViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\AttendanceStatusSheetViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\CalendarSettingsViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\CalendarEditViewModel.cs" />
+    <Compile Include="ViewModels\ElevatorController\ElevatorAuthorityViewModel.cs" />
+    <Compile Include="ViewModels\ElevatorController\ElevatorEditViewModel.cs" />
+    <Compile Include="Views\Device\DeviceSettingManageViewModel.cs" />
+    <Compile Include="Views\ElevatorController\ElevatorAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ElevatorController\ElevatorAdd.Designer.cs">
+      <DependentUpon>ElevatorAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ElevatorController\ElevatorAddViewModel.cs" />
+    <Compile Include="Views\ElevatorController\ElevatorAuthority.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ElevatorController\ElevatorAuthority.Designer.cs">
+      <DependentUpon>ElevatorAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ElevatorController\ElevatorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ElevatorController\ElevatorControl.Designer.cs">
+      <DependentUpon>ElevatorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ElevatorController\ElevatorControlViewModel.cs" />
+    <Compile Include="ViewModels\Employees\ChangeCardIDViewModel.cs" />
+    <Compile Include="ViewModels\CollectionViewFiltersVisibility.cs" />
+    <Compile Include="ViewModels\Attendance\CreatCalendarViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\CreatePersonalShiftTableViewModel.cs" />
+    <Compile Include="ViewModels\Department\DepartmentSetViewModel.cs" />
+    <Compile Include="ViewModels\Device\DeviceEditViewModel.cs" />
+    <Compile Include="ViewModels\Device\DeviceSyncSettingViewModel.cs" />
+    <Compile Include="ViewModels\Device\DeviceCategoryViewModel.cs" />
+    <Compile Include="ViewModels\Device\DeviceSettingManageViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\EditWorkShiftViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\EditPersonalShiftTableViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeesAuthorityViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeJobCodecsViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EditEmployeeViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeWeeklyViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeWorkCalendarMonthlyMultiUsersViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeWorkCalendarMonthlyViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeTypeSetViewModel.cs" />
+    <Compile Include="ViewModels\Employees\ExportEmployeesViewModel.cs" />
+    <Compile Include="ViewModels\Device\FindDeviceViewModel.cs" />
+    <Compile Include="ViewModels\ExportDatasViewModel.cs" />
+    <Compile Include="ViewModels\Helpers.cs" />
+    <Compile Include="ViewModels\Employees\ImportEmployeesViewModel.cs" />
+    <Compile Include="ViewModels\Access Control\HolidaySetViewModel.cs" />
+    <Compile Include="ViewModels\Interfaces.cs" />
+    <Compile Include="ViewModels\Attendance\JustificationLeaveApplicationViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\LeaveTypeViewModel.cs" />
+    <Compile Include="ViewModels\KcsDocument.cs" />
+    <Compile Include="ViewModels\Login\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\Messages.cs" />
+    <Compile Include="ViewModels\Employees\NewEmployeeViewModel.cs" />
+    <Compile Include="ViewModels\Device\NewDeviceViewModel.cs" />
+    <Compile Include="ViewModels\ProductReportType.cs" />
+    <Compile Include="ViewModels\ReadTransAgainViewModel.cs" />
+    <Compile Include="ViewModels\SetAdminViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\ShiftTableCategoryViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\ShiftTableEditViewModel.cs" />
+    <Compile Include="ViewModels\Supervisor\SupervisorEditViewModel.cs" />
+    <Compile Include="ViewModels\Supervisor\SupervisorNewViewModel.cs" />
+    <Compile Include="ViewModels\Supervisor\SupervisorRestPinViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\TimeAttendanceManageViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\TransactionAddViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\TransactionModifyViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\TransactionsReportViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\WorkShiftManagementViewModel.cs" />
+    <Compile Include="ViewModels\Employees\SyncSettingViewModel.cs" />
+    <Compile Include="ViewModels\Access Control\TimeSetViewModel.cs" />
+    <Compile Include="ViewModels\Access Control\TimeZoneViewModel.cs" />
+    <Compile Include="ViewModels\Access Control\UserGroupSetViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\TaHolidaySettingViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\VocationInsertViewModel.cs" />
+    <Compile Include="ViewModels\Attendance\VocationEditViewModel.cs" />
+    <Compile Include="Views\Access Control\AccessControlManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Access Control\AccessControlManage.Designer.cs">
+      <DependentUpon>AccessControlManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Access Control\HolidaySetEventArgs.cs" />
+    <Compile Include="Views\Attendance\AttendanceReportSetView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\AttendanceReportSetView.Designer.cs">
+      <DependentUpon>AttendanceReportSetView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\AnnualCalendarPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\AnnualCalendarPrint.Designer.cs">
+      <DependentUpon>AnnualCalendarPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\AttendanceReportMultiWorkShift.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\AttendanceReportMultiWorkShift.Designer.cs">
+      <DependentUpon>AttendanceReportMultiWorkShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\AttendanceReportWeekly.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\AttendanceReportWeekly.Designer.cs">
+      <DependentUpon>AttendanceReportWeekly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\AttendanceReportWorkCalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\AttendanceReportWorkCalendar.Designer.cs">
+      <DependentUpon>AttendanceReportWorkCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\AttendanceStatusSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\AttendanceStatusSetting.Designer.cs">
+      <DependentUpon>AttendanceStatusSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\AttendanceStatusSheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\AttendanceStatusSheet.Designer.cs">
+      <DependentUpon>AttendanceStatusSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\TaHolidaySetEventArgs.cs" />
+    <Compile Include="Views\Attendance\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BaseView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\CreateCalendarSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\CreateCalendarSettings.Designer.cs">
+      <DependentUpon>CreateCalendarSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\CreatCalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\CreatCalendar.Designer.cs">
+      <DependentUpon>CreatCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\CalendarEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\CalendarEdit.Designer.cs">
+      <DependentUpon>CalendarEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\CreatePersonalShiftTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\CreatePersonalShiftTable.Designer.cs">
+      <DependentUpon>CreatePersonalShiftTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\SetOpenDoorPin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Device\SetOpenDoorPin.Designer.cs">
+      <DependentUpon>SetOpenDoorPin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Device\SetOpenDoorPinViewModel.cs" />
+    <Compile Include="Views\ElevatorController\ElevatorEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ElevatorController\ElevatorEdit.Designer.cs">
+      <DependentUpon>ElevatorEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ElevatorController\ShowElevatorAuthority.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ElevatorController\ShowElevatorAuthority.Designer.cs">
+      <DependentUpon>ShowElevatorAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ElevatorController\ShowElevatorAuthorityViewModel.cs" />
+    <Compile Include="Views\Employees\ChangeCardID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\ChangeCardID.Designer.cs">
+      <DependentUpon>ChangeCardID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Department\DepartmentSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Department\DepartmentSet.Designer.cs">
+      <DependentUpon>DepartmentSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\DeviceEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Device\DeviceEdit.Designer.cs">
+      <DependentUpon>DeviceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\DeviceSyncSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Device\DeviceSyncSetting.Designer.cs">
+      <DependentUpon>DeviceSyncSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\DeviceCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Device\DeviceCategory.Designer.cs">
+      <DependentUpon>DeviceCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\DeviceSettingManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Device\DeviceSettingManage.Designer.cs">
+      <DependentUpon>DeviceSettingManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\EditWorkShift.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\EditWorkShift.Designer.cs">
+      <DependentUpon>EditWorkShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\EditPersonalShiftTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\EditPersonalShiftTable.Designer.cs">
+      <DependentUpon>EditPersonalShiftTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employees\CreateMonthlyShift.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\CreateMonthlyShift.Designer.cs">
+      <DependentUpon>CreateMonthlyShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Employees\CreateMonthlyShiftViewModel.cs" />
+    <Compile Include="Views\Employees\EmployeesAuthority.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\EmployeesAuthority.Designer.cs">
+      <DependentUpon>EmployeesAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employees\EmployeeJobCodecs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\EmployeeJobCodecs.Designer.cs">
+      <DependentUpon>EmployeeJobCodecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employees\EditEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\EditEmployee.Designer.cs">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employees\EmployeesManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\EmployeesManage.Designer.cs">
+      <DependentUpon>EmployeesManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employees\EmployeeWeekly.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\EmployeeWeekly.Designer.cs">
+      <DependentUpon>EmployeeWeekly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employees\EmployeeWorkCalendarMonthly.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\EmployeeWorkCalendarMonthly.Designer.cs">
+      <DependentUpon>EmployeeWorkCalendarMonthly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employees\EmployeeWorkCalendarMonthlyMultiUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\EmployeeWorkCalendarMonthlyMultiUsers.Designer.cs">
+      <DependentUpon>EmployeeWorkCalendarMonthlyMultiUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employees\EmployeeTypeSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\EmployeeTypeSet.Designer.cs">
+      <DependentUpon>EmployeeTypeSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employees\ExportEmployees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\ExportEmployees.Designer.cs">
+      <DependentUpon>ExportEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employees\ImportEmployees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\ImportEmployees.Designer.cs">
+      <DependentUpon>ImportEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Access Control\HolidaySet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Access Control\HolidaySet.Designer.cs">
+      <DependentUpon>HolidaySet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\FindDevice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Device\FindDevice.Designer.cs">
+      <DependentUpon>FindDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExportDatas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ExportDatas.Designer.cs">
+      <DependentUpon>ExportDatas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Interfaces.cs" />
+    <Compile Include="Views\Attendance\JustificationLeaveApplication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\JustificationLeaveApplication.Designer.cs">
+      <DependentUpon>JustificationLeaveApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\LeaveType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\LeaveType.Designer.cs">
+      <DependentUpon>LeaveType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employees\NewEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\NewEmployee.Designer.cs">
+      <DependentUpon>NewEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\NewDevice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Device\NewDevice.Designer.cs">
+      <DependentUpon>NewDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Access Control\NewHoliday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Access Control\NewHoliday.Designer.cs">
+      <DependentUpon>NewHoliday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReadTransAgain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ReadTransAgain.Designer.cs">
+      <DependentUpon>ReadTransAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SetAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SetAdmin.Designer.cs">
+      <DependentUpon>SetAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\ShiftTableCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\ShiftTableCategory.Designer.cs">
+      <DependentUpon>ShiftTableCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\ShiftTableEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\ShiftTableEdit.Designer.cs">
+      <DependentUpon>ShiftTableEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\SetDeviceParameters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Device\SetDeviceParameters.Designer.cs">
+      <DependentUpon>SetDeviceParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Device\SetDeviceParametersViewModel.cs" />
+    <Compile Include="Views\Supervisor\SupervisorNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Supervisor\SupervisorNew.Designer.cs">
+      <DependentUpon>SupervisorNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Supervisor\SupervisorRestPin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Supervisor\SupervisorRestPin.Designer.cs">
+      <DependentUpon>SupervisorRestPin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Supervisor\SupervisorEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Supervisor\SupervisorEdit.Designer.cs">
+      <DependentUpon>SupervisorEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Supervisor\SupervisorManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Supervisor\SupervisorManage.Designer.cs">
+      <DependentUpon>SupervisorManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Supervisor\SupervisorViewModel.cs" />
+    <Compile Include="Views\Attendance\TimeAttendanceManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\TimeAttendanceManage.Designer.cs">
+      <DependentUpon>TimeAttendanceManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\TransactionAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\TransactionAdd.Designer.cs">
+      <DependentUpon>TransactionAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\TransactionModify.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\TransactionModify.Designer.cs">
+      <DependentUpon>TransactionModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\TransactionsReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\TransactionsReport.Designer.cs">
+      <DependentUpon>TransactionsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\WorkShiftManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\WorkShiftManagement.Designer.cs">
+      <DependentUpon>WorkShiftManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employees\SyncSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\SyncSetting.Designer.cs">
+      <DependentUpon>SyncSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Access Control\TimeSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Access Control\TimeSet.Designer.cs">
+      <DependentUpon>TimeSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Access Control\TimeZone.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Access Control\TimeZone.Designer.cs">
+      <DependentUpon>TimeZone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Access Control\UserGroupSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Access Control\UserGroupSet.Designer.cs">
+      <DependentUpon>UserGroupSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\TaHolidaySetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\TaHolidaySetting.Designer.cs">
+      <DependentUpon>TaHolidaySetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\VocationInsert.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\VocationInsert.Designer.cs">
+      <DependentUpon>VocationInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance\VocationEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\VocationEdit.Designer.cs">
+      <DependentUpon>VocationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportAnnualCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportAnnualCalendar.Designer.cs">
+      <DependentUpon>XtraReportAnnualCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormCompanyData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraFormCompanyData.Designer.cs">
+      <DependentUpon>XtraFormCompanyData.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\OverviewControl.resx">
+      <DependentUpon>OverviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ExportTextSet.resx">
+      <DependentUpon>ExportTextSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormDatabaseMaintenance.resx">
+      <DependentUpon>FormDatabaseMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormDbServerSet.resx">
+      <DependentUpon>FormDbServerSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormComman.resx">
+      <DependentUpon>FormComman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormLangSelect.resx">
+      <DependentUpon>FormLangSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormSyncSet.resx">
+      <DependentUpon>FormSyncSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportAnnualCalendar.resx">
+      <DependentUpon>XtraReportAnnualCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportAttendanceDetails.resx">
+      <DependentUpon>XtraReportAttendanceDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportDailyAttendance.resx">
+      <DependentUpon>XtraReportDailyAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportFlexShift.resx">
+      <DependentUpon>XtraReportFlexShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportSimplified.resx">
+      <DependentUpon>XtraReportSimplified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreenKCS.resx">
+      <DependentUpon>SplashScreenKCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Access Control\AccessControlManage.resx">
+      <DependentUpon>AccessControlManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Access Control\HolidaySet.resx">
+      <DependentUpon>HolidaySet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Access Control\TimeSet.resx">
+      <DependentUpon>TimeSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Access Control\TimeZone.resx">
+      <DependentUpon>TimeZone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Access Control\UserGroupSet.resx">
+      <DependentUpon>UserGroupSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\AnnualCalendarPrint.resx">
+      <DependentUpon>AnnualCalendarPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\AttendanceReportMultiWorkShift.resx">
+      <DependentUpon>AttendanceReportMultiWorkShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\AttendanceReportSetView.resx">
+      <DependentUpon>AttendanceReportSetView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\AttendanceReportWeekly.resx">
+      <DependentUpon>AttendanceReportWeekly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\AttendanceReportWorkCalendar.resx">
+      <DependentUpon>AttendanceReportWorkCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\AttendanceStatusSetting.resx">
+      <DependentUpon>AttendanceStatusSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\AttendanceStatusSheet.resx">
+      <DependentUpon>AttendanceStatusSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\CalendarEdit.resx">
+      <DependentUpon>CalendarEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\CreateCalendarSettings.resx">
+      <DependentUpon>CreateCalendarSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\CreatCalendar.resx">
+      <DependentUpon>CreatCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\CreatePersonalShiftTable.resx">
+      <DependentUpon>CreatePersonalShiftTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\EditPersonalShiftTable.resx">
+      <DependentUpon>EditPersonalShiftTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\EditWorkShift.resx">
+      <DependentUpon>EditWorkShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\ShiftTableCategory.resx">
+      <DependentUpon>ShiftTableCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\ShiftTableEdit.resx">
+      <DependentUpon>ShiftTableEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\TaHolidaySetting.resx">
+      <DependentUpon>TaHolidaySetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\VocationEdit.resx">
+      <DependentUpon>VocationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\VocationInsert.resx">
+      <DependentUpon>VocationInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Department\DepartmentSet.resx">
+      <DependentUpon>DepartmentSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Device\DeviceCategory.resx">
+      <DependentUpon>DeviceCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Device\DeviceEdit.resx">
+      <DependentUpon>DeviceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Device\DeviceSettingManage.resx">
+      <DependentUpon>DeviceSettingManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Device\DeviceSyncSetting.resx">
+      <DependentUpon>DeviceSyncSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Device\FindDevice.resx">
+      <DependentUpon>FindDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Device\NewDevice.resx">
+      <DependentUpon>NewDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Device\SetDeviceParameters.resx">
+      <DependentUpon>SetDeviceParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Device\SetOpenDoorPin.resx">
+      <DependentUpon>SetOpenDoorPin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ElevatorController\ElevatorAdd.resx">
+      <DependentUpon>ElevatorAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ElevatorController\ElevatorAuthority.resx">
+      <DependentUpon>ElevatorAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ElevatorController\ElevatorControl.resx">
+      <DependentUpon>ElevatorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ElevatorController\ElevatorEdit.resx">
+      <DependentUpon>ElevatorEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ElevatorController\ShowElevatorAuthority.resx">
+      <DependentUpon>ShowElevatorAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\ChangeCardID.resx">
+      <DependentUpon>ChangeCardID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\CreateMonthlyShift.resx">
+      <DependentUpon>CreateMonthlyShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\EditEmployee.resx">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\EmployeeJobCodecs.resx">
+      <DependentUpon>EmployeeJobCodecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\EmployeesAuthority.resx">
+      <DependentUpon>EmployeesAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\EmployeesManage.resx">
+      <DependentUpon>EmployeesManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\EmployeeWeekly.resx">
+      <DependentUpon>EmployeeWeekly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\EmployeeWorkCalendarMonthly.resx">
+      <DependentUpon>EmployeeWorkCalendarMonthly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\EmployeeWorkCalendarMonthlyMultiUsers.resx">
+      <DependentUpon>EmployeeWorkCalendarMonthlyMultiUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\JustificationLeaveApplication.resx">
+      <DependentUpon>JustificationLeaveApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\ExportEmployees.resx">
+      <DependentUpon>ExportEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\ImportEmployees.resx">
+      <DependentUpon>ImportEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\NewEmployee.resx">
+      <DependentUpon>NewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\EmployeeTypeSet.resx">
+      <DependentUpon>EmployeeTypeSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\SyncSetting.resx">
+      <DependentUpon>SyncSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\LeaveType.resx">
+      <DependentUpon>LeaveType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Access Control\NewHoliday.resx">
+      <DependentUpon>NewHoliday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExportDatas.resx">
+      <DependentUpon>ExportDatas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReadTransAgain.resx">
+      <DependentUpon>ReadTransAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SetAdmin.resx">
+      <DependentUpon>SetAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Supervisor\SupervisorNew.resx">
+      <DependentUpon>SupervisorNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Supervisor\SupervisorEdit.resx">
+      <DependentUpon>SupervisorEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Supervisor\SupervisorManage.resx">
+      <DependentUpon>SupervisorManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Supervisor\SupervisorRestPin.resx">
+      <DependentUpon>SupervisorRestPin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\TimeAttendanceManage.resx">
+      <DependentUpon>TimeAttendanceManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\TransactionAdd.resx">
+      <DependentUpon>TransactionAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\TransactionModify.resx">
+      <DependentUpon>TransactionModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\TransactionsReport.resx">
+      <DependentUpon>TransactionsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance\WorkShiftManagement.resx">
+      <DependentUpon>WorkShiftManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormCompanyData.resx">
+      <DependentUpon>XtraFormCompanyData.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="KCS_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\KCS.Models.AcTimeSet.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.AcTimeZone.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.AcUserGroupSet.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.Administrator.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.AnnulaCalendar.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.AttendanceReportDetails.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.AttendanceReportSimplified.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.Department.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.DepartmentList.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.DeviceBase.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.DeviceBrief.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.DeviceCategory.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.DeviceInfo.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.Devices.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.DoorPIN.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.Elevator.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.ElevatorAuthority.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.ElevatorController.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.ElevatorCtlAuthority.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.EmployeeAuthority.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.EmployeeAuthritySync.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.EmployeeBrief.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.EmployeeJobCode.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.EmployeeMsg.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.EmployeeNormal.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.Employees.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.EmployeesType.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.EmployeesTypeFiled.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.EmployeeSupervisor.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.EmployeeSync.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.LoginAdmin.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.PerLeaveItem.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.PerLeaveItemDetail.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.PerShiftTable.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.RegDevice.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.SlaveCategory.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.TaHolidays.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.TaLeaveType.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.TaTransaction.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.Transactions.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.TrunWork.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.TrunWorkBase.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.UserWorkShift.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.VocationSetting.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.WorkCalendar.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.WorkList.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.WorkShift.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.WorkShiftItem.datasource" />
+    <None Include="Properties\DataSources\KCS.ViewModels.EmployeesAuthorityViewModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KCS_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-new-employee-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-delete-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-delete-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-device-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-edit-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-edit-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-new-employee-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-new-group-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-new-group-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-shift-16 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-shift-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-new-admin-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-new-admin-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ResetKey-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ResetKey-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-setting-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-setting-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Login\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppIcon.ico" />
+    <Content Include="AppLangConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\replicated.png" />
+    <None Include="Resources\Device-type-16.png" />
+    <None Include="Resources\Device-type-32.png" />
+    <None Include="Resources\Employees\Del-finger1-16.png" />
+    <None Include="Resources\Employees\Del-finger1-32.png" />
+    <None Include="Resources\Employees\Del-finger2-16.png" />
+    <None Include="Resources\Employees\Del-finger2-32.png" />
+    <None Include="Resources\Employees\Del-finger12-16.png" />
+    <None Include="Resources\Employees\Del-finger12-32.png" />
+    <None Include="Resources\Employees\Disable-user-16.png" />
+    <None Include="Resources\Employees\Disable-user-32.png" />
+    <None Include="Resources\Employees\Import-Users-16.png" />
+    <None Include="Resources\Employees\Import-Users-32.png" />
+    <None Include="Resources\Employees\set-AC-para-16.png" />
+    <None Include="Resources\Employees\set-AC-para-32.png" />
+    <None Include="Resources\Employees\StopSync-16.png" />
+    <None Include="Resources\Employees\StopSync-32.png" />
+    <None Include="Resources\Employees\Export-user-16.png" />
+    <None Include="Resources\Employees\Export-user-32.png" />
+    <None Include="Resources\Employees\force-delete-16.png" />
+    <None Include="Resources\Employees\force-delete-32.png" />
+    <None Include="Resources\Employees\sync-setting-16.png" />
+    <None Include="Resources\Employees\sync-setting-32.png" />
+    <None Include="Resources\Employees\Enable-user-16.png" />
+    <None Include="Resources\Employees\Enable-user-32.png" />
+    <None Include="Resources\finger-sync.png" />
+    <None Include="Resources\Device\Add-device-16.png" />
+    <None Include="Resources\Device\Add-device-32.png" />
+    <None Include="Resources\Device\Del-device-16.png" />
+    <None Include="Resources\Device\Del-device-32.png" />
+    <None Include="Resources\Access control\Holiday-set-16.png" />
+    <None Include="Resources\Access control\Holiday-set-32.png" />
+    <None Include="Resources\Access control\timeset-16.png" />
+    <None Include="Resources\Access control\timeset-32.png" />
+    <None Include="Resources\Access control\timezone-16.png" />
+    <None Include="Resources\Access control\timezone-32.png" />
+    <None Include="Resources\Attendance\Leave-category-16.png" />
+    <None Include="Resources\Attendance\Leave-category-32.png" />
+    <None Include="Resources\Attendance\Vacation-setting-16.png" />
+    <None Include="Resources\Attendance\Vacation-setting-32.png" />
+    <None Include="Resources\Attendance\Add-Trans-16.png" />
+    <None Include="Resources\Attendance\Add-Trans-32.png" />
+    <None Include="Resources\Attendance\Modify-Trans-16.png" />
+    <None Include="Resources\Attendance\Modify-Trans-32.png" />
+    <None Include="Resources\Attendance\search_02.png" />
+    <None Include="Resources\Attendance\Leave-Mgr-16.jpg" />
+    <None Include="Resources\Attendance\Leave-Mgr-32.jpg" />
+    <None Include="Resources\Attendance\Cancel.png" />
+    <None Include="Resources\Attendance\Confirm.png" />
+    <None Include="Resources\Attendance\Edit.png" />
+    <None Include="Resources\Attendance\chart_16.png" />
+    <None Include="Resources\Attendance\chart_32.png" />
+    <None Include="Resources\Attendance\time-report16.png" />
+    <None Include="Resources\Attendance\time-report32.png" />
+    <None Include="Resources\AppIcon1.ico" />
+    <None Include="Resources\AppIcon_Kizone.ico" />
+    <Content Include="Resources\Device\device-disable.png" />
+    <None Include="Resources\Device\device-net-test-16.png" />
+    <None Include="Resources\Device\device-net-test-32.png" />
+    <Content Include="Resources\Device\device-offline.png" />
+    <Content Include="Resources\Device\device-online.gif" />
+    <None Include="Resources\Device\Enable-device-16.png" />
+    <None Include="Resources\Device\Enable-device-32.png" />
+    <None Include="Resources\Device\Disable-device-16.png" />
+    <None Include="Resources\Device\disable-device-32.png" />
+    <None Include="Resources\Device\Reset-devce-32.png" />
+    <None Include="Resources\Device\Reset-devce-16.png" />
+    <None Include="Resources\Device\Device-sync-setting-16.png" />
+    <None Include="Resources\Device\Device-sync-setting-32.png" />
+    <None Include="Resources\Employees\JobCode-16.png" />
+    <None Include="Resources\Employees\JobCode-32.png" />
+    <None Include="Resources\Device\Reboot-device-16.png" />
+    <None Include="Resources\Device\Reboot-device-32.png" />
+    <None Include="Resources\export-TXT-16.png" />
+    <None Include="Resources\export-TXT-32.png" />
+    <None Include="Resources\Employees\create-monthly-shift-16.png" />
+    <None Include="Resources\Employees\create-monthly-shift-32.png" />
+    <None Include="Resources\icon-about-16.png" />
+    <None Include="Resources\icon-about-32.png" />
+    <None Include="Resources\Employees\ChangeCardId_16.png" />
+    <None Include="Resources\Employees\ChangeCardId_32.png" />
+    <None Include="Resources\Device\SetDev_Para16.png" />
+    <None Include="Resources\Device\SetDev_Para32.png" />
+    <None Include="Resources\Device\OpenDoor.png" />
+    <None Include="Resources\Device\OpenDoor_64.png" />
+    <None Include="Resources\Elevator-control-32.png" />
+    <None Include="Resources\Elevator-control-64.png" />
+    <None Include="Resources\Elevator-add-32.png" />
+    <None Include="Resources\Elevator-add-64.png" />
+    <None Include="Resources\Elevator-authority-32.png" />
+    <None Include="Resources\Elevator-authority-64.png" />
+    <Content Include="Resources\icon_check.png" />
+    <None Include="Resources\Import photos _64x64.png" />
+    <None Include="Resources\Import-photos_32x32.png" />
+    <None Include="Resources\KCS_logo2.bmp" />
+    <None Include="Resources\KCS_logo_IDCOM.png" />
+    <None Include="Resources\KCS_logo3.png" />
+    <None Include="Resources\KCS_logo_Kizone.png" />
+    <Content Include="Resources\Language\AppLangResource_EN.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\search-32.png" />
+    <None Include="Resources\search-16.png" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\password-16.png" />
+    <None Include="Resources\password-32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

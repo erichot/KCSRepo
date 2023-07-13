@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AppLanguageConfig>
+  <Area>
+    <Language>zh_CN</Language>
+    <List>
+      <Item>英文[EN]</Item>
+      <Item>中文[zh_CN]</Item> 
+	  <Item>繁体[zh_TW]</Item> 
+    </List>
+  </Area>
+  <Area>
+    <Language>zh_TW</Language>
+    <List>
+      <Item>英文[EN]</Item>
+      <Item>中文[zh_CN]</Item> 
+	  <Item>繁体[zh_TW]</Item> 
+    </List>
+  </Area>
+  <Area>
+    <Language>EN</Language>
+    <List>
+      <Item>English[EN]</Item>
+      <Item>Simplified Chinese[zh_CN]</Item>
+	  <Item>Traditional Chinese[zh_TW]</Item>
+    </List>
+  </Area>  
+</AppLanguageConfig>
