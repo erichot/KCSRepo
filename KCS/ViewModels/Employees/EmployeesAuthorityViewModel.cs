@@ -115,5 +115,15 @@ namespace KCS.ViewModels
             }
             
         }
+
+
+
+
+        public void AllowTimeReport()
+        {
+            MessageService.ShowMessage("asdd");
+        }
+
+
     }
 }

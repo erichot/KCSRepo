@@ -99,6 +99,12 @@
             this.listBoxControl = new DevExpress.XtraEditors.ListBoxControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblDebugPrint4 = new System.Windows.Forms.Label();
+            this.lblDebugPrint3 = new System.Windows.Forms.Label();
+            this.lblDebugPrint2 = new System.Windows.Forms.Label();
+            this.lblDebugPrint1 = new System.Windows.Forms.Label();
+            this.lblDebugPrint = new System.Windows.Forms.Label();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tileView = new DevExpress.XtraGrid.Views.Tile.TileView();
@@ -113,6 +119,7 @@
             this.colIsServerMode = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colNotPropagateWithUsersByDefault = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -128,6 +135,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileView)).BeginInit();
@@ -629,6 +637,7 @@
             // 
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.White;
             this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.Controls.Add(this.panel1);
             this.panelControl2.Controls.Add(this.gridControl);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(2, 2);
@@ -636,6 +645,65 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1350, 423);
             this.panelControl2.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblDebugPrint4);
+            this.panel1.Controls.Add(this.lblDebugPrint3);
+            this.panel1.Controls.Add(this.lblDebugPrint2);
+            this.panel1.Controls.Add(this.lblDebugPrint1);
+            this.panel1.Controls.Add(this.lblDebugPrint);
+            this.panel1.Location = new System.Drawing.Point(419, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(630, 230);
+            this.panel1.TabIndex = 1;
+            this.panel1.Visible = false;
+            // 
+            // lblDebugPrint4
+            // 
+            this.lblDebugPrint4.AutoSize = true;
+            this.lblDebugPrint4.Location = new System.Drawing.Point(40, 197);
+            this.lblDebugPrint4.Name = "lblDebugPrint4";
+            this.lblDebugPrint4.Size = new System.Drawing.Size(44, 18);
+            this.lblDebugPrint4.TabIndex = 7;
+            this.lblDebugPrint4.Text = "label1";
+            // 
+            // lblDebugPrint3
+            // 
+            this.lblDebugPrint3.AutoSize = true;
+            this.lblDebugPrint3.Location = new System.Drawing.Point(37, 157);
+            this.lblDebugPrint3.Name = "lblDebugPrint3";
+            this.lblDebugPrint3.Size = new System.Drawing.Size(44, 18);
+            this.lblDebugPrint3.TabIndex = 6;
+            this.lblDebugPrint3.Text = "label1";
+            // 
+            // lblDebugPrint2
+            // 
+            this.lblDebugPrint2.AutoSize = true;
+            this.lblDebugPrint2.Location = new System.Drawing.Point(37, 115);
+            this.lblDebugPrint2.Name = "lblDebugPrint2";
+            this.lblDebugPrint2.Size = new System.Drawing.Size(44, 18);
+            this.lblDebugPrint2.TabIndex = 5;
+            this.lblDebugPrint2.Text = "label1";
+            // 
+            // lblDebugPrint1
+            // 
+            this.lblDebugPrint1.AutoSize = true;
+            this.lblDebugPrint1.Location = new System.Drawing.Point(37, 73);
+            this.lblDebugPrint1.Name = "lblDebugPrint1";
+            this.lblDebugPrint1.Size = new System.Drawing.Size(44, 18);
+            this.lblDebugPrint1.TabIndex = 4;
+            this.lblDebugPrint1.Text = "label1";
+            // 
+            // lblDebugPrint
+            // 
+            this.lblDebugPrint.AutoSize = true;
+            this.lblDebugPrint.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDebugPrint.Location = new System.Drawing.Point(36, 20);
+            this.lblDebugPrint.Name = "lblDebugPrint";
+            this.lblDebugPrint.Size = new System.Drawing.Size(130, 24);
+            this.lblDebugPrint.TabIndex = 3;
+            this.lblDebugPrint.Text = "lblDebugPrint";
             // 
             // gridControl
             // 
@@ -856,6 +924,12 @@
             this.barButtonItem1.ImageOptions.LargeImage = global::KCS.Properties.Resources.Reboot_device_32;
             this.barButtonItem1.Name = "barButtonItem1";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // DeviceSettingManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -880,6 +954,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileView)).EndInit();
@@ -957,5 +1033,12 @@
         private DevExpress.XtraBars.BarButtonItem bbiRebootIDF211;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem bbiResyncAcPara;
+        private System.Windows.Forms.Label lblDebugPrint;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblDebugPrint2;
+        private System.Windows.Forms.Label lblDebugPrint1;
+        private System.Windows.Forms.Label lblDebugPrint3;
+        private System.Windows.Forms.Label lblDebugPrint4;
+        private System.Windows.Forms.Timer timer1;
     }
 }

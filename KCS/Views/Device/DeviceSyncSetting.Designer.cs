@@ -79,7 +79,7 @@
             this.bbiClose,
             this.hiItemsCount});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ribbonControl.MaxItemId = 13;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -89,7 +89,7 @@
             this.ribbonControl.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ShowQatLocationSelector = false;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1603, 184);
+            this.ribbonControl.Size = new System.Drawing.Size(1282, 150);
             this.ribbonControl.StatusBar = this.ribbonStatusBar2;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -159,11 +159,11 @@
             // ribbonStatusBar2
             // 
             this.ribbonStatusBar2.ItemLinks.Add(this.hiItemsCount);
-            this.ribbonStatusBar2.Location = new System.Drawing.Point(0, 714);
-            this.ribbonStatusBar2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ribbonStatusBar2.Location = new System.Drawing.Point(0, 584);
+            this.ribbonStatusBar2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar2.Name = "ribbonStatusBar2";
             this.ribbonStatusBar2.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar2.Size = new System.Drawing.Size(1603, 42);
+            this.ribbonStatusBar2.Size = new System.Drawing.Size(1282, 35);
             // 
             // bindingSource
             // 
@@ -173,12 +173,12 @@
             // 
             this.gridControl.DataSource = this.bindingSource;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gridControl.Location = new System.Drawing.Point(0, 184);
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl.Location = new System.Drawing.Point(0, 150);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(1603, 572);
+            this.gridControl.Size = new System.Drawing.Size(1282, 469);
             this.gridControl.TabIndex = 5;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -281,14 +281,14 @@
             // 
             // DeviceSyncSetting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ribbonStatusBar2);
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DeviceSyncSetting";
-            this.Size = new System.Drawing.Size(1603, 756);
+            this.Size = new System.Drawing.Size(1282, 619);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();

@@ -101,5 +101,10 @@ namespace KCS.Views
             DeviceTypeComboBoxEdit.Properties.Items.Add("Face");
 
         }
+
+        private void MenuPwdTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

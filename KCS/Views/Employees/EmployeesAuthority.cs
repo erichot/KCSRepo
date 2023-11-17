@@ -50,6 +50,11 @@ namespace KCS.Views
             var fluentAPI = mvvmContext.OfType<EmployeesAuthorityViewModel>();
             fluentAPI.BindCommand(bbiSave, x => x.Save());
             fluentAPI.BindCommand(bbiClose, x => x.Close());
+
+            // Add: 2023/10/13
+            // Ver:
+            fluentAPI.BindCommand(bbiReport, x => x.AllowTimeReport());
+
             fluentAPI.SetObjectDataSourceBinding(bindingSource, x => x.DeviceInfoDataSet);
             fluentAPI.SetObjectDataSourceBinding(bindingSourceSyncStatus, x => x.AutoritySyncStatusDataSet);
 

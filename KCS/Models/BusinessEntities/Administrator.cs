@@ -14,6 +14,12 @@ namespace KCS.Models
         public string NewUserPwd { get; set; }
         public string NewUserPwdAgain { get; set; }
 
+
+
+        // Add: 2023/09/19  辨識Admin/Supervisor
+        public int UserPermissionTypeID { get; set; }
+
+
         public Administrator()
          {
              this.UserNo = "";

@@ -133,7 +133,7 @@
             this.bbiClose,
             this.bbiSaveAndNew});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ribbonControl1.MaxItemId = 11;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -143,7 +143,7 @@
             this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowQatLocationSelector = false;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(647, 120);
+            this.ribbonControl1.Size = new System.Drawing.Size(739, 150);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -255,10 +255,11 @@
             this.dataLayoutControl1.Controls.Add(this.DeviceTypeComboBoxEdit);
             this.dataLayoutControl1.DataSource = this.bindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 120);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 150);
+            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(647, 337);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(739, 438);
             this.dataLayoutControl1.TabIndex = 4;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
@@ -266,7 +267,8 @@
             // 
             this.IDTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "SlaveSID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.IDTextEdit.EnterMoveNextControl = true;
-            this.IDTextEdit.Location = new System.Drawing.Point(112, 12);
+            this.IDTextEdit.Location = new System.Drawing.Point(138, 16);
+            this.IDTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IDTextEdit.MenuManager = this.ribbonControl1;
             this.IDTextEdit.Name = "IDTextEdit";
             this.IDTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
@@ -278,7 +280,7 @@
             this.IDTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.IDTextEdit.Properties.MaxLength = 9;
             this.IDTextEdit.Properties.ValidateOnEnterKey = true;
-            this.IDTextEdit.Size = new System.Drawing.Size(523, 20);
+            this.IDTextEdit.Size = new System.Drawing.Size(585, 24);
             this.IDTextEdit.StyleController = this.dataLayoutControl1;
             this.IDTextEdit.TabIndex = 4;
             // 
@@ -286,7 +288,8 @@
             // 
             this.IPTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "IP", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.IPTextEdit.EnterMoveNextControl = true;
-            this.IPTextEdit.Location = new System.Drawing.Point(112, 36);
+            this.IPTextEdit.Location = new System.Drawing.Point(138, 46);
+            this.IPTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IPTextEdit.MenuManager = this.ribbonControl1;
             this.IPTextEdit.Name = "IPTextEdit";
             this.IPTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
@@ -294,7 +297,7 @@
     "25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
             this.IPTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.IPTextEdit.Properties.ValidateOnEnterKey = true;
-            this.IPTextEdit.Size = new System.Drawing.Size(523, 20);
+            this.IPTextEdit.Size = new System.Drawing.Size(585, 24);
             this.IPTextEdit.StyleController = this.dataLayoutControl1;
             this.IPTextEdit.TabIndex = 5;
             // 
@@ -302,14 +305,15 @@
             // 
             this.IP_InternalTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "IP_Internal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.IP_InternalTextEdit.EnterMoveNextControl = true;
-            this.IP_InternalTextEdit.Location = new System.Drawing.Point(112, 60);
+            this.IP_InternalTextEdit.Location = new System.Drawing.Point(138, 76);
+            this.IP_InternalTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IP_InternalTextEdit.MenuManager = this.ribbonControl1;
             this.IP_InternalTextEdit.Name = "IP_InternalTextEdit";
             this.IP_InternalTextEdit.Properties.Mask.EditMask = "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(" +
     "25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
             this.IP_InternalTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.IP_InternalTextEdit.Properties.ValidateOnEnterKey = true;
-            this.IP_InternalTextEdit.Size = new System.Drawing.Size(523, 20);
+            this.IP_InternalTextEdit.Size = new System.Drawing.Size(585, 24);
             this.IP_InternalTextEdit.StyleController = this.dataLayoutControl1;
             this.IP_InternalTextEdit.TabIndex = 6;
             // 
@@ -317,11 +321,12 @@
             // 
             this.SlaveNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "SlaveName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.SlaveNameTextEdit.EnterMoveNextControl = true;
-            this.SlaveNameTextEdit.Location = new System.Drawing.Point(112, 84);
+            this.SlaveNameTextEdit.Location = new System.Drawing.Point(138, 106);
+            this.SlaveNameTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SlaveNameTextEdit.MenuManager = this.ribbonControl1;
             this.SlaveNameTextEdit.Name = "SlaveNameTextEdit";
             this.SlaveNameTextEdit.Properties.ValidateOnEnterKey = true;
-            this.SlaveNameTextEdit.Size = new System.Drawing.Size(523, 20);
+            this.SlaveNameTextEdit.Size = new System.Drawing.Size(585, 24);
             this.SlaveNameTextEdit.StyleController = this.dataLayoutControl1;
             this.SlaveNameTextEdit.TabIndex = 7;
             // 
@@ -329,11 +334,12 @@
             // 
             this.SlaveDescriptionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "SlaveDescription", true));
             this.SlaveDescriptionTextEdit.EnterMoveNextControl = true;
-            this.SlaveDescriptionTextEdit.Location = new System.Drawing.Point(112, 108);
+            this.SlaveDescriptionTextEdit.Location = new System.Drawing.Point(138, 136);
+            this.SlaveDescriptionTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SlaveDescriptionTextEdit.MenuManager = this.ribbonControl1;
             this.SlaveDescriptionTextEdit.Name = "SlaveDescriptionTextEdit";
             this.SlaveDescriptionTextEdit.Properties.ValidateOnEnterKey = true;
-            this.SlaveDescriptionTextEdit.Size = new System.Drawing.Size(523, 20);
+            this.SlaveDescriptionTextEdit.Size = new System.Drawing.Size(585, 24);
             this.SlaveDescriptionTextEdit.StyleController = this.dataLayoutControl1;
             this.SlaveDescriptionTextEdit.TabIndex = 8;
             // 
@@ -341,11 +347,12 @@
             // 
             this.IsEnabledCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "IsEnabled", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.IsEnabledCheckEdit.EnterMoveNextControl = true;
-            this.IsEnabledCheckEdit.Location = new System.Drawing.Point(112, 132);
+            this.IsEnabledCheckEdit.Location = new System.Drawing.Point(138, 166);
+            this.IsEnabledCheckEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IsEnabledCheckEdit.MenuManager = this.ribbonControl1;
             this.IsEnabledCheckEdit.Name = "IsEnabledCheckEdit";
             this.IsEnabledCheckEdit.Properties.Caption = "";
-            this.IsEnabledCheckEdit.Size = new System.Drawing.Size(523, 19);
+            this.IsEnabledCheckEdit.Size = new System.Drawing.Size(585, 19);
             this.IsEnabledCheckEdit.StyleController = this.dataLayoutControl1;
             this.IsEnabledCheckEdit.TabIndex = 9;
             // 
@@ -353,11 +360,12 @@
             // 
             this.IsServerModeCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "IsServerMode", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.IsServerModeCheckEdit.EnterMoveNextControl = true;
-            this.IsServerModeCheckEdit.Location = new System.Drawing.Point(112, 179);
+            this.IsServerModeCheckEdit.Location = new System.Drawing.Point(138, 221);
+            this.IsServerModeCheckEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IsServerModeCheckEdit.MenuManager = this.ribbonControl1;
             this.IsServerModeCheckEdit.Name = "IsServerModeCheckEdit";
             this.IsServerModeCheckEdit.Properties.Caption = "";
-            this.IsServerModeCheckEdit.Size = new System.Drawing.Size(523, 19);
+            this.IsServerModeCheckEdit.Size = new System.Drawing.Size(585, 19);
             this.IsServerModeCheckEdit.StyleController = this.dataLayoutControl1;
             this.IsServerModeCheckEdit.TabIndex = 11;
             // 
@@ -365,11 +373,12 @@
             // 
             this.NotPropagateWithUsersByDefaultCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "NotPropagateWithUsersByDefault", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.NotPropagateWithUsersByDefaultCheckEdit.EnterMoveNextControl = true;
-            this.NotPropagateWithUsersByDefaultCheckEdit.Location = new System.Drawing.Point(12, 274);
+            this.NotPropagateWithUsersByDefaultCheckEdit.Location = new System.Drawing.Point(16, 336);
+            this.NotPropagateWithUsersByDefaultCheckEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NotPropagateWithUsersByDefaultCheckEdit.MenuManager = this.ribbonControl1;
             this.NotPropagateWithUsersByDefaultCheckEdit.Name = "NotPropagateWithUsersByDefaultCheckEdit";
             this.NotPropagateWithUsersByDefaultCheckEdit.Properties.Caption = "Not Propagate With Users By Default";
-            this.NotPropagateWithUsersByDefaultCheckEdit.Size = new System.Drawing.Size(623, 19);
+            this.NotPropagateWithUsersByDefaultCheckEdit.Size = new System.Drawing.Size(707, 22);
             this.NotPropagateWithUsersByDefaultCheckEdit.StyleController = this.dataLayoutControl1;
             this.NotPropagateWithUsersByDefaultCheckEdit.TabIndex = 12;
             // 
@@ -377,7 +386,8 @@
             // 
             this.SlaveCategoryIDLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "SlaveCategoryID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.SlaveCategoryIDLookUpEdit.EnterMoveNextControl = true;
-            this.SlaveCategoryIDLookUpEdit.Location = new System.Drawing.Point(112, 155);
+            this.SlaveCategoryIDLookUpEdit.Location = new System.Drawing.Point(138, 191);
+            this.SlaveCategoryIDLookUpEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SlaveCategoryIDLookUpEdit.MenuManager = this.ribbonControl1;
             this.SlaveCategoryIDLookUpEdit.Name = "SlaveCategoryIDLookUpEdit";
             this.SlaveCategoryIDLookUpEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -390,7 +400,7 @@
             this.SlaveCategoryIDLookUpEdit.Properties.NullText = "";
             this.SlaveCategoryIDLookUpEdit.Properties.ShowHeader = false;
             this.SlaveCategoryIDLookUpEdit.Properties.ValueMember = "SlaveCategoryID";
-            this.SlaveCategoryIDLookUpEdit.Size = new System.Drawing.Size(523, 20);
+            this.SlaveCategoryIDLookUpEdit.Size = new System.Drawing.Size(585, 24);
             this.SlaveCategoryIDLookUpEdit.StyleController = this.dataLayoutControl1;
             this.SlaveCategoryIDLookUpEdit.TabIndex = 13;
             // 
@@ -401,50 +411,55 @@
             // MenuPwdTextEdit
             // 
             this.MenuPwdTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "MenuPwd", true));
-            this.MenuPwdTextEdit.Location = new System.Drawing.Point(112, 202);
+            this.MenuPwdTextEdit.Location = new System.Drawing.Point(138, 246);
+            this.MenuPwdTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MenuPwdTextEdit.MenuManager = this.ribbonControl1;
             this.MenuPwdTextEdit.Name = "MenuPwdTextEdit";
+            this.MenuPwdTextEdit.Properties.Mask.EditMask = "******";
+            this.MenuPwdTextEdit.Properties.PasswordChar = '*';
             this.MenuPwdTextEdit.Properties.ValidateOnEnterKey = true;
-            this.MenuPwdTextEdit.Size = new System.Drawing.Size(523, 20);
+            this.MenuPwdTextEdit.Size = new System.Drawing.Size(585, 24);
             this.MenuPwdTextEdit.StyleController = this.dataLayoutControl1;
             this.MenuPwdTextEdit.TabIndex = 14;
+            this.MenuPwdTextEdit.EditValueChanged += new System.EventHandler(this.MenuPwdTextEdit_EditValueChanged);
             // 
             // LanguageTextComboBoxEdit
             // 
             this.LanguageTextComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "LanguageText", true));
-            this.LanguageTextComboBoxEdit.Location = new System.Drawing.Point(112, 226);
+            this.LanguageTextComboBoxEdit.Location = new System.Drawing.Point(138, 276);
+            this.LanguageTextComboBoxEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LanguageTextComboBoxEdit.MenuManager = this.ribbonControl1;
             this.LanguageTextComboBoxEdit.Name = "LanguageTextComboBoxEdit";
             this.LanguageTextComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.LanguageTextComboBoxEdit.Size = new System.Drawing.Size(523, 20);
+            this.LanguageTextComboBoxEdit.Size = new System.Drawing.Size(585, 24);
             this.LanguageTextComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.LanguageTextComboBoxEdit.TabIndex = 15;
             // 
             // WorkModeTextComboBoxEdit
             // 
             this.WorkModeTextComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "WorkModeText", true));
-            this.WorkModeTextComboBoxEdit.Location = new System.Drawing.Point(112, 250);
+            this.WorkModeTextComboBoxEdit.Location = new System.Drawing.Point(138, 306);
+            this.WorkModeTextComboBoxEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.WorkModeTextComboBoxEdit.MenuManager = this.ribbonControl1;
             this.WorkModeTextComboBoxEdit.Name = "WorkModeTextComboBoxEdit";
             this.WorkModeTextComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.WorkModeTextComboBoxEdit.Size = new System.Drawing.Size(523, 20);
+            this.WorkModeTextComboBoxEdit.Size = new System.Drawing.Size(585, 24);
             this.WorkModeTextComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.WorkModeTextComboBoxEdit.TabIndex = 16;
             // 
             // DeviceTypeComboBoxEdit
             // 
             this.DeviceTypeComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "DeviceType", true));
-            this.DeviceTypeComboBoxEdit.Location = new System.Drawing.Point(112, 297);
-            this.DeviceTypeComboBoxEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeviceTypeComboBoxEdit.Location = new System.Drawing.Point(138, 364);
             this.DeviceTypeComboBoxEdit.MenuManager = this.ribbonControl1;
             this.DeviceTypeComboBoxEdit.Name = "DeviceTypeComboBoxEdit";
             this.DeviceTypeComboBoxEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.DeviceTypeComboBoxEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.DeviceTypeComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DeviceTypeComboBoxEdit.Size = new System.Drawing.Size(523, 20);
+            this.DeviceTypeComboBoxEdit.Size = new System.Drawing.Size(585, 24);
             this.DeviceTypeComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.DeviceTypeComboBoxEdit.TabIndex = 17;
             // 
@@ -456,7 +471,7 @@
             this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(647, 337);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(739, 438);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -479,125 +494,125 @@
             this.ItemForDeviceType});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(627, 317);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(713, 412);
             // 
             // ItemForID
             // 
             this.ItemForID.Control = this.IDTextEdit;
             this.ItemForID.Location = new System.Drawing.Point(0, 0);
             this.ItemForID.Name = "ItemForID";
-            this.ItemForID.Size = new System.Drawing.Size(627, 24);
+            this.ItemForID.Size = new System.Drawing.Size(713, 30);
             this.ItemForID.Text = "ID";
-            this.ItemForID.TextSize = new System.Drawing.Size(97, 14);
+            this.ItemForID.TextSize = new System.Drawing.Size(119, 18);
             // 
             // ItemForIP
             // 
             this.ItemForIP.Control = this.IPTextEdit;
-            this.ItemForIP.Location = new System.Drawing.Point(0, 24);
+            this.ItemForIP.Location = new System.Drawing.Point(0, 30);
             this.ItemForIP.Name = "ItemForIP";
-            this.ItemForIP.Size = new System.Drawing.Size(627, 24);
+            this.ItemForIP.Size = new System.Drawing.Size(713, 30);
             this.ItemForIP.Text = "IP";
-            this.ItemForIP.TextSize = new System.Drawing.Size(97, 14);
+            this.ItemForIP.TextSize = new System.Drawing.Size(119, 18);
             // 
             // ItemForIP_Internal
             // 
             this.ItemForIP_Internal.Control = this.IP_InternalTextEdit;
-            this.ItemForIP_Internal.Location = new System.Drawing.Point(0, 48);
+            this.ItemForIP_Internal.Location = new System.Drawing.Point(0, 60);
             this.ItemForIP_Internal.Name = "ItemForIP_Internal";
-            this.ItemForIP_Internal.Size = new System.Drawing.Size(627, 24);
+            this.ItemForIP_Internal.Size = new System.Drawing.Size(713, 30);
             this.ItemForIP_Internal.Text = "IP_Internal";
-            this.ItemForIP_Internal.TextSize = new System.Drawing.Size(97, 14);
+            this.ItemForIP_Internal.TextSize = new System.Drawing.Size(119, 18);
             this.ItemForIP_Internal.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // ItemForSlaveName
             // 
             this.ItemForSlaveName.Control = this.SlaveNameTextEdit;
-            this.ItemForSlaveName.Location = new System.Drawing.Point(0, 72);
+            this.ItemForSlaveName.Location = new System.Drawing.Point(0, 90);
             this.ItemForSlaveName.Name = "ItemForSlaveName";
-            this.ItemForSlaveName.Size = new System.Drawing.Size(627, 24);
+            this.ItemForSlaveName.Size = new System.Drawing.Size(713, 30);
             this.ItemForSlaveName.Text = "Slave Name";
-            this.ItemForSlaveName.TextSize = new System.Drawing.Size(97, 14);
+            this.ItemForSlaveName.TextSize = new System.Drawing.Size(119, 18);
             // 
             // ItemForSlaveDescription
             // 
             this.ItemForSlaveDescription.Control = this.SlaveDescriptionTextEdit;
-            this.ItemForSlaveDescription.Location = new System.Drawing.Point(0, 96);
+            this.ItemForSlaveDescription.Location = new System.Drawing.Point(0, 120);
             this.ItemForSlaveDescription.Name = "ItemForSlaveDescription";
-            this.ItemForSlaveDescription.Size = new System.Drawing.Size(627, 24);
+            this.ItemForSlaveDescription.Size = new System.Drawing.Size(713, 30);
             this.ItemForSlaveDescription.Text = "Slave Description";
-            this.ItemForSlaveDescription.TextSize = new System.Drawing.Size(97, 14);
+            this.ItemForSlaveDescription.TextSize = new System.Drawing.Size(119, 18);
             // 
             // ItemForIsEnabled
             // 
             this.ItemForIsEnabled.Control = this.IsEnabledCheckEdit;
-            this.ItemForIsEnabled.Location = new System.Drawing.Point(0, 120);
+            this.ItemForIsEnabled.Location = new System.Drawing.Point(0, 150);
             this.ItemForIsEnabled.Name = "ItemForIsEnabled";
-            this.ItemForIsEnabled.Size = new System.Drawing.Size(627, 23);
+            this.ItemForIsEnabled.Size = new System.Drawing.Size(713, 25);
             this.ItemForIsEnabled.Text = "Is Enabled";
-            this.ItemForIsEnabled.TextSize = new System.Drawing.Size(97, 14);
+            this.ItemForIsEnabled.TextSize = new System.Drawing.Size(119, 18);
             // 
             // ItemForSlaveCategoryID
             // 
             this.ItemForSlaveCategoryID.Control = this.SlaveCategoryIDLookUpEdit;
-            this.ItemForSlaveCategoryID.Location = new System.Drawing.Point(0, 143);
+            this.ItemForSlaveCategoryID.Location = new System.Drawing.Point(0, 175);
             this.ItemForSlaveCategoryID.Name = "ItemForSlaveCategoryID";
-            this.ItemForSlaveCategoryID.Size = new System.Drawing.Size(627, 24);
+            this.ItemForSlaveCategoryID.Size = new System.Drawing.Size(713, 30);
             this.ItemForSlaveCategoryID.Text = "Slave Category ID";
-            this.ItemForSlaveCategoryID.TextSize = new System.Drawing.Size(97, 14);
+            this.ItemForSlaveCategoryID.TextSize = new System.Drawing.Size(119, 18);
             // 
             // ItemForIsServerMode
             // 
             this.ItemForIsServerMode.Control = this.IsServerModeCheckEdit;
-            this.ItemForIsServerMode.Location = new System.Drawing.Point(0, 167);
+            this.ItemForIsServerMode.Location = new System.Drawing.Point(0, 205);
             this.ItemForIsServerMode.Name = "ItemForIsServerMode";
-            this.ItemForIsServerMode.Size = new System.Drawing.Size(627, 23);
+            this.ItemForIsServerMode.Size = new System.Drawing.Size(713, 25);
             this.ItemForIsServerMode.Text = "Is Server Mode";
-            this.ItemForIsServerMode.TextSize = new System.Drawing.Size(97, 14);
+            this.ItemForIsServerMode.TextSize = new System.Drawing.Size(119, 18);
             // 
             // ItemForNotPropagateWithUsersByDefault
             // 
             this.ItemForNotPropagateWithUsersByDefault.Control = this.NotPropagateWithUsersByDefaultCheckEdit;
-            this.ItemForNotPropagateWithUsersByDefault.Location = new System.Drawing.Point(0, 262);
+            this.ItemForNotPropagateWithUsersByDefault.Location = new System.Drawing.Point(0, 320);
             this.ItemForNotPropagateWithUsersByDefault.Name = "ItemForNotPropagateWithUsersByDefault";
-            this.ItemForNotPropagateWithUsersByDefault.Size = new System.Drawing.Size(627, 23);
+            this.ItemForNotPropagateWithUsersByDefault.Size = new System.Drawing.Size(713, 28);
             this.ItemForNotPropagateWithUsersByDefault.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForNotPropagateWithUsersByDefault.TextVisible = false;
             // 
             // ItemForMenuPwd
             // 
             this.ItemForMenuPwd.Control = this.MenuPwdTextEdit;
-            this.ItemForMenuPwd.Location = new System.Drawing.Point(0, 190);
+            this.ItemForMenuPwd.Location = new System.Drawing.Point(0, 230);
             this.ItemForMenuPwd.Name = "ItemForMenuPwd";
-            this.ItemForMenuPwd.Size = new System.Drawing.Size(627, 24);
+            this.ItemForMenuPwd.Size = new System.Drawing.Size(713, 30);
             this.ItemForMenuPwd.Text = "Menu Pwd";
-            this.ItemForMenuPwd.TextSize = new System.Drawing.Size(97, 14);
+            this.ItemForMenuPwd.TextSize = new System.Drawing.Size(119, 18);
             // 
             // ItemForLanguageText
             // 
             this.ItemForLanguageText.Control = this.LanguageTextComboBoxEdit;
-            this.ItemForLanguageText.Location = new System.Drawing.Point(0, 214);
+            this.ItemForLanguageText.Location = new System.Drawing.Point(0, 260);
             this.ItemForLanguageText.Name = "ItemForLanguageText";
-            this.ItemForLanguageText.Size = new System.Drawing.Size(627, 24);
+            this.ItemForLanguageText.Size = new System.Drawing.Size(713, 30);
             this.ItemForLanguageText.Text = "Language Text";
-            this.ItemForLanguageText.TextSize = new System.Drawing.Size(97, 14);
+            this.ItemForLanguageText.TextSize = new System.Drawing.Size(119, 18);
             // 
             // ItemForWorkModeText
             // 
             this.ItemForWorkModeText.Control = this.WorkModeTextComboBoxEdit;
-            this.ItemForWorkModeText.Location = new System.Drawing.Point(0, 238);
+            this.ItemForWorkModeText.Location = new System.Drawing.Point(0, 290);
             this.ItemForWorkModeText.Name = "ItemForWorkModeText";
-            this.ItemForWorkModeText.Size = new System.Drawing.Size(627, 24);
+            this.ItemForWorkModeText.Size = new System.Drawing.Size(713, 30);
             this.ItemForWorkModeText.Text = "Work Mode Text";
-            this.ItemForWorkModeText.TextSize = new System.Drawing.Size(97, 14);
+            this.ItemForWorkModeText.TextSize = new System.Drawing.Size(119, 18);
             // 
             // ItemForDeviceType
             // 
             this.ItemForDeviceType.Control = this.DeviceTypeComboBoxEdit;
-            this.ItemForDeviceType.Location = new System.Drawing.Point(0, 285);
+            this.ItemForDeviceType.Location = new System.Drawing.Point(0, 348);
             this.ItemForDeviceType.Name = "ItemForDeviceType";
-            this.ItemForDeviceType.Size = new System.Drawing.Size(627, 32);
+            this.ItemForDeviceType.Size = new System.Drawing.Size(713, 64);
             this.ItemForDeviceType.Text = "Device Type";
-            this.ItemForDeviceType.TextSize = new System.Drawing.Size(97, 14);
+            this.ItemForDeviceType.TextSize = new System.Drawing.Size(119, 18);
             // 
             // alertControl
             // 
@@ -610,12 +625,13 @@
             // 
             // NewDevice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.ribbonControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "NewDevice";
-            this.Size = new System.Drawing.Size(647, 457);
+            this.Size = new System.Drawing.Size(739, 588);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();

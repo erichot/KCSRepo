@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeesManage));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -57,6 +58,7 @@
             this.bbiSyncSetting = new DevExpress.XtraBars.BarButtonItem();
             this.bbiEnableEmployees = new DevExpress.XtraBars.BarButtonItem();
             this.bbiChangeCardId = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiAllowTimeReport = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupActions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupFinger = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -275,10 +277,11 @@
             this.bbiForceDelete,
             this.bbiSyncSetting,
             this.bbiEnableEmployees,
-            this.bbiChangeCardId});
+            this.bbiChangeCardId,
+            this.bbiAllowTimeReport});
             this.ribbonControl.Location = new System.Drawing.Point(2, 2);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.MaxItemId = 29;
+            this.ribbonControl.MaxItemId = 1;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage3});
@@ -429,6 +432,14 @@
             this.bbiChangeCardId.ImageOptions.LargeImage = global::KCS.Properties.Resources.ChangeCardId_32;
             this.bbiChangeCardId.Name = "bbiChangeCardId";
             // 
+            // bbiAllowTimeReport
+            // 
+            this.bbiAllowTimeReport.Caption = "Allow Time Report";
+            this.bbiAllowTimeReport.Id = 30;
+            this.bbiAllowTimeReport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbiAllowTimeReport.ImageOptions.Image")));
+            this.bbiAllowTimeReport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiAllowTimeReport.ImageOptions.LargeImage")));
+            this.bbiAllowTimeReport.Name = "bbiAllowTimeReport";
+            // 
             // ribbonPage3
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -446,6 +457,7 @@
             this.ribbonPageGroupActions.ItemLinks.Add(this.bbiDisableUser);
             this.ribbonPageGroupActions.ItemLinks.Add(this.bbiEnableEmployees);
             this.ribbonPageGroupActions.ItemLinks.Add(this.bbiSetAcPara);
+            this.ribbonPageGroupActions.ItemLinks.Add(this.bbiAllowTimeReport);
             this.ribbonPageGroupActions.ItemLinks.Add(this.bbiImportEmployees);
             this.ribbonPageGroupActions.ItemLinks.Add(this.bbiExportUser);
             this.ribbonPageGroupActions.ItemLinks.Add(this.bbiChangeCardId);
@@ -722,7 +734,7 @@
             gridLevelNode1});
             this.gridControl.Location = new System.Drawing.Point(16, 16);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(16, 16, 16, 16);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(16);
             this.gridControl.MenuManager = this.ribbonControl;
             this.gridControl.Name = "gridControl";
             this.gridControl.ShowOnlyPredefinedDetails = true;
@@ -1047,6 +1059,7 @@
             this.popupMenu.ItemLinks.Add(this.bbiReSyncSelect);
             this.popupMenu.ItemLinks.Add(this.bbiSyncReSync);
             this.popupMenu.ItemLinks.Add(this.bbiSetAcPara);
+            this.popupMenu.ItemLinks.Add(this.bbiAllowTimeReport);
             this.popupMenu.ItemLinks.Add(this.bbiChangeCardId);
             this.popupMenu.Name = "popupMenu";
             this.popupMenu.Ribbon = this.ribbonControl;
@@ -1205,5 +1218,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colFinger2Status;
         private DevExpress.XtraBars.BarButtonItem bbiChangeCardId;
         private DevExpress.XtraGrid.Columns.GridColumn gridEmpPhoto;
+        private DevExpress.XtraBars.BarButtonItem bbiAllowTimeReport;
     }
 }

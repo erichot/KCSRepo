@@ -94,7 +94,7 @@
             this.bbiEdit,
             this.bbiRefresh});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ribbonControl.MaxItemId = 13;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -104,7 +104,7 @@
             this.ribbonControl.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ShowQatLocationSelector = false;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1249, 184);
+            this.ribbonControl.Size = new System.Drawing.Size(999, 150);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -186,119 +186,119 @@
             this.panelControl1.Controls.Add(this.LanguageTextComboBoxEdit);
             this.panelControl1.Controls.Add(this.WorkModeTextComboBoxEdit);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 184);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelControl1.Location = new System.Drawing.Point(0, 150);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1249, 214);
+            this.panelControl1.Size = new System.Drawing.Size(999, 175);
             this.panelControl1.TabIndex = 1;
             // 
             // simpleButtonSetAll
             // 
-            this.simpleButtonSetAll.Location = new System.Drawing.Point(501, 151);
-            this.simpleButtonSetAll.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.simpleButtonSetAll.Location = new System.Drawing.Point(401, 124);
+            this.simpleButtonSetAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButtonSetAll.Name = "simpleButtonSetAll";
-            this.simpleButtonSetAll.Size = new System.Drawing.Size(174, 47);
+            this.simpleButtonSetAll.Size = new System.Drawing.Size(139, 38);
             this.simpleButtonSetAll.TabIndex = 26;
             this.simpleButtonSetAll.Text = "Set All";
             // 
             // simpleButtonDevLanguage
             // 
-            this.simpleButtonDevLanguage.Location = new System.Drawing.Point(1024, 58);
-            this.simpleButtonDevLanguage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.simpleButtonDevLanguage.Location = new System.Drawing.Point(819, 47);
+            this.simpleButtonDevLanguage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButtonDevLanguage.Name = "simpleButtonDevLanguage";
-            this.simpleButtonDevLanguage.Size = new System.Drawing.Size(80, 39);
+            this.simpleButtonDevLanguage.Size = new System.Drawing.Size(64, 32);
             this.simpleButtonDevLanguage.TabIndex = 25;
             this.simpleButtonDevLanguage.Text = "Set";
             // 
             // simpleButtonWorkMode
             // 
-            this.simpleButtonWorkMode.Location = new System.Drawing.Point(1024, 105);
-            this.simpleButtonWorkMode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.simpleButtonWorkMode.Location = new System.Drawing.Point(819, 86);
+            this.simpleButtonWorkMode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButtonWorkMode.Name = "simpleButtonWorkMode";
-            this.simpleButtonWorkMode.Size = new System.Drawing.Size(80, 39);
+            this.simpleButtonWorkMode.Size = new System.Drawing.Size(64, 32);
             this.simpleButtonWorkMode.TabIndex = 24;
             this.simpleButtonWorkMode.Text = "Set";
             // 
             // simpleButtonSetPwd
             // 
-            this.simpleButtonSetPwd.Location = new System.Drawing.Point(1024, 11);
-            this.simpleButtonSetPwd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.simpleButtonSetPwd.Location = new System.Drawing.Point(819, 9);
+            this.simpleButtonSetPwd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButtonSetPwd.Name = "simpleButtonSetPwd";
-            this.simpleButtonSetPwd.Size = new System.Drawing.Size(80, 39);
+            this.simpleButtonSetPwd.Size = new System.Drawing.Size(64, 32);
             this.simpleButtonSetPwd.TabIndex = 23;
             this.simpleButtonSetPwd.Text = "Set";
             // 
             // lblCtlLanguage
             // 
-            this.lblCtlLanguage.Location = new System.Drawing.Point(94, 69);
-            this.lblCtlLanguage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlLanguage.Location = new System.Drawing.Point(75, 56);
+            this.lblCtlLanguage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlLanguage.Name = "lblCtlLanguage";
-            this.lblCtlLanguage.Size = new System.Drawing.Size(133, 22);
+            this.lblCtlLanguage.Size = new System.Drawing.Size(111, 18);
             this.lblCtlLanguage.TabIndex = 22;
             this.lblCtlLanguage.Text = "Device Language";
             // 
             // lblCtlWorkMode
             // 
-            this.lblCtlWorkMode.Location = new System.Drawing.Point(94, 115);
-            this.lblCtlWorkMode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlWorkMode.Location = new System.Drawing.Point(75, 94);
+            this.lblCtlWorkMode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlWorkMode.Name = "lblCtlWorkMode";
-            this.lblCtlWorkMode.Size = new System.Drawing.Size(147, 22);
+            this.lblCtlWorkMode.Size = new System.Drawing.Size(123, 18);
             this.lblCtlWorkMode.TabIndex = 21;
             this.lblCtlWorkMode.Text = "Device Work Mode";
             // 
             // lblCtlMenuPwd
             // 
-            this.lblCtlMenuPwd.Location = new System.Drawing.Point(94, 24);
-            this.lblCtlMenuPwd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlMenuPwd.Location = new System.Drawing.Point(75, 20);
+            this.lblCtlMenuPwd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlMenuPwd.Name = "lblCtlMenuPwd";
-            this.lblCtlMenuPwd.Size = new System.Drawing.Size(123, 22);
+            this.lblCtlMenuPwd.Size = new System.Drawing.Size(102, 18);
             this.lblCtlMenuPwd.TabIndex = 20;
             this.lblCtlMenuPwd.Text = "Menu Password";
             // 
             // MenuPwdTextEdit
             // 
-            this.MenuPwdTextEdit.Location = new System.Drawing.Point(260, 19);
-            this.MenuPwdTextEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MenuPwdTextEdit.Location = new System.Drawing.Point(208, 16);
+            this.MenuPwdTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MenuPwdTextEdit.Name = "MenuPwdTextEdit";
             this.MenuPwdTextEdit.Properties.Mask.EditMask = "[0-9]{6}";
             this.MenuPwdTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.MenuPwdTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.MenuPwdTextEdit.Properties.ValidateOnEnterKey = true;
-            this.MenuPwdTextEdit.Size = new System.Drawing.Size(747, 28);
+            this.MenuPwdTextEdit.Size = new System.Drawing.Size(598, 24);
             this.MenuPwdTextEdit.TabIndex = 17;
             // 
             // LanguageTextComboBoxEdit
             // 
-            this.LanguageTextComboBoxEdit.Location = new System.Drawing.Point(260, 64);
-            this.LanguageTextComboBoxEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.LanguageTextComboBoxEdit.Location = new System.Drawing.Point(208, 52);
+            this.LanguageTextComboBoxEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LanguageTextComboBoxEdit.Name = "LanguageTextComboBoxEdit";
             this.LanguageTextComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.LanguageTextComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.LanguageTextComboBoxEdit.Size = new System.Drawing.Size(747, 28);
+            this.LanguageTextComboBoxEdit.Size = new System.Drawing.Size(598, 24);
             this.LanguageTextComboBoxEdit.TabIndex = 18;
             // 
             // WorkModeTextComboBoxEdit
             // 
-            this.WorkModeTextComboBoxEdit.Location = new System.Drawing.Point(260, 108);
-            this.WorkModeTextComboBoxEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.WorkModeTextComboBoxEdit.Location = new System.Drawing.Point(208, 88);
+            this.WorkModeTextComboBoxEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.WorkModeTextComboBoxEdit.Name = "WorkModeTextComboBoxEdit";
             this.WorkModeTextComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.WorkModeTextComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.WorkModeTextComboBoxEdit.Size = new System.Drawing.Size(747, 28);
+            this.WorkModeTextComboBoxEdit.Size = new System.Drawing.Size(598, 24);
             this.WorkModeTextComboBoxEdit.TabIndex = 19;
             // 
             // gridControl
             // 
             this.gridControl.DataSource = this.bindingSource;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gridControl.Location = new System.Drawing.Point(0, 398);
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl.Location = new System.Drawing.Point(0, 325);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(1249, 443);
+            this.gridControl.Size = new System.Drawing.Size(999, 363);
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -389,14 +389,14 @@
             // 
             // SetDeviceParameters
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SetDeviceParameters";
-            this.Size = new System.Drawing.Size(1249, 841);
+            this.Size = new System.Drawing.Size(999, 688);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

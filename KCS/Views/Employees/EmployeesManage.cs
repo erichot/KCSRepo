@@ -146,15 +146,21 @@ namespace KCS.Views
             fluentAPI.BindCommand(bbiDelFinger1, x => x.DeleteFinger1(null), x => x.SelectedEmployee);
             fluentAPI.BindCommand(bbiDelFinger2, x => x.DeleteFinger2(null), x => x.SelectedEmployee);
             fluentAPI.BindCommand(bbiDelFinger12, x => x.DeleteFinger12(null), x => x.SelectedEmployee);
+
             fluentAPI.BindCommand(bbiDisableUser, x => x.DisableEmployees(null), x => x.Selection);
             fluentAPI.BindCommand(bbiEnableEmployees, x => x.EnableEmployees(null), x => x.Selection);
+
             fluentAPI.BindCommand(bbiSyncReSync, x => x.ReSyncAll());
             fluentAPI.BindCommand(bbiReSyncSelect, x => x.ReSyncSelect(null), x => x.SelectedEmployee);
             fluentAPI.BindCommand(bbiSyncSetting, x => x.SyncSetting(null), x => x.SelectedEmployee);
+
             fluentAPI.BindCommand(bbiExportUser, x => x.ExportEmployees());
             fluentAPI.BindCommand(bbiImportEmployees, x => x.ImportEmployees());
+
             //fluentAPI.BindCommand(bbiJobCode, x => x.JobCodeSet());
             fluentAPI.BindCommand(bbiSetAcPara, x => x.EmployeesAuthoritySet(null), x => x.Selection);
+            fluentAPI.BindCommand(bbiAllowTimeReport, x => x.AllowTimeReport());
+
             fluentAPI.BindCommand(bbiChangeCardId, x => x.ChangeCardId(null), x => x.SelectedEmployee);
             //fluentAPI.BindCommand(bbiImportUserPhotos, x => x.ImportEmployeesPhotos());
             
@@ -171,5 +177,7 @@ namespace KCS.Views
         #region
         DevExpress.XtraBars.Ribbon.RibbonControl IRibbonModule.Ribbon { get { return ribbonControl; } }
         #endregion
+
+       
     }
 }

@@ -207,6 +207,7 @@
   <ItemGroup>
     <Compile Include="Controls\ComboxLang.cs" />
     <Compile Include="Extensions\DataBasedExtension.cs" />
+    <Compile Include="Extensions\DataConverterExtension.cs" />
     <Compile Include="Form\FormDatabaseMaintenance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +226,9 @@
     <Compile Include="Form\FormSyncSet.Designer.cs">
       <DependentUpon>FormSyncSet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\EncryptHelper.cs" />
+    <Compile Include="Helpers\HashHelper.cs" />
+    <Compile Include="Helpers\PasswordPolicyHelper.cs" />
     <Compile Include="Models\ApplicationLogEntity.cs" />
     <Compile Include="Models\BusinessEntities\AnnulaCalendar.cs" />
     <Compile Include="Models\BusinessEntities\AttendanceReportDetails.cs" />
@@ -236,6 +240,7 @@
     <Compile Include="Models\BusinessEntities\Elevator.cs" />
     <Compile Include="Models\BusinessEntities\ElevatorController.cs" />
     <Compile Include="Models\BusinessEntities\ElevatorCtlAuthority.cs" />
+    <Compile Include="Models\BusinessEntities\AllowTimeSetting.cs" />
     <Compile Include="Models\BusinessEntities\EmployeeMsg.cs" />
     <Compile Include="Models\BusinessEntities\EmployeeTA_Data.cs" />
     <Compile Include="Models\BusinessEntities\PerLeaveItem.cs" />
@@ -324,6 +329,7 @@
     <Compile Include="Models\BusinessEntities\WorkShiftSetting.cs" />
     <Compile Include="Models\BusinessEntities\EmployeeBrief.cs" />
     <Compile Include="Models\ElevatorControlDataSource.cs" />
+    <Compile Include="Models\AllowTimeDataSource.cs" />
     <Compile Include="Models\Interface\IDeviceCategory.cs" />
     <Compile Include="Models\Interface\ITransactions.cs" />
     <Compile Include="Models\BusinessEntities\Transactions.cs" />
@@ -455,6 +461,7 @@
     <Compile Include="ViewModels\Attendance\CalendarEditViewModel.cs" />
     <Compile Include="ViewModels\ElevatorController\ElevatorAuthorityViewModel.cs" />
     <Compile Include="ViewModels\ElevatorController\ElevatorEditViewModel.cs" />
+    <Compile Include="ViewModels\Employees\AllowTimeReportViewModel.cs" />
     <Compile Include="Views\Device\DeviceSettingManageViewModel.cs" />
     <Compile Include="Views\ElevatorController\ElevatorAdd.cs">
       <SubType>UserControl</SubType>
@@ -633,6 +640,12 @@
       <DependentUpon>ShowElevatorAuthority.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\ElevatorController\ShowElevatorAuthorityViewModel.cs" />
+    <Compile Include="Views\Employees\AllowTimeReportView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employees\AllowTimeReportView.Designer.cs">
+      <DependentUpon>AllowTimeReportView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Employees\ChangeCardID.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1103,6 +1116,10 @@
     <EmbeddedResource Include="Views\ElevatorController\ShowElevatorAuthority.resx">
       <DependentUpon>ShowElevatorAuthority.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employees\AllowTimeReportView.resx">
+      <DependentUpon>AllowTimeReportView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Employees\ChangeCardID.resx">
       <DependentUpon>ChangeCardID.cs</DependentUpon>
     </EmbeddedResource>
@@ -1195,11 +1212,14 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="KCS_TemporaryKey.pfx" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\DataSources\KCS.Models.AcTimeSet.datasource" />
     <None Include="Properties\DataSources\KCS.Models.AcTimeZone.datasource" />
     <None Include="Properties\DataSources\KCS.Models.AcUserGroupSet.datasource" />
     <None Include="Properties\DataSources\KCS.Models.Administrator.datasource" />
+    <None Include="Properties\DataSources\KCS.Models.AllowTimeSetting.datasource" />
     <None Include="Properties\DataSources\KCS.Models.AnnulaCalendar.datasource" />
     <None Include="Properties\DataSources\KCS.Models.AttendanceReportDetails.datasource" />
     <None Include="Properties\DataSources\KCS.Models.AttendanceReportSimplified.datasource" />

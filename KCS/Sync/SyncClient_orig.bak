@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -63,11 +62,6 @@ namespace KCS.Sync
 
         private SyncParameter syncDevicePara = new SyncParameter();
 
-        string aes256_com_key = "cyliew8606_com";
-        string aes256_com_iv = "kcs91663";
-
-        byte[] aes256_iv = new byte[16];
-        byte[] aes256_key = new byte[32];
 
 
 
@@ -75,114 +69,10 @@ namespace KCS.Sync
         const string m_ClassID = "SYNCCLIENT";
         KCS.Services.ApplicationLogService m_ApplicationLogService = new KCS.Services.ApplicationLogService();
 
-        public byte[] getHashSha256(string text)
-        {
-            byte[] bytes = Encoding.UTF8.GetBytes(text);
-            System.Security.Cryptography.HashAlgorithm algorithm;
-            algorithm = System.Security.Cryptography.SHA256.Create();
-            return algorithm.ComputeHash(bytes);
-        }
-        public byte[] getHashMd5(string text)
-        {
-            byte[] bytes = Encoding.UTF8.GetBytes(text);
-            System.Security.Cryptography.HashAlgorithm algorithm;
-            algorithm = System.Security.Cryptography.MD5.Create();
-            return algorithm.ComputeHash(bytes);
-        }
-
-        /// <summary>
-        /// AES256加密
-        /// </summary>
-        /// <param name="encryptStr">16字节 明文</param>
-        /// <param name="key">16字节 密钥</param>
-        /// <returns></returns>
-        public byte[] EncryptHex(byte[] encryptArray, byte[] iv, byte[] key)
-        {
-            if (encryptArray == null)
-                return null;
-
-            if (key == null || key.Length != 32)
-                return null;
-
-            RijndaelManaged rDel = new RijndaelManaged();
-
-            rDel.Key = key;
-            rDel.Mode = CipherMode.CBC;
-            rDel.Padding = PaddingMode.Zeros;
-
-            if (iv != null)
-                rDel.IV = iv;
-
-            ICryptoTransform cTransform = rDel.CreateEncryptor();
-            byte[] resultArray = cTransform.TransformFinalBlock(encryptArray, 0, encryptArray.Length);
-
-
-
-            return resultArray;
-        }
-        /// <summary>
-        /// AES256解密
-        /// </summary>
-        /// <param name="decryptStr"16字节 密文</param>
-        /// <param name="key">32字节 密钥</param>
-        /// <returns></returns>
-        public byte[] DecryptHex(byte[] decryptArray, byte[] iv, byte[] key)
-        {
-            if (decryptArray == null)
-                return null;
-
-            if (key == null || key.Length != 32)
-                return null;
-
-            RijndaelManaged rDel = new RijndaelManaged();
-
-            rDel.Key = key;
-            rDel.Mode = CipherMode.CBC;
-            rDel.Padding = PaddingMode.Zeros;
-
-            if (iv != null)
-                rDel.IV = iv;
-
-            ICryptoTransform cTransform = rDel.CreateDecryptor();
-            byte[] resultArray = cTransform.TransformFinalBlock(decryptArray, 0, decryptArray.Length);
-
-            return resultArray;
-        }
-
-        public byte[] CutTail(byte[] byList)
-        {
-            int j = 0;
-            byte[] tempb = null;
-            for (int i = byList.Length - 1; i >= 0; i--)
-            {
-                if (byList[i] != 0x00 & j == 0)
-                {
-                    j = i;
-                    if (tempb == null)
-                    {
-                        tempb = new byte[j + 1];
-                    }
-
-                    tempb[j] = byList[i];
-                    j--;
-                }
-                else
-                {
-                    if (tempb != null)
-                    {
-                        tempb[j] = byList[i];
-                        j--;
-                    }
-                }
-            }
-            return tempb;
-        }
 
         public SyncClient(Terminal terminal)
         {
             _terminal = terminal;
-            aes256_iv = getHashMd5(aes256_com_iv);
-            aes256_key = getHashSha256(aes256_com_key);
             //clientResultFactory = new ClientResultFactory(_terminal.deviceContext.IP_Internal, _terminal.deviceContext.IP, _terminal.deviceContext.SlaveSID);
             //clientResultFactory.transactionHandleEvent += Client_transactionHandleEventRest;
             onClientResponseReceived = new OnClientReponseReceived(OnClientResponseReceived);
@@ -316,15 +206,13 @@ namespace KCS.Sync
                 }
             }
         }
-        private void OnClientResponseReceived(byte[] tmp_response)
+        private void OnClientResponseReceived(byte[] response)
         {
-            byte[] response =DecryptHex(tmp_response, aes256_iv, aes256_key);
-            byte[] pre_response = CutTail(response);
             ReturnCode returnCode = (ReturnCode)response[0];
             try
             {
                 
-                if (pre_response.Length == 1)
+                if (response.Length == 1)
                 {
                     if (returnCode == ReturnCode.WriteTimeOrReSetDeviceOk)
                     {
@@ -1590,7 +1478,7 @@ namespace KCS.Sync
                 {
                     _terminal.UpdateDeviceStatus(true);
                     SyncEvent.Reset();
-                    _terminal.Client.Send(EncryptHex(message, aes256_iv, aes256_key));
+                    _terminal.Client.Send(message);
 
                 }
                 else

@@ -333,6 +333,17 @@ namespace KCS.Common.DAL
                         }
                     }
 
+                    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    * Add:          2023/07/21
+                    * Ver:         1.1.5.10
+                    * Note:        
+                    */
+                    if (SystemConfigure.IsEnableEncryptExportData)
+                    {
+                        strRecord = KCS.Helpers.EncryptHelper.EncryptAES(strRecord);
+                    }
+                    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
                     sw.WriteLine(strRecord);
                 }
 
@@ -665,7 +676,19 @@ namespace KCS.Common.DAL
                         }
                     }
 
-                    sw.WriteLine(strRecord);
+
+                        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        * Add:      2023/07/21
+                        * Ver:      1.1.5.10
+                        * Note:        
+                        */
+                        if (SystemConfigure.IsEnableEncryptExportData)
+                        {
+                            strRecord = KCS.Helpers.EncryptHelper.EncryptAES(strRecord);
+                        }
+                        // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                        sw.WriteLine(strRecord);
                 }
 
 

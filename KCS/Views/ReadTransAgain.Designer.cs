@@ -80,9 +80,9 @@
             this.panelControl1.Controls.Add(this.groupControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(983, 261);
+            this.panelControl1.Size = new System.Drawing.Size(786, 214);
             this.panelControl1.TabIndex = 0;
             // 
             // groupControl2
@@ -91,18 +91,18 @@
             this.groupControl2.Controls.Add(this.lblCtlEndTime);
             this.groupControl2.Controls.Add(this.lblCtlEndDate);
             this.groupControl2.Controls.Add(this.dateEditEnd);
-            this.groupControl2.Location = new System.Drawing.Point(503, 11);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupControl2.Location = new System.Drawing.Point(402, 9);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(466, 229);
+            this.groupControl2.Size = new System.Drawing.Size(373, 187);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "To";
             // 
             // timeEditEnd
             // 
             this.timeEditEnd.EditValue = new System.DateTime(2017, 7, 27, 0, 0, 0, 0);
-            this.timeEditEnd.Location = new System.Drawing.Point(136, 137);
-            this.timeEditEnd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.timeEditEnd.Location = new System.Drawing.Point(109, 112);
+            this.timeEditEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEditEnd.Name = "timeEditEnd";
             this.timeEditEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -112,38 +112,38 @@
             this.timeEditEnd.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.timeEditEnd.Properties.Mask.EditMask = "t";
             this.timeEditEnd.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.timeEditEnd.Size = new System.Drawing.Size(276, 28);
+            this.timeEditEnd.Size = new System.Drawing.Size(221, 24);
             this.timeEditEnd.TabIndex = 4;
             // 
             // lblCtlEndTime
             // 
-            this.lblCtlEndTime.Location = new System.Drawing.Point(17, 141);
-            this.lblCtlEndTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlEndTime.Location = new System.Drawing.Point(14, 115);
+            this.lblCtlEndTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlEndTime.Name = "lblCtlEndTime";
-            this.lblCtlEndTime.Size = new System.Drawing.Size(69, 22);
+            this.lblCtlEndTime.Size = new System.Drawing.Size(57, 18);
             this.lblCtlEndTime.TabIndex = 5;
             this.lblCtlEndTime.Text = "EndTime";
             // 
             // lblCtlEndDate
             // 
-            this.lblCtlEndDate.Location = new System.Drawing.Point(17, 80);
-            this.lblCtlEndDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlEndDate.Location = new System.Drawing.Point(14, 65);
+            this.lblCtlEndDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlEndDate.Name = "lblCtlEndDate";
-            this.lblCtlEndDate.Size = new System.Drawing.Size(72, 22);
+            this.lblCtlEndDate.Size = new System.Drawing.Size(60, 18);
             this.lblCtlEndDate.TabIndex = 3;
             this.lblCtlEndDate.Text = "End Date";
             // 
             // dateEditEnd
             // 
             this.dateEditEnd.EditValue = null;
-            this.dateEditEnd.Location = new System.Drawing.Point(134, 75);
-            this.dateEditEnd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateEditEnd.Location = new System.Drawing.Point(107, 61);
+            this.dateEditEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateEditEnd.Name = "dateEditEnd";
             this.dateEditEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditEnd.Size = new System.Drawing.Size(277, 28);
+            this.dateEditEnd.Size = new System.Drawing.Size(222, 24);
             this.dateEditEnd.TabIndex = 2;
             // 
             // groupControl1
@@ -152,27 +152,27 @@
             this.groupControl1.Controls.Add(this.timeEditStart);
             this.groupControl1.Controls.Add(this.lblCtlStartDate);
             this.groupControl1.Controls.Add(this.dateEditStart);
-            this.groupControl1.Location = new System.Drawing.Point(11, 11);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupControl1.Location = new System.Drawing.Point(9, 9);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(466, 229);
+            this.groupControl1.Size = new System.Drawing.Size(373, 187);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "From";
             // 
             // lblCtlStartTime
             // 
-            this.lblCtlStartTime.Location = new System.Drawing.Point(23, 141);
-            this.lblCtlStartTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlStartTime.Location = new System.Drawing.Point(18, 115);
+            this.lblCtlStartTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlStartTime.Name = "lblCtlStartTime";
-            this.lblCtlStartTime.Size = new System.Drawing.Size(82, 22);
+            this.lblCtlStartTime.Size = new System.Drawing.Size(69, 18);
             this.lblCtlStartTime.TabIndex = 3;
             this.lblCtlStartTime.Text = "Start Time";
             // 
             // timeEditStart
             // 
             this.timeEditStart.EditValue = new System.DateTime(2017, 7, 27, 0, 0, 0, 0);
-            this.timeEditStart.Location = new System.Drawing.Point(140, 137);
-            this.timeEditStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.timeEditStart.Location = new System.Drawing.Point(112, 112);
+            this.timeEditStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEditStart.Name = "timeEditStart";
             this.timeEditStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -182,39 +182,39 @@
             this.timeEditStart.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.timeEditStart.Properties.Mask.EditMask = "t";
             this.timeEditStart.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.timeEditStart.Size = new System.Drawing.Size(276, 28);
+            this.timeEditStart.Size = new System.Drawing.Size(221, 24);
             this.timeEditStart.TabIndex = 2;
             // 
             // lblCtlStartDate
             // 
-            this.lblCtlStartDate.Location = new System.Drawing.Point(23, 85);
-            this.lblCtlStartDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlStartDate.Location = new System.Drawing.Point(18, 70);
+            this.lblCtlStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlStartDate.Name = "lblCtlStartDate";
-            this.lblCtlStartDate.Size = new System.Drawing.Size(79, 22);
+            this.lblCtlStartDate.Size = new System.Drawing.Size(67, 18);
             this.lblCtlStartDate.TabIndex = 1;
             this.lblCtlStartDate.Text = "Start Date";
             // 
             // dateEditStart
             // 
             this.dateEditStart.EditValue = null;
-            this.dateEditStart.Location = new System.Drawing.Point(140, 80);
-            this.dateEditStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateEditStart.Location = new System.Drawing.Point(112, 65);
+            this.dateEditStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateEditStart.Name = "dateEditStart";
             this.dateEditStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditStart.Size = new System.Drawing.Size(277, 28);
+            this.dateEditStart.Size = new System.Drawing.Size(222, 24);
             this.dateEditStart.TabIndex = 0;
             // 
             // groupControlDevice
             // 
             this.groupControlDevice.Controls.Add(this.gridControl);
             this.groupControlDevice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControlDevice.Location = new System.Drawing.Point(0, 261);
-            this.groupControlDevice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupControlDevice.Location = new System.Drawing.Point(0, 214);
+            this.groupControlDevice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControlDevice.Name = "groupControlDevice";
-            this.groupControlDevice.Size = new System.Drawing.Size(983, 463);
+            this.groupControlDevice.Size = new System.Drawing.Size(786, 378);
             this.groupControlDevice.TabIndex = 1;
             this.groupControlDevice.Text = "Selected devices";
             // 
@@ -222,12 +222,12 @@
             // 
             this.gridControl.DataSource = this.bindingSource;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gridControl.Location = new System.Drawing.Point(3, 69);
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl.Location = new System.Drawing.Point(2, 56);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(977, 391);
+            this.gridControl.Size = new System.Drawing.Size(782, 320);
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -292,13 +292,13 @@
             // 
             // ReadTransAgain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControlDevice);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ReadTransAgain";
-            this.Size = new System.Drawing.Size(983, 724);
+            this.Size = new System.Drawing.Size(786, 592);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

@@ -82,7 +82,12 @@ using System.Runtime.InteropServices;
  *  * * 2021 3 15 1.0.4.5 手动导出当天记录
  *  [assembly: AssemblyVersion("1.0.4.6")]// fix 同步门禁权限 1.0.0.2,fix手动导出
  */
-[assembly: AssemblyVersion("1.1.5.9")]          // 2023-06-27       IsServerMode => Push Sync／張工調整ClientSync
+[assembly: AssemblyVersion("1.1.5.14")]          // 2023-11-16          Toyota 部分UI改善
+//[assembly: AssemblyVersion("1.1.5.13")]          // 2023-10-22          Toyota 避開管理員權限要求
+//[assembly: AssemblyVersion("1.1.5.12")]          // 2023-10-17          Toyota 允許進出時間報表
+//[assembly: AssemblyVersion("1.1.5.11")]          // 2023-07-30          Toyota
+//[assembly: AssemblyVersion("1.1.5.10")]          // 2023-06-28         Only DB: UDF_DS_BF_FP_Add_BySlaveSID 要加一个限制，必须是DeviceType=Finger 的设备 才会有指纹数据列表
+//[assembly: AssemblyVersion("1.1.5.9")]          // 2023-06-27       IsServerMode => Push Sync／張工調整ClientSync
 //[assembly: AssemblyVersion("1.1.5.8")]          // 2023-03-20       新增AttendenceReport FlexShift，排除Tran_PHOTO引起刷卡紀錄重複問題
 //[assembly: AssemblyVersion("1.1.5.7")]          // 2023-01-26       新增AttendenceReport FlexShift
 //[assembly: AssemblyVersion("1.1.5.6")]          // 2023-01-11       調整DeviceSettingManage的gridControl.RefreshDataSource()導致selection change的問題
@@ -91,4 +96,4 @@ using System.Runtime.InteropServices;
 //[assembly: AssemblyVersion("1.1.5.3")]      // 2022-11-23
 //[assembly: AssemblyVersion("1.1.5.2")]      // 2022-08-29   那我就要勞煩Eric在主程式上改一下並且把版本升到1151
 //[assembly: AssemblyFileVersion("1.1.5.5")]  // Hi YG, KACS.exe 上頭的Kizone logo 我能自己換成IDCOM的嗎? 還是必須你來換?
-[assembly: AssemblyFileVersion("1.1.5.9")]
+[assembly: AssemblyFileVersion("1.1.5.14")]

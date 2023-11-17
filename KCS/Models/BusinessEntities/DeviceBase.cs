@@ -17,6 +17,10 @@ namespace KCS.Models
         [StringLength(255)]
         public string SlaveDescription { get; set; }
 
+        // Modified:    2023/10/14
+        // Ver:         1.1.5.12
+        public string ListField { get; set; }
+
         public string Details
         {
             get

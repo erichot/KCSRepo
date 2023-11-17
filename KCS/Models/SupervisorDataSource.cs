@@ -21,11 +21,22 @@ namespace KCS.Models
         }
         static public bool UpdateSupervisorPin(string id, string pin)
         {
-            return KCSDatabaseHelper.Instance.UpdateSupervisorPin(id, LoginPwdCryption.EnCode(pin));
+            /*
+             * Modified:    2023/07/20
+             * Ver:         1.1.5.11
+             */
+            //return KCSDatabaseHelper.Instance.UpdateSupervisorPin(id, LoginPwdCryption.EnCode(pin));
+            return KCSDatabaseHelper.Instance.UpdateSupervisorPin(id, KCS.Helpers.HashHelper.ComputeStringToSha256Hash(pin));
         }
         static public bool NewSupervisor(EmployeeSupervisor supervisor)
         {
+            /*
+             * Modified:    2023/07/20
+             * Ver:         1.1.5.11
             supervisor.NewUserPwd = LoginPwdCryption.EnCode(supervisor.NewUserPwd);
+             */
+            supervisor.NewUserPwd = KCS.Helpers.HashHelper.ComputeStringToSha256Hash(supervisor.NewUserPwd);
+
             return KCSDatabaseHelper.Instance.InsertNewSupervisor(supervisor, CredentialsSource.GetLoginSupervisorSID());
         }
         static public bool DeleteSupervisor(int supervisorSID)

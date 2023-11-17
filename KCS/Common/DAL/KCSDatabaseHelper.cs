@@ -237,6 +237,8 @@ namespace KCS.Common.DAL
              * Modified:    2023/03/22
              * Ver:         1.1.5.8
              * Note:        刷卡報表重複
+             *              queryCondtion=1 篩選排除停用資料
+             *              queryCondtion=2 僅篩選停用資料
              */
             //string strSql = "SELECT TranSID, A.CardID,UserID, UserName, DepartmentID,DepartmentName, TranDateTime, TranDate, TranTime"
             //    + ", (CASE WHEN IsByTranType = 1 THEN TranType ELSE DataType END) AS TranType, JobName, ID, SlaveIP, SlaveDescription,InActive,[Note],B.Photos AS TransImage "
@@ -280,6 +282,15 @@ namespace KCS.Common.DAL
                 {//inactive
                     strFormSqlWhere += string.Format("and ID={0} and InActive = 1", SlaveId.ToString());
                 }
+                //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                // Note:    2023/11/16
+                // Version:     1.1.5.14
+                // Note:        Toyota UI修正
+                else
+                {
+                    strFormSqlWhere += string.Format("and ID={0} ", SlaveId.ToString());
+                }
+                //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             }
             
             strSql += strFormSqlWhere;
@@ -2157,12 +2168,20 @@ END AS [CLASS_CODE],N'{2}',N'{3}',N'{2}',N'{3}',[LIST_GRP]
         }
         public DataTable GetDeviceBaseList()
         {
-            string SqlCommand = "SELECT [SlaveSID],[IP],  [SlaveName], [SlaveDescription] from [VS_SlaveIP]";
+            // Modified:    2023/10/14
+            // Ver:         1.1.5.12
+            //string SqlCommand = "SELECT [SlaveSID],[IP],  [SlaveName], [SlaveDescription] from [VS_SlaveIP]";
+            string SqlCommand = "SELECT  [ListField], [SlaveSID],[IP],  [SlaveName], [SlaveDescription] from [VS_SlaveIP] ORDER BY SlaveSID ";
+
             return sqlDatabaseProvider.ExcuteTable(SqlCommand);
         }
         public DataTable GetDeviceBriefList()
         {
-            string SqlCommand = "SELECT 0 as SlaveSID,'All' as IP,'' as SlaveName,'' as SlaveDescription from [VS_SlaveIP] union all SELECT [SlaveSID],[IP],  [SlaveName], [SlaveDescription] from [VS_SlaveIP]";
+            // Modified:    2023/11/16
+            // Version:     1.1.5.14
+            // Note:        Toyota UI修正
+            //string SqlCommand = "SELECT 0 as SlaveSID,'All' as IP,'' as SlaveName,'' as SlaveDescription from [VS_SlaveIP] union all SELECT [SlaveSID],[IP],  [SlaveName], [SlaveDescription] from [VS_SlaveIP]";
+            string SqlCommand = "SELECT TOP (1) 0 as SlaveSID,'All' as IP,'' as SlaveName,'' as SlaveDescription, '' AS ListField from [VS_SlaveIP] union all SELECT [SlaveSID],[IP],  [SlaveName], [SlaveDescription], ListField  from [VS_SlaveIP] ORDER BY SlaveSID ";
             return sqlDatabaseProvider.ExcuteTable(SqlCommand);
         }
         public DataTable GetDeviceBriefDataList()
@@ -2606,8 +2625,13 @@ END AS [CLASS_CODE],N'{2}',N'{3}',N'{2}',N'{3}',[LIST_GRP]
         }
         public DataTable GetLoginUserMsg(string loginId)
         {
-            string sSQL = string.Format("SELECT UnionType, UserSID, UserName, GroupSID, UserPermissionTypeID, DepartmentID, IsReadOnly,UserPWD FROM [VUN_SupervisorUser] WHERE (UserID = '{0}')", loginId);
-
+            /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             * Modified:    2023/08/08
+             * Ver:         1.1.5.11
+             * string sSQL = string.Format("SELECT UnionType, UserSID, UserName, GroupSID, UserPermissionTypeID, DepartmentID, IsReadOnly,UserPWD FROM [VUN_SupervisorUser] WHERE (UserID = '{0}')", loginId);
+             */
+            string sSQL = string.Format("SELECT UnionType, UserSID, UserName, GroupSID, UserPermissionTypeID, DepartmentID, IsReadOnly, UserPWD, IsLocked, TimeLockout, PasswordExpirationDate  FROM [VUN_SupervisorUser] WHERE (UserID = '{0}')", loginId);
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             return sqlDatabaseProvider.ExcuteTable(sSQL);
         }
         public bool DeleteSuervisorBySID(int Sid)
@@ -2652,8 +2676,15 @@ END AS [CLASS_CODE],N'{2}',N'{3}',N'{2}',N'{3}',[LIST_GRP]
         }
         public bool UpdateSupervisorPin(string supervisorId, string newPin)
         {
+            /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             * Remark:  2023/08/08
+             * Ver:     1.1.5.11
             string SqlCommand = string.Format("UPDATE [BF_Supervisor] SET [UserPWD] = '{0}' WHERE [UserID] = '{1}'", newPin, supervisorId);
             return sqlDatabaseProvider.ExecuteSql(SqlCommand) > 0 ? true : false;
+            */
+            var result = SP_UPDATE_BF_Supervisor_Password(supervisorId, newPin);
+            return result > 0 ? true : false;
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         }
         #endregion
         #region Employees
@@ -2737,7 +2768,28 @@ END AS [CLASS_CODE],N'{2}',N'{3}',N'{2}',N'{3}',[LIST_GRP]
             SqlCommand += ")";
             return sqlDatabaseProvider.ExcuteTable(SqlCommand);
         }
-        
+
+        // Add: 2023/10/13
+        // Ver: 1.1.5.12
+        public DataTable GetUserSlaveAllowTime(int _slaveSID, string _departmentID
+            , int _allowTimeStartHour, int _allowTimeEndHour)
+        {
+            string SqlCommand = string.Format("SELECT * "
+                + "FROM [VBFX_UserSlaveAllowTime] "
+                + "WHERE ("+ _slaveSID + " = 0 OR SlaveSID = " + _slaveSID + ") " 
+                + " AND ('" + _departmentID + "' = '' OR DepartmentID = '" + _departmentID + "') "
+                );
+
+                SqlCommand += " AND (AllowTimeStartHour >= " + _allowTimeStartHour + ") ";
+
+                SqlCommand += " AND (AllowTimeEndHour <= " + _allowTimeEndHour + ") ";
+
+
+            //+ "WHERE (" + _slaveSID  + " = 0 OR SlaveSID = " + _slaveSID + ") ");
+
+            return sqlDatabaseProvider.ExcuteTable(SqlCommand);
+        }
+
         public DataTable GetEmployeesTypeInfoList()
         {
             return sqlDatabaseProvider.ExcuteTable(EMPLOYEES_TYPE_LIST_FIELD_SQL);
@@ -4421,6 +4473,129 @@ END AS [CLASS_CODE],N'{2}',N'{3}',N'{2}',N'{3}',[LIST_GRP]
         #endregion
 
         #endregion
+
+
+
+
+
+
+
+        /*
+         * Add:     2023/07/28
+         * Ver:     1.1.5.11
+         */
+        public int SP_INSERT_S_UserLoginHistoryLog(string LoginID, string LoginPassword, bool IsSuccessfulLogon, int? UserSID = null)
+        {
+            SqlConnection cn = sqlDatabaseProvider.GetDatabaseConnection() as SqlConnection;
+            SqlParameter[] sqlPara = new SqlParameter[4];
+
+            sqlPara[0] = new SqlParameter("@LoginID", SqlDbType.VarChar,16);
+            sqlPara[0].Value = LoginID;
+            sqlPara[1] = new SqlParameter("@LoginPassword", SqlDbType.VarChar,128);
+            sqlPara[1].Value = LoginPassword;
+            sqlPara[2] = new SqlParameter("@IsSuccessLogon", SqlDbType.Bit);
+            sqlPara[2].Value = IsSuccessfulLogon;
+            sqlPara[3] = new SqlParameter("@UserSID", SqlDbType.Int);
+            
+            if (UserSID == null)
+            {
+                sqlPara[3].IsNullable = true;
+                sqlPara[3].Value = DBNull.Value;
+            }
+            else
+            {
+                sqlPara[3].Value = UserSID;
+            }
+            
+
+            int rowsAffect = 0;
+            return DataBase.RunProcedure(cn, "SP_INSERT_S_UserLoginHistoryLog", sqlPara, out rowsAffect);
+        }
+
+        public int SP_INSERT_S_UserPasswordHistory(int UserSID, string PasswordHash)
+        {
+            SqlConnection cn = sqlDatabaseProvider.GetDatabaseConnection() as SqlConnection;
+            SqlParameter[] sqlPara = new SqlParameter[2];
+
+            sqlPara[0] = new SqlParameter("@UserSID", SqlDbType.Int);
+            sqlPara[0].Value = UserSID;
+            sqlPara[1] = new SqlParameter("@PasswordHash", SqlDbType.VarChar, 128);
+            sqlPara[1].Value = PasswordHash;
+                                 
+
+            int rowsAffect = 0;
+            return DataBase.RunProcedure(cn, "SP_INSERT_S_UserPasswordHistory", sqlPara, out rowsAffect);
+        }
+
+
+        public int SP_UPDATE_BF_Supervisor_IsLocked(int UserSID, string UserID, bool IsLocked)
+        {
+            SqlConnection cn = sqlDatabaseProvider.GetDatabaseConnection() as SqlConnection;
+            SqlParameter[] sqlPara = new SqlParameter[3];
+
+            sqlPara[0] = new SqlParameter("@UserSID", SqlDbType.Int);
+            sqlPara[0].Value = UserSID;
+
+            if (UserSID == default(int))
+            {
+                sqlPara[0].IsNullable = true;
+                sqlPara[0].Value = DBNull.Value;
+            }
+
+            sqlPara[1] = new SqlParameter("@UserID", SqlDbType.NVarChar,12);
+            sqlPara[1].Value = UserID;
+            if (string.IsNullOrEmpty(UserID))
+            {
+                sqlPara[1].IsNullable = true;
+                sqlPara[1].Value = DBNull.Value;
+            }
+
+
+            sqlPara[2] = new SqlParameter("@IsLocked", SqlDbType.Bit);
+            sqlPara[2].Value = IsLocked;
+
+
+            int rowsAffect = 0;
+            return DataBase.RunProcedure(cn, "SP_UPDATE_BF_Supervisor_IsLocked", sqlPara, out rowsAffect);
+        }
+
+
+        private int SP_UPDATE_BF_Supervisor_Password(string UserID, string UserPWD)
+        {
+            SqlConnection cn = sqlDatabaseProvider.GetDatabaseConnection() as SqlConnection;
+            SqlParameter[] sqlPara = new SqlParameter[2];
+
+            sqlPara[0] = new SqlParameter("@UserID", SqlDbType.NVarChar,12);
+            sqlPara[0].Value = UserID;
+
+            sqlPara[1] = new SqlParameter("@UserPWD", SqlDbType.NVarChar,128);
+            sqlPara[1].Value = UserPWD;
+
+            int rowsAffect = 0;
+            return DataBase.RunProcedure(cn, "SP_UPDATE_BF_Supervisor_Password", sqlPara, out rowsAffect);
+        }
+
+
+        public DataTable GetUserPasswordHistoryList(string UserID)
+        {
+
+            string sSQL = string.Format("SELECT TOP(5) H.* FROM [S_UserPasswordHistory] AS H INNER JOIN [BF_Supervisor] AS S ON H.UserSID = S.UserSID WHERE (S.UserID = '{0}') ORDER BY LogNo DESC", UserID);
+            return sqlDatabaseProvider.ExcuteTable(sSQL);
+        }
+        public DataTable GetUserPasswordHistoryList(int UserSID)
+        {
+           
+            string sSQL = string.Format("SELECT TOP(5) * FROM [S_UserPasswordHistory] WHERE (UserSID = '{0}') ORDER BY LogNo DESC", UserSID);
+            return sqlDatabaseProvider.ExcuteTable(sSQL);
+        }
+        public DataTable GetUserLoginHistoryLogList(string LoginID)
+        {
+            string sSQL = string.Format("SELECT TOP(10) * FROM [S_UserLoginHistoryLog] WHERE (LoginID = '{0}') ORDER BY LoginActionNo DESC", LoginID);
+            return sqlDatabaseProvider.ExcuteTable(sSQL);
+        }
+        // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 
     }
 

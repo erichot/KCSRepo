@@ -40,8 +40,25 @@ namespace KCS
             {
                 if (state == AppState.Authorized)
                     this.DialogResult = DialogResult.OK; /*Show Main Form*/
+
+                
+                /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                * Add:  2023/08/09
+                * Ver:  1.1.5.11
+                */
+                if (state == AppState.AuthorizedButRequirePasswordChange)
+                {
+                    KCS.Common.DAL.SystemConfigure.IsForceToChangePassword = true;
+                    this.DialogResult = DialogResult.Retry;
+                }
+                if (state == AppState.NotAuthorizedDueToLockout)
+                {
+                    this.DialogResult = DialogResult.Ignore;
+                }
+                // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
                 //else
-                  //  Close(); // exit the app;
+                //  Close(); // exit the app;
             });
            
             foreach (string item in mvvmContext.GetViewModel<LoginViewModel>().LookUpUsers)

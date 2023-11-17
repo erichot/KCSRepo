@@ -274,6 +274,16 @@ namespace KCS.ViewModels
              var document = DocumentManagerService.CreateDocument("EmployeesAuthority", EmployeesAuthorityViewModel.Create(employeesObject));
             document.Show();
         }
+
+        // Add: 2023/10/13
+        // Ver: 1.1.5.12
+        public void AllowTimeReport()
+        {
+            AllowTimeReportViewModel attendanceReportSet = AllowTimeReportViewModel.Create();
+            var document = DocumentManagerService.CreateDocument("AllowTimeReportView", attendanceReportSet);
+            document.Show();
+        }
+
         public void EnableEmployees(IEnumerable<Employees> employeesObject)
         {
             var EmployeesList = EmployeesDataSet as IList<Employees>;

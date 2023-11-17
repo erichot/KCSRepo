@@ -69,6 +69,11 @@ namespace KCS.Sync
             
             SyncServerTask.StartServerApplication();
         }
+
+        public static void ReGetDeviceList()
+        {
+            deviceList = DevicesDataSource.GetDevicesList();
+        }
         public static string GetJobCodeName(int JobCode)
         {
             try

@@ -30,6 +30,12 @@ namespace KCS.Views
         private Thread threadRefreshDevice;
         private CancellationTokenSource cts = new CancellationTokenSource();
 
+        private int m_GridTileViewCurrentPosition = 0;
+        private int m_GridTileViewPreviousPosition = 0;
+        private int m_UpdateDeviceStatusInvokeTime = 0;
+        private int m_OnLoadDeviceEventTime = 0;
+
+
         public DeviceSettingManage()
             : base(typeof(DeviceSettingManageViewModel))
         {
@@ -63,18 +69,27 @@ namespace KCS.Views
             
             try
             {
+                //m_GridTileViewPreviousPosition = ((TileView)gridControl.MainView).Position;
+
                 while (!this.cts.Token.IsCancellationRequested)
                 {
                     TickCount++;
                     if (TickCount >= 30)
                     {
-                        
-                       UpdateDeviceStatus();
+                        UpdateDeviceStatus();
                         AddTransactions();
                         TickCount = 0;
+                        lblDebugPrint1.Text = "DateTime.Now.Second=" + DateTime.Now.Second.ToString() + " /Mod=" + (DateTime.Now.Second % 5).ToString()  + " ：" + DateTime.Now.ToString("ss") + " ：" + (((TileView)gridControl.MainView).Position).ToString();
                     }
-                    Thread.Sleep(200);
+                    //((TileView)gridControl.MainView).Position = m_GridTileViewPreviousPosition;
+                    //((TileView)gridControl.MainView).Position = ((TileView)gridControl.MainView).FocusedRowHandle * (((TileView)gridControl.MainView).OptionsTiles.ItemSize.Width + ((TileView)gridControl.MainView).OptionsTiles.IndentBetweenItems);
+
+                    lblDebugPrint2.Text = "L85=" + DateTime.Now.ToString("ss") + " ：" + (((TileView)gridControl.MainView).Position).ToString();
+                    Thread.Sleep(200);                                                           
+                    
                 }
+
+                
             }
             catch (Exception ex)
             {
@@ -92,10 +107,14 @@ namespace KCS.Views
                 InitBindings();
             InitViewDisplay();
 
+            gridControl.Enter += gridControl_Enter;
             //erictest SyncManage.InitDataSync();
             foreach (Devices device in SyncManage.GetDeviceLists())
             {
-                device.DeviceStatusEvent += UpdateDeviceStatus;
+                    device.DeviceStatusEvent += UpdateDeviceStatus;
+                // Add: 2023/11/16
+                // 同樣UpdateDeviceStatus在短時間內迅速執行多次（大約是S_Slave的RowCount)
+                //break;
             //    device.DeviceGetFingerEvent += UpdateDeviceFingerStatus;
             //    device.AddTransactionEvent += AddTransactions;
             }
@@ -112,17 +131,21 @@ namespace KCS.Views
             this.gridView1.BestFitColumns();
             onAsyncCallbackPing = new OnAsyncCallbackPing(PinDeviceTest);
 
+            lblDebugPrint.Text = "Starting.. " + DateTime.Now.ToString("HH:mm:ss") + " ：" + (((TileView)gridControl.MainView).Position).ToString();
+
+
             threadRefreshDevice = new Thread(new ThreadStart(ThreadedRefreshDevice));
             threadRefreshDevice.Start();
             //SetTraceDevice();
 
-//            listBoxControl.Items.AddRange(new object[] {
-//    "Color <color=Red>Red</color>",
-//    "Color <color=Green>Green</color>",
-//    "Color <color=Blue>Blue</color>"
-//});
+            //            listBoxControl.Items.AddRange(new object[] {
+            //    "Color <color=Red>Red</color>",
+            //    "Color <color=Green>Green</color>",
+            //    "Color <color=Blue>Blue</color>"
+            //});
+            
         }
-         protected override void OnDisposing()
+        protected override void OnDisposing()
          {
              base.OnDisposing();
              cts.Cancel();
@@ -209,8 +232,12 @@ namespace KCS.Views
                  {
                      onAsyncCallbackPing.Invoke();
                  });
-             }; 
-         }
+             };
+
+
+            fluentAPI.WithEvent<EventArgs>(timer1, "Tick")
+               .EventToCommand(x => x.RebindDataSource());
+        }
         public void PinDeviceTest()
         {
             var selectDevice = tileView.GetRow(tileView.FocusedRowHandle) as Devices;
@@ -252,7 +279,9 @@ namespace KCS.Views
          }
         public void UpdateDeviceStatus()
          {
-             this.Invoke(new Action(() =>
+            var vscroll = gridControl.Controls.OfType<DevExpress.XtraGrid.Scrolling.VCrkScrollBar>().First();
+
+            this.Invoke(new Action(() =>
              {
                  try
                 {
@@ -261,7 +290,32 @@ namespace KCS.Views
                      // Ver:    1.1.5.6
                      var selected = ((TileView)gridControl.MainView).GetSelectedRows();
 
-                    gridControl.RefreshDataSource();
+                     //var vscroll = gridControl.Controls.OfType<DevExpress.XtraGrid.Scrolling.VCrkScrollBar>().First();
+                     int previousFocusedRowHandle = ((TileView)gridControl.MainView).FocusedRowHandle;
+                     m_GridTileViewPreviousPosition = ((TileView)gridControl.MainView).Position;
+                     //lblDebugPrint.Text = "selected=" + selected.ToString() + " ：" + DateTime.Now.ToString("ss") + " " + (((TileView)gridControl.MainView).Position).ToString();
+                     m_UpdateDeviceStatusInvokeTime++;
+                     lblDebugPrint3.Text = "【" + m_UpdateDeviceStatusInvokeTime + "】L281 =" + DateTime.Now.ToString("ss") + " ：" + m_GridTileViewPreviousPosition.ToString() +  " " + vscroll.Value;
+
+                     //var nnn = DateTime.Now;
+                     //gridControl.RefreshDataSource();
+                     for (var i = 0; i< tileView.TileRows.Count-1; i++)
+                     {
+                         tileView.RefreshRow(i);
+                     }
+
+                     //var ggg = DateTime.Now - nnn;
+                     //lblDebugPrint1.Text = ggg.ToString();
+
+                     //((TileView)gridControl.MainView).FocusedRowHandle = previousFocusedRowHandle;
+                     //vscroll = gridControl.Controls.OfType<DevExpress.XtraGrid.Scrolling.VCrkScrollBar>().First();
+                     //if (vscroll != null) vscroll.Value = m_GridTileViewPreviousPosition;
+                     //((TileView)gridControl.MainView).Position = m_GridTileViewPreviousPosition;
+                     //tileView.Position = m_GridTileViewCurrentPosition;
+                     //if (vscroll != null)
+                     //   vscroll.Value = previousPosition;
+
+
 
                      // Add:    2023/01/11
                      // By:     Eric
@@ -269,24 +323,51 @@ namespace KCS.Views
                      if (selected.Any())
                      {
                          var selectedIndex = selected.First();
-                         if (selectedIndex > 0) ((TileView)gridControl.MainView).FocusedRowHandle = selectedIndex;
+                         //if (selectedIndex > 0) ((TileView)gridControl.MainView).FocusedRowHandle = selectedIndex;
+                         if (selectedIndex > 0)
+                         {
+                             //((TileView)gridControl.MainView).FocusedRowHandle = selectedIndex;
+                             
+
+                             // gridControl.RefreshDataSource()會造成頁面回復到頂端，捲頁後focus會往上移
+                             //var aaaa = ((TileView)gridControl.MainView).FocusedRowModified;
+                             //((TileView)gridControl.MainView).Position = previousPosition;
+                             //((TileView)gridControl.MainView).Position = selectedIndex * (((TileView)gridControl.MainView).OptionsTiles.ItemSize.Width + ((TileView)gridControl.MainView).OptionsTiles.IndentBetweenItems);
+                             //((TileView)gridControl.MainView).Position = ((TileView)gridControl.MainView).FocusedRowHandle * (((TileView)gridControl.MainView).OptionsTiles.ItemSize.Width + ((TileView)gridControl.MainView).OptionsTiles.IndentBetweenItems);
+                         }
                      }
-                     
-                   // gridView1.RefreshData();
-                }
+
+                     //((TileView)gridControl.MainView).FocusedRowHandle = previousFocusedRowHandle;
+                     //((TileView)gridControl.MainView).Position = previousFocusedRowHandle * (((TileView)gridControl.MainView).OptionsTiles.ItemSize.Width + ((TileView)gridControl.MainView).OptionsTiles.IndentBetweenItems);
+                     //((TileView)gridControl.MainView).scro
+                     //vscroll = gridControl.Controls.OfType<DevExpress.XtraGrid.Scrolling.VCrkScrollBar>().First();
+                     //if (vscroll != null) vscroll.Value = m_GridTileViewPreviousPosition;
+                     //((TileView)gridControl.MainView).Position = m_GridTileViewPreviousPosition;
+                     //tileView.Position = m_GridTileViewPreviousPosition;
+                     //((TileView)gridControl.MainView).Position = previousPosition;
+                     lblDebugPrint4.Text = "【CurrentPosition=" + ((TileView)gridControl.MainView).Position + "】L314 =" + DateTime.Now.ToString("ss") + " ：" + m_GridTileViewPreviousPosition.ToString();
+
+                     // gridView1.RefreshData();
+
+
+                 }
                  catch { }
              }));
 
-         }
-         public void AddTransactions()
+            //((TileView)gridControl.MainView).Position = ((TileView)gridControl.MainView).FocusedRowHandle * (((TileView)gridControl.MainView).OptionsTiles.ItemSize.Width + ((TileView)gridControl.MainView).OptionsTiles.IndentBetweenItems);
+           
+            
+        }
+        public void AddTransactions()
          {
              this.Invoke(new Action(() =>
                  {
-                         try
+                    try
                         {
-                            gridControlTrans.RefreshDataSource();
+                        
+                         gridControlTrans.RefreshDataSource();
                         }
-                         catch { }
+                    catch { }
                  }));
 
          }
@@ -323,8 +404,14 @@ namespace KCS.Views
             colTransactionDateTime.Caption = LanguageResource.GetDisplayString("TransctionDateTime");
             colUserId.Caption = LanguageResource.GetDisplayString("EmployeeID");
             colUserName.Caption = LanguageResource.GetDisplayString("EmployeeName");
-           
-           
+
+            //gridControl.RefreshDataSource();
+            //((TileView)gridControl.MainView).Position = 500;
+            //((TileView)gridControl.MainView).FocusedRowHandle = 33;
+            //var vscroll = gridControl.Controls.OfType<DevExpress.XtraGrid.Scrolling.VCrkScrollBar>().First();
+            //if (vscroll != null) vscroll.Value = 600;
+            //tileView.Position = 600;
+            //tileView.FocusedRowHandle = 33;
         }
          
         #region
@@ -335,5 +422,41 @@ namespace KCS.Views
         {
             var fluent = mvvmContext.OfType<DeviceSettingManageViewModel>();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //bindingSource.DataSource = SyncManage.GetDeviceLists();
+
+            //RebindDataSource();
+            //bindingSource.ResetBindings(true);
+            //m_GridTileViewPreviousPosition = tileView.Position;
+            //var previousPosition = tileView.Position;
+            //ThreadedRefreshDevice();
+            //UpdateDeviceStatus();
+            //gridControl.RefreshDataSource();
+            //tileView.RefreshRow(1);
+            //m_GridTileViewPreviousPosition = 800;
+            //var vscroll = gridControl.Controls.OfType<DevExpress.XtraGrid.Scrolling.VCrkScrollBar>().First();
+            //if (vscroll != null) vscroll.Value = m_GridTileViewPreviousPosition;
+            //((TileView)gridControl.MainView).Position = m_GridTileViewPreviousPosition;
+            //tileView.Position = previousPosition;
+            //tileView.Position = m_GridTileViewCurrentPosition;
+            //RebindDataSource();
+        }
+
+
+
+
+
+        private void gridControl_Enter(object sender, System.EventArgs e)
+        {
+            m_GridTileViewCurrentPosition = tileView.Position;
+        }
+        private void gridControl_MouseClick(Object sender, MouseEventArgs e)
+        {
+            m_GridTileViewCurrentPosition = tileView.Position;
+        }
+
+
     }
 }

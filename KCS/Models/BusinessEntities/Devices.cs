@@ -75,14 +75,16 @@ namespace KCS.Models
                     // Modified:    2023/06/27
                     // Ver:         1.1.5.9
                     //return "Server Mode";
-                    return "Pull Sync";
+                    //return "Pull Sync";
+                    return string.Empty;
                 }
                 else
                 {
                     // Modified:    2023/06/27
                     // Ver:         1.1.5.9
                     //return "Client Mode";
-                    return "Push Sync";
+                    //return "Push Sync";
+                    return string.Empty;
                 }
             }
         }

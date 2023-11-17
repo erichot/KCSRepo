@@ -19,6 +19,19 @@ namespace KCS.Models
         public string UserPwd { get; set; }
         public bool IsCacheOrNot { get; set; }
 
+
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       * Add:     2023/08/08
+       * Ver:     1.1.5.11
+       */
+        public DateTime? PasswordExpirationDate { get; set; }
+
+        public bool IsLocked { get; set; }
+        public DateTime? TimeLockout { get; set; }
+        // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
         public LoginAdmin()
         {
             this.UserNo = "";

@@ -292,7 +292,7 @@
             gridLevelNode1});
             this.gridControl.Location = new System.Drawing.Point(16, 16);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(16, 16, 16, 16);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(16);
             this.gridControl.MenuManager = this.ribbonControl;
             this.gridControl.Name = "gridControl";
             this.gridControl.ShowOnlyPredefinedDetails = true;

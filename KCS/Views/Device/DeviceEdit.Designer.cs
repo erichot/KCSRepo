@@ -376,6 +376,7 @@
             this.MenuPwdTextEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.MenuPwdTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.MenuPwdTextEdit.Properties.Mask.EditMask = "N0";
+            this.MenuPwdTextEdit.Properties.PasswordChar = '*';
             this.MenuPwdTextEdit.Size = new System.Drawing.Size(512, 24);
             this.MenuPwdTextEdit.StyleController = this.dataLayoutControl1;
             this.MenuPwdTextEdit.TabIndex = 13;

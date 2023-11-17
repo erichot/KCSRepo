@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            DevExpress.Utils.Animation.Transition transition2 = new DevExpress.Utils.Animation.Transition();
-            DevExpress.Utils.Animation.SlideFadeTransition slideFadeTransition2 = new DevExpress.Utils.Animation.SlideFadeTransition();
+            DevExpress.Utils.Animation.Transition transition5 = new DevExpress.Utils.Animation.Transition();
+            DevExpress.Utils.Animation.SlideFadeTransition slideFadeTransition5 = new DevExpress.Utils.Animation.SlideFadeTransition();
             this.modulesContainer = new DevExpress.XtraEditors.XtraUserControl();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -266,11 +266,11 @@
             // transitionManager
             // 
             this.transitionManager.ShowWaitingIndicator = false;
-            transition2.Control = this.modulesContainer;
-            slideFadeTransition2.Parameters.EffectOptions = DevExpress.Utils.Animation.PushEffectOptions.FromRight;
-            slideFadeTransition2.Parameters.FrameInterval = 5000;
-            transition2.TransitionType = slideFadeTransition2;
-            this.transitionManager.Transitions.Add(transition2);
+            transition5.Control = this.modulesContainer;
+            slideFadeTransition5.Parameters.EffectOptions = DevExpress.Utils.Animation.PushEffectOptions.FromRight;
+            slideFadeTransition5.Parameters.FrameInterval = 5000;
+            transition5.TransitionType = slideFadeTransition5;
+            this.transitionManager.Transitions.Add(transition5);
             // 
             // dockManager
             // 

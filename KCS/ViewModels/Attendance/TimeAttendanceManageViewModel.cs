@@ -25,9 +25,12 @@ namespace KCS.ViewModels
         protected TimeAttendanceManageViewModel()
         {
             SelectDeviceId = 0;
-           // DateStart = null;
+            // DateStart = null;
             //DateEnd = null;
+
+            
             QueryCondition = 0;
+
             int dayEnd = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
             DateStart = Convert.ToDateTime(string.Format("{0}-{1}-1 ", DateTime.Now.Year.ToString(), DateTime.Now.Month.ToString()));
             DateEnd = Convert.ToDateTime(string.Format("{0}-{1}-{2}", DateTime.Now.Year.ToString(), DateTime.Now.Month.ToString(), dayEnd.ToString()));
@@ -48,7 +51,10 @@ namespace KCS.ViewModels
         public virtual int RecordCount { get; set; }
         public virtual DateTime DateStart { get; set; }
         public virtual DateTime DateEnd { get; set; }
-        public virtual int QueryCondition { get; set; }
+
+        
+        public virtual int QueryCondition { get; set; } 
+
         public virtual int SelectDeviceId { get; set; }
         public virtual TaTransaction SelectedTransaction { get; set; }
 
@@ -107,7 +113,7 @@ namespace KCS.ViewModels
         }
         public void ReloadTransactions()
         {
-
+            var xxx = SelectDeviceId;
             RebindDataSource();
             RecordCount = TransactionList.Count;
         }

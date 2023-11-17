@@ -8,6 +8,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Xml;
 
+using KCS.Helpers;
+
 namespace KCS.Common.DAL
 {
     class SystemConfigure
@@ -64,6 +66,20 @@ namespace KCS.Common.DAL
         public static int ExportCardIdLen = 0;
         public static List<string> ExportItemsList = new List<string>();
         public static List<int> slavesList = new List<int>();
+
+
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        * Add:          2023/07/21
+        * Ver:         1.1.5.11
+        * Note:        所有從DB讀出的密碼皆為Hashed/Encrypted
+        */
+        public static bool IsEnableEncryptDbConfigXML = true;
+        public static bool IsEnableEncryptExportData = true;
+        public static bool IsEnablePasswordPolicy = true;
+        public static bool IsForceToChangePassword = false;     // 系統變數，非常數，比對DB後才設定該變數
+        // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
         static void GetSlavesList()
         {
             string szPath = string.Format("{0}\\SlaveLists.bin", XmlHelper.GetWorkDirectory());
@@ -149,10 +165,32 @@ namespace KCS.Common.DAL
         /// <param name="authMode"></param>
         public static void SaveDataBaseConnectionData(string strSqlServerName, string strDbName, string strAuthName, string strAuthPin, DataBaseAuthMode authMode,string LangSel,int isSync)
         {
+            /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            * Modified:    2023/07/21
+            * Ver:         1.1.5.10
+            * Note:        
             XmlHelper.WriteConfigData("ServerName", strSqlServerName, CONFIG_FILE);
             XmlHelper.WriteConfigData("DataBaseName", strDbName, CONFIG_FILE);
             XmlHelper.WriteConfigData("LoginName", strAuthName, CONFIG_FILE);
             XmlHelper.WriteConfigData("LoginPwd", strAuthPin, CONFIG_FILE);
+            */
+            var vSqlServerName = strSqlServerName;
+            var vDbName = strDbName;
+            var vAuthName = strAuthName;
+            var vAuthPin = strAuthPin;
+            if (IsEnableEncryptDbConfigXML)
+            {
+                vSqlServerName = EncryptHelper.EncryptAES(strSqlServerName);
+                vDbName = EncryptHelper.EncryptAES(strDbName);
+                vAuthName = EncryptHelper.EncryptAES(strAuthName);
+                vAuthPin = EncryptHelper.EncryptAES(strAuthPin);
+            }
+            XmlHelper.WriteConfigData("ServerName", vSqlServerName, CONFIG_FILE);
+            XmlHelper.WriteConfigData("DataBaseName", vDbName, CONFIG_FILE);
+            XmlHelper.WriteConfigData("LoginName", vAuthName, CONFIG_FILE);
+            XmlHelper.WriteConfigData("LoginPwd", vAuthPin, CONFIG_FILE);
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
             XmlHelper.WriteConfigData("LoginMode", ((int)authMode).ToString(), CONFIG_FILE);
             SetDefaultLanguage(LangSel);
             SetDisableSyncData(isSync);
@@ -190,17 +228,58 @@ namespace KCS.Common.DAL
                 string szConfigFile = string.Format("{0}\\{1}", XmlHelper.GetWorkDirectory(), CONFIG_FILE);
                 if (System.IO.File.Exists(szConfigFile))
                 {
-                    SqlServerName = XmlHelper.GetConfigData("ServerName", "", CONFIG_FILE);
-                    DataBaseName = XmlHelper.GetConfigData("DataBaseName", "", CONFIG_FILE);
-                    AuthUserName = XmlHelper.GetConfigData("LoginName", "", CONFIG_FILE);
-                    AuthUserPin = XmlHelper.GetConfigData("LoginPwd", "", CONFIG_FILE);
-                    AuthMode = (DataBaseAuthMode)XmlHelper.GetConfigData("LoginMode", 0, CONFIG_FILE);
                     LanguageSelect = XmlHelper.GetConfigData("DefaultLanguage", "EN", CONFIG_FILE);
+                    IsDisSyncDataOrNot = XmlHelper.GetConfigData("DisSyncData", 0, CONFIG_FILE);
+                    AuthMode = (DataBaseAuthMode)XmlHelper.GetConfigData("LoginMode", 0, CONFIG_FILE);
+
+                    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     * Modified:    2023/07/20
+                     * Ver:         1.1.5.11
+                     * Note:        所有從DB讀出的密碼皆為Hashed/Encrypted
+                     SqlServerName = XmlHelper.GetConfigData("ServerName", "", CONFIG_FILE);
+                    DataBaseName = XmlHelper.GetConfigData("DataBaseName", "", CONFIG_FILE);
+                    AuthUserName = XmlHelper.GetConfigData("LoginName", "", CONFIG_FILE);                   
+                    AuthUserPin = XmlHelper.GetConfigData("LoginPwd", "", CONFIG_FILE);
+                     */
+                    var vServerName = XmlHelper.GetConfigData("ServerName", "", CONFIG_FILE);
+                    var vDataBaseName = XmlHelper.GetConfigData("DataBaseName", "", CONFIG_FILE);
+                    var vAuthUserName = XmlHelper.GetConfigData("LoginName", "", CONFIG_FILE);
+                    var vLoginPwd = XmlHelper.GetConfigData("LoginPwd", "", CONFIG_FILE);
+
+                    if (IsEnableEncryptDbConfigXML )
+                    {
+                        try
+                        {
+                            SqlServerName = EncryptHelper.DecryptAES(vServerName);
+                            DataBaseName = EncryptHelper.DecryptAES(vDataBaseName);
+                            AuthUserName = EncryptHelper.DecryptAES(vAuthUserName);
+                            AuthUserPin = EncryptHelper.DecryptAES(vLoginPwd);
+                        }
+                        catch (Exception ex)
+                        {
+                            // Message = "輸入不是有效的 Base-64 字串，因為它含有非 Base-64 字元、兩個以上填補字元，或在填補字元中有不合法的字元。 "
+                            if (ex.HResult == -2146233033)
+                            {
+                                SaveDataBaseConnectionData(vServerName, vDataBaseName, vAuthUserName, AuthUserPin, AuthMode, LanguageSelect, IsDisSyncDataOrNot);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        SqlServerName = vServerName;
+                        DataBaseName = vDataBaseName;
+                        AuthUserName = vAuthUserName;
+                        AuthUserPin = vLoginPwd;
+                    }
+                    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                    
+                    
                     CompanyName = XmlHelper.GetConfigData("CompanyName", "Test", CONFIG_FILE);
                     
                     server_ip = XmlHelper.GetConfigData("ServerIP", "", CONFIG_FILE);
                     server_port = XmlHelper.GetConfigData("ServerPort", 0, CONFIG_FILE);
-                    IsDisSyncDataOrNot = XmlHelper.GetConfigData("DisSyncData", 0, CONFIG_FILE);
+                    
 
 
                     if (ParaValidOrNot())

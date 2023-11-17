@@ -25,6 +25,7 @@ namespace KCS
 {
     public partial class MainForm : RibbonForm, IMainModule, ISupportViewModel
     {
+
         ModuleType moduleType = ModuleType.Supervisor;
         public MainForm()
         {
@@ -75,7 +76,21 @@ namespace KCS
             formLogin.ShowDialog();//显示登陆窗体  
             if (formLogin.DialogResult != DialogResult.OK)
             {
-                System.Environment.Exit(0);
+                /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                * Modified: 2023/08/09
+                * Ver:      1.1.5.11
+                * System.Environment.Exit(0);
+                */
+                
+                if (formLogin.DialogResult == DialogResult.Retry)
+                {
+                    KCS.Common.DAL.SystemConfigure.IsForceToChangePassword = true;                    
+                }
+                else
+                {
+                    System.Environment.Exit(0);
+                }
+                // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             }
             InitializeComponent();
             StartUpProcess.OnRunning(LanguageResource.GetDisplayString("ProcessBarInit"));
@@ -104,6 +119,7 @@ namespace KCS
         }
         void BindCommands()
         {
+            // 影響Command_Click
             //biSetAdminPin.BindCommand(() => ViewModel.SetAdminPin(), ViewModel);
             mvvmContext.BindCommand<MainViewModel>(biSetAdminPin, x => x.SetAdminPin());           
             mvvmContext.BindCommand<MainViewModel>(biEmployeesType, x => x.EmployeesTypeView());            
@@ -158,17 +174,42 @@ namespace KCS
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            ViewModel.SelectedModuleType = ModuleType.SupervisorManage;
-            var types = new ModuleType[] { ModuleType.Supervisor, ModuleType.DeviceSetting, ModuleType.Employees, ModuleType.AccessControl, ModuleType.TimeAttendance };
+
+            
+            //ViewModel.SelectedModuleType = ModuleType.SupervisorManage;
+            //var types = new ModuleType[] { ModuleType.Supervisor, ModuleType.DeviceSetting, ModuleType.Employees, ModuleType.AccessControl, ModuleType.TimeAttendance };
+
+            // Modified:  2023/10/16
+            // Ver:     1.1.5.12
+            var userPermissionTypeID = KCS.Models.CredentialsSource.GetLoginSupervisorUserPermissionTypeID();
+            ModuleType[] types;
+            if (userPermissionTypeID == 99)
+            {
+                ViewModel.SelectedModuleType = ModuleType.SupervisorManage;
+                types = new ModuleType[] { ModuleType.Supervisor, ModuleType.DeviceSetting, ModuleType.Employees, ModuleType.AccessControl, ModuleType.TimeAttendance };
+                
+            }
+            else
+            {
+                //ViewModel.SelectedModuleType = ModuleType.Employees;
+                //types = new ModuleType[] { ModuleType.Employees, ModuleType.AccessControl, ModuleType.TimeAttendance };
+                //ViewModel.SelectedModuleType = ModuleType.SupervisorManage;
+                types = new ModuleType[] {  ModuleType.DeviceSetting, ModuleType.Employees, ModuleType.AccessControl, ModuleType.TimeAttendance };
+            }
+
 
             RegisterNavPanes(navBar, types);
+
             //ribbonPageGroupNew.Text = LanguageResource.GetDisplayString("ToolBarGroupNew");
             KCS.Models.CreateTaDataBase.CreateTimeAttendanceDataBase();
             SyncManage.InitAccessParameters();
             if( SystemConfigure.IsDisSyncDataOrNot != 1 )
             SyncManage.InitDataSync();
 
-           
+            // ----------------------------------------------
+            // 可設定 UI Toolbar屬性
+            // Ex:biSetAdminPin.Enabled = false;
+
             biEmployeesType.Caption = LanguageResource.GetDisplayString("ToolBarEmployeesType");
             
             ribbonPageGroupSystem.Text = LanguageResource.GetDisplayString("ToolBarGroupSystem");
@@ -184,6 +225,18 @@ namespace KCS
             bbiLiftControl.Caption = LanguageResource.GetDisplayString("LiftController");
 
             StartUpProcess.OnRunning(LanguageResource.GetDisplayString("ProcessBarFinish"));
+
+            /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            * Add:  2023/08/09
+            * Ver:  1.1.5.11
+            */
+            if (KCS.Common.DAL.SystemConfigure.IsForceToChangePassword == true)
+            {
+                var sMsg = "You password has reached its age limit (250 days) and expired. Please change the password and log in again";
+                DevExpress.XtraEditors.XtraMessageBox.Show(sMsg, "Password expiration policy");
+                biSetAdminPin.PerformClick();
+            }
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         }
         protected override void OnShown(EventArgs e)
         {
@@ -314,8 +367,49 @@ namespace KCS
         #region Navigation Bar
         void RegisterNavPanes(NavBarControl navBar, ModuleType[] types)
         {
+
+            var userPermissionTypeID = KCS.Models.CredentialsSource.GetLoginSupervisorUserPermissionTypeID();
+
+            // 下方主選單功能表
             for (int i = 0; i < types.Length; i++)
-                RegisterNavPane(navBar, ViewModel.GetNavPaneModuleType(types[i]));
+            {
+
+                var moduleType = ViewModel.GetNavPaneModuleType(types[i]);
+
+                // Add: 2023/09/19  
+                // Ver: 1.1.5.11
+                if (
+                    userPermissionTypeID == 99      // Admin
+                    ||
+                        (
+                        moduleType != ModuleType.DeviceSetting
+                        && moduleType != ModuleType.SupervisorManage
+                        && moduleType != ModuleType.Supervisor
+                        )
+                    )
+                {
+                    RegisterNavPane(navBar, ViewModel.GetNavPaneModuleType(types[i]));
+                }
+
+            }
+
+
+            if (userPermissionTypeID < 99)
+            {
+                //ribbonPage1.Visible = false;
+                biSystemSetting.Visibility = BarItemVisibility.Never;
+                bbiSyncSet.Visibility = BarItemVisibility.Never;
+                biNewDepartment.Visibility = BarItemVisibility.Never;
+                bbiExportMannual.Visibility = BarItemVisibility.Never;
+                bbiExportSetting.Visibility = BarItemVisibility.Never;
+                bbiChangeLang.Visibility = BarItemVisibility.Never;
+
+                biSetAdminPin.Visibility = BarItemVisibility.Never;
+                bbiSyncSet.Visibility = BarItemVisibility.Never;
+                biSystemSetting.Visibility = BarItemVisibility.Never;
+            }
+            
+
             officeNavigationBar.RegisterItem += officeNavigationBar_RegisterItem;
             officeNavigationBar.NavigationClient = navBar;
         }

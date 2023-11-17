@@ -59,6 +59,16 @@ namespace KCS.ViewModels
             {
                 setAdminViewModel.SetAdministratorPIN();
             }
+
+            /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            * Add:  2023/08/09
+            * Ver:  1.1.5.11
+            */
+            if (KCS.Common.DAL.SystemConfigure.IsForceToChangePassword == true)
+            {
+                System.Environment.Exit(0);
+            }
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         }
         #region Properties
         public virtual ModuleType SelectedModuleType

@@ -132,11 +132,17 @@ namespace KCS.Views
 
             fluentAPI.BindCommand(bbiReportDetails, x => x.AttendanceReportDetails());
             fluentAPI.BindCommand(bbiReportCount, x => x.AttendanceReportStatics());
-            
-            fluentAPI.SetBinding(lookUpEditDevice, x => x.EditValue, x => x.SelectDeviceId);
+
+            // Modified:    2023/11/16
+            // Version:     1.1.5.14
+            // Note:        Toyota UI修正
+            //fluentAPI.SetBinding(lookUpEditDevice, x => x.EditValue, x => x.SelectDeviceId);
+            fluentAPI.SetBinding(cmbDevice, x => x.SelectedValue, x => x.SelectDeviceId);
+
             fluentAPI.SetBinding(dateEditStart, x => x.EditValue, x => x.DateStart);
             fluentAPI.SetBinding(dateEditEnd, x => x.EditValue, x => x.DateEnd);
             fluentAPI.SetBinding(radioGroupCondition, x => x.EditValue, x => x.QueryCondition);
+
             Messenger.Default.Register<UpdateCountMessage<TimeAttendanceManageViewModel>>(this, x => UpdateEntitiesCountRelatedUI(x));
 
             fluentAPI.SetObjectDataSourceBinding(bindingSourceDevice, x => x.DeviceInfoDataSet);

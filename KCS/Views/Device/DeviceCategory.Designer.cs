@@ -82,7 +82,7 @@
             this.bbiReset,
             this.bbiNew});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ribbonControl.MaxItemId = 13;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -92,7 +92,7 @@
             this.ribbonControl.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ShowQatLocationSelector = false;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(797, 184);
+            this.ribbonControl.Size = new System.Drawing.Size(638, 150);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -179,16 +179,16 @@
             // 
             this.gridControl.DataSource = this.bindingSource;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             gridLevelNode1.RelationName = "Level1";
             this.gridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gridControl.Location = new System.Drawing.Point(0, 184);
+            this.gridControl.Location = new System.Drawing.Point(0, 150);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(16);
             this.gridControl.Name = "gridControl";
             this.gridControl.ShowOnlyPredefinedDetails = true;
-            this.gridControl.Size = new System.Drawing.Size(797, 324);
+            this.gridControl.Size = new System.Drawing.Size(638, 266);
             this.gridControl.TabIndex = 9;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView,
@@ -236,7 +236,7 @@
             // layoutView
             // 
             this.layoutView.CardCaptionFormat = "{3}";
-            this.layoutView.CardMinSize = new System.Drawing.Size(487, 310);
+            this.layoutView.CardMinSize = new System.Drawing.Size(390, 254);
             this.layoutView.FieldCaptionFormat = "{0}";
             this.layoutView.GridControl = this.gridControl;
             this.layoutView.Name = "layoutView";
@@ -260,13 +260,13 @@
             // 
             // DeviceCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DeviceCategory";
-            this.Size = new System.Drawing.Size(797, 508);
+            this.Size = new System.Drawing.Size(638, 416);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();

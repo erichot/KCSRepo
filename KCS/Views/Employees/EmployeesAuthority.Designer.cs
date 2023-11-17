@@ -37,6 +37,7 @@
             this.bbiResetLayout = new DevExpress.XtraBars.BarButtonItem();
             this.bbiOnLoaded = new DevExpress.XtraBars.BarButtonItem();
             this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiReport = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupSave = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupClose = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -50,7 +51,6 @@
             this.timeEditStart = new DevExpress.XtraEditors.TimeEdit();
             this.lblCtlEndTime = new DevExpress.XtraEditors.LabelControl();
             this.groupControlDevice = new DevExpress.XtraEditors.GroupControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bindingSourceSyncStatus = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -73,6 +73,7 @@
             this.colIP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSlaveName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSlaveDescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -84,13 +85,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.timeEditStart.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlDevice)).BeginInit();
             this.groupControlDevice.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceSyncStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // mvvmContext
@@ -109,10 +110,11 @@
             this.bbiSaveLayout,
             this.bbiResetLayout,
             this.bbiOnLoaded,
-            this.bbiClose});
+            this.bbiClose,
+            this.bbiReport});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.ribbonControl1.MaxItemId = 11;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.ribbonControl1.MaxItemId = 12;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -121,7 +123,7 @@
             this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowQatLocationSelector = false;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1691, 184);
+            this.ribbonControl1.Size = new System.Drawing.Size(1383, 150);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -160,6 +162,12 @@
             this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
             this.bbiClose.Name = "bbiClose";
             // 
+            // bbiReport
+            // 
+            this.bbiReport.Caption = "Report";
+            this.bbiReport.Id = 11;
+            this.bbiReport.Name = "bbiReport";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -185,15 +193,15 @@
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 184);
-            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 150);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.groupControl);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.groupControlDevice);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1691, 658);
-            this.splitContainerControl1.SplitterPosition = 563;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1383, 603);
+            this.splitContainerControl1.SplitterPosition = 450;
             this.splitContainerControl1.TabIndex = 5;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -210,32 +218,32 @@
             new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Use Advanced Access Control", true, buttonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.CheckButton, "", -1, true, null, true, false, true, null, -1)});
             this.groupControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl.Location = new System.Drawing.Point(0, 0);
-            this.groupControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl.Name = "groupControl";
-            this.groupControl.Size = new System.Drawing.Size(563, 658);
+            this.groupControl.Size = new System.Drawing.Size(450, 603);
             this.groupControl.TabIndex = 0;
             // 
             // cmbBoxUserGroup
             // 
-            this.cmbBoxUserGroup.Location = new System.Drawing.Point(120, 242);
-            this.cmbBoxUserGroup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbBoxUserGroup.Location = new System.Drawing.Point(96, 198);
+            this.cmbBoxUserGroup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbBoxUserGroup.MenuManager = this.ribbonControl1;
             this.cmbBoxUserGroup.Name = "cmbBoxUserGroup";
             this.cmbBoxUserGroup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbBoxUserGroup.Properties.DropDownRows = 18;
             this.cmbBoxUserGroup.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbBoxUserGroup.Size = new System.Drawing.Size(273, 28);
+            this.cmbBoxUserGroup.Size = new System.Drawing.Size(218, 24);
             this.cmbBoxUserGroup.TabIndex = 7;
             // 
             // lblSimpleTile
             // 
             this.lblSimpleTile.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSimpleTile.Appearance.Options.UseFont = true;
-            this.lblSimpleTile.Location = new System.Drawing.Point(120, 149);
-            this.lblSimpleTile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblSimpleTile.Location = new System.Drawing.Point(96, 122);
+            this.lblSimpleTile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSimpleTile.Name = "lblSimpleTile";
-            this.lblSimpleTile.Size = new System.Drawing.Size(259, 35);
+            this.lblSimpleTile.Size = new System.Drawing.Size(218, 29);
             this.lblSimpleTile.TabIndex = 4;
             this.lblSimpleTile.Text = "Access Granted time";
             // 
@@ -243,88 +251,79 @@
             // 
             this.lblCtlAdvTile.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCtlAdvTile.Appearance.Options.UseFont = true;
-            this.lblCtlAdvTile.Location = new System.Drawing.Point(120, 149);
-            this.lblCtlAdvTile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlAdvTile.Location = new System.Drawing.Point(96, 122);
+            this.lblCtlAdvTile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlAdvTile.Name = "lblCtlAdvTile";
-            this.lblCtlAdvTile.Size = new System.Drawing.Size(280, 35);
+            this.lblCtlAdvTile.Size = new System.Drawing.Size(236, 29);
             this.lblCtlAdvTile.TabIndex = 6;
             this.lblCtlAdvTile.Text = "Access Granted Group";
             // 
             // lblCtlStartTime
             // 
-            this.lblCtlStartTime.Location = new System.Drawing.Point(120, 242);
-            this.lblCtlStartTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlStartTime.Location = new System.Drawing.Point(96, 198);
+            this.lblCtlStartTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlStartTime.Name = "lblCtlStartTime";
-            this.lblCtlStartTime.Size = new System.Drawing.Size(82, 22);
+            this.lblCtlStartTime.Size = new System.Drawing.Size(69, 18);
             this.lblCtlStartTime.TabIndex = 2;
             this.lblCtlStartTime.Text = "Start Time";
             // 
             // timeEditEnd
             // 
             this.timeEditEnd.EditValue = new System.DateTime(2017, 1, 5, 23, 59, 0, 0);
-            this.timeEditEnd.Location = new System.Drawing.Point(233, 316);
-            this.timeEditEnd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.timeEditEnd.Location = new System.Drawing.Point(186, 259);
+            this.timeEditEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEditEnd.MenuManager = this.ribbonControl1;
             this.timeEditEnd.Name = "timeEditEnd";
             this.timeEditEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.timeEditEnd.Properties.Mask.EditMask = "HH:mm";
-            this.timeEditEnd.Size = new System.Drawing.Size(143, 28);
+            this.timeEditEnd.Size = new System.Drawing.Size(114, 24);
             this.timeEditEnd.TabIndex = 1;
             // 
             // timeEditStart
             // 
             this.timeEditStart.EditValue = new System.DateTime(2017, 1, 5, 0, 0, 0, 0);
-            this.timeEditStart.Location = new System.Drawing.Point(233, 237);
-            this.timeEditStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.timeEditStart.Location = new System.Drawing.Point(186, 194);
+            this.timeEditStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEditStart.MenuManager = this.ribbonControl1;
             this.timeEditStart.Name = "timeEditStart";
             this.timeEditStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.timeEditStart.Properties.Mask.EditMask = "HH:mm";
-            this.timeEditStart.Size = new System.Drawing.Size(143, 28);
+            this.timeEditStart.Size = new System.Drawing.Size(114, 24);
             this.timeEditStart.TabIndex = 0;
             // 
             // lblCtlEndTime
             // 
-            this.lblCtlEndTime.Location = new System.Drawing.Point(129, 321);
-            this.lblCtlEndTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlEndTime.Location = new System.Drawing.Point(103, 263);
+            this.lblCtlEndTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlEndTime.Name = "lblCtlEndTime";
-            this.lblCtlEndTime.Size = new System.Drawing.Size(75, 22);
+            this.lblCtlEndTime.Size = new System.Drawing.Size(62, 18);
             this.lblCtlEndTime.TabIndex = 3;
             this.lblCtlEndTime.Text = "End Time";
             // 
             // groupControlDevice
             // 
-            this.groupControlDevice.Controls.Add(this.panelControl1);
             this.groupControlDevice.Controls.Add(this.gridControl1);
             this.groupControlDevice.Controls.Add(this.gridControl);
             this.groupControlDevice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControlDevice.Location = new System.Drawing.Point(0, 0);
-            this.groupControlDevice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupControlDevice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControlDevice.Name = "groupControlDevice";
-            this.groupControlDevice.Size = new System.Drawing.Size(1120, 658);
+            this.groupControlDevice.Size = new System.Drawing.Size(927, 603);
             this.groupControlDevice.TabIndex = 0;
             this.groupControlDevice.Text = "Selected devices";
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Location = new System.Drawing.Point(1, 355);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1120, 16);
-            this.panelControl1.TabIndex = 9;
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bindingSourceSyncStatus;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gridControl1.Location = new System.Drawing.Point(3, 396);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl1.Location = new System.Drawing.Point(2, 266);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1114, 259);
+            this.gridControl1.Size = new System.Drawing.Size(923, 335);
             this.gridControl1.TabIndex = 8;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -445,14 +444,16 @@
             // 
             // gridControl
             // 
+            this.gridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl.DataSource = this.bindingSource;
-            this.gridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gridControl.Location = new System.Drawing.Point(3, 33);
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl.Location = new System.Drawing.Point(2, 27);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(1114, 314);
+            this.gridControl.Size = new System.Drawing.Size(920, 231);
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -515,15 +516,25 @@
             this.colSlaveDescription.Visible = true;
             this.colSlaveDescription.VisibleIndex = 4;
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Location = new System.Drawing.Point(550, 106);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(896, 13);
+            this.panelControl1.TabIndex = 9;
+            this.panelControl1.Visible = false;
+            // 
             // EmployeesAuthority
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.ribbonControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "EmployeesAuthority";
-            this.Size = new System.Drawing.Size(1691, 842);
+            this.Size = new System.Drawing.Size(1383, 753);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
@@ -536,13 +547,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.timeEditStart.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlDevice)).EndInit();
             this.groupControlDevice.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceSyncStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -592,5 +603,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colStartTimeStr;
         private DevExpress.XtraGrid.Columns.GridColumn colEndTimeStr;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraBars.BarButtonItem bbiReport;
     }
 }

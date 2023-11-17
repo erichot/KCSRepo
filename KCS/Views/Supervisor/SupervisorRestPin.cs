@@ -33,6 +33,7 @@ namespace KCS.Views
 
             fluentAPI.SetObjectDataSourceBinding(bindingSource,
                 x => x.Supervisor);
+
             textEditNewPinAgain.Validated += (s, e) =>
             {
                 if (!(((TextEdit)s).Text).Equals(textEditNewPin.Text))
@@ -48,6 +49,20 @@ namespace KCS.Views
                 if (!(((TextEdit)s).Text).Equals(textEditNewPinAgain.Text))
                 {
                     textEditNewPin.ErrorText = "密码不一致";
+
+                }
+                else
+                {
+                    textEditNewPin.ErrorText = "";
+                    textEditNewPinAgain.ErrorText = "";
+                }
+            };
+            textEditNewPin.Validated += (s, e) =>
+            {
+                var retMsg = string.Empty;
+                if (KCS.Helpers.PasswordPolicyHelper.IsPasswordValid(textEditNewPin.Text, out retMsg))
+                {
+                    textEditNewPin.ErrorText = retMsg;
 
                 }
                 else

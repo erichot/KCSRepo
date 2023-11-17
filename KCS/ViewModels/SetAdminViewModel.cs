@@ -46,16 +46,90 @@ namespace KCS.ViewModels
                 MessageService.ShowMessage(LanguageResource.GetDisplayString("TwoInputNotConsistent"));
                 return;
             }
+
+            /*
+            * Modified:    2023/07/20
+            * Ver:         1.1.5.11
+            * Note:        所有從DB讀出的密碼皆為Hashed/Encrypted
             if (!CredentialsSource.LoginAdministrator.OldUserPwd.Equals(CredentialsSource.LoginAdministrator.UserPwd))
+            */
+            if (KCS.Common.DAL.SystemConfigure.IsEnablePasswordPolicy == true)
             {
-                MessageService.ShowMessage(LanguageResource.GetDisplayString("PasswordValidateFailed"));
-                return;
+                var passwordHistoryList = KCS.Common.DAL.KCSDatabaseHelper.Instance.GetUserPasswordHistoryList(CredentialsSource.LoginAdministrator.UserNo);
+                if (passwordHistoryList != null && passwordHistoryList.Rows.Count>0)
+                {
+                    if (DateTime.TryParse(passwordHistoryList.Rows[0]["TimeAddNew"].ToString(), out DateTime _lastModified))
+                    {
+                        if (_lastModified.AddMinutes(1440) > DateTime.Now)
+                        {
+                            var sMsg = "Unable to change new password due to the Minimum Password Age policy (1 day)";
+                            MessageService.ShowMessage(sMsg);
+                            return;
+                        }
+                    }
+
+
+                    var sNewPassword = KCS.Helpers.HashHelper.ComputeStringToSha256Hash(CredentialsSource.LoginAdministrator.NewUserPwd);
+                    foreach (System.Data.DataRow row in passwordHistoryList.Rows)
+                    {
+                        if (row["PasswordHash"].ToString() == sNewPassword)
+                        {
+                            var sMsg = "The new password cannot be re-used last 5 history passwords";
+                            MessageService.ShowMessage(sMsg);
+                            return;
+                        }
+                    }
+                }
+
+
+
+                //if (!CredentialsSource.LoginAdministrator.OldUserPwd.Equals(KCS.Helpers.HashHelper.ComputeStringToSha256Hash(CredentialsSource.LoginAdministrator.UserPwd)))
+                if (CredentialsSource.LoginAdministrator.OldUserPwd.Equals(KCS.Helpers.HashHelper.ComputeStringToSha256Hash(CredentialsSource.LoginAdministrator.UserPwd)) == false
+                    && !(CredentialsSource.LoginAdministrator.OldUserPwd == "" && CredentialsSource.LoginAdministrator.UserPwd == "")
+                    )
+                {
+                    MessageService.ShowMessage(LanguageResource.GetDisplayString("PasswordValidateFailed"));
+                    return;
+                }
+
+                var msg = string.Empty;
+                if (!KCS.Helpers.PasswordPolicyHelper.IsPasswordValid(CredentialsSource.LoginAdministrator.NewUserPwd, out msg))
+                {
+                    MessageService.ShowMessage(msg);
+                    return;
+                }
             }
+            else
+            {
+                if (!CredentialsSource.LoginAdministrator.OldUserPwd.Equals(CredentialsSource.LoginAdministrator.UserPwd))
+                {
+                    MessageService.ShowMessage(LanguageResource.GetDisplayString("PasswordValidateFailed"));
+                    return;
+                }
+            }
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
             if (!CredentialsSource.UpdateAdminPin())
             {
                 MessageService.ShowMessage(LanguageResource.GetDisplayString("ModifyPinFailed"));
                 return;
             }
+
+
+            /*
+            * Add:      2023/07/28
+            * Ver:      1.1.5.11
+            */
+            if (KCS.Common.DAL.SystemConfigure.IsEnablePasswordPolicy == true)
+            {
+                var userSID = CredentialsSource.GetLoginSupervisorSID();
+                var passwordHash = KCS.Helpers.HashHelper.ComputeStringToSha256Hash(CredentialsSource.LoginAdministrator.UserPwd);
+                KCS.Common.DAL.KCSDatabaseHelper.Instance.SP_INSERT_S_UserPasswordHistory(userSID, passwordHash);
+            }
+
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
         }
     }
 }

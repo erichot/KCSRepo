@@ -60,8 +60,9 @@ namespace KCS.ViewModels
                 _Device = value;
             }
         }
-        void RebindDataSource()
+        public void RebindDataSource()
         {
+            SyncManage.ReGetDeviceList();
             Messenger.Default.Send(new RebindMessage<DeviceSettingManageViewModel>(this));
         }
         public void Edit(object deviceObject)
