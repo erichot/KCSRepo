@@ -46,11 +46,20 @@ namespace KCS.Views
             //if (int.TryParse(cmbSlave.SelectedIndex.ToString(), out int _slaveSID)) {
             //    fluentAPI.SetBinding(cmbSlave, x => _slaveSID, x => x.SlaveSID);
             //}
-            fluentAPI.BindCommand(simpleButtonQuery, x => x.RebindDataSource());
+
+            
 
             fluentAPI.SetObjectDataSourceBinding(bindingSourceDevice, x => x.DeviceInfoDataSet);
             fluentAPI.SetObjectDataSourceBinding(bindingSourceDepartment, x => x.DepartmentInfoDataSet);
+            
 
+            fluentAPI.SetBinding(cmbSlave, x => x.SelectedIndex, x => x.m_SelectedIndexSlave);
+            fluentAPI.SetBinding(cmbDepartment, x => x.SelectedIndex, x => x.m_SelectedIndexDepartment);
+
+            fluentAPI.SetBinding(cmbStartHour, x => x.SelectedIndex, x => x.m_SelectedStartHour);
+            fluentAPI.SetBinding(cmbEndHour, x => x.SelectedIndex, x => x.m_SelectedEndHour);
+
+            fluentAPI.BindCommand(simpleButtonQuery, x => x.RebindDataSource());
             //fluentAPI.SetBinding(cmbSlave, c => c.SelectedIndex, x => x.m_SelectedIndexSlave);
             //fluentAPI.SetBinding(cmbDepartment, c => c.SelectedIndex, x => x.m_SelectedIndexDepartment);
             //fluentAPI.SetBinding(cmbDepartment, c => c.SelectedValue, x => x.m_SelectedDepartmentID);
