@@ -23,7 +23,7 @@ namespace KCS.Models
 
         public DateTime TimeAddNew { get; set; }
 
-        
+        public DateTime UserTimeAddNew { get; set; }
 
     }
 }

@@ -251,7 +251,7 @@
             this.colUserTimeAddNew.AppearanceCell.Options.UseTextOptions = true;
             this.colUserTimeAddNew.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colUserTimeAddNew.Caption = "Card Active";
-            this.colUserTimeAddNew.FieldName = "TimeAddNew";
+            this.colUserTimeAddNew.FieldName = "UserTimeAddNew";
             this.colUserTimeAddNew.Name = "colUserTimeAddNew";
             this.colUserTimeAddNew.Visible = true;
             this.colUserTimeAddNew.VisibleIndex = 7;
