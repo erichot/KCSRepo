@@ -82,7 +82,9 @@ using System.Runtime.InteropServices;
  *  * * 2021 3 15 1.0.4.5 手动导出当天记录
  *  [assembly: AssemblyVersion("1.0.4.6")]// fix 同步门禁权限 1.0.0.2,fix手动导出
  */
-[assembly: AssemblyVersion("1.1.5.14")]          // 2023-11-16          Toyota 部分UI改善
+[assembly: AssemblyVersion("1.1.5.16")]          // 2024-01-19          KCS.command.DAL.DataBase.Query Timeouit設定60
+//[assembly: AssemblyVersion("1.1.5.15")]          // 2023-12-01          Transaction Report增加IP，並隱藏Photo、體溫欄位
+//[assembly: AssemblyVersion("1.1.5.14")]          // 2023-11-16          Toyota 部分UI改善
 //[assembly: AssemblyVersion("1.1.5.13")]          // 2023-10-22          Toyota 避開管理員權限要求
 //[assembly: AssemblyVersion("1.1.5.12")]          // 2023-10-17          Toyota 允許進出時間報表
 //[assembly: AssemblyVersion("1.1.5.11")]          // 2023-07-30          Toyota
@@ -96,4 +98,4 @@ using System.Runtime.InteropServices;
 //[assembly: AssemblyVersion("1.1.5.3")]      // 2022-11-23
 //[assembly: AssemblyVersion("1.1.5.2")]      // 2022-08-29   那我就要勞煩Eric在主程式上改一下並且把版本升到1151
 //[assembly: AssemblyFileVersion("1.1.5.5")]  // Hi YG, KACS.exe 上頭的Kizone logo 我能自己換成IDCOM的嗎? 還是必須你來換?
-[assembly: AssemblyFileVersion("1.1.5.14")]
+[assembly: AssemblyFileVersion("1.1.5.16")]

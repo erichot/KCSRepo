@@ -244,13 +244,24 @@ namespace KCS.Common.DAL
             //    + ", (CASE WHEN IsByTranType = 1 THEN TranType ELSE DataType END) AS TranType, JobName, ID, SlaveIP, SlaveDescription,InActive,[Note],B.Photos AS TransImage "
             //    + ", DegreeCelsius "
             //    + "FROM VOR_Transactions_SlaveIP_Public AS A LEFT JOIN [TRANS_PHOTO] AS B ON A.SlaveID=B.SlaveSID AND A.CardID=B.CardID AND A.TranDateTime=B.TransTime ";
+            //string strSql = "SELECT TranSID, A.CardID,UserID, UserName, DepartmentID,DepartmentName, TranDateTime, TranDate, TranTime"
+            //    + ", (CASE WHEN IsByTranType = 1 THEN TranType ELSE DataType END) AS TranType, JobName, ID, SlaveIP, SlaveDescription,InActive,[Note],B.Photos AS TransImage "
+            //    + ", DegreeCelsius "
+            //    + "FROM VOR_Transactions_SlaveIP_Public AS A LEFT JOIN (" +
+            //    "       SELECT B1.Photos, B1.SlaveSID, B1.CardID, B1.TransTime FROM [TRANS_PHOTO] AS B1 INNER JOIN [VOR_TransPhoto] AS B2 ON B1.PhotoID = B2.PhotoID " +
+            //    "   ) AS B ON A.SlaveID=B.SlaveSID AND A.CardID=B.CardID AND A.TranDateTime=B.TransTime ";
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            // Modified:    2023/12/01 
+            // Ver:         1.1.5.15
+            // Note:        增加 SlaveID_Public
             string strSql = "SELECT TranSID, A.CardID,UserID, UserName, DepartmentID,DepartmentName, TranDateTime, TranDate, TranTime"
-                + ", (CASE WHEN IsByTranType = 1 THEN TranType ELSE DataType END) AS TranType, JobName, ID, SlaveIP, SlaveDescription,InActive,[Note],B.Photos AS TransImage "
+                + ", (CASE WHEN IsByTranType = 1 THEN TranType ELSE DataType END) AS TranType, JobName, ID, SlaveIP, SlaveIP_Public, SlaveDescription,InActive,[Note],B.Photos AS TransImage "
                 + ", DegreeCelsius "
                 + "FROM VOR_Transactions_SlaveIP_Public AS A LEFT JOIN (" +
                 "       SELECT B1.Photos, B1.SlaveSID, B1.CardID, B1.TransTime FROM [TRANS_PHOTO] AS B1 INNER JOIN [VOR_TransPhoto] AS B2 ON B1.PhotoID = B2.PhotoID " +
                 "   ) AS B ON A.SlaveID=B.SlaveSID AND A.CardID=B.CardID AND A.TranDateTime=B.TransTime ";
-            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
             string strFormSqlWhere = "where 1=1";
             DateTime RecordDate = Convert.ToDateTime(end);
@@ -2772,7 +2783,7 @@ END AS [CLASS_CODE],N'{2}',N'{3}',N'{2}',N'{3}',[LIST_GRP]
         // Add: 2023/10/13
         // Ver: 1.1.5.12
         public DataTable GetUserSlaveAllowTime(int _slaveSID, string _departmentID
-            , int _allowTimeStartHour, int _allowTimeEndHour)
+            , int? _allowTimeStartHour, int? _allowTimeEndHour)
         {
             string SqlCommand = string.Format("SELECT * "
                 + "FROM [VBFX_UserSlaveAllowTime] "
@@ -2780,9 +2791,11 @@ END AS [CLASS_CODE],N'{2}',N'{3}',N'{2}',N'{3}',[LIST_GRP]
                 + " AND ('" + _departmentID + "' = '' OR DepartmentID = '" + _departmentID + "') "
                 );
 
-                SqlCommand += " AND (AllowTimeStartHour >= " + _allowTimeStartHour + ") ";
+                if (_allowTimeStartHour != null)
+                    SqlCommand += " AND (AllowTimeStartHour = " + _allowTimeStartHour + ") ";
 
-                SqlCommand += " AND (AllowTimeEndHour <= " + _allowTimeEndHour + ") ";
+                if (_allowTimeEndHour != null)
+                    SqlCommand += " AND (AllowTimeEndHour = " + _allowTimeEndHour + ") ";
 
 
             //+ "WHERE (" + _slaveSID  + " = 0 OR SlaveSID = " + _slaveSID + ") ");

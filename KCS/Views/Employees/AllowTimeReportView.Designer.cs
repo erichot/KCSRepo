@@ -55,6 +55,8 @@
             this.ribbonPageGroupActions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupReport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.cmbEndHour = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -377,6 +379,8 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.label6);
+            this.panelControl2.Controls.Add(this.label5);
             this.panelControl2.Controls.Add(this.cmbEndHour);
             this.panelControl2.Controls.Add(this.label4);
             this.panelControl2.Controls.Add(this.label3);
@@ -393,12 +397,35 @@
             this.panelControl2.Size = new System.Drawing.Size(1307, 117);
             this.panelControl2.TabIndex = 27;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(818, 60);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 23);
+            this.label6.TabIndex = 18;
+            this.label6.Text = ": 59";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(818, 19);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 23);
+            this.label5.TabIndex = 18;
+            this.label5.Text = ": 00";
+            // 
             // cmbEndHour
             // 
             this.cmbEndHour.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEndHour.FormattingEnabled = true;
             this.cmbEndHour.Items.AddRange(new object[] {
-            "0",
+                "",
+                "0",
             "1",
             "2",
             "3",
@@ -450,7 +477,8 @@
             this.cmbStartHour.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStartHour.FormattingEnabled = true;
             this.cmbStartHour.Items.AddRange(new object[] {
-            "0",
+                "",
+                "0",
             "1",
             "2",
             "3",
@@ -496,7 +524,7 @@
             this.cmbDepartment.FormattingEnabled = true;
             this.cmbDepartment.Location = new System.Drawing.Point(113, 14);
             this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(398, 28);
+            this.cmbDepartment.Size = new System.Drawing.Size(465, 28);
             this.cmbDepartment.TabIndex = 13;
             this.cmbDepartment.ValueMember = "DepartmentID";
             // 
@@ -530,7 +558,7 @@
             this.cmbSlave.FormattingEnabled = true;
             this.cmbSlave.Location = new System.Drawing.Point(115, 64);
             this.cmbSlave.Name = "cmbSlave";
-            this.cmbSlave.Size = new System.Drawing.Size(396, 30);
+            this.cmbSlave.Size = new System.Drawing.Size(463, 30);
             this.cmbSlave.TabIndex = 10;
             this.cmbSlave.ValueMember = "SlaveSID";
             this.cmbSlave.SelectedIndexChanged += new System.EventHandler(this.cmbSlave_SelectedIndexChanged);
@@ -620,5 +648,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbStartHour;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }

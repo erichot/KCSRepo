@@ -12,7 +12,7 @@ namespace KCS.Models
     {
         
         static public IList<UserSlaveAllowTimeSetting> GetUserSlaveAllowTimeList(int _slaveSID, string _departmentID
-            , int _allowTimeStartHour, int _allowTimeEndHour)
+            , int? _allowTimeStartHour, int? _allowTimeEndHour)
         {
             DataTable dt = KCSDatabaseHelper.Instance.GetUserSlaveAllowTime(_slaveSID, _departmentID, _allowTimeStartHour, _allowTimeEndHour);
             return KCS.Common.Utils.ModelConvertHelper<UserSlaveAllowTimeSetting>.ConvertToModel(dt);

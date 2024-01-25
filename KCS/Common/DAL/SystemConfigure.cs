@@ -73,9 +73,9 @@ namespace KCS.Common.DAL
         * Ver:         1.1.5.11
         * Note:        所有從DB讀出的密碼皆為Hashed/Encrypted
         */
-        public static bool IsEnableEncryptDbConfigXML = true;
-        public static bool IsEnableEncryptExportData = true;
-        public static bool IsEnablePasswordPolicy = true;
+        public static bool IsEnableEncryptDbConfigXML = false;
+        public static bool IsEnableEncryptExportData = false;
+        public static bool IsEnablePasswordPolicy = false;
         public static bool IsForceToChangePassword = false;     // 系統變數，非常數，比對DB後才設定該變數
         // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -57,7 +57,10 @@ namespace KCS
                     {
                         System.Security.Principal.WindowsIdentity identity = System.Security.Principal.WindowsIdentity.GetCurrent();
                         System.Security.Principal.WindowsPrincipal principal = new System.Security.Principal.WindowsPrincipal(identity);
-                        if (1==1 || principal.IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator))
+
+                        // For Toyota 取消系統管理員權限要求：Client端電腦的登入使用者並未具有該電腦之Administator，導致使用衝突
+                        //if (1==1 || principal.IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator))
+                        if (principal.IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator))
                         {
                             try
                             {

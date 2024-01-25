@@ -21,7 +21,7 @@ namespace KCS.Models
         public byte TranType { get; set; }
         public string JobName { get; set; }
         public int ID { get; set; }
-        public string SlaveIP { get; set; }
+        public string SlaveIP { get; set; }        
         public string SlaveDescription { get; set; }       
         public bool InActive { get; set; }
         public string Note { get; set; }
@@ -32,6 +32,9 @@ namespace KCS.Models
         public string DeviceName { get; set; }
 
         public decimal DegreeCelsius { get; set; }
+
+        // 2023/12/01 Cy-Toyota
+        public string SlaveIP_Public { get; set; }
 
         public string TranDateTimeString
         {

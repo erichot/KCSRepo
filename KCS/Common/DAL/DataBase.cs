@@ -212,6 +212,12 @@ namespace KCS.Common.DAL
             {
 
                 SqlDataAdapter command = new SqlDataAdapter(SQLString, connection);
+
+
+                // Add:     2024/01/19
+                // Ver:     1.1.5.16
+                command.SelectCommand.CommandTimeout = 60;
+                
                 command.Fill(ds, "ds");
             }
             catch (System.Data.SqlClient.SqlException ex)

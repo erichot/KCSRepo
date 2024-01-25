@@ -19,9 +19,12 @@ namespace KCS.ViewModels
         public int m_SelectedIndexDepartment { get; set; }
 
 
-        public int m_SelectedStartHour { get; set; }
+        public string m_SelectedStartHourText { get; set; }
+        public string m_SelectedEndHourText { get; set; }
 
-        public int m_SelectedEndHour { get; set; }
+        public int? m_SelectedStartHour { get; set; }
+
+        public int? m_SelectedEndHour { get; set; }
 
         public string m_SelectedDepartmentID { get; set; }
         public object SelectedSlave { get; set; }
@@ -224,7 +227,26 @@ namespace KCS.ViewModels
                     SelectedDepartmentID = selectedItem.DepartmentID;
                 }
 
-                userSlaveAllowTimeSettingList = AllowTimeDataSource.GetUserSlaveAllowTimeList(SlaveSID, SelectedDepartmentID,m_SelectedStartHour, m_SelectedEndHour );
+                //if (m_SelectedStartHour == null || m_SelectedStartHour <= 0)
+                //    m_SelectedStartHour = null; 
+                //else
+                //    m_SelectedStartHour = m_SelectedStartHour - 1;
+
+                //if (m_SelectedEndHour == null || m_SelectedEndHour <= 0)
+                //    m_SelectedEndHour = null;
+                //else
+                //    m_SelectedEndHour = m_SelectedEndHour - 1;
+
+                m_SelectedStartHour = null;
+                if (int.TryParse(m_SelectedStartHourText, out int ss) && ss > 0)
+                    m_SelectedStartHour = ss - 1;
+
+                m_SelectedEndHour = null;
+                if (int.TryParse(m_SelectedEndHourText, out int ee ) && ee > 0)
+                    m_SelectedEndHour = ee - 1;
+
+
+                userSlaveAllowTimeSettingList = AllowTimeDataSource.GetUserSlaveAllowTimeList(SlaveSID, SelectedDepartmentID, m_SelectedStartHour, m_SelectedEndHour);
                 return userSlaveAllowTimeSettingList;
             }
 

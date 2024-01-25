@@ -56,8 +56,11 @@ namespace KCS.Views
             fluentAPI.SetBinding(cmbSlave, x => x.SelectedIndex, x => x.m_SelectedIndexSlave);
             fluentAPI.SetBinding(cmbDepartment, x => x.SelectedIndex, x => x.m_SelectedIndexDepartment);
 
-            fluentAPI.SetBinding(cmbStartHour, x => x.SelectedIndex, x => x.m_SelectedStartHour);
-            fluentAPI.SetBinding(cmbEndHour, x => x.SelectedIndex, x => x.m_SelectedEndHour);
+            //fluentAPI.SetBinding(cmbStartHour, x => x.SelectedIndex, x => x.m_SelectedStartHour);
+            //fluentAPI.SetBinding(cmbEndHour, x => x.SelectedIndex, x => x.m_SelectedEndHour);
+            fluentAPI.SetBinding(cmbStartHour, x => x.SelectedIndex, x => x.m_SelectedStartHourText);
+            fluentAPI.SetBinding(cmbEndHour, x => x.SelectedIndex, x => x.m_SelectedEndHourText);
+
 
             fluentAPI.BindCommand(simpleButtonQuery, x => x.RebindDataSource());
             //fluentAPI.SetBinding(cmbSlave, c => c.SelectedIndex, x => x.m_SelectedIndexSlave);
@@ -107,7 +110,7 @@ namespace KCS.Views
             //cmbStartHour.SelectedValue = 0;
             //cmbEndHour.SelectedValue = 23;
             cmbStartHour.SelectedIndex = 0;
-            cmbEndHour.SelectedIndex = 23;
+            cmbEndHour.SelectedIndex = 0;
         }
          void InitViewDisplay()
          {
@@ -153,8 +156,10 @@ namespace KCS.Views
             fluentAPI.SetBinding(cmbSlave, x => x.SelectedIndex, x => x.m_SelectedIndexSlave);
             fluentAPI.SetBinding(cmbDepartment, x => x.SelectedIndex, x => x.m_SelectedIndexDepartment);
 
-            fluentAPI.SetBinding(cmbStartHour, x => x.SelectedIndex, x => x.m_SelectedStartHour);
-            fluentAPI.SetBinding(cmbEndHour, x => x.SelectedIndex, x => x.m_SelectedEndHour);
+            //fluentAPI.SetBinding(cmbStartHour, x => x.SelectedIndex, x => x.m_SelectedStartHour);
+            //fluentAPI.SetBinding(cmbEndHour, x => x.SelectedIndex, x => x.m_SelectedEndHour);
+            fluentAPI.SetBinding(cmbStartHour, x => x.SelectedIndex, x => x.m_SelectedStartHourText);
+            fluentAPI.SetBinding(cmbEndHour, x => x.SelectedIndex, x => x.m_SelectedEndHourText);
 
             fluentAPI.SetObjectDataSourceBinding(bindingSourceAllowTime,
                   x => x.UserSlaveAllowTimeList);           
