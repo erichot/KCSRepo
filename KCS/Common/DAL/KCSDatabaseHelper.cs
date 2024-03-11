@@ -158,6 +158,11 @@ namespace KCS.Common.DAL
         private const string JOB_CODE_LIST_SQL = "SELECT top 10 [TranType], [JobCode], [JobName], [Remark],[ListField] FROM [VBF_JobCode]";
 #else
         private const string EMPLOYEES_LIST_SQL = "SELECT UserSID,UserID,  DepartmentID, DepartmentName, UserName, A.CardID, TitleName, InActive,UserPWD,NotPropagateToSlaveByDefault as SyncOrNot,AllowTimeStartHour, AllowTimeStartMinute, AllowTimeEndHour, AllowTimeEndMinute,  IsTaOrNot,   EmployeeTypeID, EmployeeTypeName, Email,ValidDate,PhoneMobile ,E.RegPhoto AS RegPhoto ,ISNULL(B.FPNo,0) as Finger1,ISNULL(C.FPNo,0) AS Finger2 FROM [VBF_User] AS A left join (select CardID,FPNo from [BF_FP] where FPNo=1) AS B on A.CardID = B.CardID left join (select CardID,FPNo from [BF_FP] where FPNo=2) AS C on A.CardID = C.CardID left join (select CardID,RegPhoto from BF_User) AS E ON A.CardID = E.CardID order by UserID";
+        
+        // Add:     2024/03/04
+        // Ver:     1.1.5.17
+        private const string EMPLOYEES_LIST_SQL_WhereDept = "SELECT UserSID,UserID,  DepartmentID, DepartmentName, UserName, A.CardID, TitleName, InActive,UserPWD,NotPropagateToSlaveByDefault as SyncOrNot,AllowTimeStartHour, AllowTimeStartMinute, AllowTimeEndHour, AllowTimeEndMinute,  IsTaOrNot,   EmployeeTypeID, EmployeeTypeName, Email,ValidDate,PhoneMobile ,E.RegPhoto AS RegPhoto ,ISNULL(B.FPNo,0) as Finger1,ISNULL(C.FPNo,0) AS Finger2 FROM [VBF_User] AS A left join (select CardID,FPNo from [BF_FP] where FPNo=1) AS B on A.CardID = B.CardID left join (select CardID,FPNo from [BF_FP] where FPNo=2) AS C on A.CardID = C.CardID left join (select CardID,RegPhoto from BF_User) AS E ON A.CardID = E.CardID WHERE ('{0}' = '' OR A.DepartmentID = '{0}') order by UserID";
+
         private const string EMPLOYEES_BRIEF_LIST_SQL = "SELECT UserSID,UserID,  A.DepartmentID, B.DepartmentName, UserName, CardID,[ShiftCategory]  FROM [BF_User] AS A LEFT JOIN [BF_Department] AS B ON A.DepartmentID=B.DepartmentID order by UserID";
         private const string EMPLOYEES_MSG_LIST_SQL = "SELECT UserID, UserName, B.DepartmentName FROM [BF_User] AS A LEFT JOIN [BF_Department] AS B ON A.DepartmentID=B.DepartmentID Where A.InActive=0 order by UserID";
         private const string EMPLOYEES_TYPE_LIST_SQL = "SELECT EmployeeTypeID, EmployeeTypeName, InActive FROM BC_EmployeeType";
@@ -230,7 +235,11 @@ namespace KCS.Common.DAL
             }
             
         }
-        public DataTable GetTaTransactionsList(int SlaveId, string start, string end, int queryCondtion)
+
+        // Modified:     2024/03/04
+        // Ver:     1.1.5.17
+        //public DataTable GetTaTransactionsList(int SlaveId, string start, string end, int queryCondtion)
+        public DataTable GetTaTransactionsList(int SlaveId, string start, string end, int queryCondtion, string _departmentID = null)
         {
             /*// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
              * By           Eric
@@ -254,14 +263,13 @@ namespace KCS.Common.DAL
 
             // Modified:    2023/12/01 
             // Ver:         1.1.5.15
-            // Note:        增加 SlaveID_Public
+            // Note:        增加 SlaveID_Public            
             string strSql = "SELECT TranSID, A.CardID,UserID, UserName, DepartmentID,DepartmentName, TranDateTime, TranDate, TranTime"
                 + ", (CASE WHEN IsByTranType = 1 THEN TranType ELSE DataType END) AS TranType, JobName, ID, SlaveIP, SlaveIP_Public, SlaveDescription,InActive,[Note],B.Photos AS TransImage "
                 + ", DegreeCelsius "
                 + "FROM VOR_Transactions_SlaveIP_Public AS A LEFT JOIN (" +
                 "       SELECT B1.Photos, B1.SlaveSID, B1.CardID, B1.TransTime FROM [TRANS_PHOTO] AS B1 INNER JOIN [VOR_TransPhoto] AS B2 ON B1.PhotoID = B2.PhotoID " +
                 "   ) AS B ON A.SlaveID=B.SlaveSID AND A.CardID=B.CardID AND A.TranDateTime=B.TransTime ";
-
 
             string strFormSqlWhere = "where 1=1";
             DateTime RecordDate = Convert.ToDateTime(end);
@@ -270,6 +278,14 @@ namespace KCS.Common.DAL
             {
                 strFormSqlWhere = string.Format("where TranDateTime BETWEEN '{0}' AND '{1}' ", start, end);
             }
+
+            // Add:     2024/03/04
+            // Ver:     1.1.5.17
+            if (string.IsNullOrEmpty(_departmentID) == false)
+            {
+                strFormSqlWhere += $"and DepartmentID = '{_departmentID}'";
+            }
+
             if (SlaveId == 0)
             {
                 if (queryCondtion == 1)
@@ -279,8 +295,7 @@ namespace KCS.Common.DAL
                 else if (queryCondtion == 2)
                 {//inactive
                     strFormSqlWhere += "and InActive = 1";     
-                }
-                          
+                }         
             }
             else
             {
@@ -2832,11 +2847,29 @@ END AS [CLASS_CODE],N'{2}',N'{3}',N'{2}',N'{3}',[LIST_GRP]
 
             return sqlDatabaseProvider.ExcuteTable(strSqlQuery);
         }
-        
+
+        // Add:     2024/03/09
+        // Ver:     1.1.5.17
+        public DataTable GetEmployeesBriefList(string _departmentID)
+        {
+            string strSqlQuery = $"SELECT UserSID,UserID,  A.DepartmentID, B.DepartmentName, UserName, CardID,[ShiftCategory] FROM [BF_User]  AS A LEFT JOIN [BF_Department] AS B ON A.DepartmentID=B.DepartmentID  where (A.[InActive]=0 OR (A.[InActive]=1 and DateDiff(day,A.TimeLastLogout,getdate()) <= 0)) AND ('{_departmentID}' = '' OR A.DepartmentID = '{_departmentID}') order by UserID ";
+
+            return sqlDatabaseProvider.ExcuteTable(strSqlQuery);
+        }
+
         public DataTable GetEmployeesList()
         {
             return sqlDatabaseProvider.ExcuteTable(EMPLOYEES_LIST_SQL);
         }
+
+        // Add:     2024/03/04
+        // Ver:     1.1.5.17
+        public DataTable GetEmployeesList(string _departmentID)
+        {
+            return sqlDatabaseProvider.ExcuteTable(
+                string.Format(EMPLOYEES_LIST_SQL_WhereDept, _departmentID));
+        }
+
         public bool UpdateDeviceParameters(IEnumerable<DeviceBrief> deviceList, string menuPwd, int workMode, int language)
         {
             string StrDeviceList = " WHERE [SlaveSID] in(";

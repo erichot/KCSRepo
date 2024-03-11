@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransactionsReport));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.ribbonPageGroupActions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.colCardID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -128,14 +128,14 @@
             // 
             // radioGroupCondition
             // 
-            this.radioGroupCondition.Location = new System.Drawing.Point(578, 16);
-            this.radioGroupCondition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioGroupCondition.Location = new System.Drawing.Point(462, 13);
+            this.radioGroupCondition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioGroupCondition.MenuManager = this.ribbonControl;
             this.radioGroupCondition.Name = "radioGroupCondition";
             this.radioGroupCondition.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.radioGroupCondition.Properties.Appearance.Options.UseBackColor = true;
             this.radioGroupCondition.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.radioGroupCondition.Size = new System.Drawing.Size(280, 112);
+            this.radioGroupCondition.Size = new System.Drawing.Size(224, 92);
             this.radioGroupCondition.TabIndex = 7;
             // 
             // ribbonControl
@@ -153,14 +153,14 @@
             this.bbiExportXLSX,
             this.bbiExprtToPDF});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl.MaxItemId = 14;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2});
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1648, 184);
+            this.ribbonControl.Size = new System.Drawing.Size(1318, 150);
             this.ribbonControl.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -259,16 +259,16 @@
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barHeaderItem);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 726);
-            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 593);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1648, 42);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1318, 35);
             // 
             // lookUpEditDevice
             // 
-            this.lookUpEditDevice.Location = new System.Drawing.Point(96, 24);
-            this.lookUpEditDevice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lookUpEditDevice.Location = new System.Drawing.Point(77, 20);
+            this.lookUpEditDevice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lookUpEditDevice.MenuManager = this.ribbonControl;
             this.lookUpEditDevice.Name = "lookUpEditDevice";
             this.lookUpEditDevice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -277,7 +277,7 @@
             this.lookUpEditDevice.Properties.DisplayMember = "IP";
             this.lookUpEditDevice.Properties.ShowHeader = false;
             this.lookUpEditDevice.Properties.ValueMember = "SlaveSID";
-            this.lookUpEditDevice.Size = new System.Drawing.Size(464, 28);
+            this.lookUpEditDevice.Size = new System.Drawing.Size(371, 24);
             this.lookUpEditDevice.TabIndex = 6;
             // 
             // bindingSourceDevice
@@ -286,20 +286,20 @@
             // 
             // lblCtlDevice
             // 
-            this.lblCtlDevice.Location = new System.Drawing.Point(31, 31);
-            this.lblCtlDevice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlDevice.Location = new System.Drawing.Point(25, 25);
+            this.lblCtlDevice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlDevice.Name = "lblCtlDevice";
-            this.lblCtlDevice.Size = new System.Drawing.Size(51, 22);
+            this.lblCtlDevice.Size = new System.Drawing.Size(43, 18);
             this.lblCtlDevice.TabIndex = 5;
             this.lblCtlDevice.Text = "Device";
             // 
             // simpleButtonQuery
             // 
             this.simpleButtonQuery.ImageOptions.Image = global::KCS.Properties.Resources.search_02;
-            this.simpleButtonQuery.Location = new System.Drawing.Point(869, 31);
-            this.simpleButtonQuery.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.simpleButtonQuery.Location = new System.Drawing.Point(695, 25);
+            this.simpleButtonQuery.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButtonQuery.Name = "simpleButtonQuery";
-            this.simpleButtonQuery.Size = new System.Drawing.Size(190, 83);
+            this.simpleButtonQuery.Size = new System.Drawing.Size(152, 68);
             this.simpleButtonQuery.TabIndex = 4;
             this.simpleButtonQuery.Text = "Query";
             this.simpleButtonQuery.Click += new System.EventHandler(this.simpleButtonQuery_Click);
@@ -307,38 +307,38 @@
             // dateEditEnd
             // 
             this.dateEditEnd.EditValue = null;
-            this.dateEditEnd.Location = new System.Drawing.Point(354, 82);
-            this.dateEditEnd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateEditEnd.Location = new System.Drawing.Point(283, 67);
+            this.dateEditEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateEditEnd.MenuManager = this.ribbonControl;
             this.dateEditEnd.Name = "dateEditEnd";
             this.dateEditEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditEnd.Size = new System.Drawing.Size(206, 28);
+            this.dateEditEnd.Size = new System.Drawing.Size(165, 24);
             this.dateEditEnd.TabIndex = 3;
             // 
             // lblCtlTo
             // 
-            this.lblCtlTo.Location = new System.Drawing.Point(311, 86);
-            this.lblCtlTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlTo.Location = new System.Drawing.Point(249, 70);
+            this.lblCtlTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlTo.Name = "lblCtlTo";
-            this.lblCtlTo.Size = new System.Drawing.Size(21, 22);
+            this.lblCtlTo.Size = new System.Drawing.Size(18, 18);
             this.lblCtlTo.TabIndex = 2;
             this.lblCtlTo.Text = "To";
             // 
             // dateEditStart
             // 
             this.dateEditStart.EditValue = null;
-            this.dateEditStart.Location = new System.Drawing.Point(96, 82);
-            this.dateEditStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateEditStart.Location = new System.Drawing.Point(77, 67);
+            this.dateEditStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateEditStart.MenuManager = this.ribbonControl;
             this.dateEditStart.Name = "dateEditStart";
             this.dateEditStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditStart.Size = new System.Drawing.Size(206, 28);
+            this.dateEditStart.Size = new System.Drawing.Size(165, 24);
             this.dateEditStart.TabIndex = 1;
             // 
             // colDepartmentName
@@ -424,7 +424,7 @@
             // layoutView
             // 
             this.layoutView.CardCaptionFormat = "{3}";
-            this.layoutView.CardMinSize = new System.Drawing.Size(488, 310);
+            this.layoutView.CardMinSize = new System.Drawing.Size(390, 254);
             this.layoutView.FieldCaptionFormat = "{0}";
             this.layoutView.GridControl = this.gridControl;
             this.layoutView.Name = "layoutView";
@@ -450,17 +450,17 @@
             // 
             this.gridControl.DataSource = this.bindingSource;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            gridLevelNode1.RelationName = "Level1";
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            gridLevelNode2.RelationName = "Level1";
             this.gridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.gridControl.Location = new System.Drawing.Point(0, 329);
+            gridLevelNode2});
+            this.gridControl.Location = new System.Drawing.Point(0, 269);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(20);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(16);
             this.gridControl.MenuManager = this.ribbonControl;
             this.gridControl.Name = "gridControl";
             this.gridControl.ShowOnlyPredefinedDetails = true;
-            this.gridControl.Size = new System.Drawing.Size(1648, 439);
+            this.gridControl.Size = new System.Drawing.Size(1318, 359);
             this.gridControl.TabIndex = 7;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView,
@@ -531,10 +531,10 @@
             // 
             // lblCtlFrom
             // 
-            this.lblCtlFrom.Location = new System.Drawing.Point(32, 86);
-            this.lblCtlFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlFrom.Location = new System.Drawing.Point(26, 70);
+            this.lblCtlFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlFrom.Name = "lblCtlFrom";
-            this.lblCtlFrom.Size = new System.Drawing.Size(40, 22);
+            this.lblCtlFrom.Size = new System.Drawing.Size(34, 18);
             this.lblCtlFrom.TabIndex = 0;
             this.lblCtlFrom.Text = "From";
             // 
@@ -549,23 +549,23 @@
             this.panelControl1.Controls.Add(this.dateEditStart);
             this.panelControl1.Controls.Add(this.lblCtlFrom);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 184);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelControl1.Location = new System.Drawing.Point(0, 150);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1648, 145);
+            this.panelControl1.Size = new System.Drawing.Size(1318, 119);
             this.panelControl1.TabIndex = 6;
             // 
             // TransactionsReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "TransactionsReport";
-            this.Size = new System.Drawing.Size(1648, 768);
+            this.Size = new System.Drawing.Size(1318, 628);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupCondition.Properties)).EndInit();

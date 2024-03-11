@@ -18,6 +18,11 @@ namespace KCS.Views
 {
     public partial class AccessControlManage : BaseViewControl, IRibbonModule
     {
+
+        // Add:         2024/02/19
+        // Ver:         1.1.5.17
+        bool m_SupervisorIsReadOnly;
+
         public AccessControlManage()
             : base(typeof(AccessControlManageViewModel))
         {
@@ -29,6 +34,13 @@ namespace KCS.Views
 
             base.OnLoad(e);
             // gridControl.Load += gridControl_Load;
+
+            // Add:         2024/02/19
+            // Ver:         1.1.5.17
+            m_SupervisorIsReadOnly = KCS.Models.CredentialsSource.GetLoginSupervisorIsReadOnly();
+
+
+
             if (!DesignMode)
                 InitBindings();
             InitViewDisplay();
@@ -46,6 +58,19 @@ namespace KCS.Views
             ribbonPageGroupUserGoup.Text = LanguageResource.GetDisplayString("UserGroupText");
             bbiSave.Caption = LanguageResource.GetDisplayString("ToolBarSaveUserGroup");
             ribbonPageGroupActions.Text = LanguageResource.GetDisplayString("ToolBarGroupAction");
+
+
+            // Add:     2024/02/19
+            // Ver:     1.1.5.17
+            if (m_SupervisorIsReadOnly == true)
+            {
+                bbiHolidaySet.Enabled = false;
+                bbiTimeSet.Enabled = false;
+                bbiTimeZone.Enabled = false;
+
+                bbiSave.Enabled = false;
+            }
+
         }
         void RebindDataSource()
         {
@@ -76,11 +101,21 @@ namespace KCS.Views
             fluentAPI.BindCommand(bbiSave, x => x.SaveUserGroup());
             //fluentAPI.SetBinding(repositoryItemLookUpEdit1, x => x.ed, x => x.SelectSetValue);
             Messenger.Default.Register<RebindMessage<AccessControlManageViewModel>>(this, x => RebindDataSource());
-           // fluentAPI.WithEvent<FocusedNodeChangedEventArgs>(treeList, "FocusedNodeChanged")
-           //.EventToCommand(x => x.Save(null), new Func<FocusedNodeChangedEventArgs, object>(e => e.Node.GetDisplayText("NodeName")));
+            // fluentAPI.WithEvent<FocusedNodeChangedEventArgs>(treeList, "FocusedNodeChanged")
+            //.EventToCommand(x => x.Save(null), new Func<FocusedNodeChangedEventArgs, object>(e => e.Node.GetDisplayText("NodeName")));
 
-            fluentAPI.WithEvent<CellValueChangedEventArgs>(treeList, "CellValueChanging")
-           .EventToCommand(x => x.Save(null), new Func<CellValueChangedEventArgs, object>(e => e));
+            // Modified:     2024/02/19
+            // Ver:     1.1.5.17
+            //fluentAPI.WithEvent<CellValueChangedEventArgs>(treeList, "CellValueChanging")
+            //    .EventToCommand(x => x.Save(null), new Func<CellValueChangedEventArgs, object>(e => e));
+            if (m_SupervisorIsReadOnly == false)
+            {
+                fluentAPI.WithEvent<CellValueChangedEventArgs>(treeList, "CellValueChanging")
+                .EventToCommand(x => x.Save(null), new Func<CellValueChangedEventArgs, object>(e => e));
+            }
+            
+
+
             //treeList.TextChanged
            // treeList.TreeListMenuItemClick
             treeList.ShowingEditor += (sender, e) =>

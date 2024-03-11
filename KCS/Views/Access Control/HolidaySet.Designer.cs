@@ -71,9 +71,9 @@
             this.panelControl1.Controls.Add(this.schedulerControl);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1514, 814);
+            this.panelControl1.Size = new System.Drawing.Size(1211, 666);
             this.panelControl1.TabIndex = 4;
             // 
             // dateNavigator
@@ -87,22 +87,22 @@
             this.dateNavigator.Cursor = System.Windows.Forms.Cursors.Default;
             this.dateNavigator.Dock = System.Windows.Forms.DockStyle.Left;
             this.dateNavigator.FirstDayOfWeek = System.DayOfWeek.Sunday;
-            this.dateNavigator.Location = new System.Drawing.Point(3, 3);
-            this.dateNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateNavigator.Location = new System.Drawing.Point(2, 2);
+            this.dateNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateNavigator.Name = "dateNavigator";
-            this.dateNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.dateNavigator.Padding = new System.Windows.Forms.Padding(0);
             this.dateNavigator.RowCount = 2;
             this.dateNavigator.SchedulerControl = this.schedulerControl;
             this.dateNavigator.SelectionMode = DevExpress.XtraEditors.Repository.CalendarSelectionMode.Single;
-            this.dateNavigator.Size = new System.Drawing.Size(426, 808);
+            this.dateNavigator.Size = new System.Drawing.Size(341, 662);
             this.dateNavigator.TabIndex = 1;
             // 
             // schedulerControl
             // 
             this.schedulerControl.ActiveViewType = DevExpress.XtraScheduler.SchedulerViewType.Month;
             this.schedulerControl.DataStorage = this.schedulerStorage;
-            this.schedulerControl.Location = new System.Drawing.Point(437, 3);
-            this.schedulerControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.schedulerControl.Location = new System.Drawing.Point(350, 2);
+            this.schedulerControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.schedulerControl.Name = "schedulerControl";
             this.schedulerControl.OptionsBehavior.SelectOnRightClick = true;
             this.schedulerControl.OptionsCustomization.AllowAppointmentCopy = DevExpress.XtraScheduler.UsedAppointmentType.None;
@@ -112,7 +112,7 @@
             this.schedulerControl.OptionsCustomization.AllowAppointmentDragBetweenResources = DevExpress.XtraScheduler.UsedAppointmentType.None;
             this.schedulerControl.OptionsCustomization.AllowAppointmentEdit = DevExpress.XtraScheduler.UsedAppointmentType.None;
             this.schedulerControl.OptionsCustomization.AllowAppointmentMultiSelect = false;
-            this.schedulerControl.Size = new System.Drawing.Size(1057, 808);
+            this.schedulerControl.Size = new System.Drawing.Size(846, 661);
             this.schedulerControl.Start = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
             this.schedulerControl.TabIndex = 0;
             this.schedulerControl.Views.AgendaView.Enabled = false;
@@ -145,18 +145,18 @@
             this.panelControl2.Controls.Add(this.lblCtlType1);
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl2.Location = new System.Drawing.Point(1523, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelControl2.Location = new System.Drawing.Point(1218, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(291, 814);
+            this.panelControl2.Size = new System.Drawing.Size(233, 666);
             this.panelControl2.TabIndex = 5;
             // 
             // lblCtlType8
             // 
-            this.lblCtlType8.Location = new System.Drawing.Point(160, 566);
-            this.lblCtlType8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlType8.Location = new System.Drawing.Point(128, 463);
+            this.lblCtlType8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlType8.Name = "lblCtlType8";
-            this.lblCtlType8.Size = new System.Drawing.Size(55, 22);
+            this.lblCtlType8.Size = new System.Drawing.Size(47, 18);
             this.lblCtlType8.TabIndex = 15;
             this.lblCtlType8.Text = "Type 8";
             // 
@@ -165,18 +165,18 @@
             this.labelControl16.Appearance.BackColor = System.Drawing.Color.Indigo;
             this.labelControl16.Appearance.Options.UseBackColor = true;
             this.labelControl16.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl16.Location = new System.Drawing.Point(73, 564);
-            this.labelControl16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl16.Location = new System.Drawing.Point(58, 461);
+            this.labelControl16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(79, 25);
+            this.labelControl16.Size = new System.Drawing.Size(63, 20);
             this.labelControl16.TabIndex = 14;
             // 
             // lblCtlType7
             // 
-            this.lblCtlType7.Location = new System.Drawing.Point(160, 500);
-            this.lblCtlType7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlType7.Location = new System.Drawing.Point(128, 409);
+            this.lblCtlType7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlType7.Name = "lblCtlType7";
-            this.lblCtlType7.Size = new System.Drawing.Size(55, 22);
+            this.lblCtlType7.Size = new System.Drawing.Size(47, 18);
             this.lblCtlType7.TabIndex = 13;
             this.lblCtlType7.Text = "Type 7";
             // 
@@ -185,18 +185,18 @@
             this.labelControl14.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
             this.labelControl14.Appearance.Options.UseBackColor = true;
             this.labelControl14.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl14.Location = new System.Drawing.Point(73, 498);
-            this.labelControl14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl14.Location = new System.Drawing.Point(58, 407);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(79, 25);
+            this.labelControl14.Size = new System.Drawing.Size(63, 20);
             this.labelControl14.TabIndex = 12;
             // 
             // lblCtlType6
             // 
-            this.lblCtlType6.Location = new System.Drawing.Point(160, 434);
-            this.lblCtlType6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlType6.Location = new System.Drawing.Point(128, 355);
+            this.lblCtlType6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlType6.Name = "lblCtlType6";
-            this.lblCtlType6.Size = new System.Drawing.Size(55, 22);
+            this.lblCtlType6.Size = new System.Drawing.Size(47, 18);
             this.lblCtlType6.TabIndex = 11;
             this.lblCtlType6.Text = "Type 6";
             // 
@@ -205,18 +205,18 @@
             this.labelControl12.Appearance.BackColor = System.Drawing.Color.Aqua;
             this.labelControl12.Appearance.Options.UseBackColor = true;
             this.labelControl12.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl12.Location = new System.Drawing.Point(73, 432);
-            this.labelControl12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl12.Location = new System.Drawing.Point(58, 353);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(79, 25);
+            this.labelControl12.Size = new System.Drawing.Size(63, 20);
             this.labelControl12.TabIndex = 10;
             // 
             // lblCtlType5
             // 
-            this.lblCtlType5.Location = new System.Drawing.Point(160, 374);
-            this.lblCtlType5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlType5.Location = new System.Drawing.Point(128, 306);
+            this.lblCtlType5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlType5.Name = "lblCtlType5";
-            this.lblCtlType5.Size = new System.Drawing.Size(55, 22);
+            this.lblCtlType5.Size = new System.Drawing.Size(47, 18);
             this.lblCtlType5.TabIndex = 9;
             this.lblCtlType5.Text = "Type 5";
             // 
@@ -225,18 +225,18 @@
             this.labelControl10.Appearance.BackColor = System.Drawing.Color.DarkGreen;
             this.labelControl10.Appearance.Options.UseBackColor = true;
             this.labelControl10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl10.Location = new System.Drawing.Point(73, 372);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl10.Location = new System.Drawing.Point(58, 304);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(79, 25);
+            this.labelControl10.Size = new System.Drawing.Size(63, 20);
             this.labelControl10.TabIndex = 8;
             // 
             // lblCtlType4
             // 
-            this.lblCtlType4.Location = new System.Drawing.Point(160, 311);
-            this.lblCtlType4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlType4.Location = new System.Drawing.Point(128, 254);
+            this.lblCtlType4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlType4.Name = "lblCtlType4";
-            this.lblCtlType4.Size = new System.Drawing.Size(55, 22);
+            this.lblCtlType4.Size = new System.Drawing.Size(47, 18);
             this.lblCtlType4.TabIndex = 7;
             this.lblCtlType4.Text = "Type 4";
             // 
@@ -245,18 +245,18 @@
             this.labelControl8.Appearance.BackColor = System.Drawing.Color.YellowGreen;
             this.labelControl8.Appearance.Options.UseBackColor = true;
             this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl8.Location = new System.Drawing.Point(73, 310);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl8.Location = new System.Drawing.Point(58, 254);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(79, 25);
+            this.labelControl8.Size = new System.Drawing.Size(63, 20);
             this.labelControl8.TabIndex = 6;
             // 
             // lblCtlType3
             // 
-            this.lblCtlType3.Location = new System.Drawing.Point(160, 251);
-            this.lblCtlType3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlType3.Location = new System.Drawing.Point(128, 205);
+            this.lblCtlType3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlType3.Name = "lblCtlType3";
-            this.lblCtlType3.Size = new System.Drawing.Size(55, 22);
+            this.lblCtlType3.Size = new System.Drawing.Size(47, 18);
             this.lblCtlType3.TabIndex = 5;
             this.lblCtlType3.Text = "Type 3";
             // 
@@ -265,18 +265,18 @@
             this.labelControl6.Appearance.BackColor = System.Drawing.Color.Chartreuse;
             this.labelControl6.Appearance.Options.UseBackColor = true;
             this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl6.Location = new System.Drawing.Point(73, 250);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl6.Location = new System.Drawing.Point(58, 205);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(79, 25);
+            this.labelControl6.Size = new System.Drawing.Size(63, 20);
             this.labelControl6.TabIndex = 4;
             // 
             // lblCtlType2
             // 
-            this.lblCtlType2.Location = new System.Drawing.Point(160, 195);
-            this.lblCtlType2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlType2.Location = new System.Drawing.Point(128, 160);
+            this.lblCtlType2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlType2.Name = "lblCtlType2";
-            this.lblCtlType2.Size = new System.Drawing.Size(55, 22);
+            this.lblCtlType2.Size = new System.Drawing.Size(47, 18);
             this.lblCtlType2.TabIndex = 3;
             this.lblCtlType2.Text = "Type 2";
             // 
@@ -285,18 +285,18 @@
             this.labelControl4.Appearance.BackColor = System.Drawing.Color.OrangeRed;
             this.labelControl4.Appearance.Options.UseBackColor = true;
             this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl4.Location = new System.Drawing.Point(73, 193);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl4.Location = new System.Drawing.Point(58, 158);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(79, 25);
+            this.labelControl4.Size = new System.Drawing.Size(63, 20);
             this.labelControl4.TabIndex = 2;
             // 
             // lblCtlType1
             // 
-            this.lblCtlType1.Location = new System.Drawing.Point(160, 138);
-            this.lblCtlType1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlType1.Location = new System.Drawing.Point(128, 113);
+            this.lblCtlType1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlType1.Name = "lblCtlType1";
-            this.lblCtlType1.Size = new System.Drawing.Size(55, 22);
+            this.lblCtlType1.Size = new System.Drawing.Size(47, 18);
             this.lblCtlType1.TabIndex = 1;
             this.lblCtlType1.Text = "Type 1";
             // 
@@ -305,10 +305,10 @@
             this.labelControl1.Appearance.BackColor = System.Drawing.Color.LightCoral;
             this.labelControl1.Appearance.Options.UseBackColor = true;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(73, 137);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl1.Location = new System.Drawing.Point(58, 112);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(79, 25);
+            this.labelControl1.Size = new System.Drawing.Size(63, 20);
             this.labelControl1.TabIndex = 0;
             // 
             // mvvmContext
@@ -318,13 +318,13 @@
             // 
             // HolidaySet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "HolidaySet";
-            this.Size = new System.Drawing.Size(1814, 814);
+            this.Size = new System.Drawing.Size(1451, 666);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator.CalendarTimeProperties)).EndInit();

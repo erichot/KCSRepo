@@ -21,6 +21,12 @@ namespace KCS.Views
 {
     public partial class EmployeesManage : BaseViewControl, IRibbonModule
     {
+        // Add:         2024/02/19, 2024/03/04
+        // Ver:         1.1.5.17
+        bool m_SupervisorIsReadOnly;
+        string m_SupervisorDepartmentID;
+        
+
         public EmployeesManage()
             : base(typeof(EmployeeViewModel))
         {
@@ -41,6 +47,17 @@ namespace KCS.Views
             
             base.OnLoad(e);
             gridControl.Load += gridControl_Load;
+
+            /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            * Add:      2024/02/19,2024/03/04
+            * Ver:      1.1.5.17
+            */
+            m_SupervisorIsReadOnly = KCS.Models.CredentialsSource.GetLoginSupervisorIsReadOnly();
+            m_SupervisorDepartmentID = KCS.Models.CredentialsSource.GetLoginSupervisorDepID();
+            lblSupervisorDepartmentID.Text = m_SupervisorDepartmentID;
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
             if (!DesignMode)
                 InitBindings();
             InitViewDisplay();
@@ -88,8 +105,29 @@ namespace KCS.Views
             this.ItemForEmpTypeListField.Text = colEmployeeTypeName.Caption = LanguageResource.GetDisplayString("ToolBarEmployeesType");
             this.colFinger1Status.Caption = LanguageResource.GetDisplayString("Finger1Status");
             this.colFinger2Status.Caption = LanguageResource.GetDisplayString("Finger2Status");
-            
 
+            // Add:     2024/02/19
+            // Ver:     1.1.5.17
+            if (m_SupervisorIsReadOnly == true)
+            {
+                biEdit.Enabled = false;
+                biDelete.Enabled = false;
+                biNew.Enabled = false;
+                bbiDisableUser.Enabled = false;
+                bbiEnableEmployees.Enabled = false;
+
+                bbiSetAcPara.Enabled = false;
+                bbiImportEmployees.Enabled = false;
+
+                bbiDelFinger1.Enabled = false;
+                bbiDelFinger2.Enabled = false;
+                bbiDelFinger12.Enabled = false;
+                bbiSyncReSync.Enabled = false;
+                bbiReSyncSelect.Enabled = false;
+                bbiSyncSetting.Enabled = false;
+                bbiForceDelete.Enabled = false;
+                bbiChangeCardId.Enabled = false;
+            }
 
         }
         void RebindDataSource()
@@ -111,6 +149,13 @@ namespace KCS.Views
         {
             var fluentAPI = mvvmContext.OfType<EmployeeViewModel>();
             MVVMContext.RegisterFlyoutMessageBoxService();
+
+            // Add:     2024/03/04
+            // Ver:     1.1.5.17
+            fluentAPI.SetBinding(lblSupervisorDepartmentID, label => label.Text, x => x.m_SupervisorDepartmentID);
+            lblSupervisorDepartmentID.Text = m_SupervisorDepartmentID;
+
+
             Messenger.Default.Register<UpdateCountMessage<EmployeeViewModel>>(this, x => UpdateEntitiesCountRelatedUI(x));
             Messenger.Default.Register<RebindMessage<EmployeeViewModel>>(this, x => RebindDataSource());
             fluentAPI.SetObjectDataSourceBinding(bindingSource,
@@ -125,10 +170,21 @@ namespace KCS.Views
            
             fluentAPI.WithEvent<DevExpress.Data.SelectionChangedEventArgs>(gridView, "SelectionChanged")
                .SetBinding(x => x.Selection, e => GetSelectedEmployees());
-            fluentAPI.WithEvent<RowClickEventArgs>(gridView, "RowClick")
+
+            // Modified:    2024/02/19
+            // Ver:         1.1.5.17
+            //fluentAPI.WithEvent<RowClickEventArgs>(gridView, "RowClick")
+            //            .EventToCommand(
+            //                x => x.Edit(null), x => x.SelectedEmployee,
+            //                args => (args.Clicks == 2) && (args.Button == System.Windows.Forms.MouseButtons.Left));
+            if (m_SupervisorIsReadOnly == false)
+            {
+                fluentAPI.WithEvent<RowClickEventArgs>(gridView, "RowClick")
                         .EventToCommand(
                             x => x.Edit(null), x => x.SelectedEmployee,
                             args => (args.Clicks == 2) && (args.Button == System.Windows.Forms.MouseButtons.Left));
+            }
+
 
             gridView.RowClick += (s, e) =>
             {

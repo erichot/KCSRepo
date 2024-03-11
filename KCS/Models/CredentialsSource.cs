@@ -80,6 +80,19 @@ namespace KCS.Models
         }
         // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       * Add:     2024/02/19
+       * Ver:     1.1.5.17
+       */
+        static public bool GetLoginSupervisorIsReadOnly()
+        {
+            return LoginSupervisor.IsReadOnly;
+        }
+        // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
         static public void ReadAdministrator()
        {
            try
@@ -165,7 +178,12 @@ namespace KCS.Models
                             LoginSupervisor.GroupSID = int.Parse(dt.Rows[0][3].ToString().Trim());
                             LoginSupervisor.UserPermissionTypeID = int.Parse(dt.Rows[0][4].ToString().Trim());
                             LoginSupervisor.DepartmentID = dt.Rows[0][5].ToString().Trim();
-                            LoginSupervisor.IsReadOnly = int.Parse(dt.Rows[0][6].ToString().Trim());
+
+                            // Modified:    2024/02/19
+                            // Ver:         1.1.5.17
+                            //LoginSupervisor.IsReadOnly = int.Parse(dt.Rows[0][6].ToString().Trim());
+                            LoginSupervisor.IsReadOnly = Convert.ToBoolean(dt.Rows[0][6]);
+
                             LoginSupervisor.UserPwd = pwd;
                             if (!string.IsNullOrEmpty(LoginSupervisor.DepartmentID))
                             {

@@ -41,6 +41,23 @@ namespace KCS.Models
             }
             
         }
+
+        // Add:     2024/03/04
+        // Ver:     1.1.5.17
+        static public IList<Employees> GetEmployeesList(string _departmentID)
+        {
+            try
+            {
+                DataTable dt = KCSDatabaseHelper.Instance.GetEmployeesList(_departmentID);
+                return KCS.Common.Utils.ModelConvertHelper<Employees>.ConvertToModel(dt);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
         static public IList<EmployeeMsg> GetEmployeesMsgList()
         {
             DataTable dt = KCSDatabaseHelper.Instance.GetEmployeesMsgList();
@@ -57,6 +74,15 @@ namespace KCS.Models
             DataTable dt = KCSDatabaseHelper.Instance.GetEmployeesBriefList();
             return KCS.Common.Utils.ModelConvertHelper<EmployeeBrief>.ConvertToModel(dt);
         }
+
+        // Add:     2024/03/09
+        // Ver:     1.1.5.17
+        static public IList<EmployeeBrief> GetEmployeesBriefList(string _departmentID)
+        {
+            DataTable dt = KCSDatabaseHelper.Instance.GetEmployeesBriefList(_departmentID);
+            return KCS.Common.Utils.ModelConvertHelper<EmployeeBrief>.ConvertToModel(dt);
+        }
+
         static public bool UpdateEmployee(Employees employee,bool updateFace)
         {
             return KCSDatabaseHelper.Instance.UpdateEmployee(employee, CredentialsSource.GetLoginSupervisorSID(), updateFace);

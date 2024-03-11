@@ -16,6 +16,11 @@ namespace KCS.Views
 {
     public partial class ExportEmployees : DevExpress.XtraEditors.XtraUserControl
     {
+        // Add:         2024/03/04
+        // Ver:         1.1.5.17
+        bool m_SupervisorIsReadOnly;
+        string m_SupervisorDepartmentID;
+
         public ExportEmployees()
         {
             InitializeComponent();
@@ -30,6 +35,16 @@ namespace KCS.Views
 
             base.OnLoad(e);
             gridControl.Load += gridControl_Load;
+
+            /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           * Add:      2024/03/04
+           * Ver:      1.1.5.17
+           */
+            m_SupervisorIsReadOnly = KCS.Models.CredentialsSource.GetLoginSupervisorIsReadOnly();
+            m_SupervisorDepartmentID = KCS.Models.CredentialsSource.GetLoginSupervisorDepID();
+            lblSupervisorDepartmentID.Text = m_SupervisorDepartmentID;
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
             if (!DesignMode)
                 InitBindings();
             InitViewDisplay();
@@ -59,6 +74,13 @@ namespace KCS.Views
         void InitBindings()
         {
             var fluentAPI = mvvmContext.OfType<ExportEmployeesViewModel>();
+            
+            // Add:     2024/03/04
+            // Ver:     1.1.5.17
+            fluentAPI.SetBinding(lblSupervisorDepartmentID, label => label.Text, x => x.m_SupervisorDepartmentID);
+            lblSupervisorDepartmentID.Text = m_SupervisorDepartmentID;
+
+
             fluentAPI.SetObjectDataSourceBinding(bindingSource,
                 x => x.EmployeesDataSet);
             sbExport.Click += (s, e) =>

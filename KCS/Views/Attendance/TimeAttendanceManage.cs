@@ -20,6 +20,11 @@ namespace KCS.Views
 {
     public partial class TimeAttendanceManage : BaseViewControl, IRibbonModule
     {
+        // Add:         2024/02/19
+        // Ver:         1.1.5.17
+        bool m_SupervisorIsReadOnly;
+        string m_SupervisorDepartmentID;
+
         KCS.Services.IWaitingService waitingService;
         public TimeAttendanceManage()
             : base(typeof(TimeAttendanceManageViewModel))
@@ -31,6 +36,13 @@ namespace KCS.Views
 
             base.OnLoad(e);
             gridControl.Load += gridControl_Load;
+
+            // Add:         2024/02/19,2024/03/04
+            // Ver:         1.1.5.17
+            m_SupervisorIsReadOnly = KCS.Models.CredentialsSource.GetLoginSupervisorIsReadOnly();            
+            m_SupervisorDepartmentID = KCS.Models.CredentialsSource.GetLoginSupervisorDepID();
+            lblSupervisorDepartmentID.Text = m_SupervisorDepartmentID;
+
             if (!DesignMode)
                 InitBindings();
             InitViewDisplay();
@@ -103,12 +115,41 @@ namespace KCS.Views
             });
             radioGroupCondition.SelectedIndex = 0;
 
-          
+
+
+
+            // Add:     2024/02/19
+            // Ver:     1.1.5.17
+            if (m_SupervisorIsReadOnly == true)
+            {
+                bbiHolidaySetting.Enabled = false;
+                bbiLeaveCategory.Enabled = false;
+                bbiLeaveManagement.Enabled = false;
+
+                bbiModifyTrans.Enabled = false;
+                bbiAddTrans.Enabled = false;
+                biNewWorkShift.Enabled = false;
+
+                bbiCalendarSettings.Enabled = false;
+                bbiJobCode.Enabled = false;
+
+                bbiEditAnnaulShiftTable.Enabled = false;
+
+                bbiShiftType.Enabled = false;
+                bbiCalendarCreate.Enabled = false;
+                bbiEditCalendar.Enabled = false;
+                bbiCreatePersonalCalendar.Enabled = false;
+                bbiEditPersonalShiftTable.Enabled = false;                
+            }
+
+
+            
+
         }
         void InitBindings()
         {
-            
-            var fluentAPI = mvvmContext.OfType<TimeAttendanceManageViewModel>();
+
+            var fluentAPI = mvvmContext.OfType<TimeAttendanceManageViewModel>();  
             fluentAPI.BindCommand(bbiHolidaySetting, x => x.TaHolidaySetting());
             fluentAPI.BindCommand(bbiLeaveCategory, x => x.LeaveCategorySetting());
             fluentAPI.BindCommand(bbiLeaveManagement, x => x.VocationSetting());
@@ -116,6 +157,7 @@ namespace KCS.Views
             fluentAPI.BindCommand(bbiAddTrans, x => x.AddTransaction(null), x => x.SelectedTransaction);
             fluentAPI.BindCommand(bbiModifyTrans, x => x.Edit(null), x => x.SelectedTransaction);
 
+           
 
             fluentAPI.BindCommand(biNewWorkShift, x => x.NewWorkShift());
             fluentAPI.BindCommand(bbiJobCode, x => x.JobCodeSet());
@@ -143,11 +185,18 @@ namespace KCS.Views
             fluentAPI.SetBinding(dateEditEnd, x => x.EditValue, x => x.DateEnd);
             fluentAPI.SetBinding(radioGroupCondition, x => x.EditValue, x => x.QueryCondition);
 
+
+            // Add:     2024/03/04
+            // Ver:     1.1.5.17
+            fluentAPI.SetBinding(lblSupervisorDepartmentID, label => label.Text, x => x.m_SelectDepartmentId);
+            lblSupervisorDepartmentID.Text = m_SupervisorDepartmentID;
+
             Messenger.Default.Register<UpdateCountMessage<TimeAttendanceManageViewModel>>(this, x => UpdateEntitiesCountRelatedUI(x));
 
             fluentAPI.SetObjectDataSourceBinding(bindingSourceDevice, x => x.DeviceInfoDataSet);
             fluentAPI.SetObjectDataSourceBinding(bindingSource, x => x.TransactionDataSet);
             //fluentAPI.SetObjectDataSourceBinding(bindingSourceAannualCalendar, x => x.AnnualCalendarDataSet);
+            
 
             barHeaderItem1.Caption = string.Format("{0}: {1}", LanguageResource.GetDisplayString("RecordsText"), fluentAPI.ViewModel.RecordCount);
 
@@ -158,10 +207,21 @@ namespace KCS.Views
                     args => args.Row as TaTransaction,
                     (gView, transaction) => gView.FocusedRowHandle = gView.FindRow(transaction));
 
-            fluentAPI.WithEvent<RowClickEventArgs>(gridView, "RowClick")
+
+            // Modified:     2024/02/19
+            // Ver:         1.1.5.17
+            //fluentAPI.WithEvent<RowClickEventArgs>(gridView, "RowClick")
+            //           .EventToCommand(
+            //               x => x.Edit(null), x => x.SelectedTransaction,
+            //               args => (args.Clicks == 2) && (args.Button == System.Windows.Forms.MouseButtons.Left));
+            if (m_SupervisorIsReadOnly == false)
+            {
+                fluentAPI.WithEvent<RowClickEventArgs>(gridView, "RowClick")
                        .EventToCommand(
                            x => x.Edit(null), x => x.SelectedTransaction,
                            args => (args.Clicks == 2) && (args.Button == System.Windows.Forms.MouseButtons.Left));
+            }
+
 
             barHeaderItem.Caption = string.Format("{0}: {1}", LanguageResource.GetDisplayString("RecordsText"), fluentAPI.ViewModel.RecordCount.ToString());
 

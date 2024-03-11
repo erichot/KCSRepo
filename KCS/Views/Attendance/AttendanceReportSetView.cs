@@ -17,6 +17,13 @@ namespace KCS.Views
 {
     public partial class AttendanceReportSetView : DevExpress.XtraEditors.XtraUserControl
     {
+
+        // Add:         2024/03/04
+        // Ver:         1.1.5.17
+        bool m_SupervisorIsReadOnly;
+        string m_SupervisorDepartmentID;
+
+
         KCS.Services.IWaitingService waitingService =  new KCS.Services.WaitingService();
         public AttendanceReportSetView()
         {
@@ -26,6 +33,17 @@ namespace KCS.Views
         {
             base.OnLoad(e);
             InitViewDisplay();
+
+            /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           * Add:      2024/03/04
+           * Ver:      1.1.5.17
+           */
+            m_SupervisorIsReadOnly = KCS.Models.CredentialsSource.GetLoginSupervisorIsReadOnly();
+            m_SupervisorDepartmentID = KCS.Models.CredentialsSource.GetLoginSupervisorDepID();
+            lblSupervisorDepartmentID.Text = m_SupervisorDepartmentID;
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
             if (!DesignMode)
                 InitBindings();
            // waitingService = GetService<Services.IWaitingService>();
@@ -35,7 +53,14 @@ namespace KCS.Views
              var fluentAPI = mvvmContext.OfType<AttendanceReportSetViewModel>();
              Messenger.Default.Register<WaitingMessage<AttendanceReportSetViewModel>>(this, ShowWaiting);
 
-             fluentAPI.SetBinding(dateEditStart, x => x.EditValue, x => x.StartDate);
+            // Add:     2024/03/04
+            // Ver:     1.1.5.17
+            fluentAPI.SetBinding(lblSupervisorDepartmentID, label => label.Text, x => x.m_SupervisorDepartmentID);
+            lblSupervisorDepartmentID.Text = m_SupervisorDepartmentID;
+
+
+
+            fluentAPI.SetBinding(dateEditStart, x => x.EditValue, x => x.StartDate);
              fluentAPI.SetBinding(dateEditEnd, x => x.EditValue, x => x.EndDate);
              fluentAPI.SetBinding(checkByAttendanceRecords, x => x.Checked, x => x.ByTransactionType);
 

@@ -58,6 +58,14 @@ namespace KCS.ViewModels
         public virtual int SelectDeviceId { get; set; }
         public virtual TaTransaction SelectedTransaction { get; set; }
 
+
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         * Add:     2024/03/04
+         * Ver:     1.1.5.17
+         */
+        public virtual string m_SelectDepartmentId { get; set; }
+         
+          
         //public object AnnualCalendarDataSet
         //{
         //    get
@@ -69,17 +77,28 @@ namespace KCS.ViewModels
         {
             get
             {
-               
+                // Modified:    2024/03/04
+                // Ver:         1.1.5.17
+                //if (DateStart == null || DateEnd == null)
+                //    TransactionList = TransactionDataSource.GetTaTransactionsList(SelectDeviceId, null, null, QueryCondition);
+                //else
+                //    TransactionList = TransactionDataSource.GetTaTransactionsList(SelectDeviceId, DateStart.ToString("yyyy-MM-dd HH:mm:ss"), DateEnd.ToString("yyyy-MM-dd HH:mm:ss"), QueryCondition);
                 if (DateStart == null || DateEnd == null)
-                    TransactionList = TransactionDataSource.GetTaTransactionsList(SelectDeviceId, null, null, QueryCondition);
+                    TransactionList = TransactionDataSource.GetTaTransactionsList(SelectDeviceId, null, null, QueryCondition, m_SelectDepartmentId);
                 else
-                    TransactionList = TransactionDataSource.GetTaTransactionsList(SelectDeviceId, DateStart.ToString("yyyy-MM-dd HH:mm:ss"), DateEnd.ToString("yyyy-MM-dd HH:mm:ss"), QueryCondition);
+                    TransactionList = TransactionDataSource.GetTaTransactionsList(SelectDeviceId, DateStart.ToString("yyyy-MM-dd HH:mm:ss"), DateEnd.ToString("yyyy-MM-dd HH:mm:ss"), QueryCondition, m_SelectDepartmentId);
+
+
                 //var TransactionList = TransactionDataSet as IList<TaTransaction>;
                 RecordCount = TransactionList.Count;
                 return TransactionList;
             }
 
         }
+
+       
+
+        
         public object DeviceInfoDataSet
         {
             get

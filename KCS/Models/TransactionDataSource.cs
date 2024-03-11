@@ -16,6 +16,20 @@ namespace KCS.Models
             return KCS.Common.Utils.ModelConvertHelper<TaTransaction>.ConvertToModel(dt);
 
         }
+
+        // Add:     2024/03/04
+        // Ver:     1.1.5.17
+        static public IList<TaTransaction> GetTaTransactionsList(int SlaveId, string start = null, string end = null, int queryCondtion = 0, string _departmentID = null)
+        {
+            // Modified:     2024/03/04
+            // Ver:     1.1.5.17
+            //DataTable dt = KCSDatabaseHelper.Instance.GetTaTransactionsList(SlaveId, start, end, queryCondtion);
+            DataTable dt = KCSDatabaseHelper.Instance.GetTaTransactionsList(SlaveId, start, end, queryCondtion, _departmentID);
+
+            return KCS.Common.Utils.ModelConvertHelper<TaTransaction>.ConvertToModel(dt);
+        }
+
+
         static public int GetTaTransactionsCount(List<int> slaveIdList, string start, string end)
         {
             return KCSDatabaseHelper.Instance.GetTaTransactionsCount(slaveIdList, start, end);

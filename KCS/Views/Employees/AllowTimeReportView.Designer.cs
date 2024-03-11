@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllowTimeReportView));
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.bindingSourceAllowTime = new System.Windows.Forms.BindingSource(this.components);
@@ -90,9 +90,9 @@
             this.gridControl.DataSource = this.bindingSourceAllowTime;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gridControl.Location = new System.Drawing.Point(2, 2);
             this.gridControl.MainView = this.gridView;
             this.gridControl.Margin = new System.Windows.Forms.Padding(16);
@@ -424,8 +424,8 @@
             this.cmbEndHour.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEndHour.FormattingEnabled = true;
             this.cmbEndHour.Items.AddRange(new object[] {
-                "",
-                "0",
+            "",
+            "0",
             "1",
             "2",
             "3",
@@ -477,8 +477,8 @@
             this.cmbStartHour.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStartHour.FormattingEnabled = true;
             this.cmbStartHour.Items.AddRange(new object[] {
-                "",
-                "0",
+            "",
+            "0",
             "1",
             "2",
             "3",

@@ -60,6 +60,7 @@
             this.ribbonPageGroupActions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupReport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.lblSupervisorDepartmentID = new System.Windows.Forms.Label();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.checkByAttendanceRecords.Properties)).BeginInit();
@@ -81,18 +82,18 @@
             // 
             // checkByAttendanceRecords
             // 
-            this.checkByAttendanceRecords.Location = new System.Drawing.Point(604, 79);
-            this.checkByAttendanceRecords.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.checkByAttendanceRecords.Location = new System.Drawing.Point(483, 65);
+            this.checkByAttendanceRecords.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkByAttendanceRecords.Name = "checkByAttendanceRecords";
             this.checkByAttendanceRecords.Properties.Caption = "Calculate attendance record only";
-            this.checkByAttendanceRecords.Size = new System.Drawing.Size(392, 26);
+            this.checkByAttendanceRecords.Size = new System.Drawing.Size(314, 22);
             this.checkByAttendanceRecords.TabIndex = 8;
             // 
             // dateEditEnd
             // 
             this.dateEditEnd.EditValue = null;
-            this.dateEditEnd.Location = new System.Drawing.Point(858, 28);
-            this.dateEditEnd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateEditEnd.Location = new System.Drawing.Point(686, 23);
+            this.dateEditEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateEditEnd.Name = "dateEditEnd";
             this.dateEditEnd.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dateEditEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -100,23 +101,23 @@
             this.dateEditEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditEnd.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.dateEditEnd.Size = new System.Drawing.Size(206, 28);
+            this.dateEditEnd.Size = new System.Drawing.Size(165, 24);
             this.dateEditEnd.TabIndex = 7;
             // 
             // lblCtlTo
             // 
-            this.lblCtlTo.Location = new System.Drawing.Point(814, 33);
-            this.lblCtlTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlTo.Location = new System.Drawing.Point(651, 27);
+            this.lblCtlTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlTo.Name = "lblCtlTo";
-            this.lblCtlTo.Size = new System.Drawing.Size(21, 22);
+            this.lblCtlTo.Size = new System.Drawing.Size(18, 18);
             this.lblCtlTo.TabIndex = 6;
             this.lblCtlTo.Text = "To";
             // 
             // dateEditStart
             // 
             this.dateEditStart.EditValue = null;
-            this.dateEditStart.Location = new System.Drawing.Point(599, 28);
-            this.dateEditStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateEditStart.Location = new System.Drawing.Point(479, 23);
+            this.dateEditStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateEditStart.Name = "dateEditStart";
             this.dateEditStart.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dateEditStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -124,15 +125,15 @@
             this.dateEditStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditStart.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.dateEditStart.Size = new System.Drawing.Size(206, 28);
+            this.dateEditStart.Size = new System.Drawing.Size(165, 24);
             this.dateEditStart.TabIndex = 5;
             // 
             // lblCtlFrom
             // 
-            this.lblCtlFrom.Location = new System.Drawing.Point(536, 33);
-            this.lblCtlFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCtlFrom.Location = new System.Drawing.Point(429, 27);
+            this.lblCtlFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCtlFrom.Name = "lblCtlFrom";
-            this.lblCtlFrom.Size = new System.Drawing.Size(40, 22);
+            this.lblCtlFrom.Size = new System.Drawing.Size(34, 18);
             this.lblCtlFrom.TabIndex = 4;
             this.lblCtlFrom.Text = "From";
             // 
@@ -140,16 +141,16 @@
             // 
             this.gridControl.DataSource = this.bindingSourceEmBrief;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             gridLevelNode1.RelationName = "Level1";
             this.gridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gridControl.Location = new System.Drawing.Point(3, 3);
+            this.gridControl.Location = new System.Drawing.Point(2, 2);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(20);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(16);
             this.gridControl.Name = "gridControl";
             this.gridControl.ShowOnlyPredefinedDetails = true;
-            this.gridControl.Size = new System.Drawing.Size(1628, 519);
+            this.gridControl.Size = new System.Drawing.Size(1303, 426);
             this.gridControl.TabIndex = 24;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView,
@@ -245,7 +246,7 @@
             // layoutView
             // 
             this.layoutView.CardCaptionFormat = "{3}";
-            this.layoutView.CardMinSize = new System.Drawing.Size(488, 310);
+            this.layoutView.CardMinSize = new System.Drawing.Size(390, 254);
             this.layoutView.FieldCaptionFormat = "{0}";
             this.layoutView.GridControl = this.gridControl;
             this.layoutView.Name = "layoutView";
@@ -282,14 +283,14 @@
             this.bbiMonthlySimplifiedReport,
             this.bbiFlexShiftReport});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl.MaxItemId = 2;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2});
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1634, 184);
+            this.ribbonControl.Size = new System.Drawing.Size(1307, 150);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -394,26 +395,37 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.lblSupervisorDepartmentID);
             this.panelControl2.Controls.Add(this.checkByAttendanceRecords);
             this.panelControl2.Controls.Add(this.dateEditStart);
             this.panelControl2.Controls.Add(this.dateEditEnd);
             this.panelControl2.Controls.Add(this.lblCtlFrom);
             this.panelControl2.Controls.Add(this.lblCtlTo);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(0, 184);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelControl2.Location = new System.Drawing.Point(0, 150);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1634, 143);
+            this.panelControl2.Size = new System.Drawing.Size(1307, 117);
             this.panelControl2.TabIndex = 27;
+            // 
+            // lblSupervisorDepartmentID
+            // 
+            this.lblSupervisorDepartmentID.AutoSize = true;
+            this.lblSupervisorDepartmentID.Location = new System.Drawing.Point(990, 95);
+            this.lblSupervisorDepartmentID.Name = "lblSupervisorDepartmentID";
+            this.lblSupervisorDepartmentID.Size = new System.Drawing.Size(181, 18);
+            this.lblSupervisorDepartmentID.TabIndex = 9;
+            this.lblSupervisorDepartmentID.Text = "lblSupervisorDepartmentID";
+            this.lblSupervisorDepartmentID.Visible = false;
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.gridControl);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 327);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelControl1.Location = new System.Drawing.Point(0, 267);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1634, 525);
+            this.panelControl1.Size = new System.Drawing.Size(1307, 430);
             this.panelControl1.TabIndex = 28;
             // 
             // mvvmContext
@@ -423,14 +435,14 @@
             // 
             // AttendanceReportSetView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AttendanceReportSetView";
-            this.Size = new System.Drawing.Size(1634, 852);
+            this.Size = new System.Drawing.Size(1307, 697);
             ((System.ComponentModel.ISupportInitialize)(this.checkByAttendanceRecords.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditEnd.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditEnd.Properties)).EndInit();
@@ -485,5 +497,6 @@
         private DevExpress.Utils.MVVM.MVVMContext mvvmContext;
         private DevExpress.XtraBars.BarButtonItem bbiMonthlySimplifiedReport;
         private DevExpress.XtraBars.BarButtonItem bbiFlexShiftReport;
+        private System.Windows.Forms.Label lblSupervisorDepartmentID;
     }
 }

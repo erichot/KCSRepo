@@ -10,6 +10,10 @@ namespace KCS.ViewModels
     [POCOViewModel(ImplementIDataErrorInfo = true)]
     public class ExportEmployeesViewModel : KcsDocument 
     {
+        // Add:     2024/03/04
+        // Ver:     1.1.5.17
+        public virtual string m_SupervisorDepartmentID { get; set; }
+
         public static ExportEmployeesViewModel Create()
         {
             return ViewModelSource.Create(() => new ExportEmployeesViewModel());
@@ -19,8 +23,12 @@ namespace KCS.ViewModels
         {
             get
             {
-                IList<Employees> employeesList = EmployeesDataSource.GetEmployeesList();
-                
+
+                // Modified:     2024/03/04
+                // Ver:     1.1.5.17
+                //IList<Employees> employeesList = EmployeesDataSource.GetEmployeesList();
+                IList<Employees> employeesList = EmployeesDataSource.GetEmployeesList(m_SupervisorDepartmentID);
+
                 return employeesList;
             }
 

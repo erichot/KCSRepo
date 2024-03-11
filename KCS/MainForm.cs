@@ -370,6 +370,13 @@ namespace KCS
 
             var userPermissionTypeID = KCS.Models.CredentialsSource.GetLoginSupervisorUserPermissionTypeID();
 
+            /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            * Add:  2023/08/09
+            * Ver:  1.1.5.11
+            */
+            var m_SupervisorIsReadOnly = KCS.Models.CredentialsSource.GetLoginSupervisorIsReadOnly();
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
             // 下方主選單功能表
             for (int i = 0; i < types.Length; i++)
             {
@@ -408,7 +415,25 @@ namespace KCS
                 bbiSyncSet.Visibility = BarItemVisibility.Never;
                 biSystemSetting.Visibility = BarItemVisibility.Never;
             }
-            
+
+            // Add:    2024/02/19
+            // Ver:    1.1.5.17
+            if (m_SupervisorIsReadOnly == true)
+            {
+                biSystemSetting.Enabled = false;
+                bbiSyncSet.Enabled = false;
+                biNewDepartment.Enabled = false;
+
+                biSetAdminPin.Enabled = false;
+                bbiSyncSet.Enabled = false;
+                biSystemSetting.Enabled = false;
+
+                bbiCompanyDataSetting.Enabled = false;
+                bbiDatabaseMaintenance.Enabled = false;
+                bbiLiftControl.Enabled = false;
+
+                biEmployeesType.Enabled = false;
+            }
 
             officeNavigationBar.RegisterItem += officeNavigationBar_RegisterItem;
             officeNavigationBar.NavigationClient = navBar;

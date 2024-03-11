@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeviceSettingManage));
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement1 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement2 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
@@ -83,7 +82,7 @@
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControlTrans = new DevExpress.XtraGrid.GridControl();
-            this.transactionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.transactionsBindingSource = new System.Windows.Forms.BindingSource();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTransSIDInDevice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTransactionType = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -106,7 +105,7 @@
             this.lblDebugPrint1 = new System.Windows.Forms.Label();
             this.lblDebugPrint = new System.Windows.Forms.Label();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
-            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource = new System.Windows.Forms.BindingSource();
             this.tileView = new DevExpress.XtraGrid.Views.Tile.TileView();
             this.colSlaveSID = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colIP_Internal = new DevExpress.XtraGrid.Columns.TileViewColumn();
@@ -119,7 +118,7 @@
             this.colIsServerMode = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colNotPropagateWithUsersByDefault = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -926,7 +925,6 @@
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Interval = 3000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 

@@ -19,6 +19,11 @@ namespace KCS.ViewModels
         IList<EmployeeBrief> employeesBriefList = null;
         public virtual IEnumerable<EmployeeBrief> Selection { get; set; }
 
+        // Add:     2024/03/04
+        // Ver:     1.1.5.17
+        public virtual string m_SupervisorDepartmentID { get; set; }
+
+
         public static AttendanceReportSetViewModel Create()
         {
             return ViewModelSource.Create(() => new AttendanceReportSetViewModel());
@@ -155,7 +160,12 @@ namespace KCS.ViewModels
         {
             get
             {
-                employeesBriefList = EmployeesDataSource.GetEmployeesBriefList();
+                // Modified: 2024/03/09
+                // Ver:     1.1.5.17
+                //employeesBriefList = EmployeesDataSource.GetEmployeesBriefList();
+                employeesBriefList = EmployeesDataSource.GetEmployeesBriefList(m_SupervisorDepartmentID);
+                // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
                 return employeesBriefList;
             }
 

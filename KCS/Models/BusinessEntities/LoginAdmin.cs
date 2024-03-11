@@ -15,7 +15,10 @@ namespace KCS.Models
         public int UserPermissionTypeID { get; set; }
         public string DepartmentID { get; set; }
         public int DepartmentSID { get; set; }
-        public int IsReadOnly { get; set; }
+
+        // public int IsReadOnly { get; set; }
+        public bool IsReadOnly { get; set; }
+
         public string UserPwd { get; set; }
         public bool IsCacheOrNot { get; set; }
 
@@ -42,7 +45,12 @@ namespace KCS.Models
             this.UserPermissionTypeID = 0;
             this.DepartmentID = "";
             this.DepartmentSID = 0;
-            this.IsReadOnly = 0;
+
+            // Modified:    2024/02/19
+            // Ver:         1.1.5.17
+            //this.IsReadOnly = 0;
+            this.IsReadOnly = false;
+
             this.UserPwd = "";
             this.IsCacheOrNot = false;
             

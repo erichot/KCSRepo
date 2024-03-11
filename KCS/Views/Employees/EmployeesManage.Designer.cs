@@ -34,6 +34,7 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.lblSupervisorDepartmentID = new System.Windows.Forms.Label();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
@@ -181,6 +182,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.lblSupervisorDepartmentID);
             this.panelControl1.Controls.Add(this.layoutControl1);
             this.panelControl1.Controls.Add(this.ribbonControl);
             this.panelControl1.Controls.Add(this.ribbonStatusBar2);
@@ -190,6 +192,15 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1237, 619);
             this.panelControl1.TabIndex = 5;
+            // 
+            // lblSupervisorDepartmentID
+            // 
+            this.lblSupervisorDepartmentID.Location = new System.Drawing.Point(134, 592);
+            this.lblSupervisorDepartmentID.Name = "lblSupervisorDepartmentID";
+            this.lblSupervisorDepartmentID.Size = new System.Drawing.Size(1201, 25);
+            this.lblSupervisorDepartmentID.TabIndex = 5;
+            this.lblSupervisorDepartmentID.Text = "lblSupervisorDepartmentID";
+            this.lblSupervisorDepartmentID.Visible = false;
             // 
             // layoutControl1
             // 
@@ -1219,5 +1230,6 @@
         private DevExpress.XtraBars.BarButtonItem bbiChangeCardId;
         private DevExpress.XtraGrid.Columns.GridColumn gridEmpPhoto;
         private DevExpress.XtraBars.BarButtonItem bbiAllowTimeReport;
+        private System.Windows.Forms.Label lblSupervisorDepartmentID;
     }
 }
