@@ -76,8 +76,12 @@ namespace KCS.Sync
         WriteDeviceParaOk = 0x0d,
         WriteDoorPINOk = 0x0e,
         WriteTimeOk = 0x20,
-        RCV_FACE_PHOTO = 0x40
+        RCV_FACE_PHOTO = 0x40,
 
+        // Add: 2024/03/29      若KCS 執行 "Open Door" 之後，且relay順利啟動。 OR_Transaction 有收到 !SOFTOPEN!紀錄然後就開始持續收到 returnCode 0xF5 
+        //                      刚查了一下，如果数据通信错误或者设备收到未识别的指令 就好返回F5。这个回传11 应该没事，可能是粘包了 或者啥的
+        //                      这个应该是记录类型的问题 datasync 和 OR_Tans 不匹配 那kcs把这个错误屏蔽, 这个主要是调试用的
+        ReadSlaveOkException = 0xF5
     }
     public enum SyncServerCommand
     {
@@ -101,7 +105,7 @@ namespace KCS.Sync
         WriteDevicePara = 0x93,
         OpenDoor = 0x94,
         SetDoorPin = 0x95,
-        RebootDevice = 0x96
+        RebootDevice = 0x96        
     }
     public enum RequestCommand
     {

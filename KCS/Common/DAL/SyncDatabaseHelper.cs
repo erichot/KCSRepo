@@ -596,12 +596,24 @@ namespace KCS.Common
                 sqlPara[8] = new SqlParameter("@ClientTranSID", SqlDbType.Int);
                 sqlPara[8].Value = TranSID;
 
+                /* Mofieid: 2024/04/04
+                 * Exception  : Error - ReadSalveOk將資料類型從 numeric 轉換到 decimal 時發生錯誤。
+                KCS 嘗試在DB建立一筆OR_Transaction卡號：!SOFTOPEN!
+                TranType: 144
+                體溫：38174.8就是這個體溫超出原本的設計
+                */
                 // Add:     2022/05/11 
                 // By:      Eric
-                // Subject: 體溫
-                sqlPara[9] = new SqlParameter("@DegreeCelsius", SqlDbType.Decimal);
-                sqlPara[9].Value = transData.BodyTemp;
+                // Subject: 體溫                
+                //sqlPara[9] = new SqlParameter("@DegreeCelsius", SqlDbType.Decimal);
+                //sqlPara[9].Value = transData.BodyTemp;
+                decimal degreeCelsius = Convert.ToDecimal(transData.BodyTemp);
+                if (degreeCelsius > 99) degreeCelsius = (decimal)99.9;
+                degreeCelsius = Math.Round(degreeCelsius, 1);
 
+                sqlPara[9] = new SqlParameter("@DegreeCelsius", SqlDbType.Decimal);
+                sqlPara[9].Value = degreeCelsius;
+                // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
                 return DataBase.RunProcedure(cn, "SP_DS_DataSync_INSERT_OR_Transactions", sqlPara, out rowsAffect);
             }
