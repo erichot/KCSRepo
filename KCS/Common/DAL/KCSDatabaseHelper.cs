@@ -5,10 +5,13 @@ using LINQtoCSV;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
+
 using System.Data.Common;
 using System.Data.OleDb;
-using System.Data.SqlClient;
+using System.Data;
+//using System.Data.SqlClient;
+//using Microsoft.Data;
+using Microsoft.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
@@ -3119,27 +3122,32 @@ END AS [CLASS_CODE],N'{2}',N'{3}',N'{2}',N'{3}',[LIST_GRP]
                 SP_Insert_BF_WorkCalendar_WhenNewUserOnThisMonth(getUserSID, System.DateTime.Now.Year, System.DateTime.Now.Month, OperationId);
                 SP_DS_Insert_User_Add_NewUser(getUserSID, OperationId);
 
+                // Add:2024/04/09 
+                // Ver:1.1.5.20
+                SP_INSERT_BFX_UserSlaveAllowTime(employee.CardID.PadLeft(10, '0'));
+
+
                 //插入人脸同步资料
-    //            ArrayList SQLStringList = new ArrayList();
-    //            SQLStringList.Add(string.Format("DELETE FROM [DS_User_Face_Add] WHERE (CardID = '{0}')", employee.CardID.PadLeft(10, '0')));
-    //            SQLStringList.Add(string.Format(@"INSERT [DS_User_Face_Add] (UserSID, CardID, SlaveSID, InActive, UserAddNewSID)
+                //            ArrayList SQLStringList = new ArrayList();
+                //            SQLStringList.Add(string.Format("DELETE FROM [DS_User_Face_Add] WHERE (CardID = '{0}')", employee.CardID.PadLeft(10, '0')));
+                //            SQLStringList.Add(string.Format(@"INSERT [DS_User_Face_Add] (UserSID, CardID, SlaveSID, InActive, UserAddNewSID)
 
-    //SELECT @UserSID, U.CardID, S.SlaveSID
-    //    , CASE WHEN U.NotPropagateToSlaveByDefault = 1
+                //SELECT @UserSID, U.CardID, S.SlaveSID
+                //    , CASE WHEN U.NotPropagateToSlaveByDefault = 1
 
-    //        THEN 1
+                //        THEN 1
 
-    //        ELSE(
-    //            CASE WHEN S.NotPropagateWithUsersByDefault = 1 THEN 1 ELSE 0 END
-    //            )
+                //        ELSE(
+                //            CASE WHEN S.NotPropagateWithUsersByDefault = 1 THEN 1 ELSE 0 END
+                //            )
 
-    //        END AS InActive
-    //    , U.UserAddNewSID
+                //        END AS InActive
+                //    , U.UserAddNewSID
 
-    //FROM[BF_User] AS U, [VS_SlaveFace] AS S
+                //FROM[BF_User] AS U, [VS_SlaveFace] AS S
 
-    //WHERE UserSID = {0}", getUserSID.ToString()));
-    //            sqlDatabaseProvider.ExecuteSqlTran(SQLStringList);
+                //WHERE UserSID = {0}", getUserSID.ToString()));
+                //            sqlDatabaseProvider.ExecuteSqlTran(SQLStringList);
 
 
                 if (!employee.SyncOrNot && !SyncToAll && deviceList != null)
@@ -3158,8 +3166,9 @@ END AS [CLASS_CODE],N'{2}',N'{3}',N'{2}',N'{3}',[LIST_GRP]
                 }
                 return 0;
             }
-            catch
+            catch (Exception ex)
             {
+
             }
             return DataBaseAccessErrorCode.OperationError; 
       
@@ -4389,6 +4398,45 @@ END AS [CLASS_CODE],N'{2}',N'{3}',N'{2}',N'{3}',[LIST_GRP]
             sqlPara[0].Value = DepartmentId;
 
             return DataBase.RunProcedure(cn, "SP_IsValid_Department_Delete", sqlPara, out rowsAffect);
+        }
+
+
+        /*  Add:2024/04/09
+         *  Ver:1.1.5.20
+         *  Toyota 預設不允許進入	@IsDisallowFullTime = 1
+         */
+        private int SP_INSERT_BFX_UserSlaveAllowTime(string CardID, short? SlaveID = 0, bool? IsDisallowFullTime = null)
+        {
+            SqlConnection cn = sqlDatabaseProvider.GetDatabaseConnection() as SqlConnection;
+            SqlParameter[] sqlPara = new SqlParameter[3];
+
+            sqlPara[0] = new SqlParameter("@CardID", SqlDbType.NVarChar,14);
+            sqlPara[0].Value = CardID;
+
+            sqlPara[1] = new SqlParameter("@SlaveID", SqlDbType.SmallInt);
+            if (SlaveID == null)
+            {
+                sqlPara[1].IsNullable = true;
+                sqlPara[1].Value = DBNull.Value;
+            }
+            else
+            {
+                sqlPara[1].Value = SlaveID;
+            }
+
+            sqlPara[2] = new SqlParameter("@IsDisallowFullTime", SqlDbType.Bit);
+            if (IsDisallowFullTime == null)
+            {
+                sqlPara[2].IsNullable = true;
+                sqlPara[2].Value = DBNull.Value;
+            }
+            else
+            {
+                sqlPara[2].Value = IsDisallowFullTime;
+            }
+
+            int rowsAffect = 0;
+            return DataBase.RunProcedure(cn, "SP_INSERT_BFX_UserSlaveAllowTime", sqlPara, out rowsAffect);
         }
         #endregion
         #region Attendacne

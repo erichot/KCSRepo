@@ -82,7 +82,9 @@ using System.Runtime.InteropServices;
  *  * * 2021 3 15 1.0.4.5 手动导出当天记录
  *  [assembly: AssemblyVersion("1.0.4.6")]// fix 同步门禁权限 1.0.0.2,fix手动导出
  */
-[assembly: AssemblyVersion("1.1.5.18")]          // 2024-03-29          这个应该是记录类型的问题 datasync 和 OR_Tans 不匹配 那kcs把这个错误屏蔽, 这个主要是调试用的
+[assembly: AssemblyVersion("1.1.5.20")]          // 2024-04-04          Exception  : Error - ReadSalveOk將資料類型從 numeric 轉換到 decimal 時發生錯誤。KCS 嘗試在DB建立一筆OR_Transaction卡號：!SOFTOPEN! TranType: 144 體溫：38174.8
+//[assembly: AssemblyVersion("1.1.5.19")]          // 2024-04-04          Exception  : Error - ReadSalveOk將資料類型從 numeric 轉換到 decimal 時發生錯誤。KCS 嘗試在DB建立一筆OR_Transaction卡號：!SOFTOPEN! TranType: 144 體溫：38174.8
+//[assembly: AssemblyVersion("1.1.5.18")]          // 2024-03-29          这个应该是记录类型的问题 datasync 和 OR_Tans 不匹配 那kcs把这个错误屏蔽, 这个主要是调试用的
 //[assembly: AssemblyVersion("1.1.5.17")]          // 2024-03-11          KCS.command.DAL.DataBase.Query Timeouit設定60
 //[assembly: AssemblyVersion("1.1.5.16")]          // 2024-01-19          KCS.command.DAL.DataBase.Query Timeouit設定60
 //[assembly: AssemblyVersion("1.1.5.15")]          // 2023-12-01          Transaction Report增加IP，並隱藏Photo、體溫欄位
@@ -100,4 +102,4 @@ using System.Runtime.InteropServices;
 //[assembly: AssemblyVersion("1.1.5.3")]      // 2022-11-23
 //[assembly: AssemblyVersion("1.1.5.2")]      // 2022-08-29   那我就要勞煩Eric在主程式上改一下並且把版本升到1151
 //[assembly: AssemblyFileVersion("1.1.5.5")]  // Hi YG, KACS.exe 上頭的Kizone logo 我能自己換成IDCOM的嗎? 還是必須你來換?
-[assembly: AssemblyFileVersion("1.1.5.18")]
+[assembly: AssemblyFileVersion("1.1.5.20")]

@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.UserIDTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.bindingSourceEmployee = new System.Windows.Forms.BindingSource(this.components);
             this.UserNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.CardIDTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.DepListFieldTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -43,11 +41,11 @@
             this.ItemForDepListField = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblCtlNewCardId = new DevExpress.XtraEditors.LabelControl();
             this.textEditNewCardId = new DevExpress.XtraEditors.TextEdit();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.bindingSourceEmployee = new System.Windows.Forms.BindingSource();
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserIDTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardIDTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepListFieldTextEdit.Properties)).BeginInit();
@@ -58,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCardID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDepListField)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditNewCardId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,10 +86,6 @@
             this.UserIDTextEdit.Size = new System.Drawing.Size(325, 24);
             this.UserIDTextEdit.StyleController = this.dataLayoutControl1;
             this.UserIDTextEdit.TabIndex = 4;
-            // 
-            // bindingSourceEmployee
-            // 
-            this.bindingSourceEmployee.DataSource = typeof(KCS.Models.Employees);
             // 
             // UserNameTextEdit
             // 
@@ -201,6 +196,10 @@
             this.textEditNewCardId.Size = new System.Drawing.Size(329, 24);
             this.textEditNewCardId.TabIndex = 2;
             // 
+            // bindingSourceEmployee
+            // 
+            this.bindingSourceEmployee.DataSource = typeof(KCS.Models.Employees);
+            // 
             // mvvmContext
             // 
             this.mvvmContext.ContainerControl = this;
@@ -219,7 +218,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.UserIDTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserNameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardIDTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepListFieldTextEdit.Properties)).EndInit();
@@ -230,6 +228,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCardID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDepListField)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditNewCardId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

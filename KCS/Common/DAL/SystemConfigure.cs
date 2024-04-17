@@ -286,14 +286,25 @@ namespace KCS.Common.DAL
                     {
                         if (AuthMode == DataBaseAuthMode.WindowsAuth)
                         {
-                            DBConnectionString = "Data Source=" + SqlServerName + ";Initial Catalog=master"  + ";Integrated Security=SSPI;Connect Timeout=20;Max Pool Size = 10000;";
-                            KatesConnectionString = "Data Source=" + SqlServerName + ";Initial Catalog=" + DataBaseName + ";Integrated Security=SSPI;Connect Timeout=20;Max Pool Size = 10000;";
+
+                            // Modified:2024/04/09
+                            // Ver:1.1.5.20
+                            // Remark:A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - 此憑證鏈結是由不受信任的授權單位發出的
+                            // DBConnectionString = "Data Source=" + SqlServerName + ";Initial Catalog=master"  + ";Integrated Security=SSPI;Connect Timeout=20;Max Pool Size = 10000;";
+                            //KatesConnectionString = "Data Source=" + SqlServerName + ";Initial Catalog=" + DataBaseName + ";Integrated Security=SSPI;Connect Timeout=20;Max Pool Size = 10000;";
+                            DBConnectionString = "Data Source=" + SqlServerName + ";Initial Catalog=master" + ";Integrated Security=SSPI;Connect Timeout=20;Max Pool Size = 10000;TrustServerCertificate=true;";
+                            KatesConnectionString = "Data Source=" + SqlServerName + ";Initial Catalog=" + DataBaseName + ";Integrated Security=SSPI;Connect Timeout=20;Max Pool Size = 10000;TrustServerCertificate=true;";
                         }
                         else
                         {
-                            DBConnectionString = "Data Source=" + SqlServerName + ";Initial Catalog=master"  + ";User Id=" + AuthUserName + ";Password=" + AuthUserPin + ";;Connect Timeout=20;Max Pool Size = 10000;";
-                     
-                            KatesConnectionString = "Data Source=" + SqlServerName + ";Initial Catalog=" + DataBaseName + ";User Id=" + AuthUserName + ";Password=" + AuthUserPin + ";;Connect Timeout=20;Max Pool Size = 10000;";
+
+                            // Modified:2024/04/09
+                            // Ver:1.1.5.20
+                            // Remark:A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - 此憑證鏈結是由不受信任的授權單位發出的
+                            // DBConnectionString = "Data Source=" + SqlServerName + ";Initial Catalog=master"  + ";User Id=" + AuthUserName + ";Password=" + AuthUserPin + ";;Connect Timeout=20;Max Pool Size = 10000;";
+                            //KatesConnectionString = "Data Source=" + SqlServerName + ";Initial Catalog=" + DataBaseName + ";User Id=" + AuthUserName + ";Password=" + AuthUserPin + ";;Connect Timeout=20;Max Pool Size = 10000;";
+                            DBConnectionString = "Data Source=" + SqlServerName + ";Initial Catalog=master" + ";User Id=" + AuthUserName + ";Password=" + AuthUserPin + ";;Connect Timeout=20;Max Pool Size = 10000;TrustServerCertificate=true;";
+                            KatesConnectionString = "Data Source=" + SqlServerName + ";Initial Catalog=" + DataBaseName + ";User Id=" + AuthUserName + ";Password=" + AuthUserPin + ";;Connect Timeout=20;Max Pool Size = 10000;TrustServerCertificate=true;";
                         }
                     }
                 }

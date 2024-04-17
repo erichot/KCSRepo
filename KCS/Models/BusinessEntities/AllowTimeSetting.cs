@@ -10,6 +10,8 @@ namespace KCS.Models
     {
         public int SlaveID { get; set; }
 
+        public string SlaveName { get; set; }
+
         public string CardID { get; set; }
         public string UserID { get; set; }
         public string UserName { get; set; }

@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllowTimeReportView));
             this.gridControl = new DevExpress.XtraGrid.GridControl();
-            this.bindingSourceAllowTime = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceAllowTime = new System.Windows.Forms.BindingSource();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSlaveID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSlaveName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserSID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCardID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,13 +63,13 @@
             this.cmbStartHour = new System.Windows.Forms.ComboBox();
             this.simpleButtonQuery = new DevExpress.XtraEditors.SimpleButton();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.bindingSourceDepartment = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDepartment = new System.Windows.Forms.BindingSource();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbSlave = new System.Windows.Forms.ComboBox();
-            this.bindingSourceDevice = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDevice = new System.Windows.Forms.BindingSource();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAllowTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
@@ -90,9 +90,9 @@
             this.gridControl.DataSource = this.bindingSourceAllowTime;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gridControl.Location = new System.Drawing.Point(2, 2);
             this.gridControl.MainView = this.gridView;
             this.gridControl.Margin = new System.Windows.Forms.Padding(16);
@@ -120,6 +120,7 @@
             this.gridView.AppearancePrint.Row.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colSlaveID,
+            this.colSlaveName,
             this.colUserSID,
             this.colCardID,
             this.colUserID,
@@ -158,7 +159,16 @@
             this.colSlaveID.Name = "colSlaveID";
             this.colSlaveID.Visible = true;
             this.colSlaveID.VisibleIndex = 0;
-            this.colSlaveID.Width = 67;
+            this.colSlaveID.Width = 60;
+            // 
+            // colSlaveName
+            // 
+            this.colSlaveName.Caption = "Slave Name";
+            this.colSlaveName.FieldName = "SlaveName";
+            this.colSlaveName.Name = "colSlaveName";
+            this.colSlaveName.Visible = true;
+            this.colSlaveName.VisibleIndex = 1;
+            this.colSlaveName.Width = 90;
             // 
             // colUserSID
             // 
@@ -181,8 +191,8 @@
             this.colCardID.OptionsColumn.AllowEdit = false;
             this.colCardID.OptionsColumn.ReadOnly = true;
             this.colCardID.Visible = true;
-            this.colCardID.VisibleIndex = 5;
-            this.colCardID.Width = 126;
+            this.colCardID.VisibleIndex = 6;
+            this.colCardID.Width = 116;
             // 
             // colUserID
             // 
@@ -194,8 +204,8 @@
             this.colUserID.OptionsColumn.AllowEdit = false;
             this.colUserID.OptionsColumn.ReadOnly = true;
             this.colUserID.Visible = true;
-            this.colUserID.VisibleIndex = 1;
-            this.colUserID.Width = 110;
+            this.colUserID.VisibleIndex = 2;
+            this.colUserID.Width = 102;
             // 
             // colUserName
             // 
@@ -207,8 +217,8 @@
             this.colUserName.OptionsColumn.AllowEdit = false;
             this.colUserName.OptionsColumn.ReadOnly = true;
             this.colUserName.Visible = true;
-            this.colUserName.VisibleIndex = 4;
-            this.colUserName.Width = 317;
+            this.colUserName.VisibleIndex = 5;
+            this.colUserName.Width = 296;
             // 
             // colDepartmentID
             // 
@@ -221,8 +231,8 @@
             this.colDepartmentID.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             this.colDepartmentID.OptionsColumn.ReadOnly = true;
             this.colDepartmentID.Visible = true;
-            this.colDepartmentID.VisibleIndex = 2;
-            this.colDepartmentID.Width = 125;
+            this.colDepartmentID.VisibleIndex = 3;
+            this.colDepartmentID.Width = 110;
             // 
             // colDepartmentName
             // 
@@ -234,8 +244,8 @@
             this.colDepartmentName.OptionsColumn.AllowEdit = false;
             this.colDepartmentName.OptionsColumn.ReadOnly = true;
             this.colDepartmentName.Visible = true;
-            this.colDepartmentName.VisibleIndex = 3;
-            this.colDepartmentName.Width = 288;
+            this.colDepartmentName.VisibleIndex = 4;
+            this.colDepartmentName.Width = 263;
             // 
             // colAllowTime
             // 
@@ -245,8 +255,8 @@
             this.colAllowTime.FieldName = "AllowTimeStartToEnd";
             this.colAllowTime.Name = "colAllowTime";
             this.colAllowTime.Visible = true;
-            this.colAllowTime.VisibleIndex = 6;
-            this.colAllowTime.Width = 143;
+            this.colAllowTime.VisibleIndex = 7;
+            this.colAllowTime.Width = 132;
             // 
             // colUserTimeAddNew
             // 
@@ -256,8 +266,8 @@
             this.colUserTimeAddNew.FieldName = "UserTimeAddNew";
             this.colUserTimeAddNew.Name = "colUserTimeAddNew";
             this.colUserTimeAddNew.Visible = true;
-            this.colUserTimeAddNew.VisibleIndex = 7;
-            this.colUserTimeAddNew.Width = 125;
+            this.colUserTimeAddNew.VisibleIndex = 8;
+            this.colUserTimeAddNew.Width = 132;
             // 
             // layoutView
             // 
@@ -650,5 +660,6 @@
         private System.Windows.Forms.ComboBox cmbStartHour;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private DevExpress.XtraGrid.Columns.GridColumn colSlaveName;
     }
 }
