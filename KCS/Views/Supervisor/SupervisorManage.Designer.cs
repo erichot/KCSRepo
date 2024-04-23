@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.biEdit = new DevExpress.XtraBars.BarButtonItem();
@@ -38,7 +39,7 @@
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupActions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.bindingSource = new System.Windows.Forms.BindingSource();
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutViewField_colPhoto = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.layoutViewField_colAddress1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.layoutViewField_colEmail1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
@@ -83,7 +84,7 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.popupMenu = new DevExpress.XtraBars.PopupMenu();
+            this.popupMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
@@ -138,7 +139,7 @@
             this.biSetPassword,
             this.biNew});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonControl.MaxItemId = 1;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -146,7 +147,7 @@
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.ShowOnMultiplePages;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1206, 122);
+            this.ribbonControl.Size = new System.Drawing.Size(1508, 150);
             this.ribbonControl.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -207,11 +208,11 @@
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.hiItemsCount);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 699);
-            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 855);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1206, 35);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1508, 42);
             // 
             // bindingSource
             // 
@@ -260,7 +261,7 @@
             // layoutView
             // 
             this.layoutView.CardCaptionFormat = "{3}";
-            this.layoutView.CardMinSize = new System.Drawing.Size(390, 254);
+            this.layoutView.CardMinSize = new System.Drawing.Size(488, 310);
             this.layoutView.FieldCaptionFormat = "{0}";
             this.layoutView.GridControl = this.gridControl;
             this.layoutView.Name = "layoutView";
@@ -285,17 +286,17 @@
             // gridControl
             // 
             this.gridControl.DataSource = this.bindingSource;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             gridLevelNode1.RelationName = "Level1";
             this.gridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gridControl.Location = new System.Drawing.Point(16, 16);
+            this.gridControl.Location = new System.Drawing.Point(18, 18);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(16);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
             this.gridControl.MenuManager = this.ribbonControl;
             this.gridControl.Name = "gridControl";
             this.gridControl.ShowOnlyPredefinedDetails = true;
-            this.gridControl.Size = new System.Drawing.Size(898, 545);
+            this.gridControl.Size = new System.Drawing.Size(1126, 669);
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView,
@@ -395,21 +396,21 @@
             this.layoutControl1.Controls.Add(this.panelControl1);
             this.layoutControl1.Controls.Add(this.gridControl);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 122);
-            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 150);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1206, 577);
+            this.layoutControl1.Size = new System.Drawing.Size(1508, 705);
             this.layoutControl1.TabIndex = 9;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.layoutControl2);
-            this.panelControl1.Location = new System.Drawing.Point(920, 16);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl1.Location = new System.Drawing.Point(1150, 18);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(270, 545);
+            this.panelControl1.Size = new System.Drawing.Size(340, 669);
             this.panelControl1.TabIndex = 4;
             // 
             // layoutControl2
@@ -423,111 +424,111 @@
             this.layoutControl2.Controls.Add(this.textEditUserName);
             this.layoutControl2.Controls.Add(this.textEditUserId);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl2.Location = new System.Drawing.Point(2, 2);
-            this.layoutControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.layoutControl2.Location = new System.Drawing.Point(3, 3);
+            this.layoutControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1351, 239, 448, 521);
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(266, 541);
+            this.layoutControl2.Size = new System.Drawing.Size(334, 663);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
             // textEditDepartment
             // 
             this.textEditDepartment.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "DepartmentList", true));
-            this.textEditDepartment.Location = new System.Drawing.Point(143, 194);
-            this.textEditDepartment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEditDepartment.Location = new System.Drawing.Point(171, 220);
+            this.textEditDepartment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textEditDepartment.MenuManager = this.ribbonControl;
             this.textEditDepartment.Name = "textEditDepartment";
             this.textEditDepartment.Properties.ReadOnly = true;
-            this.textEditDepartment.Size = new System.Drawing.Size(107, 24);
+            this.textEditDepartment.Size = new System.Drawing.Size(145, 28);
             this.textEditDepartment.StyleController = this.layoutControl2;
             this.textEditDepartment.TabIndex = 13;
             // 
             // memoEditRemarks
             // 
             this.memoEditRemarks.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "Note", true));
-            this.memoEditRemarks.Location = new System.Drawing.Point(143, 224);
-            this.memoEditRemarks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.memoEditRemarks.Location = new System.Drawing.Point(171, 254);
+            this.memoEditRemarks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.memoEditRemarks.MenuManager = this.ribbonControl;
             this.memoEditRemarks.Name = "memoEditRemarks";
             this.memoEditRemarks.Properties.ReadOnly = true;
-            this.memoEditRemarks.Size = new System.Drawing.Size(107, 185);
+            this.memoEditRemarks.Size = new System.Drawing.Size(145, 241);
             this.memoEditRemarks.StyleController = this.layoutControl2;
             this.memoEditRemarks.TabIndex = 12;
             // 
             // comboBoxEditAdminType
             // 
             this.comboBoxEditAdminType.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "UserPermissionTypeBindable", true));
-            this.comboBoxEditAdminType.Location = new System.Drawing.Point(143, 164);
-            this.comboBoxEditAdminType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxEditAdminType.Location = new System.Drawing.Point(171, 186);
+            this.comboBoxEditAdminType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxEditAdminType.MenuManager = this.ribbonControl;
             this.comboBoxEditAdminType.Name = "comboBoxEditAdminType";
             this.comboBoxEditAdminType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboBoxEditAdminType.Properties.ReadOnly = true;
-            this.comboBoxEditAdminType.Size = new System.Drawing.Size(107, 24);
+            this.comboBoxEditAdminType.Size = new System.Drawing.Size(145, 28);
             this.comboBoxEditAdminType.StyleController = this.layoutControl2;
             this.comboBoxEditAdminType.TabIndex = 9;
             // 
             // readOnlyAuthority
             // 
             this.readOnlyAuthority.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "EmployeeAuthority", true));
-            this.readOnlyAuthority.Location = new System.Drawing.Point(16, 136);
-            this.readOnlyAuthority.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.readOnlyAuthority.Location = new System.Drawing.Point(18, 154);
+            this.readOnlyAuthority.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.readOnlyAuthority.MenuManager = this.ribbonControl;
             this.readOnlyAuthority.Name = "readOnlyAuthority";
             this.readOnlyAuthority.Properties.Caption = "Read Only";
             this.readOnlyAuthority.Properties.ReadOnly = true;
-            this.readOnlyAuthority.Size = new System.Drawing.Size(234, 22);
+            this.readOnlyAuthority.Size = new System.Drawing.Size(298, 26);
             this.readOnlyAuthority.StyleController = this.layoutControl2;
             this.readOnlyAuthority.TabIndex = 8;
             // 
             // textEditMobilePhone
             // 
             this.textEditMobilePhone.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "PhoneMobile", true));
-            this.textEditMobilePhone.Location = new System.Drawing.Point(143, 106);
-            this.textEditMobilePhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEditMobilePhone.Location = new System.Drawing.Point(171, 120);
+            this.textEditMobilePhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textEditMobilePhone.MenuManager = this.ribbonControl;
             this.textEditMobilePhone.Name = "textEditMobilePhone";
             this.textEditMobilePhone.Properties.ReadOnly = true;
-            this.textEditMobilePhone.Size = new System.Drawing.Size(107, 24);
+            this.textEditMobilePhone.Size = new System.Drawing.Size(145, 28);
             this.textEditMobilePhone.StyleController = this.layoutControl2;
             this.textEditMobilePhone.TabIndex = 7;
             // 
             // textEditEmail
             // 
             this.textEditEmail.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "Email", true));
-            this.textEditEmail.Location = new System.Drawing.Point(143, 76);
-            this.textEditEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEditEmail.Location = new System.Drawing.Point(171, 86);
+            this.textEditEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textEditEmail.MenuManager = this.ribbonControl;
             this.textEditEmail.Name = "textEditEmail";
             this.textEditEmail.Properties.ReadOnly = true;
-            this.textEditEmail.Size = new System.Drawing.Size(107, 24);
+            this.textEditEmail.Size = new System.Drawing.Size(145, 28);
             this.textEditEmail.StyleController = this.layoutControl2;
             this.textEditEmail.TabIndex = 6;
             // 
             // textEditUserName
             // 
             this.textEditUserName.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "UserName", true));
-            this.textEditUserName.Location = new System.Drawing.Point(143, 46);
-            this.textEditUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEditUserName.Location = new System.Drawing.Point(171, 52);
+            this.textEditUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textEditUserName.MenuManager = this.ribbonControl;
             this.textEditUserName.Name = "textEditUserName";
             this.textEditUserName.Properties.ReadOnly = true;
-            this.textEditUserName.Size = new System.Drawing.Size(107, 24);
+            this.textEditUserName.Size = new System.Drawing.Size(145, 28);
             this.textEditUserName.StyleController = this.layoutControl2;
             this.textEditUserName.TabIndex = 5;
             // 
             // textEditUserId
             // 
             this.textEditUserId.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "UserID", true));
-            this.textEditUserId.Location = new System.Drawing.Point(143, 16);
-            this.textEditUserId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEditUserId.Location = new System.Drawing.Point(171, 18);
+            this.textEditUserId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textEditUserId.MenuManager = this.ribbonControl;
             this.textEditUserId.Name = "textEditUserId";
             this.textEditUserId.Properties.ReadOnly = true;
-            this.textEditUserId.Size = new System.Drawing.Size(107, 24);
+            this.textEditUserId.Size = new System.Drawing.Size(145, 28);
             this.textEditUserId.StyleController = this.layoutControl2;
             this.textEditUserId.TabIndex = 4;
             // 
@@ -550,7 +551,7 @@
             this.ItemDepartment});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "Root";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(266, 541);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(334, 663);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // ItemForUserNO
@@ -558,43 +559,43 @@
             this.ItemForUserNO.Control = this.textEditUserId;
             this.ItemForUserNO.Location = new System.Drawing.Point(0, 0);
             this.ItemForUserNO.Name = "ItemForUserNO";
-            this.ItemForUserNO.Size = new System.Drawing.Size(240, 30);
+            this.ItemForUserNO.Size = new System.Drawing.Size(304, 34);
             this.ItemForUserNO.Text = "UserID";
-            this.ItemForUserNO.TextSize = new System.Drawing.Size(124, 18);
+            this.ItemForUserNO.TextSize = new System.Drawing.Size(150, 22);
             // 
             // ItemUserName
             // 
             this.ItemUserName.Control = this.textEditUserName;
-            this.ItemUserName.Location = new System.Drawing.Point(0, 30);
+            this.ItemUserName.Location = new System.Drawing.Point(0, 34);
             this.ItemUserName.Name = "ItemUserName";
-            this.ItemUserName.Size = new System.Drawing.Size(240, 30);
+            this.ItemUserName.Size = new System.Drawing.Size(304, 34);
             this.ItemUserName.Text = "User Name";
-            this.ItemUserName.TextSize = new System.Drawing.Size(124, 18);
+            this.ItemUserName.TextSize = new System.Drawing.Size(150, 22);
             // 
             // ItemEmail
             // 
             this.ItemEmail.Control = this.textEditEmail;
-            this.ItemEmail.Location = new System.Drawing.Point(0, 60);
+            this.ItemEmail.Location = new System.Drawing.Point(0, 68);
             this.ItemEmail.Name = "ItemEmail";
-            this.ItemEmail.Size = new System.Drawing.Size(240, 30);
+            this.ItemEmail.Size = new System.Drawing.Size(304, 34);
             this.ItemEmail.Text = "Email";
-            this.ItemEmail.TextSize = new System.Drawing.Size(124, 18);
+            this.ItemEmail.TextSize = new System.Drawing.Size(150, 22);
             // 
             // ItemMobilePhone
             // 
             this.ItemMobilePhone.Control = this.textEditMobilePhone;
-            this.ItemMobilePhone.Location = new System.Drawing.Point(0, 90);
+            this.ItemMobilePhone.Location = new System.Drawing.Point(0, 102);
             this.ItemMobilePhone.Name = "ItemMobilePhone";
-            this.ItemMobilePhone.Size = new System.Drawing.Size(240, 30);
+            this.ItemMobilePhone.Size = new System.Drawing.Size(304, 34);
             this.ItemMobilePhone.Text = "Mobile phone";
-            this.ItemMobilePhone.TextSize = new System.Drawing.Size(124, 18);
+            this.ItemMobilePhone.TextSize = new System.Drawing.Size(150, 22);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.readOnlyAuthority;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 120);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 136);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(240, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(304, 32);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -602,54 +603,54 @@
             // 
             this.ItemAdminType.Control = this.comboBoxEditAdminType;
             this.ItemAdminType.CustomizationFormText = "Admin Type";
-            this.ItemAdminType.Location = new System.Drawing.Point(0, 148);
+            this.ItemAdminType.Location = new System.Drawing.Point(0, 168);
             this.ItemAdminType.Name = "ItemAdminType";
-            this.ItemAdminType.Size = new System.Drawing.Size(240, 30);
+            this.ItemAdminType.Size = new System.Drawing.Size(304, 34);
             this.ItemAdminType.Text = "Administrator Type";
-            this.ItemAdminType.TextSize = new System.Drawing.Size(124, 18);
+            this.ItemAdminType.TextSize = new System.Drawing.Size(150, 22);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 415);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 504);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(86, 28);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(109, 36);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 443);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 540);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(240, 72);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(304, 93);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(86, 415);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(109, 504);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(154, 28);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(195, 36);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // ItemRemarks
             // 
             this.ItemRemarks.Control = this.memoEditRemarks;
-            this.ItemRemarks.Location = new System.Drawing.Point(0, 208);
+            this.ItemRemarks.Location = new System.Drawing.Point(0, 236);
             this.ItemRemarks.MinSize = new System.Drawing.Size(121, 20);
             this.ItemRemarks.Name = "ItemRemarks";
-            this.ItemRemarks.Size = new System.Drawing.Size(240, 191);
+            this.ItemRemarks.Size = new System.Drawing.Size(304, 247);
             this.ItemRemarks.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.ItemRemarks.Text = "Remarks";
-            this.ItemRemarks.TextSize = new System.Drawing.Size(124, 18);
+            this.ItemRemarks.TextSize = new System.Drawing.Size(150, 22);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 399);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 483);
             this.emptySpaceItem4.MinSize = new System.Drawing.Size(10, 10);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(240, 16);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(304, 21);
             this.emptySpaceItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -657,11 +658,11 @@
             // 
             this.ItemDepartment.Control = this.textEditDepartment;
             this.ItemDepartment.CustomizationFormText = "Department";
-            this.ItemDepartment.Location = new System.Drawing.Point(0, 178);
+            this.ItemDepartment.Location = new System.Drawing.Point(0, 202);
             this.ItemDepartment.Name = "ItemDepartment";
-            this.ItemDepartment.Size = new System.Drawing.Size(240, 30);
+            this.ItemDepartment.Size = new System.Drawing.Size(304, 34);
             this.ItemDepartment.Text = "Department";
-            this.ItemDepartment.TextSize = new System.Drawing.Size(124, 18);
+            this.ItemDepartment.TextSize = new System.Drawing.Size(150, 22);
             // 
             // layoutControlGroup1
             // 
@@ -672,7 +673,7 @@
             this.layoutControlItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1206, 577);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1508, 705);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -681,7 +682,7 @@
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.MinSize = new System.Drawing.Size(104, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(904, 551);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1132, 675);
             this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
@@ -689,10 +690,10 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.panelControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(904, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(1132, 0);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(5, 5);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(276, 551);
+            this.layoutControlItem2.Size = new System.Drawing.Size(346, 675);
             this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
@@ -708,14 +709,14 @@
             // 
             // SupervisorManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SupervisorManage";
-            this.Size = new System.Drawing.Size(1206, 734);
+            this.Size = new System.Drawing.Size(1508, 897);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();

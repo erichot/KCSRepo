@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.barHeaderItem2 = new DevExpress.XtraBars.BarHeaderItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -104,40 +104,40 @@
             this.panelControl1.Controls.Add(this.sbExport);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1147, 70);
+            this.panelControl1.Size = new System.Drawing.Size(1434, 86);
             this.panelControl1.TabIndex = 4;
             // 
             // cbExport
             // 
-            this.cbExport.Location = new System.Drawing.Point(99, 20);
-            this.cbExport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbExport.Location = new System.Drawing.Point(124, 24);
+            this.cbExport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbExport.Name = "cbExport";
             this.cbExport.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.cbExport.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbExport.Properties.DropDownRows = 10;
             this.cbExport.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbExport.Size = new System.Drawing.Size(213, 24);
+            this.cbExport.Size = new System.Drawing.Size(266, 28);
             this.cbExport.TabIndex = 2;
             // 
             // labelControlExport
             // 
             this.labelControlExport.AllowHtmlString = true;
-            this.labelControlExport.Location = new System.Drawing.Point(7, 25);
-            this.labelControlExport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControlExport.Location = new System.Drawing.Point(9, 31);
+            this.labelControlExport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelControlExport.Name = "labelControlExport";
-            this.labelControlExport.Size = new System.Drawing.Size(72, 18);
+            this.labelControlExport.Size = new System.Drawing.Size(87, 22);
             this.labelControlExport.TabIndex = 3;
             this.labelControlExport.Text = "<b>Export</b> to:";
             // 
             // sbExport
             // 
-            this.sbExport.Location = new System.Drawing.Point(337, 16);
-            this.sbExport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.sbExport.Location = new System.Drawing.Point(421, 20);
+            this.sbExport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sbExport.Name = "sbExport";
-            this.sbExport.Size = new System.Drawing.Size(155, 32);
+            this.sbExport.Size = new System.Drawing.Size(194, 39);
             this.sbExport.TabIndex = 4;
             this.sbExport.Text = "Export...";
             // 
@@ -157,26 +157,26 @@
             // 
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(0, 70);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl2.Location = new System.Drawing.Point(0, 86);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1147, 13);
+            this.panelControl2.Size = new System.Drawing.Size(1434, 16);
             this.panelControl2.TabIndex = 6;
             // 
             // gridControl
             // 
             this.gridControl.DataSource = this.bindingSource;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            gridLevelNode1.RelationName = "Level1";
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            gridLevelNode2.RelationName = "Level1";
             this.gridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.gridControl.Location = new System.Drawing.Point(0, 83);
+            gridLevelNode2});
+            this.gridControl.Location = new System.Drawing.Point(0, 102);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(16, 16, 16, 16);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
             this.gridControl.Name = "gridControl";
             this.gridControl.ShowOnlyPredefinedDetails = true;
-            this.gridControl.Size = new System.Drawing.Size(1147, 545);
+            this.gridControl.Size = new System.Drawing.Size(1434, 666);
             this.gridControl.TabIndex = 7;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView,
@@ -383,7 +383,7 @@
             // layoutView
             // 
             this.layoutView.CardCaptionFormat = "{3}";
-            this.layoutView.CardMinSize = new System.Drawing.Size(390, 254);
+            this.layoutView.CardMinSize = new System.Drawing.Size(488, 310);
             this.layoutView.FieldCaptionFormat = "{0}";
             this.layoutView.GridControl = this.gridControl;
             this.layoutView.Name = "layoutView";
@@ -414,24 +414,25 @@
             // lblSupervisorDepartmentID
             // 
             this.lblSupervisorDepartmentID.AutoSize = true;
-            this.lblSupervisorDepartmentID.Location = new System.Drawing.Point(611, 575);
+            this.lblSupervisorDepartmentID.Location = new System.Drawing.Point(764, 703);
+            this.lblSupervisorDepartmentID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSupervisorDepartmentID.Name = "lblSupervisorDepartmentID";
-            this.lblSupervisorDepartmentID.Size = new System.Drawing.Size(181, 18);
+            this.lblSupervisorDepartmentID.Size = new System.Drawing.Size(221, 22);
             this.lblSupervisorDepartmentID.TabIndex = 8;
             this.lblSupervisorDepartmentID.Text = "lblSupervisorDepartmentID";
             this.lblSupervisorDepartmentID.Visible = false;
             // 
             // ExportEmployees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblSupervisorDepartmentID);
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ExportEmployees";
-            this.Size = new System.Drawing.Size(1147, 628);
+            this.Size = new System.Drawing.Size(1434, 768);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

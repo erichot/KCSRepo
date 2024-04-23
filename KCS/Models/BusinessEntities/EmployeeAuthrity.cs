@@ -33,8 +33,11 @@ namespace KCS.Models
         {
             get
             {
-                if (GroupID == 0)
-                    return "";
+                // Remark:  2024/04/23
+                // Ver:
+                // Note:    EmployeesAuthorityViewModel.bUseAdvAccessControlSet =>  SelectUserGroup => UserGroupNo
+                //if (GroupID == 0)
+                //    return "";
                 return string.Format("{0:D2}", AllowTimeStartHour) + ":" + string.Format("{0:D2}", AllowTimeStartMinute);
             }
         }
@@ -43,8 +46,11 @@ namespace KCS.Models
         {
             get
             {
-                if (GroupID == 0)
-                    return "";
+                // Remark:  2024/04/23
+                // Ver:
+                // Note:    EmployeesAuthorityViewModel.bUseAdvAccessControlSet =>  SelectUserGroup => UserGroupNo
+                //if (GroupID == 0)
+                //    return "";
                 return string.Format("{0:D2}", AllowTimeEndHour) + ":" + string.Format("{0:D2}", AllowTimeEndMinute);
             }
         }

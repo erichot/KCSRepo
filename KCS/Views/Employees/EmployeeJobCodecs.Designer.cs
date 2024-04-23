@@ -71,18 +71,18 @@
             // 
             this.gridControl.DataSource = this.bindingSource;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             gridLevelNode2.RelationName = "Level1";
             this.gridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode2});
-            this.gridControl.Location = new System.Drawing.Point(0, 150);
+            this.gridControl.Location = new System.Drawing.Point(0, 184);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(16, 16, 16, 16);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
             this.gridControl.Name = "gridControl";
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1});
             this.gridControl.ShowOnlyPredefinedDetails = true;
-            this.gridControl.Size = new System.Drawing.Size(807, 323);
+            this.gridControl.Size = new System.Drawing.Size(1009, 394);
             this.gridControl.TabIndex = 11;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView,
@@ -168,7 +168,7 @@
             // layoutView
             // 
             this.layoutView.CardCaptionFormat = "{3}";
-            this.layoutView.CardMinSize = new System.Drawing.Size(390, 254);
+            this.layoutView.CardMinSize = new System.Drawing.Size(488, 310);
             this.layoutView.FieldCaptionFormat = "{0}";
             this.layoutView.GridControl = this.gridControl;
             this.layoutView.Name = "layoutView";
@@ -206,7 +206,7 @@
             this.bbiReset,
             this.bbiNew});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.ribbonControl.MaxItemId = 13;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -216,7 +216,7 @@
             this.ribbonControl.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ShowQatLocationSelector = false;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(807, 150);
+            this.ribbonControl.Size = new System.Drawing.Size(1009, 184);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -301,13 +301,13 @@
             // 
             // EmployeeJobCodecs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EmployeeJobCodecs";
-            this.Size = new System.Drawing.Size(807, 473);
+            this.Size = new System.Drawing.Size(1009, 578);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();

@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllowTimeReportView));
             this.gridControl = new DevExpress.XtraGrid.GridControl();
-            this.bindingSourceAllowTime = new System.Windows.Forms.BindingSource();
+            this.bindingSourceAllowTime = new System.Windows.Forms.BindingSource(this.components);
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSlaveID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSlaveName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,13 +64,13 @@
             this.cmbStartHour = new System.Windows.Forms.ComboBox();
             this.simpleButtonQuery = new DevExpress.XtraEditors.SimpleButton();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.bindingSourceDepartment = new System.Windows.Forms.BindingSource();
+            this.bindingSourceDepartment = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbSlave = new System.Windows.Forms.ComboBox();
-            this.bindingSourceDevice = new System.Windows.Forms.BindingSource();
+            this.bindingSourceDevice = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext();
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAllowTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
@@ -89,16 +90,16 @@
             // 
             this.gridControl.DataSource = this.bindingSourceAllowTime;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            gridLevelNode1.RelationName = "Level1";
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            gridLevelNode2.RelationName = "Level1";
             this.gridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.gridControl.Location = new System.Drawing.Point(2, 2);
+            gridLevelNode2});
+            this.gridControl.Location = new System.Drawing.Point(3, 3);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(16);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
             this.gridControl.Name = "gridControl";
             this.gridControl.ShowOnlyPredefinedDetails = true;
-            this.gridControl.Size = new System.Drawing.Size(1303, 426);
+            this.gridControl.Size = new System.Drawing.Size(1628, 519);
             this.gridControl.TabIndex = 24;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView,
@@ -273,7 +274,7 @@
             // 
             this.layoutView.ActiveFilterEnabled = false;
             this.layoutView.CardCaptionFormat = "{3}";
-            this.layoutView.CardMinSize = new System.Drawing.Size(390, 254);
+            this.layoutView.CardMinSize = new System.Drawing.Size(488, 310);
             this.layoutView.FieldCaptionFormat = "{0}";
             this.layoutView.GridControl = this.gridControl;
             this.layoutView.Name = "layoutView";
@@ -314,14 +315,14 @@
             this.bbiClose,
             this.bbiExportToExcel});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonControl.MaxItemId = 1;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2});
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1307, 150);
+            this.ribbonControl.Size = new System.Drawing.Size(1634, 184);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -401,20 +402,20 @@
             this.panelControl2.Controls.Add(this.label1);
             this.panelControl2.Controls.Add(this.cmbSlave);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(0, 150);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl2.Location = new System.Drawing.Point(0, 184);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1307, 117);
+            this.panelControl2.Size = new System.Drawing.Size(1634, 143);
             this.panelControl2.TabIndex = 27;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(818, 60);
+            this.label6.Location = new System.Drawing.Point(1022, 73);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 23);
+            this.label6.Size = new System.Drawing.Size(51, 27);
             this.label6.TabIndex = 18;
             this.label6.Text = ": 59";
             // 
@@ -422,10 +423,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(818, 19);
+            this.label5.Location = new System.Drawing.Point(1022, 23);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 23);
+            this.label5.Size = new System.Drawing.Size(51, 27);
             this.label5.TabIndex = 18;
             this.label5.Text = ": 00";
             // 
@@ -459,26 +460,29 @@
             "21",
             "22",
             "23"});
-            this.cmbEndHour.Location = new System.Drawing.Point(691, 61);
+            this.cmbEndHour.Location = new System.Drawing.Point(864, 75);
+            this.cmbEndHour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbEndHour.Name = "cmbEndHour";
-            this.cmbEndHour.Size = new System.Drawing.Size(121, 28);
+            this.cmbEndHour.Size = new System.Drawing.Size(150, 33);
             this.cmbEndHour.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(603, 66);
+            this.label4.Location = new System.Drawing.Point(754, 81);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 18);
+            this.label4.Size = new System.Drawing.Size(84, 22);
             this.label4.TabIndex = 16;
             this.label4.Text = "End Hour";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(603, 14);
+            this.label3.Location = new System.Drawing.Point(754, 17);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 18);
+            this.label3.Size = new System.Drawing.Size(91, 22);
             this.label3.TabIndex = 16;
             this.label3.Text = "Start Hour";
             // 
@@ -511,18 +515,19 @@
             "21",
             "22",
             "23"});
-            this.cmbStartHour.Location = new System.Drawing.Point(691, 14);
+            this.cmbStartHour.Location = new System.Drawing.Point(864, 17);
+            this.cmbStartHour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbStartHour.Name = "cmbStartHour";
-            this.cmbStartHour.Size = new System.Drawing.Size(121, 28);
+            this.cmbStartHour.Size = new System.Drawing.Size(150, 33);
             this.cmbStartHour.TabIndex = 15;
             // 
             // simpleButtonQuery
             // 
             this.simpleButtonQuery.ImageOptions.Image = global::KCS.Properties.Resources.search_02;
-            this.simpleButtonQuery.Location = new System.Drawing.Point(888, 19);
-            this.simpleButtonQuery.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButtonQuery.Location = new System.Drawing.Point(1110, 23);
+            this.simpleButtonQuery.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.simpleButtonQuery.Name = "simpleButtonQuery";
-            this.simpleButtonQuery.Size = new System.Drawing.Size(152, 68);
+            this.simpleButtonQuery.Size = new System.Drawing.Size(190, 83);
             this.simpleButtonQuery.TabIndex = 14;
             this.simpleButtonQuery.Text = "Query";
             // 
@@ -532,9 +537,10 @@
             this.cmbDepartment.DisplayMember = "ListField";
             this.cmbDepartment.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(113, 14);
+            this.cmbDepartment.Location = new System.Drawing.Point(141, 17);
+            this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(465, 28);
+            this.cmbDepartment.Size = new System.Drawing.Size(580, 33);
             this.cmbDepartment.TabIndex = 13;
             this.cmbDepartment.ValueMember = "DepartmentID";
             // 
@@ -545,18 +551,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 14);
+            this.label2.Location = new System.Drawing.Point(18, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 18);
+            this.label2.Size = new System.Drawing.Size(102, 22);
             this.label2.TabIndex = 12;
             this.label2.Text = "Department";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 64);
+            this.label1.Location = new System.Drawing.Point(18, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 18);
+            this.label1.Size = new System.Drawing.Size(61, 22);
             this.label1.TabIndex = 11;
             this.label1.Text = "Device";
             // 
@@ -566,9 +574,10 @@
             this.cmbSlave.DisplayMember = "ListField";
             this.cmbSlave.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSlave.FormattingEnabled = true;
-            this.cmbSlave.Location = new System.Drawing.Point(115, 64);
+            this.cmbSlave.Location = new System.Drawing.Point(144, 78);
+            this.cmbSlave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbSlave.Name = "cmbSlave";
-            this.cmbSlave.Size = new System.Drawing.Size(463, 30);
+            this.cmbSlave.Size = new System.Drawing.Size(578, 34);
             this.cmbSlave.TabIndex = 10;
             this.cmbSlave.ValueMember = "SlaveSID";
             this.cmbSlave.SelectedIndexChanged += new System.EventHandler(this.cmbSlave_SelectedIndexChanged);
@@ -581,10 +590,10 @@
             // 
             this.panelControl1.Controls.Add(this.gridControl);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 267);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl1.Location = new System.Drawing.Point(0, 327);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1307, 430);
+            this.panelControl1.Size = new System.Drawing.Size(1634, 525);
             this.panelControl1.TabIndex = 28;
             // 
             // mvvmContext
@@ -594,14 +603,14 @@
             // 
             // AllowTimeReportView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AllowTimeReportView";
-            this.Size = new System.Drawing.Size(1307, 697);
+            this.Size = new System.Drawing.Size(1634, 852);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAllowTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();

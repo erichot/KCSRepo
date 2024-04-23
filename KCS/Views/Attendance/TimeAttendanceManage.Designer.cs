@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimeAttendanceManage));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.hiItemsCount = new DevExpress.XtraBars.BarHeaderItem();
@@ -74,7 +75,7 @@
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSlaveIP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lookUpEditDevice = new DevExpress.XtraEditors.LookUpEdit();
-            this.bindingSourceDevice = new System.Windows.Forms.BindingSource();
+            this.bindingSourceDevice = new System.Windows.Forms.BindingSource(this.components);
             this.colSlaveDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutView = new DevExpress.XtraGrid.Views.Layout.LayoutView();
@@ -125,7 +126,7 @@
             this.colTranDateTimeString = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_colTranDateTimeString = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
-            this.bindingSource = new System.Windows.Forms.BindingSource();
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTranSID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCardID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -139,6 +140,7 @@
             this.layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
             this.radioGroupCondition = new DevExpress.XtraEditors.RadioGroup();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.lblSupervisorDepartmentID = new System.Windows.Forms.Label();
             this.cmbDevice = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.simpleButtonQuery = new DevExpress.XtraEditors.SimpleButton();
@@ -146,7 +148,7 @@
             this.lblCtlTo = new DevExpress.XtraEditors.LabelControl();
             this.dateEditStart = new DevExpress.XtraEditors.DateEdit();
             this.lblCtlFrom = new DevExpress.XtraEditors.LabelControl();
-            this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext();
+            this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -156,9 +158,8 @@
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.bindingSourceAannualCalendar = new System.Windows.Forms.BindingSource();
+            this.bindingSourceAannualCalendar = new System.Windows.Forms.BindingSource(this.components);
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.lblSupervisorDepartmentID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDevice.Properties)).BeginInit();
@@ -238,14 +239,14 @@
             this.bbiReportDetails,
             this.bbiReportCount});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonControl.MaxItemId = 32;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2});
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1447, 150);
+            this.ribbonControl.Size = new System.Drawing.Size(1809, 184);
             this.ribbonControl.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -499,11 +500,11 @@
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barHeaderItem1);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 795);
-            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 972);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1447, 35);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1809, 42);
             // 
             // barHeaderItem
             // 
@@ -513,10 +514,10 @@
             // 
             // lblCtlDevice
             // 
-            this.lblCtlDevice.Location = new System.Drawing.Point(25, 25);
-            this.lblCtlDevice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblCtlDevice.Location = new System.Drawing.Point(31, 31);
+            this.lblCtlDevice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblCtlDevice.Name = "lblCtlDevice";
-            this.lblCtlDevice.Size = new System.Drawing.Size(43, 18);
+            this.lblCtlDevice.Size = new System.Drawing.Size(51, 22);
             this.lblCtlDevice.TabIndex = 5;
             this.lblCtlDevice.Text = "Device";
             // 
@@ -578,8 +579,8 @@
             // 
             // lookUpEditDevice
             // 
-            this.lookUpEditDevice.Location = new System.Drawing.Point(77, 47);
-            this.lookUpEditDevice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lookUpEditDevice.Location = new System.Drawing.Point(96, 57);
+            this.lookUpEditDevice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lookUpEditDevice.MenuManager = this.ribbonControl;
             this.lookUpEditDevice.Name = "lookUpEditDevice";
             this.lookUpEditDevice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -588,7 +589,7 @@
             this.lookUpEditDevice.Properties.DisplayMember = "IP";
             this.lookUpEditDevice.Properties.ShowHeader = false;
             this.lookUpEditDevice.Properties.ValueMember = "SlaveSID";
-            this.lookUpEditDevice.Size = new System.Drawing.Size(371, 24);
+            this.lookUpEditDevice.Size = new System.Drawing.Size(464, 28);
             this.lookUpEditDevice.TabIndex = 6;
             this.lookUpEditDevice.Visible = false;
             // 
@@ -613,7 +614,7 @@
             // layoutView
             // 
             this.layoutView.CardCaptionFormat = "{3}";
-            this.layoutView.CardMinSize = new System.Drawing.Size(390, 254);
+            this.layoutView.CardMinSize = new System.Drawing.Size(488, 310);
             this.layoutView.Columns.AddRange(new DevExpress.XtraGrid.Columns.LayoutViewColumn[] {
             this.colTranSID1,
             this.colCardID1,
@@ -667,11 +668,11 @@
             // 
             // layoutViewField_colTranSID1
             // 
-            this.layoutViewField_colTranSID1.EditorPreferredWidth = 242;
+            this.layoutViewField_colTranSID1.EditorPreferredWidth = 302;
             this.layoutViewField_colTranSID1.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colTranSID1.Name = "layoutViewField_colTranSID1";
             this.layoutViewField_colTranSID1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colTranSID1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colTranSID1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colCardID1
             // 
@@ -681,11 +682,11 @@
             // 
             // layoutViewField_colCardID1
             // 
-            this.layoutViewField_colCardID1.EditorPreferredWidth = 242;
+            this.layoutViewField_colCardID1.EditorPreferredWidth = 302;
             this.layoutViewField_colCardID1.Location = new System.Drawing.Point(0, 26);
             this.layoutViewField_colCardID1.Name = "layoutViewField_colCardID1";
             this.layoutViewField_colCardID1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colCardID1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colCardID1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colUserID1
             // 
@@ -695,11 +696,11 @@
             // 
             // layoutViewField_colUserID1
             // 
-            this.layoutViewField_colUserID1.EditorPreferredWidth = 242;
+            this.layoutViewField_colUserID1.EditorPreferredWidth = 302;
             this.layoutViewField_colUserID1.Location = new System.Drawing.Point(0, 52);
             this.layoutViewField_colUserID1.Name = "layoutViewField_colUserID1";
             this.layoutViewField_colUserID1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colUserID1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colUserID1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colUserName1
             // 
@@ -709,11 +710,11 @@
             // 
             // layoutViewField_colUserName1
             // 
-            this.layoutViewField_colUserName1.EditorPreferredWidth = 242;
+            this.layoutViewField_colUserName1.EditorPreferredWidth = 302;
             this.layoutViewField_colUserName1.Location = new System.Drawing.Point(0, 78);
             this.layoutViewField_colUserName1.Name = "layoutViewField_colUserName1";
             this.layoutViewField_colUserName1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colUserName1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colUserName1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colDepartmentID1
             // 
@@ -723,11 +724,11 @@
             // 
             // layoutViewField_colDepartmentID1
             // 
-            this.layoutViewField_colDepartmentID1.EditorPreferredWidth = 242;
+            this.layoutViewField_colDepartmentID1.EditorPreferredWidth = 302;
             this.layoutViewField_colDepartmentID1.Location = new System.Drawing.Point(0, 104);
             this.layoutViewField_colDepartmentID1.Name = "layoutViewField_colDepartmentID1";
             this.layoutViewField_colDepartmentID1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colDepartmentID1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colDepartmentID1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colDepartmentName1
             // 
@@ -737,11 +738,11 @@
             // 
             // layoutViewField_colDepartmentName1
             // 
-            this.layoutViewField_colDepartmentName1.EditorPreferredWidth = 242;
+            this.layoutViewField_colDepartmentName1.EditorPreferredWidth = 302;
             this.layoutViewField_colDepartmentName1.Location = new System.Drawing.Point(0, 130);
             this.layoutViewField_colDepartmentName1.Name = "layoutViewField_colDepartmentName1";
             this.layoutViewField_colDepartmentName1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colDepartmentName1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colDepartmentName1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colTranDateTime1
             // 
@@ -751,11 +752,11 @@
             // 
             // layoutViewField_colTranDateTime1
             // 
-            this.layoutViewField_colTranDateTime1.EditorPreferredWidth = 242;
+            this.layoutViewField_colTranDateTime1.EditorPreferredWidth = 302;
             this.layoutViewField_colTranDateTime1.Location = new System.Drawing.Point(0, 156);
             this.layoutViewField_colTranDateTime1.Name = "layoutViewField_colTranDateTime1";
             this.layoutViewField_colTranDateTime1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colTranDateTime1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colTranDateTime1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colTranDate1
             // 
@@ -765,11 +766,11 @@
             // 
             // layoutViewField_colTranDate1
             // 
-            this.layoutViewField_colTranDate1.EditorPreferredWidth = 242;
+            this.layoutViewField_colTranDate1.EditorPreferredWidth = 302;
             this.layoutViewField_colTranDate1.Location = new System.Drawing.Point(0, 182);
             this.layoutViewField_colTranDate1.Name = "layoutViewField_colTranDate1";
             this.layoutViewField_colTranDate1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colTranDate1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colTranDate1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colTranTime1
             // 
@@ -779,11 +780,11 @@
             // 
             // layoutViewField_colTranTime1
             // 
-            this.layoutViewField_colTranTime1.EditorPreferredWidth = 242;
+            this.layoutViewField_colTranTime1.EditorPreferredWidth = 302;
             this.layoutViewField_colTranTime1.Location = new System.Drawing.Point(0, 208);
             this.layoutViewField_colTranTime1.Name = "layoutViewField_colTranTime1";
             this.layoutViewField_colTranTime1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colTranTime1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colTranTime1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colTranType1
             // 
@@ -793,11 +794,11 @@
             // 
             // layoutViewField_colTranType1
             // 
-            this.layoutViewField_colTranType1.EditorPreferredWidth = 242;
+            this.layoutViewField_colTranType1.EditorPreferredWidth = 302;
             this.layoutViewField_colTranType1.Location = new System.Drawing.Point(0, 234);
             this.layoutViewField_colTranType1.Name = "layoutViewField_colTranType1";
             this.layoutViewField_colTranType1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colTranType1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colTranType1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colJobName1
             // 
@@ -807,11 +808,11 @@
             // 
             // layoutViewField_colJobName1
             // 
-            this.layoutViewField_colJobName1.EditorPreferredWidth = 242;
+            this.layoutViewField_colJobName1.EditorPreferredWidth = 302;
             this.layoutViewField_colJobName1.Location = new System.Drawing.Point(0, 260);
             this.layoutViewField_colJobName1.Name = "layoutViewField_colJobName1";
             this.layoutViewField_colJobName1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colJobName1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colJobName1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colID1
             // 
@@ -821,11 +822,11 @@
             // 
             // layoutViewField_colID1
             // 
-            this.layoutViewField_colID1.EditorPreferredWidth = 242;
+            this.layoutViewField_colID1.EditorPreferredWidth = 302;
             this.layoutViewField_colID1.Location = new System.Drawing.Point(0, 286);
             this.layoutViewField_colID1.Name = "layoutViewField_colID1";
             this.layoutViewField_colID1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colID1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colID1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colSlaveIP1
             // 
@@ -835,11 +836,11 @@
             // 
             // layoutViewField_colSlaveIP1
             // 
-            this.layoutViewField_colSlaveIP1.EditorPreferredWidth = 242;
+            this.layoutViewField_colSlaveIP1.EditorPreferredWidth = 302;
             this.layoutViewField_colSlaveIP1.Location = new System.Drawing.Point(0, 312);
             this.layoutViewField_colSlaveIP1.Name = "layoutViewField_colSlaveIP1";
             this.layoutViewField_colSlaveIP1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colSlaveIP1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colSlaveIP1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colSlaveDescription1
             // 
@@ -849,11 +850,11 @@
             // 
             // layoutViewField_colSlaveDescription1
             // 
-            this.layoutViewField_colSlaveDescription1.EditorPreferredWidth = 242;
+            this.layoutViewField_colSlaveDescription1.EditorPreferredWidth = 302;
             this.layoutViewField_colSlaveDescription1.Location = new System.Drawing.Point(0, 338);
             this.layoutViewField_colSlaveDescription1.Name = "layoutViewField_colSlaveDescription1";
             this.layoutViewField_colSlaveDescription1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colSlaveDescription1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colSlaveDescription1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colInActive1
             // 
@@ -863,11 +864,11 @@
             // 
             // layoutViewField_colInActive1
             // 
-            this.layoutViewField_colInActive1.EditorPreferredWidth = 242;
+            this.layoutViewField_colInActive1.EditorPreferredWidth = 302;
             this.layoutViewField_colInActive1.Location = new System.Drawing.Point(0, 364);
             this.layoutViewField_colInActive1.Name = "layoutViewField_colInActive1";
             this.layoutViewField_colInActive1.Size = new System.Drawing.Size(431, 24);
-            this.layoutViewField_colInActive1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colInActive1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colNote1
             // 
@@ -877,11 +878,11 @@
             // 
             // layoutViewField_colNote1
             // 
-            this.layoutViewField_colNote1.EditorPreferredWidth = 242;
+            this.layoutViewField_colNote1.EditorPreferredWidth = 302;
             this.layoutViewField_colNote1.Location = new System.Drawing.Point(0, 388);
             this.layoutViewField_colNote1.Name = "layoutViewField_colNote1";
             this.layoutViewField_colNote1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colNote1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colNote1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colIsByTranType
             // 
@@ -891,11 +892,11 @@
             // 
             // layoutViewField_colIsByTranType
             // 
-            this.layoutViewField_colIsByTranType.EditorPreferredWidth = 242;
+            this.layoutViewField_colIsByTranType.EditorPreferredWidth = 302;
             this.layoutViewField_colIsByTranType.Location = new System.Drawing.Point(0, 414);
             this.layoutViewField_colIsByTranType.Name = "layoutViewField_colIsByTranType";
             this.layoutViewField_colIsByTranType.Size = new System.Drawing.Size(431, 24);
-            this.layoutViewField_colIsByTranType.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colIsByTranType.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colSlaveSID
             // 
@@ -905,11 +906,11 @@
             // 
             // layoutViewField_colSlaveSID
             // 
-            this.layoutViewField_colSlaveSID.EditorPreferredWidth = 242;
+            this.layoutViewField_colSlaveSID.EditorPreferredWidth = 302;
             this.layoutViewField_colSlaveSID.Location = new System.Drawing.Point(0, 438);
             this.layoutViewField_colSlaveSID.Name = "layoutViewField_colSlaveSID";
             this.layoutViewField_colSlaveSID.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colSlaveSID.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colSlaveSID.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colDataType
             // 
@@ -919,11 +920,11 @@
             // 
             // layoutViewField_colDataType
             // 
-            this.layoutViewField_colDataType.EditorPreferredWidth = 242;
+            this.layoutViewField_colDataType.EditorPreferredWidth = 302;
             this.layoutViewField_colDataType.Location = new System.Drawing.Point(0, 464);
             this.layoutViewField_colDataType.Name = "layoutViewField_colDataType";
             this.layoutViewField_colDataType.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colDataType.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colDataType.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colTransImage1
             // 
@@ -933,12 +934,12 @@
             // 
             // layoutViewField_colTransImage1
             // 
-            this.layoutViewField_colTransImage1.EditorPreferredWidth = 242;
+            this.layoutViewField_colTransImage1.EditorPreferredWidth = 302;
             this.layoutViewField_colTransImage1.Location = new System.Drawing.Point(0, 490);
             this.layoutViewField_colTransImage1.Name = "layoutViewField_colTransImage1";
             this.layoutViewField_colTransImage1.Size = new System.Drawing.Size(431, 56);
             this.layoutViewField_colTransImage1.StartNewLine = true;
-            this.layoutViewField_colTransImage1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colTransImage1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colDeviceName
             // 
@@ -948,11 +949,11 @@
             // 
             // layoutViewField_colDeviceName
             // 
-            this.layoutViewField_colDeviceName.EditorPreferredWidth = 242;
+            this.layoutViewField_colDeviceName.EditorPreferredWidth = 302;
             this.layoutViewField_colDeviceName.Location = new System.Drawing.Point(0, 546);
             this.layoutViewField_colDeviceName.Name = "layoutViewField_colDeviceName";
             this.layoutViewField_colDeviceName.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colDeviceName.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colDeviceName.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colDegreeCelsius1
             // 
@@ -962,11 +963,11 @@
             // 
             // layoutViewField_colDegreeCelsius1
             // 
-            this.layoutViewField_colDegreeCelsius1.EditorPreferredWidth = 242;
+            this.layoutViewField_colDegreeCelsius1.EditorPreferredWidth = 302;
             this.layoutViewField_colDegreeCelsius1.Location = new System.Drawing.Point(0, 572);
             this.layoutViewField_colDegreeCelsius1.Name = "layoutViewField_colDegreeCelsius1";
             this.layoutViewField_colDegreeCelsius1.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colDegreeCelsius1.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colDegreeCelsius1.TextSize = new System.Drawing.Size(175, 22);
             // 
             // colTranDateTimeString
             // 
@@ -977,29 +978,29 @@
             // 
             // layoutViewField_colTranDateTimeString
             // 
-            this.layoutViewField_colTranDateTimeString.EditorPreferredWidth = 242;
+            this.layoutViewField_colTranDateTimeString.EditorPreferredWidth = 302;
             this.layoutViewField_colTranDateTimeString.Location = new System.Drawing.Point(0, 598);
             this.layoutViewField_colTranDateTimeString.Name = "layoutViewField_colTranDateTimeString";
             this.layoutViewField_colTranDateTimeString.Size = new System.Drawing.Size(431, 26);
-            this.layoutViewField_colTranDateTimeString.TextSize = new System.Drawing.Size(146, 18);
+            this.layoutViewField_colTranDateTimeString.TextSize = new System.Drawing.Size(175, 22);
             // 
             // gridControl
             // 
             this.gridControl.DataSource = this.bindingSource;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             gridLevelNode1.RelationName = "Level1";
             this.gridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gridControl.Location = new System.Drawing.Point(0, 269);
+            this.gridControl.Location = new System.Drawing.Point(0, 329);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(16);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
             this.gridControl.MenuManager = this.ribbonControl;
             this.gridControl.Name = "gridControl";
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemImageEdit1});
             this.gridControl.ShowOnlyPredefinedDetails = true;
-            this.gridControl.Size = new System.Drawing.Size(1447, 561);
+            this.gridControl.Size = new System.Drawing.Size(1809, 685);
             this.gridControl.TabIndex = 10;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView,
@@ -1148,14 +1149,14 @@
             // 
             // radioGroupCondition
             // 
-            this.radioGroupCondition.Location = new System.Drawing.Point(462, 13);
-            this.radioGroupCondition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioGroupCondition.Location = new System.Drawing.Point(578, 16);
+            this.radioGroupCondition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioGroupCondition.MenuManager = this.ribbonControl;
             this.radioGroupCondition.Name = "radioGroupCondition";
             this.radioGroupCondition.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.radioGroupCondition.Properties.Appearance.Options.UseBackColor = true;
             this.radioGroupCondition.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.radioGroupCondition.Size = new System.Drawing.Size(224, 92);
+            this.radioGroupCondition.Size = new System.Drawing.Size(280, 112);
             this.radioGroupCondition.TabIndex = 7;
             // 
             // panelControl1
@@ -1172,29 +1173,41 @@
             this.panelControl1.Controls.Add(this.dateEditStart);
             this.panelControl1.Controls.Add(this.lblCtlFrom);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 150);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl1.Location = new System.Drawing.Point(0, 184);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1447, 119);
+            this.panelControl1.Size = new System.Drawing.Size(1809, 145);
             this.panelControl1.TabIndex = 9;
+            // 
+            // lblSupervisorDepartmentID
+            // 
+            this.lblSupervisorDepartmentID.AutoSize = true;
+            this.lblSupervisorDepartmentID.Location = new System.Drawing.Point(1380, 92);
+            this.lblSupervisorDepartmentID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSupervisorDepartmentID.Name = "lblSupervisorDepartmentID";
+            this.lblSupervisorDepartmentID.Size = new System.Drawing.Size(221, 22);
+            this.lblSupervisorDepartmentID.TabIndex = 10;
+            this.lblSupervisorDepartmentID.Text = "lblSupervisorDepartmentID";
             // 
             // cmbDevice
             // 
             this.cmbDevice.DataSource = this.bindingSourceDevice;
             this.cmbDevice.DisplayMember = "ListField";
             this.cmbDevice.FormattingEnabled = true;
-            this.cmbDevice.Location = new System.Drawing.Point(77, 22);
+            this.cmbDevice.Location = new System.Drawing.Point(96, 27);
+            this.cmbDevice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbDevice.Name = "cmbDevice";
-            this.cmbDevice.Size = new System.Drawing.Size(371, 26);
+            this.cmbDevice.Size = new System.Drawing.Size(463, 30);
             this.cmbDevice.TabIndex = 9;
             this.cmbDevice.ValueMember = "SlaveSID";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(921, 29);
+            this.label1.Location = new System.Drawing.Point(1151, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 18);
+            this.label1.Size = new System.Drawing.Size(56, 22);
             this.label1.TabIndex = 8;
             this.label1.Text = "label1";
             this.label1.Visible = false;
@@ -1202,56 +1215,56 @@
             // simpleButtonQuery
             // 
             this.simpleButtonQuery.ImageOptions.Image = global::KCS.Properties.Resources.search_02;
-            this.simpleButtonQuery.Location = new System.Drawing.Point(695, 25);
-            this.simpleButtonQuery.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButtonQuery.Location = new System.Drawing.Point(869, 31);
+            this.simpleButtonQuery.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.simpleButtonQuery.Name = "simpleButtonQuery";
-            this.simpleButtonQuery.Size = new System.Drawing.Size(152, 68);
+            this.simpleButtonQuery.Size = new System.Drawing.Size(190, 83);
             this.simpleButtonQuery.TabIndex = 4;
             this.simpleButtonQuery.Text = "Query";
             // 
             // dateEditEnd
             // 
             this.dateEditEnd.EditValue = null;
-            this.dateEditEnd.Location = new System.Drawing.Point(283, 67);
-            this.dateEditEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateEditEnd.Location = new System.Drawing.Point(354, 82);
+            this.dateEditEnd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateEditEnd.MenuManager = this.ribbonControl;
             this.dateEditEnd.Name = "dateEditEnd";
             this.dateEditEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditEnd.Size = new System.Drawing.Size(165, 24);
+            this.dateEditEnd.Size = new System.Drawing.Size(206, 28);
             this.dateEditEnd.TabIndex = 3;
             // 
             // lblCtlTo
             // 
-            this.lblCtlTo.Location = new System.Drawing.Point(249, 70);
-            this.lblCtlTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblCtlTo.Location = new System.Drawing.Point(311, 86);
+            this.lblCtlTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblCtlTo.Name = "lblCtlTo";
-            this.lblCtlTo.Size = new System.Drawing.Size(18, 18);
+            this.lblCtlTo.Size = new System.Drawing.Size(21, 22);
             this.lblCtlTo.TabIndex = 2;
             this.lblCtlTo.Text = "To";
             // 
             // dateEditStart
             // 
             this.dateEditStart.EditValue = null;
-            this.dateEditStart.Location = new System.Drawing.Point(77, 67);
-            this.dateEditStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateEditStart.Location = new System.Drawing.Point(96, 82);
+            this.dateEditStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateEditStart.MenuManager = this.ribbonControl;
             this.dateEditStart.Name = "dateEditStart";
             this.dateEditStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditStart.Size = new System.Drawing.Size(165, 24);
+            this.dateEditStart.Size = new System.Drawing.Size(206, 28);
             this.dateEditStart.TabIndex = 1;
             // 
             // lblCtlFrom
             // 
-            this.lblCtlFrom.Location = new System.Drawing.Point(26, 70);
-            this.lblCtlFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblCtlFrom.Location = new System.Drawing.Point(32, 86);
+            this.lblCtlFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblCtlFrom.Name = "lblCtlFrom";
-            this.lblCtlFrom.Size = new System.Drawing.Size(34, 18);
+            this.lblCtlFrom.Size = new System.Drawing.Size(40, 22);
             this.lblCtlFrom.TabIndex = 0;
             this.lblCtlFrom.Text = "From";
             // 
@@ -1336,26 +1349,17 @@
             this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
             this.barButtonItem9.Name = "barButtonItem9";
             // 
-            // lblSupervisorDepartmentID
-            // 
-            this.lblSupervisorDepartmentID.AutoSize = true;
-            this.lblSupervisorDepartmentID.Location = new System.Drawing.Point(1104, 75);
-            this.lblSupervisorDepartmentID.Name = "lblSupervisorDepartmentID";
-            this.lblSupervisorDepartmentID.Size = new System.Drawing.Size(181, 18);
-            this.lblSupervisorDepartmentID.TabIndex = 10;
-            this.lblSupervisorDepartmentID.Text = "lblSupervisorDepartmentID";
-            // 
             // TimeAttendanceManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "TimeAttendanceManage";
-            this.Size = new System.Drawing.Size(1447, 830);
+            this.Size = new System.Drawing.Size(1809, 1014);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDevice.Properties)).EndInit();

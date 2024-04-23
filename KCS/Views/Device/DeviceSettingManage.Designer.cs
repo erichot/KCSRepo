@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeviceSettingManage));
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement1 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement2 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement3 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement4 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement5 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement6 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement7 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement8 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement9 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement10 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement11 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement12 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement13 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement14 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement15 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement16 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement17 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement18 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement19 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement20 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement21 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement22 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement23 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement24 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement25 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement26 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement27 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement28 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement29 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement30 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
             this.colDeviceStatsImage = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colID = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colIP = new DevExpress.XtraGrid.Columns.TileViewColumn();
@@ -82,7 +83,7 @@
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControlTrans = new DevExpress.XtraGrid.GridControl();
-            this.transactionsBindingSource = new System.Windows.Forms.BindingSource();
+            this.transactionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTransSIDInDevice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTransactionType = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -105,7 +106,7 @@
             this.lblDebugPrint1 = new System.Windows.Forms.Label();
             this.lblDebugPrint = new System.Windows.Forms.Label();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
-            this.bindingSource = new System.Windows.Forms.BindingSource();
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tileView = new DevExpress.XtraGrid.Views.Tile.TileView();
             this.colSlaveSID = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colIP_Internal = new DevExpress.XtraGrid.Columns.TileViewColumn();
@@ -118,7 +119,7 @@
             this.colIsServerMode = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colNotPropagateWithUsersByDefault = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -228,14 +229,14 @@
             this.bbiRebootIDF211,
             this.bbiResyncAcPara});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonControl.MaxItemId = 20;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2});
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1354, 150);
+            this.ribbonControl.Size = new System.Drawing.Size(1692, 184);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -330,10 +331,12 @@
             // bbiRebootDevice
             // 
             this.bbiRebootDevice.Caption = "Reboot Device";
+            this.bbiRebootDevice.Enabled = false;
             this.bbiRebootDevice.Id = 13;
             this.bbiRebootDevice.ImageOptions.Image = global::KCS.Properties.Resources.Reboot_device_16;
             this.bbiRebootDevice.ImageOptions.LargeImage = global::KCS.Properties.Resources.Reboot_device_32;
             this.bbiRebootDevice.Name = "bbiRebootDevice";
+            this.bbiRebootDevice.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // bbiReReadTrans
             // 
@@ -369,7 +372,7 @@
             // 
             // bbiRebootIDF211
             // 
-            this.bbiRebootIDF211.Caption = "Reboot IDF211";
+            this.bbiRebootIDF211.Caption = "Reboot Device";
             this.bbiRebootIDF211.Id = 18;
             this.bbiRebootIDF211.ImageOptions.Image = global::KCS.Properties.Resources.Reboot_device_16;
             this.bbiRebootIDF211.ImageOptions.LargeImage = global::KCS.Properties.Resources.Reboot_device_32;
@@ -447,10 +450,10 @@
             this.panelControl1.Controls.Add(this.panelControl3);
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 150);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl1.Location = new System.Drawing.Point(0, 184);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1354, 860);
+            this.panelControl1.Size = new System.Drawing.Size(1692, 1050);
             this.panelControl1.TabIndex = 1;
             // 
             // panelControl4
@@ -458,23 +461,23 @@
             this.panelControl4.AllowDrop = true;
             this.panelControl4.Controls.Add(this.splitContainerControl1);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(2, 438);
-            this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl4.Location = new System.Drawing.Point(3, 536);
+            this.panelControl4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1350, 420);
+            this.panelControl4.Size = new System.Drawing.Size(1686, 511);
             this.panelControl4.TabIndex = 2;
             // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.FixedPanel = DevExpress.XtraEditors.SplitFixedPanel.Panel2;
-            this.splitContainerControl1.Location = new System.Drawing.Point(2, 2);
-            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.splitContainerControl1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.gridControlTrans);
             this.splitContainerControl1.Panel2.Controls.Add(this.listBoxControl);
-            this.splitContainerControl1.Size = new System.Drawing.Size(1346, 416);
-            this.splitContainerControl1.SplitterPosition = 630;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1680, 505);
+            this.splitContainerControl1.SplitterPosition = 788;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -483,13 +486,13 @@
             this.gridControlTrans.AllowDrop = true;
             this.gridControlTrans.DataSource = this.transactionsBindingSource;
             this.gridControlTrans.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlTrans.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControlTrans.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControlTrans.Location = new System.Drawing.Point(0, 0);
             this.gridControlTrans.MainView = this.gridView1;
-            this.gridControlTrans.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControlTrans.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControlTrans.MenuManager = this.ribbonControl;
             this.gridControlTrans.Name = "gridControlTrans";
-            this.gridControlTrans.Size = new System.Drawing.Size(710, 416);
+            this.gridControlTrans.Size = new System.Drawing.Size(884, 505);
             this.gridControlTrans.TabIndex = 0;
             this.gridControlTrans.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -617,19 +620,19 @@
             this.listBoxControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.listBoxControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl.Location = new System.Drawing.Point(0, 0);
-            this.listBoxControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.listBoxControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBoxControl.Name = "listBoxControl";
-            this.listBoxControl.Size = new System.Drawing.Size(630, 416);
+            this.listBoxControl.Size = new System.Drawing.Size(788, 505);
             this.listBoxControl.TabIndex = 0;
             // 
             // panelControl3
             // 
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl3.Location = new System.Drawing.Point(2, 425);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl3.Location = new System.Drawing.Point(3, 520);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1350, 13);
+            this.panelControl3.Size = new System.Drawing.Size(1686, 16);
             this.panelControl3.TabIndex = 1;
             // 
             // panelControl2
@@ -639,10 +642,10 @@
             this.panelControl2.Controls.Add(this.panel1);
             this.panelControl2.Controls.Add(this.gridControl);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(2, 2);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl2.Location = new System.Drawing.Point(3, 3);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1350, 423);
+            this.panelControl2.Size = new System.Drawing.Size(1686, 517);
             this.panelControl2.TabIndex = 0;
             // 
             // panel1
@@ -652,45 +655,50 @@
             this.panel1.Controls.Add(this.lblDebugPrint2);
             this.panel1.Controls.Add(this.lblDebugPrint1);
             this.panel1.Controls.Add(this.lblDebugPrint);
-            this.panel1.Location = new System.Drawing.Point(419, 25);
+            this.panel1.Location = new System.Drawing.Point(524, 31);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(630, 230);
+            this.panel1.Size = new System.Drawing.Size(788, 281);
             this.panel1.TabIndex = 1;
             this.panel1.Visible = false;
             // 
             // lblDebugPrint4
             // 
             this.lblDebugPrint4.AutoSize = true;
-            this.lblDebugPrint4.Location = new System.Drawing.Point(40, 197);
+            this.lblDebugPrint4.Location = new System.Drawing.Point(50, 241);
+            this.lblDebugPrint4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDebugPrint4.Name = "lblDebugPrint4";
-            this.lblDebugPrint4.Size = new System.Drawing.Size(44, 18);
+            this.lblDebugPrint4.Size = new System.Drawing.Size(56, 22);
             this.lblDebugPrint4.TabIndex = 7;
             this.lblDebugPrint4.Text = "label1";
             // 
             // lblDebugPrint3
             // 
             this.lblDebugPrint3.AutoSize = true;
-            this.lblDebugPrint3.Location = new System.Drawing.Point(37, 157);
+            this.lblDebugPrint3.Location = new System.Drawing.Point(46, 192);
+            this.lblDebugPrint3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDebugPrint3.Name = "lblDebugPrint3";
-            this.lblDebugPrint3.Size = new System.Drawing.Size(44, 18);
+            this.lblDebugPrint3.Size = new System.Drawing.Size(56, 22);
             this.lblDebugPrint3.TabIndex = 6;
             this.lblDebugPrint3.Text = "label1";
             // 
             // lblDebugPrint2
             // 
             this.lblDebugPrint2.AutoSize = true;
-            this.lblDebugPrint2.Location = new System.Drawing.Point(37, 115);
+            this.lblDebugPrint2.Location = new System.Drawing.Point(46, 141);
+            this.lblDebugPrint2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDebugPrint2.Name = "lblDebugPrint2";
-            this.lblDebugPrint2.Size = new System.Drawing.Size(44, 18);
+            this.lblDebugPrint2.Size = new System.Drawing.Size(56, 22);
             this.lblDebugPrint2.TabIndex = 5;
             this.lblDebugPrint2.Text = "label1";
             // 
             // lblDebugPrint1
             // 
             this.lblDebugPrint1.AutoSize = true;
-            this.lblDebugPrint1.Location = new System.Drawing.Point(37, 73);
+            this.lblDebugPrint1.Location = new System.Drawing.Point(46, 89);
+            this.lblDebugPrint1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDebugPrint1.Name = "lblDebugPrint1";
-            this.lblDebugPrint1.Size = new System.Drawing.Size(44, 18);
+            this.lblDebugPrint1.Size = new System.Drawing.Size(56, 22);
             this.lblDebugPrint1.TabIndex = 4;
             this.lblDebugPrint1.Text = "label1";
             // 
@@ -698,9 +706,10 @@
             // 
             this.lblDebugPrint.AutoSize = true;
             this.lblDebugPrint.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDebugPrint.Location = new System.Drawing.Point(36, 20);
+            this.lblDebugPrint.Location = new System.Drawing.Point(45, 24);
+            this.lblDebugPrint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDebugPrint.Name = "lblDebugPrint";
-            this.lblDebugPrint.Size = new System.Drawing.Size(130, 24);
+            this.lblDebugPrint.Size = new System.Drawing.Size(152, 29);
             this.lblDebugPrint.TabIndex = 3;
             this.lblDebugPrint.Text = "lblDebugPrint";
             // 
@@ -709,13 +718,13 @@
             this.gridControl.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "FingersReplicatedCounts", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.gridControl.DataSource = this.bindingSource;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControl.Location = new System.Drawing.Point(2, 2);
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl.Location = new System.Drawing.Point(3, 3);
             this.gridControl.MainView = this.tileView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl.MenuManager = this.ribbonControl;
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(1346, 419);
+            this.gridControl.Size = new System.Drawing.Size(1680, 511);
             this.gridControl.TabIndex = 0;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tileView});
@@ -773,77 +782,77 @@
             this.tileView.OptionsTiles.RowCount = 8;
             this.tileView.OptionsTiles.ShowGroupText = false;
             this.tileView.OptionsTiles.VerticalContentAlignment = DevExpress.Utils.VertAlignment.Center;
-            tileViewItemElement1.Column = this.colDeviceStatsImage;
-            tileViewItemElement1.Image = global::KCS.Properties.Resources.icon_device_32;
-            tileViewItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft;
-            tileViewItemElement1.Text = "colDeviceStatsImage";
-            tileViewItemElement2.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
-            tileViewItemElement2.Text = "SlaveSID";
-            tileViewItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileViewItemElement3.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
-            tileViewItemElement3.AnchorElementIndex = 1;
-            tileViewItemElement3.Column = this.colID;
-            tileViewItemElement3.Text = "colID";
-            tileViewItemElement4.AnchorElementIndex = 1;
-            tileViewItemElement4.Text = "IP";
-            tileViewItemElement5.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
-            tileViewItemElement5.AnchorElementIndex = 3;
-            tileViewItemElement5.Column = this.colIP;
-            tileViewItemElement5.Text = "colIP";
-            tileViewItemElement6.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
-            tileViewItemElement6.AnchorElementIndex = 0;
-            tileViewItemElement6.Column = this.colSlaveName;
-            tileViewItemElement6.Text = "colSlaveName";
-            tileViewItemElement7.AnchorElementIndex = 5;
-            tileViewItemElement7.Column = this.colServerMode;
-            tileViewItemElement7.Text = "colServerMode";
-            tileViewItemElement8.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Bottom;
-            tileViewItemElement8.AnchorElementIndex = 0;
-            tileViewItemElement8.Image = global::KCS.Properties.Resources.icon_new_employee_16;
-            tileViewItemElement8.Text = "";
-            tileViewItemElement9.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
-            tileViewItemElement9.AnchorElementIndex = 7;
-            tileViewItemElement9.Column = this.colUserCounts;
-            tileViewItemElement9.Text = "colUserCounts";
-            tileViewItemElement10.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
-            tileViewItemElement10.AnchorElementIndex = 7;
-            tileViewItemElement10.AnchorIndent = 56;
-            tileViewItemElement10.Image = global::KCS.Properties.Resources.replicated;
-            tileViewItemElement10.Text = "";
-            tileViewItemElement11.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
-            tileViewItemElement11.AnchorElementIndex = 9;
-            tileViewItemElement11.Column = this.colUserReplicatedCounts;
-            tileViewItemElement11.Text = "colUserReplicatedCounts";
-            tileViewItemElement12.AnchorElementIndex = 7;
-            tileViewItemElement12.Image = global::KCS.Properties.Resources.finger_sync;
-            tileViewItemElement12.Text = "";
-            tileViewItemElement13.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
-            tileViewItemElement13.AnchorElementIndex = 11;
-            tileViewItemElement13.Column = this.colFingersCounts;
-            tileViewItemElement13.Text = "colFingersCounts";
-            tileViewItemElement14.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Bottom;
-            tileViewItemElement14.AnchorElementIndex = 9;
-            tileViewItemElement14.Image = global::KCS.Properties.Resources.replicated;
-            tileViewItemElement14.Text = "";
-            tileViewItemElement15.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
-            tileViewItemElement15.AnchorElementIndex = 13;
-            tileViewItemElement15.Column = this.colFingersReplicatedCounts;
-            tileViewItemElement15.Text = "colFingersReplicatedCounts";
-            this.tileView.TileTemplate.Add(tileViewItemElement1);
-            this.tileView.TileTemplate.Add(tileViewItemElement2);
-            this.tileView.TileTemplate.Add(tileViewItemElement3);
-            this.tileView.TileTemplate.Add(tileViewItemElement4);
-            this.tileView.TileTemplate.Add(tileViewItemElement5);
-            this.tileView.TileTemplate.Add(tileViewItemElement6);
-            this.tileView.TileTemplate.Add(tileViewItemElement7);
-            this.tileView.TileTemplate.Add(tileViewItemElement8);
-            this.tileView.TileTemplate.Add(tileViewItemElement9);
-            this.tileView.TileTemplate.Add(tileViewItemElement10);
-            this.tileView.TileTemplate.Add(tileViewItemElement11);
-            this.tileView.TileTemplate.Add(tileViewItemElement12);
-            this.tileView.TileTemplate.Add(tileViewItemElement13);
-            this.tileView.TileTemplate.Add(tileViewItemElement14);
-            this.tileView.TileTemplate.Add(tileViewItemElement15);
+            tileViewItemElement16.Column = this.colDeviceStatsImage;
+            tileViewItemElement16.Image = global::KCS.Properties.Resources.icon_device_32;
+            tileViewItemElement16.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft;
+            tileViewItemElement16.Text = "colDeviceStatsImage";
+            tileViewItemElement17.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
+            tileViewItemElement17.Text = "SlaveSID";
+            tileViewItemElement17.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileViewItemElement18.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
+            tileViewItemElement18.AnchorElementIndex = 1;
+            tileViewItemElement18.Column = this.colID;
+            tileViewItemElement18.Text = "colID";
+            tileViewItemElement19.AnchorElementIndex = 1;
+            tileViewItemElement19.Text = "IP";
+            tileViewItemElement20.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
+            tileViewItemElement20.AnchorElementIndex = 3;
+            tileViewItemElement20.Column = this.colIP;
+            tileViewItemElement20.Text = "colIP";
+            tileViewItemElement21.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
+            tileViewItemElement21.AnchorElementIndex = 0;
+            tileViewItemElement21.Column = this.colSlaveName;
+            tileViewItemElement21.Text = "colSlaveName";
+            tileViewItemElement22.AnchorElementIndex = 5;
+            tileViewItemElement22.Column = this.colServerMode;
+            tileViewItemElement22.Text = "colServerMode";
+            tileViewItemElement23.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Bottom;
+            tileViewItemElement23.AnchorElementIndex = 0;
+            tileViewItemElement23.Image = global::KCS.Properties.Resources.icon_new_employee_16;
+            tileViewItemElement23.Text = "";
+            tileViewItemElement24.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
+            tileViewItemElement24.AnchorElementIndex = 7;
+            tileViewItemElement24.Column = this.colUserCounts;
+            tileViewItemElement24.Text = "colUserCounts";
+            tileViewItemElement25.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
+            tileViewItemElement25.AnchorElementIndex = 7;
+            tileViewItemElement25.AnchorIndent = 56;
+            tileViewItemElement25.Image = global::KCS.Properties.Resources.replicated;
+            tileViewItemElement25.Text = "";
+            tileViewItemElement26.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
+            tileViewItemElement26.AnchorElementIndex = 9;
+            tileViewItemElement26.Column = this.colUserReplicatedCounts;
+            tileViewItemElement26.Text = "colUserReplicatedCounts";
+            tileViewItemElement27.AnchorElementIndex = 7;
+            tileViewItemElement27.Image = global::KCS.Properties.Resources.finger_sync;
+            tileViewItemElement27.Text = "";
+            tileViewItemElement28.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
+            tileViewItemElement28.AnchorElementIndex = 11;
+            tileViewItemElement28.Column = this.colFingersCounts;
+            tileViewItemElement28.Text = "colFingersCounts";
+            tileViewItemElement29.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Bottom;
+            tileViewItemElement29.AnchorElementIndex = 9;
+            tileViewItemElement29.Image = global::KCS.Properties.Resources.replicated;
+            tileViewItemElement29.Text = "";
+            tileViewItemElement30.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Right;
+            tileViewItemElement30.AnchorElementIndex = 13;
+            tileViewItemElement30.Column = this.colFingersReplicatedCounts;
+            tileViewItemElement30.Text = "colFingersReplicatedCounts";
+            this.tileView.TileTemplate.Add(tileViewItemElement16);
+            this.tileView.TileTemplate.Add(tileViewItemElement17);
+            this.tileView.TileTemplate.Add(tileViewItemElement18);
+            this.tileView.TileTemplate.Add(tileViewItemElement19);
+            this.tileView.TileTemplate.Add(tileViewItemElement20);
+            this.tileView.TileTemplate.Add(tileViewItemElement21);
+            this.tileView.TileTemplate.Add(tileViewItemElement22);
+            this.tileView.TileTemplate.Add(tileViewItemElement23);
+            this.tileView.TileTemplate.Add(tileViewItemElement24);
+            this.tileView.TileTemplate.Add(tileViewItemElement25);
+            this.tileView.TileTemplate.Add(tileViewItemElement26);
+            this.tileView.TileTemplate.Add(tileViewItemElement27);
+            this.tileView.TileTemplate.Add(tileViewItemElement28);
+            this.tileView.TileTemplate.Add(tileViewItemElement29);
+            this.tileView.TileTemplate.Add(tileViewItemElement30);
             // 
             // colSlaveSID
             // 
@@ -930,13 +939,13 @@
             // 
             // DeviceSettingManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DeviceSettingManage";
-            this.Size = new System.Drawing.Size(1354, 1010);
+            this.Size = new System.Drawing.Size(1692, 1234);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

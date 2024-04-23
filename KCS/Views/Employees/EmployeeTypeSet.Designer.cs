@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
@@ -110,7 +110,7 @@
             this.bbiReset,
             this.bbiNew});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.ribbonControl.MaxItemId = 13;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -120,7 +120,7 @@
             this.ribbonControl.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ShowQatLocationSelector = false;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(878, 150);
+            this.ribbonControl.Size = new System.Drawing.Size(1098, 184);
             this.ribbonControl.StatusBar = this.ribbonStatusBar2;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -232,11 +232,11 @@
             // ribbonStatusBar2
             // 
             this.ribbonStatusBar2.ItemLinks.Add(this.hiItemsCount);
-            this.ribbonStatusBar2.Location = new System.Drawing.Point(0, 719);
-            this.ribbonStatusBar2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar2.Location = new System.Drawing.Point(0, 880);
+            this.ribbonStatusBar2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonStatusBar2.Name = "ribbonStatusBar2";
             this.ribbonStatusBar2.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar2.Size = new System.Drawing.Size(878, 35);
+            this.ribbonStatusBar2.Size = new System.Drawing.Size(1098, 42);
             // 
             // hiItemsCount
             // 
@@ -256,26 +256,26 @@
             this.dataLayoutControl1.Controls.Add(this.InActiveCheckEdit);
             this.dataLayoutControl1.DataSource = this.bindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 150);
-            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 184);
+            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(878, 569);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1098, 696);
             this.dataLayoutControl1.TabIndex = 1;
             // 
             // gridControl
             // 
             this.gridControl.DataSource = this.bindingSourceList;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            gridLevelNode1.RelationName = "Level1";
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            gridLevelNode2.RelationName = "Level1";
             this.gridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.gridControl.Location = new System.Drawing.Point(128, 101);
+            gridLevelNode2});
+            this.gridControl.Location = new System.Drawing.Point(150, 114);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(16, 16, 16, 16);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
             this.gridControl.Name = "gridControl";
             this.gridControl.ShowOnlyPredefinedDetails = true;
-            this.gridControl.Size = new System.Drawing.Size(734, 452);
+            this.gridControl.Size = new System.Drawing.Size(930, 564);
             this.gridControl.TabIndex = 7;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView,
@@ -334,7 +334,7 @@
             // layoutView
             // 
             this.layoutView.CardCaptionFormat = "{3}";
-            this.layoutView.CardMinSize = new System.Drawing.Size(390, 254);
+            this.layoutView.CardMinSize = new System.Drawing.Size(488, 310);
             this.layoutView.FieldCaptionFormat = "{0}";
             this.layoutView.GridControl = this.gridControl;
             this.layoutView.Name = "layoutView";
@@ -359,35 +359,35 @@
             // TypeIdTextEdit
             // 
             this.TypeIdTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "EmployeeTypeID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.TypeIdTextEdit.Location = new System.Drawing.Point(128, 16);
-            this.TypeIdTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TypeIdTextEdit.Location = new System.Drawing.Point(150, 18);
+            this.TypeIdTextEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TypeIdTextEdit.MenuManager = this.ribbonControl;
             this.TypeIdTextEdit.Name = "TypeIdTextEdit";
             this.TypeIdTextEdit.Properties.ReadOnly = true;
-            this.TypeIdTextEdit.Size = new System.Drawing.Size(734, 24);
+            this.TypeIdTextEdit.Size = new System.Drawing.Size(930, 28);
             this.TypeIdTextEdit.StyleController = this.dataLayoutControl1;
             this.TypeIdTextEdit.TabIndex = 4;
             // 
             // TypeNameTextEdit
             // 
             this.TypeNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "EmployeeTypeName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.TypeNameTextEdit.Location = new System.Drawing.Point(128, 46);
-            this.TypeNameTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TypeNameTextEdit.Location = new System.Drawing.Point(150, 52);
+            this.TypeNameTextEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TypeNameTextEdit.MenuManager = this.ribbonControl;
             this.TypeNameTextEdit.Name = "TypeNameTextEdit";
-            this.TypeNameTextEdit.Size = new System.Drawing.Size(734, 24);
+            this.TypeNameTextEdit.Size = new System.Drawing.Size(930, 28);
             this.TypeNameTextEdit.StyleController = this.dataLayoutControl1;
             this.TypeNameTextEdit.TabIndex = 5;
             // 
             // InActiveCheckEdit
             // 
             this.InActiveCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "InActive", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.InActiveCheckEdit.Location = new System.Drawing.Point(128, 76);
-            this.InActiveCheckEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InActiveCheckEdit.Location = new System.Drawing.Point(150, 86);
+            this.InActiveCheckEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.InActiveCheckEdit.MenuManager = this.ribbonControl;
             this.InActiveCheckEdit.Name = "InActiveCheckEdit";
             this.InActiveCheckEdit.Properties.Caption = "";
-            this.InActiveCheckEdit.Size = new System.Drawing.Size(734, 19);
+            this.InActiveCheckEdit.Size = new System.Drawing.Size(930, 19);
             this.InActiveCheckEdit.StyleController = this.dataLayoutControl1;
             this.InActiveCheckEdit.TabIndex = 6;
             // 
@@ -399,7 +399,7 @@
             this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(878, 569);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1098, 696);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -413,44 +413,44 @@
             this.ItemForEmployeeType});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(852, 543);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1068, 666);
             // 
             // ItemForTypeId
             // 
             this.ItemForTypeId.Control = this.TypeIdTextEdit;
             this.ItemForTypeId.Location = new System.Drawing.Point(0, 0);
             this.ItemForTypeId.Name = "ItemForTypeId";
-            this.ItemForTypeId.Size = new System.Drawing.Size(852, 30);
+            this.ItemForTypeId.Size = new System.Drawing.Size(1068, 34);
             this.ItemForTypeId.Text = "Type Id";
-            this.ItemForTypeId.TextSize = new System.Drawing.Size(109, 18);
+            this.ItemForTypeId.TextSize = new System.Drawing.Size(129, 22);
             // 
             // ItemForTypeName
             // 
             this.ItemForTypeName.Control = this.TypeNameTextEdit;
-            this.ItemForTypeName.Location = new System.Drawing.Point(0, 30);
+            this.ItemForTypeName.Location = new System.Drawing.Point(0, 34);
             this.ItemForTypeName.Name = "ItemForTypeName";
-            this.ItemForTypeName.Size = new System.Drawing.Size(852, 30);
+            this.ItemForTypeName.Size = new System.Drawing.Size(1068, 34);
             this.ItemForTypeName.Text = "Type Name";
-            this.ItemForTypeName.TextSize = new System.Drawing.Size(109, 18);
+            this.ItemForTypeName.TextSize = new System.Drawing.Size(129, 22);
             // 
             // ItemForInActive
             // 
             this.ItemForInActive.Control = this.InActiveCheckEdit;
-            this.ItemForInActive.Location = new System.Drawing.Point(0, 60);
+            this.ItemForInActive.Location = new System.Drawing.Point(0, 68);
             this.ItemForInActive.Name = "ItemForInActive";
-            this.ItemForInActive.Size = new System.Drawing.Size(852, 25);
+            this.ItemForInActive.Size = new System.Drawing.Size(1068, 28);
             this.ItemForInActive.Text = "In Active";
-            this.ItemForInActive.TextSize = new System.Drawing.Size(109, 18);
+            this.ItemForInActive.TextSize = new System.Drawing.Size(129, 22);
             // 
             // ItemForEmployeeType
             // 
             this.ItemForEmployeeType.Control = this.gridControl;
             this.ItemForEmployeeType.CustomizationFormText = "Employees Type";
-            this.ItemForEmployeeType.Location = new System.Drawing.Point(0, 85);
+            this.ItemForEmployeeType.Location = new System.Drawing.Point(0, 96);
             this.ItemForEmployeeType.Name = "ItemForEmployeeType";
-            this.ItemForEmployeeType.Size = new System.Drawing.Size(852, 458);
+            this.ItemForEmployeeType.Size = new System.Drawing.Size(1068, 570);
             this.ItemForEmployeeType.Text = "Employees Type";
-            this.ItemForEmployeeType.TextSize = new System.Drawing.Size(109, 18);
+            this.ItemForEmployeeType.TextSize = new System.Drawing.Size(129, 22);
             // 
             // barHeaderItem1
             // 
@@ -459,14 +459,14 @@
             // 
             // EmployeeTypeSet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.ribbonControl);
             this.Controls.Add(this.ribbonStatusBar2);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EmployeeTypeSet";
-            this.Size = new System.Drawing.Size(878, 754);
+            this.Size = new System.Drawing.Size(1098, 922);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();

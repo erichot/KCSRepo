@@ -464,7 +464,7 @@ namespace KCS.Sync
             if (1 == response[18])
             {
                 AddResultMessage("Write Employee:" + AddCardId.ToString().PadLeft(10, '0') + " Finger:" + FingerNo.ToString() + "OK");
-                if (_terminal.syncDataBaseHelper.UPDATE_DS_BF_FP_Add(AddCardId, _terminal.deviceContext.SlaveSID))
+                if (_terminal.syncDataBaseHelper.UPDATE_DS_BF_FP_Add(AddCardId, FingerNo,_terminal.deviceContext.SlaveSID))
                 {
                     _terminal.RemoveUserFingerFromAddList(AddCardId);
                     _terminal.deviceContext.FingersReplicatedCounts++;
@@ -493,7 +493,7 @@ namespace KCS.Sync
             if (1 == response[18])
             {
                 AddResultMessage("Delete Employee:" + AddCardId.ToString().PadLeft(10, '0') + " Finger:" + FingerNo.ToString() + "OK");
-                _terminal.syncDataBaseHelper.UPDATE_DS_BF_FP_Delete(AddCardId, _terminal.deviceContext.SlaveSID);
+                _terminal.syncDataBaseHelper.UPDATE_DS_BF_FP_Delete(AddCardId, FingerNo, _terminal.deviceContext.SlaveSID);
                 _terminal.RemoveUserFingerFromDeleteList(AddCardId);
                
 
