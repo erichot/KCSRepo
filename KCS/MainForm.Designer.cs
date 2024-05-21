@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            DevExpress.Utils.Animation.Transition transition2 = new DevExpress.Utils.Animation.Transition();
-            DevExpress.Utils.Animation.SlideFadeTransition slideFadeTransition2 = new DevExpress.Utils.Animation.SlideFadeTransition();
+            DevExpress.Utils.Animation.Transition transition1 = new DevExpress.Utils.Animation.Transition();
+            DevExpress.Utils.Animation.SlideFadeTransition slideFadeTransition1 = new DevExpress.Utils.Animation.SlideFadeTransition();
             this.modulesContainer = new DevExpress.XtraEditors.XtraUserControl();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -72,19 +72,18 @@
             // modulesContainer
             // 
             this.modulesContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.modulesContainer.Location = new System.Drawing.Point(377, 3);
-            this.modulesContainer.Margin = new System.Windows.Forms.Padding(34, 37, 34, 5);
+            this.modulesContainer.Location = new System.Drawing.Point(301, 2);
+            this.modulesContainer.Margin = new System.Windows.Forms.Padding(27, 30, 27, 4);
             this.modulesContainer.Name = "modulesContainer";
-            this.modulesContainer.Size = new System.Drawing.Size(912, 526);
+            this.modulesContainer.Size = new System.Drawing.Size(731, 431);
             this.modulesContainer.TabIndex = 2;
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 811);
-            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 663);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1292, 48);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1034, 40);
             // 
             // ribbonControl
             // 
@@ -108,7 +107,7 @@
             this.bbiDatabaseMaintenance,
             this.bbiLiftControl});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl.MaxItemId = 1;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -118,7 +117,7 @@
             this.ribbonControl.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.ShowOnMultiplePages;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1292, 225);
+            this.ribbonControl.Size = new System.Drawing.Size(1034, 184);
             this.ribbonControl.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -267,11 +266,11 @@
             // transitionManager
             // 
             this.transitionManager.ShowWaitingIndicator = false;
-            transition2.Control = this.modulesContainer;
-            slideFadeTransition2.Parameters.EffectOptions = DevExpress.Utils.Animation.PushEffectOptions.FromRight;
-            slideFadeTransition2.Parameters.FrameInterval = 5000;
-            transition2.TransitionType = slideFadeTransition2;
-            this.transitionManager.Transitions.Add(transition2);
+            transition1.Control = this.modulesContainer;
+            slideFadeTransition1.Parameters.EffectOptions = DevExpress.Utils.Animation.PushEffectOptions.FromRight;
+            slideFadeTransition1.Parameters.FrameInterval = 5000;
+            transition1.TransitionType = slideFadeTransition1;
+            this.transitionManager.Transitions.Add(transition1);
             // 
             // dockManager
             // 
@@ -297,10 +296,10 @@
             this.officeNavigationBar.CustomizationButtonVisibility = DevExpress.XtraBars.Navigation.CustomizationButtonVisibility.Hidden;
             this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.officeNavigationBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.officeNavigationBar.Location = new System.Drawing.Point(0, 757);
-            this.officeNavigationBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.officeNavigationBar.Location = new System.Drawing.Point(0, 619);
+            this.officeNavigationBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.officeNavigationBar.Name = "officeNavigationBar";
-            this.officeNavigationBar.Size = new System.Drawing.Size(1292, 54);
+            this.officeNavigationBar.Size = new System.Drawing.Size(1034, 44);
             this.officeNavigationBar.TabIndex = 11;
             this.officeNavigationBar.Text = "officeNavigationBar1";
             // 
@@ -312,12 +311,12 @@
             this.navBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navBar.LinkSelectionMode = DevExpress.XtraNavBar.LinkSelectionModeType.OneInControl;
-            this.navBar.Location = new System.Drawing.Point(3, 3);
-            this.navBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.navBar.Location = new System.Drawing.Point(2, 2);
+            this.navBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navBar.Name = "navBar";
-            this.navBar.OptionsNavPane.ExpandedWidth = 374;
+            this.navBar.OptionsNavPane.ExpandedWidth = 299;
             this.navBar.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBar.Size = new System.Drawing.Size(374, 526);
+            this.navBar.Size = new System.Drawing.Size(299, 431);
             this.navBar.TabIndex = 12;
             this.navBar.Text = "navBarControl1";
             // 
@@ -326,10 +325,10 @@
             this.panelControl1.Controls.Add(this.modulesContainer);
             this.panelControl1.Controls.Add(this.navBar);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 225);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelControl1.Location = new System.Drawing.Point(0, 184);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1292, 532);
+            this.panelControl1.Size = new System.Drawing.Size(1034, 435);
             this.panelControl1.TabIndex = 1;
             // 
             // ribbonPageGroup1
@@ -348,16 +347,16 @@
             // MainForm
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1292, 859);
+            this.ClientSize = new System.Drawing.Size(1034, 703);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.officeNavigationBar);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
             this.Ribbon = this.ribbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
