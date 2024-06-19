@@ -229,13 +229,14 @@
             this.bbiRebootIDF211,
             this.bbiResyncAcPara});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl.MaxItemId = 20;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2});
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1184, 120);
+            this.ribbonControl.Size = new System.Drawing.Size(1353, 150);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -449,9 +450,10 @@
             this.panelControl1.Controls.Add(this.panelControl3);
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 120);
+            this.panelControl1.Location = new System.Drawing.Point(0, 150);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1184, 665);
+            this.panelControl1.Size = new System.Drawing.Size(1353, 859);
             this.panelControl1.TabIndex = 1;
             // 
             // panelControl4
@@ -459,9 +461,10 @@
             this.panelControl4.AllowDrop = true;
             this.panelControl4.Controls.Add(this.splitContainerControl1);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(2, 341);
+            this.panelControl4.Location = new System.Drawing.Point(2, 438);
+            this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1180, 322);
+            this.panelControl4.Size = new System.Drawing.Size(1349, 419);
             this.panelControl4.TabIndex = 2;
             // 
             // splitContainerControl1
@@ -469,11 +472,12 @@
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.FixedPanel = DevExpress.XtraEditors.SplitFixedPanel.Panel2;
             this.splitContainerControl1.Location = new System.Drawing.Point(2, 2);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.gridControlTrans);
             this.splitContainerControl1.Panel2.Controls.Add(this.listBoxControl);
-            this.splitContainerControl1.Size = new System.Drawing.Size(1176, 318);
-            this.splitContainerControl1.SplitterPosition = 552;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1345, 415);
+            this.splitContainerControl1.SplitterPosition = 631;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -482,11 +486,13 @@
             this.gridControlTrans.AllowDrop = true;
             this.gridControlTrans.DataSource = this.transactionsBindingSource;
             this.gridControlTrans.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlTrans.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlTrans.Location = new System.Drawing.Point(0, 0);
             this.gridControlTrans.MainView = this.gridView1;
+            this.gridControlTrans.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlTrans.MenuManager = this.ribbonControl;
             this.gridControlTrans.Name = "gridControlTrans";
-            this.gridControlTrans.Size = new System.Drawing.Size(619, 318);
+            this.gridControlTrans.Size = new System.Drawing.Size(708, 415);
             this.gridControlTrans.TabIndex = 0;
             this.gridControlTrans.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -614,17 +620,19 @@
             this.listBoxControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.listBoxControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl.Location = new System.Drawing.Point(0, 0);
+            this.listBoxControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBoxControl.Name = "listBoxControl";
-            this.listBoxControl.Size = new System.Drawing.Size(552, 318);
+            this.listBoxControl.Size = new System.Drawing.Size(631, 415);
             this.listBoxControl.TabIndex = 0;
             // 
             // panelControl3
             // 
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl3.Location = new System.Drawing.Point(2, 331);
+            this.panelControl3.Location = new System.Drawing.Point(2, 425);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1180, 10);
+            this.panelControl3.Size = new System.Drawing.Size(1349, 13);
             this.panelControl3.TabIndex = 1;
             // 
             // panelControl2
@@ -635,8 +643,9 @@
             this.panelControl2.Controls.Add(this.gridControl);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(2, 2);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1180, 329);
+            this.panelControl2.Size = new System.Drawing.Size(1349, 423);
             this.panelControl2.TabIndex = 0;
             // 
             // panel1
@@ -646,45 +655,46 @@
             this.panel1.Controls.Add(this.lblDebugPrint2);
             this.panel1.Controls.Add(this.lblDebugPrint1);
             this.panel1.Controls.Add(this.lblDebugPrint);
-            this.panel1.Location = new System.Drawing.Point(109, 133);
+            this.panel1.Location = new System.Drawing.Point(125, 171);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(315, 179);
+            this.panel1.Size = new System.Drawing.Size(360, 230);
             this.panel1.TabIndex = 1;
             this.panel1.Visible = false;
             // 
             // lblDebugPrint4
             // 
             this.lblDebugPrint4.AutoSize = true;
-            this.lblDebugPrint4.Location = new System.Drawing.Point(35, 153);
+            this.lblDebugPrint4.Location = new System.Drawing.Point(40, 197);
             this.lblDebugPrint4.Name = "lblDebugPrint4";
-            this.lblDebugPrint4.Size = new System.Drawing.Size(38, 14);
+            this.lblDebugPrint4.Size = new System.Drawing.Size(44, 18);
             this.lblDebugPrint4.TabIndex = 7;
             this.lblDebugPrint4.Text = "label1";
             // 
             // lblDebugPrint3
             // 
             this.lblDebugPrint3.AutoSize = true;
-            this.lblDebugPrint3.Location = new System.Drawing.Point(32, 122);
+            this.lblDebugPrint3.Location = new System.Drawing.Point(37, 157);
             this.lblDebugPrint3.Name = "lblDebugPrint3";
-            this.lblDebugPrint3.Size = new System.Drawing.Size(38, 14);
+            this.lblDebugPrint3.Size = new System.Drawing.Size(44, 18);
             this.lblDebugPrint3.TabIndex = 6;
             this.lblDebugPrint3.Text = "label1";
             // 
             // lblDebugPrint2
             // 
             this.lblDebugPrint2.AutoSize = true;
-            this.lblDebugPrint2.Location = new System.Drawing.Point(32, 90);
+            this.lblDebugPrint2.Location = new System.Drawing.Point(37, 116);
             this.lblDebugPrint2.Name = "lblDebugPrint2";
-            this.lblDebugPrint2.Size = new System.Drawing.Size(38, 14);
+            this.lblDebugPrint2.Size = new System.Drawing.Size(44, 18);
             this.lblDebugPrint2.TabIndex = 5;
             this.lblDebugPrint2.Text = "label1";
             // 
             // lblDebugPrint1
             // 
             this.lblDebugPrint1.AutoSize = true;
-            this.lblDebugPrint1.Location = new System.Drawing.Point(32, 57);
+            this.lblDebugPrint1.Location = new System.Drawing.Point(37, 73);
             this.lblDebugPrint1.Name = "lblDebugPrint1";
-            this.lblDebugPrint1.Size = new System.Drawing.Size(38, 14);
+            this.lblDebugPrint1.Size = new System.Drawing.Size(44, 18);
             this.lblDebugPrint1.TabIndex = 4;
             this.lblDebugPrint1.Text = "label1";
             // 
@@ -692,9 +702,9 @@
             // 
             this.lblDebugPrint.AutoSize = true;
             this.lblDebugPrint.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDebugPrint.Location = new System.Drawing.Point(31, 15);
+            this.lblDebugPrint.Location = new System.Drawing.Point(35, 19);
             this.lblDebugPrint.Name = "lblDebugPrint";
-            this.lblDebugPrint.Size = new System.Drawing.Size(105, 19);
+            this.lblDebugPrint.Size = new System.Drawing.Size(130, 24);
             this.lblDebugPrint.TabIndex = 3;
             this.lblDebugPrint.Text = "lblDebugPrint";
             // 
@@ -703,11 +713,13 @@
             this.gridControl.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "FingersReplicatedCounts", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.gridControl.DataSource = this.bindingSource;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl.Location = new System.Drawing.Point(2, 2);
             this.gridControl.MainView = this.tileView;
+            this.gridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl.MenuManager = this.ribbonControl;
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(1176, 325);
+            this.gridControl.Size = new System.Drawing.Size(1345, 419);
             this.gridControl.TabIndex = 0;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tileView});
@@ -923,12 +935,13 @@
             // 
             // DeviceSettingManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.ribbonControl);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DeviceSettingManage";
-            this.Size = new System.Drawing.Size(1184, 785);
+            this.Size = new System.Drawing.Size(1353, 1009);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

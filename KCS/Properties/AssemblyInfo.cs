@@ -82,7 +82,8 @@ using System.Runtime.InteropServices;
  *  * * 2021 3 15 1.0.4.5 手动导出当天记录
  *  [assembly: AssemblyVersion("1.0.4.6")]// fix 同步门禁权限 1.0.0.2,fix手动导出
  */
-[assembly: AssemblyVersion("1.1.5.22")]         // 2024-05-09          Device 在100%正常Windows字體大小時，IP與Slave兩排文字互相擠壓。
+[assembly: AssemblyVersion("1.1.5.23")]         // 2024-06-19          原本Transaction Report 遺漏體溫欄位。
+//[assembly: AssemblyVersion("1.1.5.22")]         // 2024-05-09          Device 在100%正常Windows字體大小時，IP與Slave兩排文字互相擠壓。
 //[assembly: AssemblyVersion("1.1.5.21")]         // 2024-04-23          Employees > Access Control Parameters [StartTimeStr], [EndTimeStr] 這個地方無法正常顯示
 //[assembly: AssemblyVersion("1.1.5.20")]          // 2024-04-04          Toyota AllowTime Report add DoorName, Allow time is 00:00-00:00 by default while create employee
 //[assembly: AssemblyVersion("1.1.5.19")]          // 2024-04-04          Exception  : Error - ReadSalveOk將資料類型從 numeric 轉換到 decimal 時發生錯誤。KCS 嘗試在DB建立一筆OR_Transaction卡號：!SOFTOPEN! TranType: 144 體溫：38174.8
@@ -104,4 +105,4 @@ using System.Runtime.InteropServices;
 //[assembly: AssemblyVersion("1.1.5.3")]      // 2022-11-23
 //[assembly: AssemblyVersion("1.1.5.2")]      // 2022-08-29   那我就要勞煩Eric在主程式上改一下並且把版本升到1151
 //[assembly: AssemblyFileVersion("1.1.5.5")]  // Hi YG, KACS.exe 上頭的Kizone logo 我能自己換成IDCOM的嗎? 還是必須你來換?
-[assembly: AssemblyFileVersion("1.1.5.22")]
+[assembly: AssemblyFileVersion("1.1.5.23")]
