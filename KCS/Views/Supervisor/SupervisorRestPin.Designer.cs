@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.textEditNewPinAgain = new DevExpress.XtraEditors.TextEdit();
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textEditNewPin = new DevExpress.XtraEditors.TextEdit();
             this.textEditAdminName = new DevExpress.XtraEditors.TextEdit();
             this.textEditAdminNo = new DevExpress.XtraEditors.TextEdit();
@@ -39,11 +40,11 @@
             this.layoutControlNewPinAgain = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlNewPin = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlAdminName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditNewPinAgain.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditNewPin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAdminName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAdminNo.Properties)).BeginInit();
@@ -52,7 +53,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlNewPinAgain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlNewPin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlAdminName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,6 +85,10 @@
             this.textEditNewPinAgain.Size = new System.Drawing.Size(530, 32);
             this.textEditNewPinAgain.StyleController = this.layoutControl1;
             this.textEditNewPinAgain.TabIndex = 8;
+            // 
+            // bindingSource
+            // 
+            this.bindingSource.DataSource = typeof(KCS.Models.EmployeeSupervisor);
             // 
             // textEditNewPin
             // 
@@ -192,10 +196,6 @@
             this.layoutControlAdminName.Text = "管理员姓名";
             this.layoutControlAdminName.TextSize = new System.Drawing.Size(75, 18);
             // 
-            // bindingSource
-            // 
-            this.bindingSource.DataSource = typeof(KCS.Models.EmployeeSupervisor);
-            // 
             // mvvmContext
             // 
             this.mvvmContext.ContainerControl = this;
@@ -212,6 +212,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEditNewPinAgain.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditNewPin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAdminName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAdminNo.Properties)).EndInit();
@@ -220,7 +221,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlNewPinAgain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlNewPin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlAdminName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             this.ResumeLayout(false);
 

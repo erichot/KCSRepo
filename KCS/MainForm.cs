@@ -20,6 +20,7 @@ using KCS.Common.DAL;
 using System.Reflection;
 using KCS.Sync;
 using KCS.Form;
+using Serilog;
 
 namespace KCS
 {
@@ -247,6 +248,11 @@ namespace KCS
         {
             ViewModel.SelectedModuleType = ModuleType.Unknown;
             SyncManage.StopServerApplication();
+
+            // Add: 2024/08/09   
+            // Ver: 1.1.5.24
+            Log.CloseAndFlush();
+
             base.OnClosed(e);
         }
         

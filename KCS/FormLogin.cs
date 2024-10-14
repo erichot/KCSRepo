@@ -20,6 +20,11 @@ namespace KCS
             InitializeComponent();
             InitLanguageResource();
             BindCommands();
+
+            
+
+
+            
         }
         private void InitLanguageResource()
         {
@@ -67,5 +72,47 @@ namespace KCS
             fluentAPI.ViewModel.Init();
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+
+            // Add: 2024/08/11
+            Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(KCS.Models.AppRegistryModel.REG_KEY_SW_CU_KCS);
+            if (regKey != null)
+            {
+                bool isAutoLogon = false;
+                string isAutoLogonText = regKey.GetValue(KCS.Models.AppRegistryModel.REG_ITEM_IsAutoLogon).ToString();
+                if (string.IsNullOrEmpty(isAutoLogonText) == false
+                    && Boolean.TryParse(isAutoLogonText, out bool _isAutoLogon) == true
+                    )
+                {
+                    isAutoLogon = _isAutoLogon;
+                }
+
+                if (isAutoLogon == true)
+                {
+                    string userID = string.Empty;
+                    string pwdDec = string.Empty;
+                    userID = regKey.GetValue(KCS.Models.AppRegistryModel.REG_ITEM_UserID).ToString();
+
+                    string pwdEnc = regKey.GetValue(KCS.Models.AppRegistryModel.REG_ITEM_Password).ToString();
+                    if (string.IsNullOrEmpty(pwdEnc) == false)
+                    {
+                        pwdDec = LoginPwdCryption.DeCode(pwdEnc);
+                    }
+
+                    if (string.IsNullOrEmpty(userID) == false)
+                    {
+                        var fluentAPI = mvvmContext.OfType<LoginViewModel>();
+                        fluentAPI.ViewModel.Init();
+                        fluentAPI.ViewModel.CurrentUser.UserNo = userID;
+                        fluentAPI.ViewModel.CurrentUser.UserPwd = pwdDec;
+                        fluentAPI.ViewModel.OnLogin();
+                    }
+                }
+            }
+
+        }
     }
 }

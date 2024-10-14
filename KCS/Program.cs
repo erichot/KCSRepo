@@ -12,6 +12,8 @@ namespace KCS
     using KCS.Common.DAL;
     using KCS.Common.Utils;
     using KCS.Form;
+    using Serilog;
+    using Serilog.Sinks.File;
 
     static class Program
     {
@@ -20,6 +22,12 @@ namespace KCS
         /// </summary>
         [STAThread]
         static void Main() {
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.File("log-.txt",rollingInterval:RollingInterval.Day)
+                .CreateLogger();
+            Log.Information("Program_Main");
+
+
             TaskbarAssistant.Default.Initialize();
             AppDomain.CurrentDomain.AssemblyResolve += OnCurrentDomainAssemblyResolve;
             //DataDirectoryHelper.LocalPrefix = "KCS";

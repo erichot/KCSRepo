@@ -61,7 +61,7 @@ namespace KCS.Views
             biDelete.Caption = LanguageResource.GetDisplayString("ToolBarDelete");
             biSetPassword.Caption = LanguageResource.GetDisplayString("ToolBarSetPassword");
             biNew.Caption = LanguageResource.GetDisplayString("ToolBarNewSupervisor");
-
+            
             ItemForUserNO.Text = this.colUserID.Caption = LanguageResource.GetDisplayString("SupervisorViewId");
             ItemUserName.Text = this.colUserName.Caption = LanguageResource.GetDisplayString("SupervisorViewName");
             ItemEmail.Text = this.colEmail.Caption = LanguageResource.GetDisplayString("Email");
@@ -159,9 +159,11 @@ namespace KCS.Views
             fluentAPI.BindCommand(biNew, x => x.NewSupervisor());
             fluentAPI.BindCommand(biSetPassword, x => x.SetPassword(null), x => x.SelectedSupervisor);
 
-           
-           
-            
+            // Add: 2024/08/11
+            fluentAPI.BindCommand(biAutoLogon, x => x.SetAutoLogon(null));
+
+
+
         }
         #region
         DevExpress.XtraBars.Ribbon.RibbonControl IRibbonModule.Ribbon { get { return ribbonControl; } }

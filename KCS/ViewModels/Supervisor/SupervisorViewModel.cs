@@ -134,6 +134,16 @@ namespace KCS.Views
             OnSetPassword(DialogService.ShowDialog(MessageButton.OKCancel, LanguageResource.GetDisplayString("ResetSupervisorPin"), "SupervisorRestPin", SupervisorRestPinViewModel.Create(_EditSupervisor)));
             
         }
+        public void SetAutoLogon(object supervisorObjec)
+        {
+
+            var superAutoLogonViewModel = SupervisorAutoLognViewModel.Create();
+            superAutoLogonViewModel.SetParentViewModel(this);
+            var document = DocumentManagerService.CreateDocument("SupervisorAutoLogon", superAutoLogonViewModel);
+            //document.DestroyOnClose = true;
+            document.Title = "Auto Logon";
+            document.Show();
+        }
         void OnEditSupervisor(MessageResult result)
         {
             

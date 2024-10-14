@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Serilog;
 
 namespace KCS.Sync
 {
@@ -646,6 +647,20 @@ namespace KCS.Sync
             {
 				ReadTimeOut = 8000;
                 //bool bRet = _terminal.syncDataBaseHelper.InsertToOR_Transactions(transaction);
+
+                // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                // Add: 2024/08/09
+                // Ver: 1.1.5.24
+                try
+                {
+                    Log.Information($"SyncClient,AnalysReadDeviceByCharResult,{transaction.TransactionCardId},{transaction.TransactionDateTime},{transaction.DeviceIP},{transaction.DevicePublicIP},{transaction.BodyTemp.ToString()}");
+                }
+                catch (Exception ex)
+                {
+                    Log.Error($"SyncClient,AnalysReadDeviceByCharResult,{ex.Message}");
+                }
+                // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
                 int iRet = _terminal.syncDataBaseHelper.InsertToOR_TransactionsWithTransId(transaction, 0);
                 Employees employee = _terminal.syncDataBaseHelper.GetEmployeeByCardId(transaction.TransactionCardId);
                 if ((object)employee != null)
@@ -796,6 +811,19 @@ namespace KCS.Sync
 				ReadTimeOut = 8000;
                 //bool bRet = _terminal.syncDataBaseHelper.InsertToOR_Transactions(transaction);
                 int iRet = _terminal.syncDataBaseHelper.InsertToOR_TransactionsWithTransId(transaction, 0);
+
+                // Add: 2024/08/09
+                // Ver: 1.1.5.24
+                try
+                {
+                    Log.Information($"SyncClient,AnalysReadDeviceResult,{transaction.TransactionCardId},{transaction.TransactionDateTime},{transaction.DeviceIP},{transaction.DevicePublicIP},{transaction.BodyTemp.ToString()}");
+                }
+                catch  (Exception ex)
+                {
+                    Log.Error($"SyncClient,AnalysReadDeviceResult,{ex.Message}");
+                }
+
+
                 Employees employee = _terminal.syncDataBaseHelper.GetEmployeeByCardId(transaction.TransactionCardId);
                 if ((object)employee != null)
                 {
