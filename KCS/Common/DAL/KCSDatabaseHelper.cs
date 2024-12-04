@@ -3078,7 +3078,7 @@ END AS [CLASS_CODE],N'{2}',N'{3}',N'{2}',N'{3}',[LIST_GRP]
             return true;
 
         }
-        public DataBaseAccessErrorCode InsertEmployee(Employees employee, int OperationId, bool SyncToAll, IEnumerable<DeviceInfo> deviceList)
+        public DataBaseAccessErrorCode InsertEmployee(Employees employee, int OperationId, bool SyncToAll, IEnumerable<DeviceInfo> deviceList, bool? IsDisallowFullTime = null)
         {
             int UserSID;
             if (SP_IsExist_User_UserID(employee.UserID, out UserSID) > 0)
@@ -3124,7 +3124,7 @@ END AS [CLASS_CODE],N'{2}',N'{3}',N'{2}',N'{3}',[LIST_GRP]
 
                 // Add:2024/04/09 
                 // Ver:1.1.5.20
-                SP_INSERT_BFX_UserSlaveAllowTime(employee.CardID.PadLeft(10, '0'));
+                SP_INSERT_BFX_UserSlaveAllowTime(employee.CardID.PadLeft(10, '0'), 0, IsDisallowFullTime);
 
 
                 //插入人脸同步资料

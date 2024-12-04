@@ -163,6 +163,7 @@
   <Item name="Details" text="詳細資料" />
   <Item name="IsTaOrNot" text="是否考勤" />
   <Item name="ValideDate" text="有效期" />
+  <Item name="DefaultAllowTime" text="通行時間" />
   <Item name="AllowTimeStartHour" text="通行開始時間(時)" />
   <Item name="AllowTimeStartHMin" text="通行開始時間(分)" />
   <Item name="AllowTimeEndHour" text="通行結束時間(時)" />

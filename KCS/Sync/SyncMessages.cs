@@ -47,6 +47,7 @@ namespace KCS.Sync
         Com_RebootDevice = 0xf2,
         Com_OpenDoor = 0xb5,
         Com_SetDoorPin = 0xf9,//set open door  pin 2019 7 1
+        Com_DelReadTransactionWithId = 0xfb,
     }
     public enum SyncUserCommand
     {

@@ -163,6 +163,7 @@
   <Item name="Details" text="Details" />
   <Item name="IsTaOrNot" text="Is TA or not" />
   <Item name="ValideDate" text="Valid Date" />
+  <Item name="DefaultAllowTime" text="Default allow time" />
   <Item name="AllowTimeStartHour" text="Allow time start hour" />
   <Item name="AllowTimeStartHMin" text="Allow time start Minute" />
   <Item name="AllowTimeEndHour" text="Allow time end hour" />

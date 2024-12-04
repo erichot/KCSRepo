@@ -421,6 +421,36 @@ namespace KCS.Sync
 
             }
         }
+        public byte[] CreateDleteTransactioWithIdMessage(byte[] arryId)
+        {
+            byte[] CheckResult = new byte[1];
+            byte[] SendData = new byte[8];
+
+
+            CreateMesageHeader((byte)SyncClientCommand.Com_DelReadTransactionWithId, 4);
+            CheckResult[0] = 0;
+            SendData[0] = arryId[0];
+            SendData[1] = arryId[1];
+            SendData[2] = arryId[2];
+            SendData[3] = arryId[3];
+            for (int i = 0; i < RequestMessageHeader.Length; i++)
+            {
+                CheckResult[0] ^= RequestMessageHeader[i];
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                CheckResult[0] ^= SendData[i];
+            }
+            using (System.IO.MemoryStream m = new System.IO.MemoryStream())
+            {
+
+                m.WriteAsync(RequestMessageHeader, 0, 7);
+                m.WriteAsync(SendData, 0, 4);
+                m.WriteAsync(CheckResult, 0, 1);
+                return m.ToArray();
+
+            }
+        }
         public byte[] CreateDleteTransactioMessage()
         {
             byte[] CheckResult = new byte[1];

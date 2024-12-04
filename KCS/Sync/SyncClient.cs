@@ -753,6 +753,8 @@ namespace KCS.Sync
             byte[] CardId = new byte[11];
             byte[] TransactionTime = new byte[32];
             byte[] TransactionDevIp = new byte[15];
+            byte[] DelTransId = new byte[4];
+            int deleteTransType = 0;
             rcvDataLen++;
             Transactions transaction = new Transactions(_terminal.deviceContext.IP_Internal, _terminal.deviceContext.IP, _terminal.deviceContext.SlaveSID, true);
 
@@ -766,6 +768,7 @@ namespace KCS.Sync
                 rcvDataLen += 32;
                 Array.Copy(response, rcvDataLen, TransactionDevIp, 0, 15);
                 rcvDataLen += 15;
+
                 CardId[10] = 0;
                 transaction.TransactionCardId = Encoding.UTF8.GetString(CardId);
                 transaction.TransactionDateTime = Encoding.UTF8.GetString(TransactionTime);
@@ -785,6 +788,9 @@ namespace KCS.Sync
                 rcvDataLen += 15;
                 transaction.DataType = response[rcvDataLen];
                 rcvDataLen++;
+                Array.Copy(response, rcvDataLen, DelTransId, 0, 4);
+				rcvDataLen += 4;
+                deleteTransType = 1;
                 CardId[10] = 0;
                 transaction.TransactionCardId = Encoding.UTF8.GetString(CardId);
                 transaction.TransactionDateTime = Encoding.UTF8.GetString(TransactionTime);
@@ -831,7 +837,7 @@ namespace KCS.Sync
                     transaction.UserName = employee.UserName;
                 }
                 transaction.DeviceName = _terminal.deviceContext.SlaveName;
-                AddResultMessage("Read Transaction OK");
+                
                 if (iRet > 0)
                 {
 
@@ -843,7 +849,17 @@ namespace KCS.Sync
                     {
                         UpdateReadTransList(transaction);
                     }
-                    SendViaTcpAsSync(_terminal.CreateDleteTransactioMessage());
+                    
+                    if(deleteTransType == 1)
+					{
+						AddResultMessage("Read Transaction OK NEW");
+						SendViaTcpAsSync(_terminal.CreateDleteTransactioWithIdMessage(DelTransId));
+					}
+                    else
+					{
+						AddResultMessage("Read Transaction OK");
+                        SendViaTcpAsSync(_terminal.CreateDleteTransactioMessage());
+					}
 
 
                 }

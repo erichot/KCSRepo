@@ -63,6 +63,11 @@ namespace KCS.Views
             fluentAPI.WithEvent<DevExpress.Data.SelectionChangedEventArgs>(gridView, "SelectionChanged")
                .SetBinding(x => x.SelectionDevices, e => GetSelectedDevices());
 
+            // Date:    2024/12/03
+            // Ver:     1.1.6.4            
+            fluentAPI.SetBinding(rdoAllowTimeByDefault, x => x.EditValue, x => x.DefaultAllowTimeSelection);
+            
+
             mvvmContext.RegisterService(NotificationService.Create(alertControl));
             SyncOrNotCheckEdit.EditValueChanged += (s, e) =>
                 {
@@ -135,6 +140,9 @@ namespace KCS.Views
 
 
             };
+
+            
+            
         }
         private double getImageSize(string path)
 
@@ -173,7 +181,18 @@ namespace KCS.Views
             SyncOrNotCheckEdit.Text = LanguageResource.GetDisplayString("DontSyncToDevices");
             ItemForSyncDevices.Text = LanguageResource.GetDisplayString("SyncSetting");
 
-           
+            // Date:    2024/12/03
+            // Ver:     1.1.6.4
+            ItemForAllowedTime.Text = LanguageResource.GetDisplayString("DefaultAllowTime");
+            rdoAllowTimeByDefault.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+                new DevExpress.XtraEditors.Controls.RadioGroupItem(0,  "00:00 ~ 23:59"),
+                new DevExpress.XtraEditors.Controls.RadioGroupItem(1,  "00:00 ~ 00:00")});
+            rdoAllowTimeByDefault.SelectedIndex = 0;
+            //rdoAllowTimeByDefault.Properties.Items[1].Value = true;
+            //rdoAllowTimeByDefault.SelectedIndex = 1;
+            //rdoAllowTimeByDefault.Properties.Items[0].Value = true;
+            //rdoAllowTimeByDefault.Properties.Items[1].Value = true;
+
 
             this.radioGroupSync.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0,  LanguageResource.GetDisplayString("SyncToAll")),

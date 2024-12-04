@@ -193,6 +193,7 @@ namespace KCS.Common.Utils
         private static string Details = "Details";
         private static string IsTaOrNot = "Is TA or not";
         private static string ValideDate = "Valid Date";
+        private static string DefaultAllowTime = "Default allow time";
         private static string AllowTimeStartHour = "Allow time start hour";
         private static string AllowTimeStartHMin = "Allow time start Minute";
         private static string AllowTimeEndHour = "Allow time end hour";

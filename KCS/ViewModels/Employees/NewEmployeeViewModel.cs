@@ -99,6 +99,12 @@ namespace KCS.ViewModels
                 return EmployeesTypeDataSource.GetEmployeesTypeInfoList();
             }
         }
+
+        // Date:    2024/12/03
+        // Ver:     1.1.6.4
+        public virtual int DefaultAllowTimeSelection { get; set; }
+
+
         void RebindDataSource()
         {
             Messenger.Default.Send(new RebindMessage<EmployeeViewModel>(this.GetParentViewModel<EmployeeViewModel>()));
@@ -123,11 +129,18 @@ namespace KCS.ViewModels
         }
         private bool SaveEmployee()
         {
+            // Date:    2024/12/03
+            // Ver:     1.1.6.4
+            bool? IsDisallowFullTime = false;
+            if (DefaultAllowTimeSelection == 1)
+                IsDisallowFullTime = true;
+
+
             if (!HasValidationErrors())
             {
                 string ErrorText = "";
-
-                DataBaseAccessErrorCode iRet = EmployeesDataSource.NewEmployee(NewEmployee, SyncSetting == 0, DeviceList);
+                
+                DataBaseAccessErrorCode iRet = EmployeesDataSource.NewEmployee(NewEmployee, SyncSetting == 0, DeviceList, IsDisallowFullTime);
                 if (iRet == DataBaseAccessErrorCode.Success)
                 {
                     ShowNotification(LanguageResource.GetDisplayString("NewEmployeeOk"));
@@ -156,7 +169,6 @@ namespace KCS.ViewModels
         }
         public void Save()
         {
-
             SaveEmployee();
         }
        

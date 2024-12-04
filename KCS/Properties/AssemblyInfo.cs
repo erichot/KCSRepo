@@ -82,7 +82,12 @@ using System.Runtime.InteropServices;
  *  * * 2021 3 15 1.0.4.5 手动导出当天记录
  *  [assembly: AssemblyVersion("1.0.4.6")]// fix 同步门禁权限 1.0.0.2,fix手动导出
  */
-[assembly: AssemblyVersion("1.1.6.0")]         // 2024-08-26          新增自動登入 / 刷卡紀錄文字LOG
+[assembly: AssemblyVersion("1.1.6.4")]          // 2024-12-04            新增人員時系統默認打卡/進出權限
+//[assembly: AssemblyVersion("1.1.6.3")]         // 2024-10-30            YG:麻烦再替换一下
+//[assembly: AssemblyVersion("1.1.6.2")]         // 2024-10-30            YG:我下位机没有收到删除记录的指令呢, 麻烦游sir 再用我发的这个 重新编译一下
+//[assembly: AssemblyVersion("1.1.6.1")]         // 2024-10-30            YG:eric 早 麻烦用这个替换 编译在发我
+//[assembly: AssemblyVersion("1.1.6.1")]         // 2024-10-14            YG:Jeff 要想解决这个丢数据的问题，需要改一下通信协议 只改211 和 IDF300 可以吗？
+//[assembly: AssemblyVersion("1.1.6.0")]         // 2024-08-26          新增自動登入 / 刷卡紀錄文字LOG
 //[assembly: AssemblyVersion("1.1.5.23")]         // 2024-06-19          原本Transaction Report 遺漏體溫欄位。
 //[assembly: AssemblyVersion("1.1.5.22")]         // 2024-05-09          Device 在100%正常Windows字體大小時，IP與Slave兩排文字互相擠壓。
 //[assembly: AssemblyVersion("1.1.5.21")]         // 2024-04-23          Employees > Access Control Parameters [StartTimeStr], [EndTimeStr] 這個地方無法正常顯示
@@ -106,4 +111,4 @@ using System.Runtime.InteropServices;
 //[assembly: AssemblyVersion("1.1.5.3")]      // 2022-11-23
 //[assembly: AssemblyVersion("1.1.5.2")]      // 2022-08-29   那我就要勞煩Eric在主程式上改一下並且把版本升到1151
 //[assembly: AssemblyFileVersion("1.1.5.5")]  // Hi YG, KACS.exe 上頭的Kizone logo 我能自己換成IDCOM的嗎? 還是必須你來換?
-[assembly: AssemblyFileVersion("1.1.6.0")]
+[assembly: AssemblyFileVersion("1.1.6.4")]

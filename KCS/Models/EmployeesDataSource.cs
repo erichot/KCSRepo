@@ -101,10 +101,10 @@ namespace KCS.Models
         {
             return KCSDatabaseHelper.Instance.UpdateEmployeeAuthority(deviceList, employeesObject, Authority, CredentialsSource.GetLoginSupervisorSID());
         }
-        static public DataBaseAccessErrorCode NewEmployee(Employees employee, bool SyncToAll, IEnumerable<DeviceInfo> deviceList)
+        static public DataBaseAccessErrorCode NewEmployee(Employees employee, bool SyncToAll, IEnumerable<DeviceInfo> deviceList, bool? IsDisallowFullTime = null)
         {
 
-            return KCSDatabaseHelper.Instance.InsertEmployee(employee, CredentialsSource.GetLoginSupervisorSID(), SyncToAll, deviceList);
+            return KCSDatabaseHelper.Instance.InsertEmployee(employee, CredentialsSource.GetLoginSupervisorSID(), SyncToAll, deviceList, IsDisallowFullTime);
         }
         static public int DeleteEmployee(int EmployeeSID)
         {

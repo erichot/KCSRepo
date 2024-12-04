@@ -68,11 +68,11 @@
             this.bindingSourceEmpType = new System.Windows.Forms.BindingSource(this.components);
             this.SyncOrNotCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.EmpPhotoPictureEdit = new DevExpress.XtraEditors.PictureEdit();
+            this.rdoAllowTimeByDefault = new DevExpress.XtraEditors.RadioGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForUserID = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForDepartmentID = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForUserName = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForCardID = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForTitleName = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForEmail = new DevExpress.XtraLayout.LayoutControlItem();
@@ -82,9 +82,12 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.ItemForBtnSelectDevices = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForUserName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForAllowedTime = new DevExpress.XtraLayout.LayoutControlItem();
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.alertControl = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
+            this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -106,11 +109,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SyncOrNotCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmpPhotoPictureEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdoAllowTimeByDefault.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUserID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDepartmentID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForUserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCardID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTitleName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).BeginInit();
@@ -120,6 +123,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForBtnSelectDevices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForUserName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAllowedTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -140,11 +145,13 @@
             this.dataLayoutControl1.Controls.Add(this.EmployeeTypeIDLookUpEdit);
             this.dataLayoutControl1.Controls.Add(this.SyncOrNotCheckEdit);
             this.dataLayoutControl1.Controls.Add(this.EmpPhotoPictureEdit);
+            this.dataLayoutControl1.Controls.Add(this.rdoAllowTimeByDefault);
             this.dataLayoutControl1.DataSource = this.employeesBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(2, 2);
             this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
+            this.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1074, 171, 562, 500);
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
             this.dataLayoutControl1.Size = new System.Drawing.Size(846, 368);
             this.dataLayoutControl1.TabIndex = 0;
@@ -379,24 +386,24 @@
             // drBtnSelectDevices
             // 
             this.drBtnSelectDevices.DropDownControl = this.popupControlContainer1;
-            this.drBtnSelectDevices.Location = new System.Drawing.Point(432, 254);
+            this.drBtnSelectDevices.Location = new System.Drawing.Point(429, 224);
             this.drBtnSelectDevices.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.drBtnSelectDevices.MenuManager = this.ribbonControl1;
             this.drBtnSelectDevices.Name = "drBtnSelectDevices";
-            this.drBtnSelectDevices.Size = new System.Drawing.Size(118, 27);
+            this.drBtnSelectDevices.Size = new System.Drawing.Size(121, 27);
             this.drBtnSelectDevices.StyleController = this.dataLayoutControl1;
             this.drBtnSelectDevices.TabIndex = 15;
             this.drBtnSelectDevices.Text = "Select devices";
             // 
             // radioGroupSync
             // 
-            this.radioGroupSync.Location = new System.Drawing.Point(142, 254);
+            this.radioGroupSync.Location = new System.Drawing.Point(149, 224);
             this.radioGroupSync.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioGroupSync.MenuManager = this.ribbonControl1;
             this.radioGroupSync.Name = "radioGroupSync";
             this.radioGroupSync.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.radioGroupSync.Properties.Appearance.Options.UseBackColor = true;
-            this.radioGroupSync.Size = new System.Drawing.Size(284, 27);
+            this.radioGroupSync.Size = new System.Drawing.Size(274, 27);
             this.radioGroupSync.StyleController = this.dataLayoutControl1;
             this.radioGroupSync.TabIndex = 14;
             // 
@@ -404,7 +411,7 @@
             // 
             this.UserIDTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeesBindingSource, "UserID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.UserIDTextEdit.EnterMoveNextControl = true;
-            this.UserIDTextEdit.Location = new System.Drawing.Point(142, 16);
+            this.UserIDTextEdit.Location = new System.Drawing.Point(149, 16);
             this.UserIDTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.UserIDTextEdit.Name = "UserIDTextEdit";
             this.UserIDTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
@@ -412,7 +419,7 @@
             this.UserIDTextEdit.Properties.Mask.EditMask = "n0";
             this.UserIDTextEdit.Properties.NullValuePrompt = null;
             this.UserIDTextEdit.Properties.ValidateOnEnterKey = true;
-            this.UserIDTextEdit.Size = new System.Drawing.Size(408, 24);
+            this.UserIDTextEdit.Size = new System.Drawing.Size(401, 24);
             this.UserIDTextEdit.StyleController = this.dataLayoutControl1;
             this.UserIDTextEdit.TabIndex = 4;
             // 
@@ -424,7 +431,7 @@
             // 
             this.DepartmentIDLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeesBindingSource, "DepartmentID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DepartmentIDLookUpEdit.EnterMoveNextControl = true;
-            this.DepartmentIDLookUpEdit.Location = new System.Drawing.Point(142, 46);
+            this.DepartmentIDLookUpEdit.Location = new System.Drawing.Point(149, 46);
             this.DepartmentIDLookUpEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DepartmentIDLookUpEdit.Name = "DepartmentIDLookUpEdit";
             this.DepartmentIDLookUpEdit.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
@@ -435,7 +442,7 @@
             this.DepartmentIDLookUpEdit.Properties.NullText = "";
             this.DepartmentIDLookUpEdit.Properties.ShowHeader = false;
             this.DepartmentIDLookUpEdit.Properties.ValueMember = "DepartmentID";
-            this.DepartmentIDLookUpEdit.Size = new System.Drawing.Size(408, 24);
+            this.DepartmentIDLookUpEdit.Size = new System.Drawing.Size(401, 24);
             this.DepartmentIDLookUpEdit.StyleController = this.dataLayoutControl1;
             this.DepartmentIDLookUpEdit.TabIndex = 5;
             // 
@@ -447,17 +454,17 @@
             // 
             this.UserNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeesBindingSource, "UserName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.UserNameTextEdit.EnterMoveNextControl = true;
-            this.UserNameTextEdit.Location = new System.Drawing.Point(142, 106);
+            this.UserNameTextEdit.Location = new System.Drawing.Point(149, 257);
             this.UserNameTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.UserNameTextEdit.Name = "UserNameTextEdit";
-            this.UserNameTextEdit.Size = new System.Drawing.Size(408, 24);
+            this.UserNameTextEdit.Size = new System.Drawing.Size(401, 24);
             this.UserNameTextEdit.StyleController = this.dataLayoutControl1;
             this.UserNameTextEdit.TabIndex = 6;
             // 
             // CardIDTextEdit
             // 
             this.CardIDTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeesBindingSource, "CardID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.CardIDTextEdit.Location = new System.Drawing.Point(142, 136);
+            this.CardIDTextEdit.Location = new System.Drawing.Point(149, 106);
             this.CardIDTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CardIDTextEdit.Name = "CardIDTextEdit";
             this.CardIDTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
@@ -466,7 +473,7 @@
             this.CardIDTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.CardIDTextEdit.Properties.NullValuePrompt = null;
             this.CardIDTextEdit.Properties.ValidateOnEnterKey = true;
-            this.CardIDTextEdit.Size = new System.Drawing.Size(408, 24);
+            this.CardIDTextEdit.Size = new System.Drawing.Size(401, 24);
             this.CardIDTextEdit.StyleController = this.dataLayoutControl1;
             this.CardIDTextEdit.TabIndex = 7;
             // 
@@ -474,10 +481,10 @@
             // 
             this.TitleNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeesBindingSource, "TitleName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.TitleNameTextEdit.EnterMoveNextControl = true;
-            this.TitleNameTextEdit.Location = new System.Drawing.Point(142, 166);
+            this.TitleNameTextEdit.Location = new System.Drawing.Point(149, 136);
             this.TitleNameTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TitleNameTextEdit.Name = "TitleNameTextEdit";
-            this.TitleNameTextEdit.Size = new System.Drawing.Size(408, 24);
+            this.TitleNameTextEdit.Size = new System.Drawing.Size(401, 24);
             this.TitleNameTextEdit.StyleController = this.dataLayoutControl1;
             this.TitleNameTextEdit.TabIndex = 8;
             // 
@@ -485,10 +492,10 @@
             // 
             this.EmailTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeesBindingSource, "Email", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.EmailTextEdit.EnterMoveNextControl = true;
-            this.EmailTextEdit.Location = new System.Drawing.Point(142, 196);
+            this.EmailTextEdit.Location = new System.Drawing.Point(149, 166);
             this.EmailTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EmailTextEdit.Name = "EmailTextEdit";
-            this.EmailTextEdit.Size = new System.Drawing.Size(408, 24);
+            this.EmailTextEdit.Size = new System.Drawing.Size(401, 24);
             this.EmailTextEdit.StyleController = this.dataLayoutControl1;
             this.EmailTextEdit.TabIndex = 9;
             // 
@@ -496,7 +503,7 @@
             // 
             this.EmployeeTypeIDLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeesBindingSource, "EmployeeTypeID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.EmployeeTypeIDLookUpEdit.EnterMoveNextControl = true;
-            this.EmployeeTypeIDLookUpEdit.Location = new System.Drawing.Point(142, 76);
+            this.EmployeeTypeIDLookUpEdit.Location = new System.Drawing.Point(149, 76);
             this.EmployeeTypeIDLookUpEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EmployeeTypeIDLookUpEdit.Name = "EmployeeTypeIDLookUpEdit";
             this.EmployeeTypeIDLookUpEdit.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
@@ -507,7 +514,7 @@
             this.EmployeeTypeIDLookUpEdit.Properties.NullText = "";
             this.EmployeeTypeIDLookUpEdit.Properties.ShowHeader = false;
             this.EmployeeTypeIDLookUpEdit.Properties.ValueMember = "EmployeeTypeID";
-            this.EmployeeTypeIDLookUpEdit.Size = new System.Drawing.Size(408, 24);
+            this.EmployeeTypeIDLookUpEdit.Size = new System.Drawing.Size(401, 24);
             this.EmployeeTypeIDLookUpEdit.StyleController = this.dataLayoutControl1;
             this.EmployeeTypeIDLookUpEdit.TabIndex = 10;
             // 
@@ -518,12 +525,11 @@
             // SyncOrNotCheckEdit
             // 
             this.SyncOrNotCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeesBindingSource, "SyncOrNot", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.SyncOrNotCheckEdit.Location = new System.Drawing.Point(142, 226);
+            this.SyncOrNotCheckEdit.Location = new System.Drawing.Point(149, 196);
             this.SyncOrNotCheckEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SyncOrNotCheckEdit.MenuManager = this.ribbonControl1;
             this.SyncOrNotCheckEdit.Name = "SyncOrNotCheckEdit";
             this.SyncOrNotCheckEdit.Properties.Caption = "Do not sync to any devices";
-            this.SyncOrNotCheckEdit.Size = new System.Drawing.Size(408, 22);
+            this.SyncOrNotCheckEdit.Size = new System.Drawing.Size(401, 22);
             this.SyncOrNotCheckEdit.StyleController = this.dataLayoutControl1;
             this.SyncOrNotCheckEdit.TabIndex = 13;
             // 
@@ -540,6 +546,18 @@
             this.EmpPhotoPictureEdit.Size = new System.Drawing.Size(274, 272);
             this.EmpPhotoPictureEdit.StyleController = this.dataLayoutControl1;
             this.EmpPhotoPictureEdit.TabIndex = 17;
+            // 
+            // rdoAllowTimeByDefault
+            // 
+            this.rdoAllowTimeByDefault.Location = new System.Drawing.Point(149, 287);
+            this.rdoAllowTimeByDefault.MenuManager = this.ribbonControl1;
+            this.rdoAllowTimeByDefault.Name = "rdoAllowTimeByDefault";
+            this.rdoAllowTimeByDefault.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rdoAllowTimeByDefault.Properties.Appearance.Options.UseBackColor = true;
+            this.rdoAllowTimeByDefault.Properties.Columns = 2;
+            this.rdoAllowTimeByDefault.Size = new System.Drawing.Size(401, 32);
+            this.rdoAllowTimeByDefault.StyleController = this.dataLayoutControl1;
+            this.rdoAllowTimeByDefault.TabIndex = 20;
             // 
             // layoutControlGroup1
             // 
@@ -559,7 +577,6 @@
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.ItemForUserID,
             this.ItemForDepartmentID,
-            this.ItemForUserName,
             this.ItemForCardID,
             this.ItemForTitleName,
             this.ItemForEmail,
@@ -568,7 +585,9 @@
             this.ItemForSyncDevices,
             this.emptySpaceItem1,
             this.ItemForBtnSelectDevices,
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.ItemForUserName,
+            this.ItemForAllowedTime});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(820, 342);
@@ -579,7 +598,7 @@
             this.ItemForUserID.Location = new System.Drawing.Point(0, 0);
             this.ItemForUserID.Name = "ItemForUserID";
             this.ItemForUserID.Size = new System.Drawing.Size(540, 30);
-            this.ItemForUserID.TextSize = new System.Drawing.Size(123, 18);
+            this.ItemForUserID.TextSize = new System.Drawing.Size(130, 18);
             // 
             // ItemForDepartmentID
             // 
@@ -588,42 +607,33 @@
             this.ItemForDepartmentID.Name = "ItemForDepartmentID";
             this.ItemForDepartmentID.Size = new System.Drawing.Size(540, 30);
             this.ItemForDepartmentID.Text = "Department ID";
-            this.ItemForDepartmentID.TextSize = new System.Drawing.Size(123, 18);
-            // 
-            // ItemForUserName
-            // 
-            this.ItemForUserName.Control = this.UserNameTextEdit;
-            this.ItemForUserName.Location = new System.Drawing.Point(0, 90);
-            this.ItemForUserName.Name = "ItemForUserName";
-            this.ItemForUserName.Size = new System.Drawing.Size(540, 30);
-            this.ItemForUserName.Text = "User Name";
-            this.ItemForUserName.TextSize = new System.Drawing.Size(123, 18);
+            this.ItemForDepartmentID.TextSize = new System.Drawing.Size(130, 18);
             // 
             // ItemForCardID
             // 
             this.ItemForCardID.Control = this.CardIDTextEdit;
-            this.ItemForCardID.Location = new System.Drawing.Point(0, 120);
+            this.ItemForCardID.Location = new System.Drawing.Point(0, 90);
             this.ItemForCardID.Name = "ItemForCardID";
             this.ItemForCardID.Size = new System.Drawing.Size(540, 30);
-            this.ItemForCardID.TextSize = new System.Drawing.Size(123, 18);
+            this.ItemForCardID.TextSize = new System.Drawing.Size(130, 18);
             // 
             // ItemForTitleName
             // 
             this.ItemForTitleName.Control = this.TitleNameTextEdit;
-            this.ItemForTitleName.Location = new System.Drawing.Point(0, 150);
+            this.ItemForTitleName.Location = new System.Drawing.Point(0, 120);
             this.ItemForTitleName.Name = "ItemForTitleName";
             this.ItemForTitleName.Size = new System.Drawing.Size(540, 30);
             this.ItemForTitleName.Text = "Title Name";
-            this.ItemForTitleName.TextSize = new System.Drawing.Size(123, 18);
+            this.ItemForTitleName.TextSize = new System.Drawing.Size(130, 18);
             // 
             // ItemForEmail
             // 
             this.ItemForEmail.Control = this.EmailTextEdit;
-            this.ItemForEmail.Location = new System.Drawing.Point(0, 180);
+            this.ItemForEmail.Location = new System.Drawing.Point(0, 150);
             this.ItemForEmail.Name = "ItemForEmail";
             this.ItemForEmail.Size = new System.Drawing.Size(540, 30);
             this.ItemForEmail.Text = "Email";
-            this.ItemForEmail.TextSize = new System.Drawing.Size(123, 18);
+            this.ItemForEmail.TextSize = new System.Drawing.Size(130, 18);
             // 
             // ItemForEmployeeTypeID
             // 
@@ -632,43 +642,43 @@
             this.ItemForEmployeeTypeID.Name = "ItemForEmployeeTypeID";
             this.ItemForEmployeeTypeID.Size = new System.Drawing.Size(540, 30);
             this.ItemForEmployeeTypeID.Text = "Employee Type ID";
-            this.ItemForEmployeeTypeID.TextSize = new System.Drawing.Size(123, 18);
+            this.ItemForEmployeeTypeID.TextSize = new System.Drawing.Size(130, 18);
             // 
             // ItemForSyncOrNot
             // 
             this.ItemForSyncOrNot.Control = this.SyncOrNotCheckEdit;
-            this.ItemForSyncOrNot.Location = new System.Drawing.Point(0, 210);
+            this.ItemForSyncOrNot.Location = new System.Drawing.Point(0, 180);
             this.ItemForSyncOrNot.Name = "ItemForSyncOrNot";
             this.ItemForSyncOrNot.Size = new System.Drawing.Size(540, 28);
             this.ItemForSyncOrNot.Text = "Sync Or Not";
-            this.ItemForSyncOrNot.TextSize = new System.Drawing.Size(123, 18);
+            this.ItemForSyncOrNot.TextSize = new System.Drawing.Size(130, 18);
             this.ItemForSyncOrNot.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // ItemForSyncDevices
             // 
             this.ItemForSyncDevices.Control = this.radioGroupSync;
-            this.ItemForSyncDevices.Location = new System.Drawing.Point(0, 238);
+            this.ItemForSyncDevices.Location = new System.Drawing.Point(0, 208);
             this.ItemForSyncDevices.MinSize = new System.Drawing.Size(158, 29);
             this.ItemForSyncDevices.Name = "ItemForSyncDevices";
-            this.ItemForSyncDevices.Size = new System.Drawing.Size(416, 33);
+            this.ItemForSyncDevices.Size = new System.Drawing.Size(413, 33);
             this.ItemForSyncDevices.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.ItemForSyncDevices.Text = "Sync setting";
-            this.ItemForSyncDevices.TextSize = new System.Drawing.Size(123, 18);
+            this.ItemForSyncDevices.TextSize = new System.Drawing.Size(130, 18);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 271);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 309);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(540, 71);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(540, 33);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // ItemForBtnSelectDevices
             // 
             this.ItemForBtnSelectDevices.Control = this.drBtnSelectDevices;
-            this.ItemForBtnSelectDevices.Location = new System.Drawing.Point(416, 238);
+            this.ItemForBtnSelectDevices.Location = new System.Drawing.Point(413, 208);
             this.ItemForBtnSelectDevices.Name = "ItemForBtnSelectDevices";
-            this.ItemForBtnSelectDevices.Size = new System.Drawing.Size(124, 33);
+            this.ItemForBtnSelectDevices.Size = new System.Drawing.Size(127, 33);
             this.ItemForBtnSelectDevices.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForBtnSelectDevices.TextVisible = false;
             this.ItemForBtnSelectDevices.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
@@ -681,6 +691,24 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(280, 342);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // ItemForUserName
+            // 
+            this.ItemForUserName.Control = this.UserNameTextEdit;
+            this.ItemForUserName.Location = new System.Drawing.Point(0, 241);
+            this.ItemForUserName.Name = "ItemForUserName";
+            this.ItemForUserName.Size = new System.Drawing.Size(540, 30);
+            this.ItemForUserName.Text = "User Name";
+            this.ItemForUserName.TextSize = new System.Drawing.Size(130, 18);
+            // 
+            // ItemForAllowedTime
+            // 
+            this.ItemForAllowedTime.Control = this.rdoAllowTimeByDefault;
+            this.ItemForAllowedTime.Location = new System.Drawing.Point(0, 271);
+            this.ItemForAllowedTime.Name = "ItemForAllowedTime";
+            this.ItemForAllowedTime.Size = new System.Drawing.Size(540, 38);
+            this.ItemForAllowedTime.Text = "Default allowed time";
+            this.ItemForAllowedTime.TextSize = new System.Drawing.Size(130, 18);
             // 
             // mvvmContext
             // 
@@ -705,6 +733,11 @@
             this.alertControl.FormLocation = DevExpress.XtraBars.Alerter.AlertFormLocation.TopRight;
             this.alertControl.ShowPinButton = false;
             this.alertControl.ShowToolTips = false;
+            // 
+            // sqlCommand1
+            // 
+            this.sqlCommand1.CommandTimeout = 30;
+            this.sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
             // NewEmployee
             // 
@@ -736,11 +769,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SyncOrNotCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmpPhotoPictureEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdoAllowTimeByDefault.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUserID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDepartmentID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForUserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCardID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTitleName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).EndInit();
@@ -750,6 +783,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForBtnSelectDevices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForUserName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAllowedTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -815,5 +850,8 @@
         private DevExpress.XtraEditors.PictureEdit EmpPhotoPictureEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraEditors.RadioGroup rdoAllowTimeByDefault;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForAllowedTime;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
     }
 }
